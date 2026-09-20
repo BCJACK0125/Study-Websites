@@ -1,0 +1,2565 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>台電僱員 專業科目A 備考手冊｜行政學概要・法律常識</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&family=Noto+Serif+TC:wght@600;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#131A22; --ink-2:#37424F; --muted:#6B7684;
+  --paper:#EFF1EC; --card:#FFFFFF; --sunk:#F6F7F3;
+  --rule:#D7DBD2; --rule-2:#E7EAE2;
+  --adm:#1D6B5C; --adm-bg:#E4EFEB;
+  --law:#3A4A8F; --law-bg:#E6E9F5;
+  --volt:#E3A008; --volt-bg:#FBF0D0;
+  --hot:#9E2B25; --hot-bg:#F6E4E2;
+  --ok:#2F7A4F;
+  --shadow:0 1px 0 var(--rule), 0 6px 18px -14px rgba(19,26,34,.35);
+  --sans:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --serif:"Noto Serif TC","Songti TC",Georgia,serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.75;
+  font-feature-settings:"palt" 1;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ink:#E8EBE6; --ink-2:#C2C9C3; --muted:#949E9A;
+    --paper:#12161A; --card:#1A2026; --sunk:#151B20;
+    --rule:#2C353D; --rule-2:#232B32;
+    --adm:#5FBFA6; --adm-bg:#172A26;
+    --law:#93A5E8; --law-bg:#1B2136;
+    --volt:#F2C14E; --volt-bg:#332913;
+    --hot:#E38A83; --hot-bg:#33201E;
+    --ok:#6DC08C;
+    --shadow:0 1px 0 var(--rule), 0 6px 18px -14px rgba(0,0,0,.6);
+  }
+}
+:root[data-theme="dark"]{
+  --ink:#E8EBE6; --ink-2:#C2C9C3; --muted:#949E9A;
+  --paper:#12161A; --card:#1A2026; --sunk:#151B20;
+  --rule:#2C353D; --rule-2:#232B32;
+  --adm:#5FBFA6; --adm-bg:#172A26;
+  --law:#93A5E8; --law-bg:#1B2136;
+  --volt:#F2C14E; --volt-bg:#332913;
+  --hot:#E38A83; --hot-bg:#33201E;
+  --ok:#6DC08C;
+}
+
+/* ---------- top bar ---------- */
+.bar{
+  position:sticky;top:0;z-index:60;
+  background:var(--paper);
+  background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:saturate(1.4) blur(10px);
+  border-bottom:1px solid var(--rule);
+  padding-top:env(safe-area-inset-top,0px);
+}
+.bar-in{display:flex;align-items:center;gap:10px;max-width:1240px;margin:0 auto;padding:10px 16px;min-height:62px}
+.brand{font-family:var(--serif);font-weight:900;font-size:17px;letter-spacing:.01em;line-height:1.2;white-space:nowrap}
+.brand small{display:block;font-family:var(--sans);font-weight:500;font-size:11px;color:var(--muted);letter-spacing:.06em}
+.bar-sp{flex:1}
+.btn{
+  font-family:var(--sans);font-size:13px;font-weight:500;color:var(--ink-2);
+  background:var(--card);border:1px solid var(--rule);border-radius:7px;
+  padding:7px 11px;cursor:pointer;white-space:nowrap;
+}
+.btn:hover{border-color:var(--ink-2)}
+.btn[aria-pressed="true"]{background:var(--volt-bg);border-color:var(--volt);color:var(--ink)}
+.btn:focus-visible,a:focus-visible,summary:focus-visible,input:focus-visible{outline:2px solid var(--volt);outline-offset:2px}
+#q{
+  font-family:var(--sans);font-size:14px;color:var(--ink);
+  background:var(--card);border:1px solid var(--rule);border-radius:7px;
+  padding:7px 11px;width:190px;
+}
+#q::placeholder{color:var(--muted)}
+#menu-btn{display:none}
+@media (max-width:980px){
+  #menu-btn{display:block}
+  #q{width:120px}
+  .brand small{display:none}
+}
+
+/* ---------- layout ---------- */
+.wrap{max-width:1240px;margin:0 auto;padding:0 16px;display:grid;grid-template-columns:248px minmax(0,1fr);gap:34px;align-items:start}
+nav.toc{
+  position:sticky;top:calc(74px + env(safe-area-inset-top,0px));
+  max-height:calc(100vh - 100px);overflow-y:auto;overscroll-behavior:contain;
+  padding:22px 0 40px;font-size:13.5px;line-height:1.6;
+}
+nav.toc h4{font-family:var(--sans);font-size:11px;font-weight:700;color:var(--muted);letter-spacing:.12em;margin:18px 0 7px}
+nav.toc h4:first-child{margin-top:0}
+nav.toc a{display:block;color:var(--ink-2);text-decoration:none;padding:3px 9px;border-left:2px solid transparent;border-radius:0 4px 4px 0}
+nav.toc a:hover{background:var(--sunk);color:var(--ink)}
+nav.toc a.on{border-left-color:var(--volt);background:var(--sunk);color:var(--ink);font-weight:500}
+main{padding:26px 0 90px;min-width:0}
+@media (max-width:980px){
+  .wrap{grid-template-columns:1fr;gap:0;padding:0 14px}
+  nav.toc{
+    position:fixed;inset:calc(62px + env(safe-area-inset-top,0px)) 0 0 0;z-index:55;
+    background:var(--paper);max-height:none;overflow-y:auto;padding:18px 20px 60px;display:none;
+  }
+  nav.toc.open{display:block}
+  main{padding:18px 0 80px}
+}
+
+/* ---------- typography ---------- */
+h1,h2,h3,h4{font-family:var(--serif);font-weight:700;line-height:1.35;margin:0}
+h2.sec{
+  font-size:26px;font-weight:900;margin:56px 0 4px;padding-top:18px;
+  border-top:3px solid var(--ink);letter-spacing:.01em;
+}
+h2.sec:first-of-type{margin-top:12px}
+h3.ch{font-size:20px;margin:38px 0 12px;display:flex;flex-wrap:wrap;align-items:baseline;gap:10px}
+h3.ch .n{
+  font-family:var(--sans);font-size:12px;font-weight:700;color:var(--card);
+  background:var(--ink);border-radius:5px;padding:3px 7px;letter-spacing:.04em;
+}
+h4.sub{font-size:16.5px;margin:26px 0 8px;color:var(--ink)}
+p{margin:0 0 12px;max-width:74ch}
+main ul,main ol{margin:0 0 14px;padding-left:1.35em;max-width:74ch}
+main li{margin:3px 0}
+b,strong{font-weight:700}
+a{color:var(--law)}
+.lead{font-size:15px;color:var(--ink-2);max-width:70ch}
+.tiny{font-size:12.5px;color:var(--muted);line-height:1.65}
+
+/* ---------- section colouring ---------- */
+#adm h2.sec{border-top-color:var(--adm);color:var(--adm)}
+#adm h3.ch .n{background:var(--adm)}
+#law h2.sec{border-top-color:var(--law);color:var(--law)}
+#law h3.ch .n{background:var(--law)}
+
+/* ---------- badges ---------- */
+.yr{
+  display:inline-block;font-family:var(--sans);font-size:11px;font-weight:700;
+  border-radius:4px;padding:1px 5px;margin-left:3px;vertical-align:1px;
+  background:var(--volt-bg);color:#7A5600;border:1px solid var(--volt);border-color:color-mix(in srgb,var(--volt) 45%,transparent);
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .yr{color:var(--volt)}}
+:root[data-theme="dark"] .yr{color:var(--volt)}
+.tag{display:inline-block;font-size:11px;font-weight:700;border-radius:4px;padding:1px 6px;margin-right:6px;vertical-align:2px}
+.tag.hot{background:var(--hot-bg);color:var(--hot)}
+.tag.a{background:var(--adm-bg);color:var(--adm)}
+.tag.l{background:var(--law-bg);color:var(--law)}
+
+/* ---------- cards ---------- */
+.card{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow)}
+.card > :last-child{margin-bottom:0}
+.card h4{font-size:15.5px;margin:0 0 9px}
+.box{border-left:4px solid var(--volt);background:var(--volt-bg);border-radius:0 8px 8px 0;padding:13px 16px;margin:16px 0}
+.box > :last-child{margin-bottom:0}
+.box .lbl{font-size:11.5px;font-weight:700;letter-spacing:.1em;color:#7A5600;display:block;margin-bottom:5px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .box .lbl{color:var(--volt)}}
+:root[data-theme="dark"] .box .lbl{color:var(--volt)}
+.box.trap{border-left-color:var(--hot);background:var(--hot-bg)}
+.box.trap .lbl{color:var(--hot)}
+.box.law{border-left-color:var(--law);background:var(--law-bg)}
+.box.law .lbl{color:var(--law)}
+
+/* ---------- tables ---------- */
+.tw{overflow-x:auto;margin:14px 0;border:1px solid var(--rule);border-radius:10px;background:var(--card)}
+table{border-collapse:collapse;width:100%;font-size:14px;min-width:460px}
+th,td{padding:8px 11px;text-align:left;vertical-align:top;border-bottom:1px solid var(--rule-2)}
+thead th{background:var(--sunk);font-weight:700;font-size:12.5px;color:var(--ink-2);white-space:nowrap;border-bottom:1px solid var(--rule)}
+tbody tr:last-child td{border-bottom:none}
+td.c,th.c{text-align:center}
+td.k{font-weight:700;white-space:nowrap}
+table.tight{font-size:13.5px}
+table.tight th,table.tight td{padding:6px 9px}
+
+/* ---------- answer masking (背誦模式) ---------- */
+.a{
+  background:var(--volt-bg);border-radius:3px;padding:0 3px;font-weight:700;
+  box-decoration-break:clone;-webkit-box-decoration-break:clone;
+}
+body.mask .a{
+  color:transparent;background:var(--ink-2);border-radius:3px;cursor:pointer;
+  text-shadow:none;user-select:none;
+}
+body.mask .a.show{color:inherit;background:var(--volt-bg);user-select:auto}
+
+/* ---------- mnemonic ---------- */
+.mn{font-family:var(--serif);font-weight:700;font-size:17px;letter-spacing:.02em;color:var(--ink)}
+
+/* ---------- diagram ---------- */
+figure{margin:16px 0}
+figure svg{width:100%;height:auto;display:block}
+figcaption{font-size:12.5px;color:var(--muted);margin-top:6px}
+.svg-ink{fill:var(--ink)}.svg-mut{fill:var(--muted)}
+.svg-card{fill:var(--card);stroke:var(--rule)}
+.svg-line{stroke:var(--rule);fill:none}
+
+/* flow chain */
+.chain{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px;margin:14px 0}
+.chain .s{
+  flex:1 1 118px;background:var(--card);border:1px solid var(--rule);border-radius:8px;
+  padding:9px 11px;font-size:13.5px;line-height:1.5;position:relative;
+}
+.chain .s b{display:block;font-size:14px}
+.chain .s span{color:var(--muted);font-size:12px}
+.chain .ar{display:flex;align-items:center;color:var(--muted);font-size:15px;flex:0 0 auto}
+@media(max-width:620px){.chain{flex-direction:column}.chain .ar{transform:rotate(90deg);justify-content:center;padding:1px 0}}
+
+/* ladder / mindmap */
+.map{background:var(--card);border:1px solid var(--rule);border-radius:10px;padding:14px 16px;margin:16px 0;font-size:14px;line-height:1.85}
+.map .r{font-family:var(--serif);font-weight:700;font-size:16px;margin-bottom:6px}
+.map ul{list-style:none;padding-left:0;margin:0;max-width:none}
+.map ul ul{padding-left:16px;border-left:1px dashed var(--rule);margin-left:5px}
+.map li{margin:1px 0}
+.map .b1{font-weight:700;color:var(--ink)}
+.map .b2{color:var(--ink-2)}
+
+/* ---------- past-paper answer tables ---------- */
+table.pp{font-size:13px;min-width:540px}
+table.pp th,table.pp td{padding:5px 8px}
+table.pp td.no{width:34px;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums}
+table.pp td.an{width:34px;text-align:center;font-weight:900;color:var(--hot)}
+body.mask table.pp td.an{color:transparent;background:var(--ink-2);cursor:pointer}
+body.mask table.pp td.an.show{color:var(--hot);background:transparent}
+table.pp td.tp{width:120px;color:var(--muted);font-size:12px;white-space:nowrap}
+
+/* ---------- progress ---------- */
+.prog{display:flex;align-items:center;gap:9px;font-size:12.5px;color:var(--muted)}
+.prog .track{width:74px;height:6px;border-radius:99px;background:var(--rule);overflow:hidden}
+.prog .fill{height:100%;background:var(--ok);width:0%;transition:width .25s}
+.done-wrap{display:flex;justify-content:flex-end;margin-top:8px}
+label.done{
+  display:inline-flex;align-items:center;gap:7px;font-size:12.5px;color:var(--muted);
+  border:1px solid var(--rule);border-radius:7px;padding:5px 10px;cursor:pointer;background:var(--card);
+}
+label.done input{accent-color:var(--ok);margin:0}
+label.done:has(input:checked){color:var(--ok);border-color:var(--ok)}
+
+/* ---------- hero ---------- */
+.hero{margin:6px 0 10px}
+.hero h1{font-size:clamp(28px,5.4vw,42px);font-weight:900;letter-spacing:.005em;line-height:1.24}
+.hero .sub{font-size:15px;color:var(--ink-2);margin-top:10px;max-width:60ch}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(122px,1fr));gap:1px;background:var(--rule);border:1px solid var(--rule);border-radius:10px;overflow:hidden;margin:22px 0}
+.stats div{background:var(--card);padding:12px 14px}
+.stats .v{font-family:var(--serif);font-weight:900;font-size:23px;line-height:1.2}
+.stats .l{font-size:11.5px;color:var(--muted);margin-top:2px}
+
+/* heat chart */
+.heat{margin:10px 0 4px}
+.heat .row{display:grid;grid-template-columns:minmax(96px,132px) 1fr 30px;align-items:center;gap:10px;padding:2.5px 0;font-size:13px}
+.heat .nm{text-align:right;color:var(--ink-2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.heat .brk{height:13px;border-radius:2px;background:var(--adm);min-width:2px}
+.heat .row.l .brk{background:var(--law)}
+.heat .ct{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
+.heat .hd{font-size:11.5px;font-weight:700;letter-spacing:.1em;color:var(--muted);margin:14px 0 4px}
+
+details{border:1px solid var(--rule);border-radius:9px;background:var(--card);margin:12px 0;overflow:hidden}
+details[open]{box-shadow:var(--shadow)}
+summary{cursor:pointer;padding:11px 15px;font-weight:700;font-size:14.5px;list-style:none;display:flex;align-items:center;gap:8px}
+summary::-webkit-details-marker{display:none}
+summary::before{content:"＋";color:var(--muted);font-weight:400}
+details[open] summary::before{content:"−"}
+details .bd{padding:0 15px 14px;border-top:1px solid var(--rule-2)}
+details .bd > :first-child{margin-top:12px}
+
+.hidden{display:none !important}
+mark{background:var(--volt-bg);color:inherit;border-radius:2px}
+hr.soft{border:none;border-top:1px solid var(--rule);margin:30px 0}
+
+@media print{
+  .bar,nav.toc,.done-wrap,#menu-btn{display:none!important}
+  .wrap{display:block;max-width:none}
+  body{background:#fff;font-size:11pt}
+  .card,.tw,details{break-inside:avoid;box-shadow:none}
+  body.mask .a{color:inherit!important;background:none!important}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+
+<header class="bar">
+  <div class="bar-in">
+    <button class="btn" id="menu-btn" aria-expanded="false">目錄</button>
+    <div class="brand">台電僱員・專業科目A<small>行政學概要 ╱ 法律常識　備考手冊</small></div>
+    <div class="bar-sp"></div>
+    <input id="q" type="search" placeholder="搜尋考點…" aria-label="搜尋考點">
+    <button class="btn" id="mask-btn" aria-pressed="false" title="把所有答案蓋起來，點一下揭曉">背誦模式</button>
+    <div class="prog" title="章節完成進度"><div class="track"><div class="fill" id="pfill"></div></div><span id="ptxt">0/20</span></div>
+  </div>
+</header>
+
+<div class="wrap">
+<nav class="toc" id="toc">
+  <h4>開始之前</h4>
+  <a href="#intro">這份手冊怎麼用</a>
+  <a href="#exam">考情與命題解剖</a>
+  <a href="#plan">讀書策略與時程</a>
+  <h4>第一篇　行政學概要</h4>
+  <a href="#c1">1　典範變遷與理論分期</a>
+  <a href="#c2">2　組織結構與型態</a>
+  <a href="#c3">3　組織行為與病象</a>
+  <a href="#c4">4　激勵理論</a>
+  <a href="#c5">5　領導理論</a>
+  <a href="#c6">6　決策、溝通與衝突</a>
+  <a href="#c7">7　人事行政</a>
+  <a href="#c8">8　財務行政</a>
+  <a href="#c9">9　公共政策</a>
+  <a href="#c10">10　管理新途徑與府際關係</a>
+  <h4>第二篇　法律常識</h4>
+  <a href="#c11">11　法學基礎與法規標準法</a>
+  <a href="#c12">12　憲法與中央政府</a>
+  <a href="#c13">13　行政程序法</a>
+  <a href="#c14">14　行政罰、執行與救濟</a>
+  <a href="#c15">15　民法總則與債編</a>
+  <a href="#c16">16　物權、親屬與繼承</a>
+  <a href="#c17">17　刑法</a>
+  <a href="#c18">18　民訴與刑訴</a>
+  <a href="#c19">19　商事法</a>
+  <a href="#c20">20　智財與行政管制特別法</a>
+  <h4>實戰</h4>
+  <a href="#papers">112–115 全解答案卷</a>
+  <a href="#numbers">數字速查總表</a>
+  <a href="#confuse">易混淆一擊破</a>
+  <a href="#mnemo">口訣總集</a>
+  <a href="#final">考前七日清單</a>
+</nav>
+
+<main>
+<section class="hero" id="intro">
+  <h1>把 200 題拆開，反推出一張<br>看得完、記得住的考點地圖</h1>
+  <p class="sub">這份手冊以台電 112～115 年度「專業科目 A」四份正式試題為骨幹，逐題回推背後的理論體系與法條群，展開成 20 章。每個知識點後面掛著實際考過的年度徽章，讓你知道哪些是真的會考、哪些只是書上有寫。</p>
+
+  <div class="stats">
+    <div><div class="v">30%</div><div class="l">專業科目A 佔筆試比重</div></div>
+    <div><div class="v">50 題</div><div class="l">單選，每題 2 分</div></div>
+    <div><div class="v">60 分鐘</div><div class="l">平均 72 秒／題</div></div>
+    <div><div class="v">不倒扣</div><div class="l">111 年起取消倒扣</div></div>
+    <div><div class="v">25 ∶ 25</div><div class="l">行政學 ∶ 法律常識</div></div>
+  </div>
+
+  <div class="box">
+    <span class="lbl">先講結論</span>
+    <p>專業科目 A 是全五科裡<b>投資報酬率最高</b>的一科。它 100% 單選、不倒扣、範圍雖廣但重複率極高——四年下來，同一個考點換個問法再考一次是常態。上榜心得裡專 A 拿 90 分以上的人非常多，<b>它不是用來拉分的，是用來「不能掉分」的</b>。真正的競爭在這一科的失分控制。</p>
+  </div>
+</section>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="intro">讀完了</label></div>
+
+<h2 class="sec" id="exam">考情與命題解剖</h2>
+<p class="lead">在讀任何內容之前，先知道題目長什麼樣子、從哪裡來、怎麼重複。</p>
+
+<h4 class="sub">一、這場考試的基本盤</h4>
+<div class="tw"><table>
+<thead><tr><th>項目</th><th>內容</th><th>對備考的意義</th></tr></thead>
+<tbody>
+<tr><td class="k">考試全名</td><td>台灣電力公司新進僱用人員甄試（綜合行政類）</td><td>台電獨招，非考選部國考，難度明顯低於高普考</td></tr>
+<tr><td class="k">筆試五科</td><td>國文 20%、英文 20%、專業A 30%、專業B 30%</td><td>專業兩科合計 60%，是主戰場</td></tr>
+<tr><td class="k">專業A 題型</td><td>單選 50 題 × 2 分 = 100 分，60 分鐘</td><td>速度不是問題，準確度才是</td></tr>
+<tr><td class="k">倒扣</td><td>110 年以前答錯倒扣 1/3；111 年起<b>不倒扣</b></td><td>絕對不可以空白，不會也要猜</td></tr>
+<tr><td class="k">科目組成</td><td>第 1–25 題行政學、第 26–50 題法律常識（四年皆同）</td><td>可以分科計時：各 25～28 分鐘</td></tr>
+<tr><td class="k">試卷版本</td><td>同一份題目有多種排列版本</td><td>官方答案卷的題號順序未必等於你手上的，核對時看題目不看題號</td></tr>
+<tr><td class="k">近年時程</td><td>約 12 月底公告簡章 → 1 月報名 → 5 月初筆試 → 7 月中複試名單 → 8 月複試 → 9 月放榜</td><td>從簡章到筆試約 4 個月，但要贏必須更早開始</td></tr>
+<tr><td class="k">競爭實況</td><td>115 年度全體到考錄取率約 15%，但<b>行政類約 2%</b></td><td>技術類與行政類完全是兩個世界，別被平均錄取率安慰到</td></tr>
+</tbody></table></div>
+
+<div class="box trap">
+  <span class="lbl">最容易被忽略的一件事</span>
+  <p>綜合行政類是所有類別中報名人數最多、錄取率最低的「死亡之組」。這代表專 A 錯 5 題（90 分）在這一組裡已經算「普通」，不是「不錯」。設定目標時請以<b>錯 2～3 題</b>為基準。</p>
+</div>
+
+<h4 class="sub">二、四年 200 題考點分布</h4>
+<p>把 112～115 年共 200 題逐題歸類後，分布長這樣。長條愈長＝這四年考過愈多題。</p>
+
+<div class="card heat">
+  <div class="hd">行政學概要（100 題）</div>
+  <div class="row"><div class="nm">組織結構與型態</div><div class="brk" style="width:100%"></div><div class="ct">23</div></div>
+  <div class="row"><div class="nm">管理新途徑／工具</div><div class="brk" style="width:74%"></div><div class="ct">17</div></div>
+  <div class="row"><div class="nm">激勵與領導</div><div class="brk" style="width:65%"></div><div class="ct">15</div></div>
+  <div class="row"><div class="nm">公共政策</div><div class="brk" style="width:48%"></div><div class="ct">11</div></div>
+  <div class="row"><div class="nm">非營利與公私協力</div><div class="brk" style="width:39%"></div><div class="ct">9</div></div>
+  <div class="row"><div class="nm">財務行政</div><div class="brk" style="width:35%"></div><div class="ct">8</div></div>
+  <div class="row"><div class="nm">決策與溝通</div><div class="brk" style="width:30%"></div><div class="ct">7</div></div>
+  <div class="row"><div class="nm">典範與理論分期</div><div class="brk" style="width:26%"></div><div class="ct">6</div></div>
+  <div class="row"><div class="nm">生態、責任、府際</div><div class="brk" style="width:22%"></div><div class="ct">5</div></div>
+  <div class="row"><div class="nm">人事行政</div><div class="brk" style="width:17%"></div><div class="ct">4</div></div>
+
+  <div class="hd">法律常識（100 題）</div>
+  <div class="row l"><div class="nm">民法（全編）</div><div class="brk" style="width:100%"></div><div class="ct">18</div></div>
+  <div class="row l"><div class="nm">行政法／行政程序法</div><div class="brk" style="width:72%"></div><div class="ct">13</div></div>
+  <div class="row l"><div class="nm">民事訴訟法</div><div class="brk" style="width:50%"></div><div class="ct">9</div></div>
+  <div class="row l"><div class="nm">刑法</div><div class="brk" style="width:50%"></div><div class="ct">9</div></div>
+  <div class="row l"><div class="nm">法規標準法／法學方法</div><div class="brk" style="width:44%"></div><div class="ct">8</div></div>
+  <div class="row l"><div class="nm">憲法</div><div class="brk" style="width:44%"></div><div class="ct">8</div></div>
+  <div class="row l"><div class="nm">商事法</div><div class="brk" style="width:39%"></div><div class="ct">7</div></div>
+  <div class="row l"><div class="nm">智慧財產權</div><div class="brk" style="width:39%"></div><div class="ct">7</div></div>
+  <div class="row l"><div class="nm">刑事訴訟法</div><div class="brk" style="width:39%"></div><div class="ct">7</div></div>
+  <div class="row l"><div class="nm">勞動與性平</div><div class="brk" style="width:33%"></div><div class="ct">6</div></div>
+  <div class="row l"><div class="nm">其他特別法</div><div class="brk" style="width:28%"></div><div class="ct">5</div></div>
+  <div class="row l"><div class="nm">消保法</div><div class="brk" style="width:22%"></div><div class="ct">4</div></div>
+  <div class="row l"><div class="nm">行政救濟</div><div class="brk" style="width:17%"></div><div class="ct">3</div></div>
+</div>
+<p class="tiny">歸類依主要考點判定，少數跨領域題目會落在相鄰類別。</p>
+
+<h4 class="sub">三、五種命題套路（看懂就能反射作答）</h4>
+
+<div class="tw"><table>
+<thead><tr><th style="width:96px">套路</th><th>長相</th><th>破解方式</th></tr></thead>
+<tbody>
+<tr><td class="k">① 學者＋分類</td>
+<td>「○○○(Xxx) 將…分為 N 類，不包括下列何者？」<br><span class="tiny">韋伯官僚、艾桑尼、布勞與史考特、哈理生、明茲伯格、唐斯、達爾頓、雷格斯…</span></td>
+<td>背「人名 → 分類數 → 各類名稱」三件套。選項裡那個<b>語感最順、最像好話</b>的，通常就是編出來的假選項（如「服務型的組織」「人員取向」「發展目標」）</td></tr>
+
+<tr><td class="k">② 定義反查</td>
+<td>先給一段定義，問「係指下列何者」<br><span class="tiny">占比最高的題型，行政學與法律都用</span></td>
+<td>抓定義裡的<b>唯一關鍵字</b>。例：「報告訂約之機會或為訂約之媒介」→ 居間；「移轉占有供債權擔保之動產」→ 動產質權</td></tr>
+
+<tr><td class="k">③ 順序題</td>
+<td>「①②③④ 之正確順序為下列何者？」<br><span class="tiny">114 考了 MBO 步驟、財務行政循環；115 考了馬斯洛、ERG、決策理性程度</span></td>
+<td>先定出<b>頭</b>或<b>尾</b>，用刪去法砍掉一半選項；順序題幾乎都能靠首項篩選</td></tr>
+
+<tr><td class="k">④ 何者「有誤」</td>
+<td>四個敘述挑錯的那個<br><span class="tiny">陷阱最多，也是最會失分的題型</span></td>
+<td>先在題幹「有誤／非屬」兩字上畫圈。四選項逐一標 ○／×，<b>標完再選</b>，不要看到像的就跳答</td></tr>
+
+<tr><td class="k">⑤ 數字題</td>
+<td>「幾日內」「幾年」「幾人以上」<br><span class="tiny">法律常識固定出 5～8 題</span></td>
+<td>純記憶、零推理，投報率最高。見本手冊〈數字速查總表〉</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">四、近年命題的三個新動向</h4>
+<div class="card">
+<p><b>① 開始考「台電自己」。</b>114 年第 22 題直接問台電的法律地位（國營事業、適用公司法、適用政府採購法、主管機關經濟部），第 19 題問我國因應美國關稅的「特別預算」。這類題目無法從行政學課本找到，只能靠常識與時事。</p>
+<p><b>② 開始考時事與新法。</b>115 年第 48 題考 113 年 7 月才制定的《詐欺犯罪危害防制條例》。<b>新通過的法律、當年度熱門政策，有很高機率成為隔年題目。</b></p>
+<p><b>③ 題幹敘述變長、變情境化。</b>115 年第 38 題用一整段櫻桃裝箱的故事考竊盜／詐欺之辨；第 42 題用繼承圖考應繼分。純記憶已不夠，要能把條文套進事實。</p>
+</div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="exam">讀完了</label></div>
+
+<h2 class="sec" id="plan">讀書策略與時程</h2>
+
+<h4 class="sub">四階段節奏</h4>
+<div class="chain">
+  <div class="s"><b>① 建骨架</b><span>4～6 週</span></div><div class="ar">→</div>
+  <div class="s"><b>② 刷考古</b><span>6～8 週</span></div><div class="ar">→</div>
+  <div class="s"><b>③ 補弱點</b><span>4 週</span></div><div class="ar">→</div>
+  <div class="s"><b>④ 限時模考</b><span>考前 3～4 週</span></div>
+</div>
+
+<div class="tw"><table>
+<thead><tr><th style="width:80px">階段</th><th>要做的事</th><th>不要做的事</th></tr></thead>
+<tbody>
+<tr><td class="k">① 建骨架</td><td>本手冊第一篇、第二篇各讀一輪，<b>只求看過、不求記住</b>。把不懂的名詞用自己的白話寫在旁邊。</td><td>不要一開始就從厚達 700 頁的《行政學精論》讀起，容易在第三章陣亡</td></tr>
+<tr><td class="k">② 刷考古</td><td>台電近 10 年專 A 全刷。<b>每一題四個選項都要說得出為什麼對／錯</b>，不是只對答案。錯題當天就回手冊補筆記。</td><td>不要只刷台電；也不要只刷一次就換題庫</td></tr>
+<tr><td class="k">③ 補弱點</td><td>統計錯題落在哪幾章，針對那幾章加刷其他國營（中油、台水、台糖、郵局）與初等考的法緒、行政學大意題目。</td><td>不要平均分配時間；強科再讀也只多拿 0.5 題</td></tr>
+<tr><td class="k">④ 限時模考</td><td>整份 50 題限時 50 分鐘（預留 10 分鐘劃卡與檢查）。同時開始準備口試。</td><td>不要考前一週才第一次計時</td></tr>
+</tbody></table></div>
+
+<div class="box">
+<span class="lbl">考古題的正確用法</span>
+<p>上榜心得裡幾乎都提到同一件事：<b>台電專 A 的觀念重複率極高</b>。同一個考點（例如 BOT 家族、告訴乃論、消滅時效年限、刑法 §57）三、四年內會用不同包裝再考一次。所以刷考古題不是為了「背答案」，而是為了<b>把出題者關心的那 300 個考點挑出來</b>。本手冊已經幫你挑完了，年度徽章 <span class="yr">113</span> 就是證據。</p>
+</div>
+
+<h4 class="sub">兩科的讀法完全不同</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:92px"></th><th>行政學概要</th><th>法律常識</th></tr></thead>
+<tbody>
+<tr><td class="k">本質</td><td>學說體系 — 人名、分類、比較</td><td>法條記憶 — 數字、要件、效果</td></tr>
+<tr><td class="k">主要風險</td><td>名詞太多互相干擾，「看過但想不起來」</td><td>法條會修正，背到過時版本</td></tr>
+<tr><td class="k">有效方法</td><td>對照表 ＋ 心智圖。永遠<b>成組記</b>，不要單獨記一個名詞</td><td>把散落的條文<b>依主題集中</b>成一張表（如：各種期間一覽）</td></tr>
+<tr><td class="k">衰退速度</td><td>慢（理解型）</td><td>快（數字型）→ 考前一週必須重刷數字表</td></tr>
+<tr><td class="k">本手冊對應</td><td>第 1–10 章</td><td>第 11–20 章 ＋〈數字速查總表〉</td></tr>
+</tbody></table></div>
+
+<div class="box trap">
+<span class="lbl">法條版本的自保動作</span>
+<p>法律常識最痛的失分是「背了舊法」。四年內就已經出現：民法成年年齡 20→18 歲、性別工作平等法改名為<b>性別平等工作法</b>且性騷擾防治門檻由 30 人下修、《詐欺犯罪危害防制條例》全新制定。<b>凡是本手冊標示 <span class="tag hot">修法</span> 的條文，考前務必到全國法規資料庫（law.moj.gov.tw）再確認一次現行條文。</b></p>
+</div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="plan">讀完了</label></div>
+
+<div id="adm">
+<h2 class="sec">第一篇　行政學概要</h2>
+<p class="lead">行政學 25 題的失分，八成來自「名詞太多、彼此干擾」。解法只有一個：<b>永遠成組記憶</b>。看到「艾桑尼」就要同時想起布勞與史考特、帕森思；看到「赫茲伯格」就要同時想起馬斯洛與 ERG。以下每一章都以「對照表」為主軸，就是為了這件事。</p>
+
+<!-- ============ CH1 ============ -->
+<h3 class="ch" id="c1"><span class="n">CH 1</span>典範變遷與理論分期</h3>
+
+<h4 class="sub">1-1　剖析行政學的四種觀點</h4>
+<p>行政學的發展可從四個角度切入：<b>管理</b>、<b>政治</b>、<b>公共政策</b>、<b>公共性</b>。<span class="yr">113</span> 考過「不包括下列何者」，答案是<span class="a">公平</span>（不在四者之內）。</p>
+
+<h4 class="sub">1-2　四大時期一覽（最重要的一張表）</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:92px">時期</th><th style="width:100px">理論基礎</th><th>代表學派／學者</th><th>核心主張</th><th>人性假定</th></tr></thead>
+<tbody>
+<tr><td class="k">傳統理論<br><span class="tiny">1887–1930</span></td><td><span class="a">科學管理</span></td>
+<td>科學管理（泰勒 Taylor）<br>行政管理（費堯 Fayol、古立克 Gulick）<br><b>官僚體系（韋伯 Weber）</b></td>
+<td>效率至上、專業分工、層級節制、標準化作業</td><td>X 理論／經濟人</td></tr>
+<tr><td class="k">修正理論<br><span class="tiny">1930–1960</span></td><td><span class="a">行為科學</span> <span class="yr">113</span></td>
+<td>霍桑實驗（梅堯 Mayo）、動態平衡（巴納德）、需求層次（馬斯洛）、決策（賽蒙）</td>
+<td>重視人性、非正式組織、士氣、參與</td><td>Y 理論／社會人</td></tr>
+<tr><td class="k">整合理論<br><span class="tiny">1960–1970s</span></td><td>系統理論、權變理論</td>
+<td>卡斯特、羅森威、費德勒、雷格斯（生態）</td>
+<td>組織是開放系統；<b>沒有最好的方法，只有最適合的方法</b></td><td>複雜人</td></tr>
+<tr><td class="k">新公共行政<br>／新公共管理</td><td>後官僚、市場</td>
+<td>明諾布魯克會議、黑堡宣言、OGO《新政府運動》</td>
+<td>社會公平、顧客導向、企業型政府</td><td>—</td></tr>
+</tbody></table></div>
+
+<div class="box">
+<span class="lbl">記憶口訣</span>
+<p class="mn">傳統管科學 → 修正行為學 → 整合系統權變 → 新公管市場</p>
+<p class="tiny">四期的「理論基礎」是最常被單獨挖空的一格：傳統＝科學管理、修正＝行為科學、整合＝系統與權變。</p>
+</div>
+
+<h4 class="sub">1-3　韋伯的理想官僚體制</h4>
+<p>韋伯 (Max Weber) 認為理想型官僚具備以下特徵——<span class="yr">112</span><span class="yr">113</span> 兩年都考「下列何者非屬」：</p>
+<ul>
+<li><b>依法辦理</b>（一切依法定程序，<span class="a">對事不對人</span>）</li>
+<li><b>專業分工</b>（依功能不同而分工）</li>
+<li><b>層級節制</b>（上令下從的金字塔體系）</li>
+<li><b>永業化傾向</b>（以工作能力決定任用與升遷）</li>
+<li><b>法定薪資與保障</b>、<b>公文書處理</b>（一切作成書面紀錄）</li>
+</ul>
+<div class="box trap">
+<span class="lbl">兩個固定陷阱</span>
+<p><b>「對人不對事」</b><span class="yr">113</span> — 官僚制強調的是<b>對事不對人</b>（不因人而異），選項寫「對人不對事」即為錯誤。<br>
+<b>「專案管理」</b><span class="yr">112</span> — 專案管理是現代管理工具，韋伯的年代（1864–1920）根本沒有，屬非屬其理想官僚特徵。</p>
+</div>
+<p class="tiny">韋伯另有著名的<b>三種權威</b>：傳統權威（世襲）、超人權威／魅力權威（個人特質）、<b>法理權威</b>（rational-legal，官僚制的基礎）。</p>
+
+<h4 class="sub">1-4　新公共行政 · 新公共管理 · 新公共服務</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px"></th><th>新公共行政 NPA</th><th>新公共管理 NPM</th><th>新公共服務 NPS</th></tr></thead>
+<tbody>
+<tr><td class="k">起點</td><td>1968 明諾布魯克會議</td><td>1980s 英美政府再造</td><td>2000s 丹哈特夫婦</td></tr>
+<tr><td class="k">核心價值</td><td><b>社會公平</b></td><td><b>效率、效能</b></td><td><b>公民精神、民主</b></td></tr>
+<tr><td class="k">民眾定位</td><td>受服務者</td><td><b>顧客</b>（customer）</td><td><b>公民</b>（citizen）</td></tr>
+<tr><td class="k">手法</td><td>入世、相關、反科層</td><td>引進私部門管理、民營化、簡化流程</td><td>服務而非領航</td></tr>
+<tr><td class="k">常見批判</td><td>欠缺原創性與可行性、過於理想化流於形式主義、規範性價值難以界定 <span class="yr">112</span></td><td>過度市場化、忽略公共性</td><td>—</td></tr>
+</tbody></table></div>
+<div class="box trap">
+<span class="lbl">兩題高頻陷阱</span>
+<p><span class="yr">112</span> 問「非屬新公共行政所遭批判」，答案是<span class="a">太強調民主政治中的開放透明</span>——這是優點不是批判。<br>
+<span class="yr">115</span> 問「新公共管理敘述有誤」，答案是<span class="a">將民眾視為公民</span>——那是<b>新公共服務</b>；NPM 視民眾為<b>顧客</b>。</p>
+</div>
+
+<h4 class="sub">1-5　黑堡宣言（Blacksburg Manifesto）</h4>
+<p><span class="yr">114</span> 直接考定義。黑堡宣言主張<b>恢復公共行政在憲政制度中的正當地位</b>，行政人員應是<span class="a">憲政秩序的捍衛者</span>與公共利益的信託者，而非只是被動執行政策的工具。代表人物：萬斯萊 (Wamsley)、顧塞爾 (Goodsell)。</p>
+<p class="tiny">易混淆選項：第五項修練＝聖吉的學習型組織；華格納法則＝公共支出隨經濟發展不斷擴張；權變理論＝整合時期的組織理論。</p>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c1">讀完了</label></div>
+
+<!-- ============ CH2 ============ -->
+<h3 class="ch" id="c2"><span class="n">CH 2</span>組織結構與型態</h3>
+<p class="lead">四年 23 題，是行政學考最多的一章。</p>
+
+<h4 class="sub">2-1　古立克的分部化原則（4P）</h4>
+<p><b>P</b>urpose 目的／功能　<b>P</b>rocess 過程／程序　<b>P</b>erson 服務對象（人或物）　<b>P</b>lace 地區</p>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">115</span> 問「非古立克分部化原則」，答案是<span class="a">依計畫 (Project) 而分工</span>——多了一個 P 但不是那四個。</p></div>
+
+<h4 class="sub">2-2　穆尼與雷利的健全組織四原則</h4>
+<p>穆尼 (Mooney) 與雷利 (Reiley)：<b>協調原則、階梯原則、機能原則、幕僚（參謀）原則</b>。</p>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">112</span> 的假選項是<span class="a">平衡原則</span>。</p></div>
+
+<h4 class="sub">2-3　控制幅度（Span of Control）</h4>
+<p>一位主管能直接有效指揮的部屬人數。關係要背熟：</p>
+<div class="tw"><table class="tight">
+<thead><tr><th>控制幅度與…</th><th class="c">關係</th><th>白話</th></tr></thead>
+<tbody>
+<tr><td>部屬能力強弱</td><td class="c">正比</td><td>部屬愈強，管愈多人也沒問題</td></tr>
+<tr><td>工作反覆性強弱</td><td class="c"><b>正比</b></td><td>工作愈例行單純，管愈多人</td></tr>
+<tr><td>權責劃分明確程度</td><td class="c">正比</td><td>權責愈清楚，管愈多人</td></tr>
+<tr><td>工作環境變化大小</td><td class="c">反比</td><td>環境愈多變，能管的人愈少</td></tr>
+<tr><td>主管與部屬空間距離</td><td class="c">反比</td><td>愈分散愈難管</td></tr>
+<tr><td><b>組織層級數</b></td><td class="c"><b>反比</b></td><td>幅度大 → 層級少 → 扁平；幅度小 → 層級多 → 高聳</td></tr>
+</tbody></table></div>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">112</span> 的錯誤選項把「工作反覆性」寫成<span class="a">反比</span>。記法：<b>工作愈簡單重複，主管愈輕鬆，當然可以管更多人。</b></p></div>
+
+<h4 class="sub">2-4　首長制 vs 委員制</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:74px"></th><th>首長制（獨任制）</th><th>委員制（合議制）</th></tr></thead>
+<tbody>
+<tr><td class="k">優點</td><td>事權集中、責任明確；指揮靈敏、行動迅速；<b>易於保守秘密</b>；減少摩擦</td><td><b>集思廣益、容納各方意見</b>；相互監督防止專斷；適合政策研議</td></tr>
+<tr><td class="k">缺點</td><td>易流於專斷獨裁、決策可能草率</td><td>責任不明、效率較低、難保密</td></tr>
+<tr><td class="k">例</td><td>各部會、縣市政府</td><td>考試院、NCC、公平會</td></tr>
+</tbody></table></div>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">113</span> 問「非屬首長制優點」，答案是<span class="a">能容納各方意見，集思廣益</span>——那是委員制。</p></div>
+
+<h4 class="sub">2-5　扁平式 vs 高聳式組織</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:96px"></th><th>扁平式</th><th>高聳式（金字塔）</th></tr></thead>
+<tbody>
+<tr><td class="k">層級</td><td>少</td><td>多</td></tr>
+<tr><td class="k">控制幅度</td><td>大</td><td>小</td></tr>
+<tr><td class="k">溝通</td><td>容易、快速，命令傳達效率高</td><td>層層轉達，易失真</td></tr>
+<tr><td class="k">環境適應</td><td><b>反應快</b></td><td>反應慢</td></tr>
+<tr><td class="k">適用</td><td>工作簡單、關係單純、環境多變</td><td>工作繁雜、需嚴密控制</td></tr>
+</tbody></table></div>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">115</span> 問「非屬扁平式組織特色」，答案是<span class="a">對外界環境變動反應慢</span>——扁平式反應是<b>快</b>的。</p></div>
+
+<h4 class="sub">2-6　現代組織型態</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:92px">型態</th><th>關鍵敘述</th></tr></thead>
+<tbody>
+<tr><td class="k">事業部組織<br><span class="tiny">Divisionalization</span></td><td>史龍 (Sloan, 美國通用) 首創。各部門<b>擁有自治權與獨立的產品或服務</b>，分部經理人負績效責任、掌握策略性與作業性決策；各事業部即為<b>利潤中心</b>；總管理處設堅強幕僚。精神為<span class="a">集權式的政策、分權式的管理</span> <span class="yr">112</span><span class="yr">114</span></td></tr>
+<tr><td class="k">矩陣式組織</td><td>功能別 × 專案別雙重指揮，屬<b>臨時性、開放式</b>團體；違反「指揮統一」原則</td></tr>
+<tr><td class="k">虛擬組織</td><td>以資訊科技串連、無固定疆界的網絡組織</td></tr>
+<tr><td class="k">有機式管理</td><td>規章程序少、無標準化工作規則、低度集權、<b>適用於變動的環境</b> <span class="yr">112</span></td></tr>
+<tr><td class="k">機械式管理</td><td>高度標準化、集權、適用於<b>穩定的環境</b></td></tr>
+</tbody></table></div>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">112</span> 的事業部題把精神寫反成「<span class="a">分權式的政策和集權式的管理</span>」；有機式管理題的錯誤選項是「<span class="a">穩定的環境性質</span>」。</p></div>
+
+<h4 class="sub">2-7　明茲伯格的五種協調機制</h4>
+<p>明茲伯格 (Mintzberg) 認為組織靠五種機制協調：<b>相互調適</b>、<b>直接監督</b>、<b>工作流程標準化</b>、<b>產出標準化</b>、<b>技能（人員技能）標準化</b>。</p>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">115</span> 問「非屬之」，答案為<span class="a">人員標準化</span>（正確說法是「技能標準化」，不是把「人」標準化）。</p></div>
+
+<h4 class="sub">2-8　組織分類三大家（成組記）</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:120px">學者</th><th style="width:110px">分類標準</th><th>類型</th></tr></thead>
+<tbody>
+<tr><td class="k">艾桑尼 Etzioni</td><td><b>人員順從程度</b></td><td>① <b>強制型</b>（監獄、軍隊）② <b>功利型</b>（企業）③ <b>規範型</b>（教會、學校）<br><span class="tiny">陷阱：沒有「服務型」 <span class="yr">113</span></span></td></tr>
+<tr><td class="k">布勞與史考特<br>Blau &amp; Scott</td><td><b>主要受惠對象</b></td><td>① <b>互利組織</b>—受惠者為<b>組織成員</b>（政黨、工會、俱樂部）<span class="yr">114</span><br>② <b>企業組織</b>—受惠者為所有者（公司）<br>③ <b>服務組織</b>—受惠者為<b>顧客</b>（醫院、學校）<br>④ <b>公益組織</b>—受惠者為<b>社會大眾</b>（警察、消防）</td></tr>
+<tr><td class="k">帕森思 Parsons</td><td>社會功能</td><td>① 生產（經濟）② 政治目標達成 ③ 整合 ④ 模式維持（教育、文化）</td></tr>
+<tr><td class="k">比特 Bitter</td><td>非營利組織</td><td><b>互益類</b>（公會、消費合作社、社交俱樂部）／<b>公益類</b>（私立基金會、慈善團體）<br><span class="tiny">陷阱：私立基金會是<b>公益</b>不是互益 <span class="yr">112</span></span></td></tr>
+</tbody></table></div>
+
+<div class="map">
+<div class="r">組織分類・心智圖</div>
+<ul>
+<li class="b1">依「順從程度」→ 艾桑尼
+  <ul><li class="b2">強制（監獄）／功利（公司）／規範（教會）</li></ul></li>
+<li class="b1">依「誰受惠」→ 布勞與史考特
+  <ul><li class="b2">成員受惠＝互利｜老闆受惠＝企業｜顧客受惠＝服務｜大眾受惠＝公益</li></ul></li>
+<li class="b1">依「社會功能」→ 帕森思
+  <ul><li class="b2">生產／政治／整合／模式維持</li></ul></li>
+</ul>
+</div>
+
+<h4 class="sub">2-9　行政法人與獨立機關</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:96px"></th><th>重點</th></tr></thead>
+<tbody>
+<tr><td class="k">行政法人</td><td>以法律創設、具<b>公法人</b>地位，處理不適合由行政機關或民間辦理之公共事務。<br>✔ 進用人員<b>不具公務人員身分</b> <span class="yr">114</span>｜✔ 仍受政府監督｜✔ 政府<b>得</b>核撥經費｜✔ <b>適用</b>訴願法與國家賠償法<br><span class="tiny">例：國家表演藝術中心、國家運動訓練中心、國家中山科學研究院</span></td></tr>
+<tr><td class="k">獨立機關</td><td>依法獨立行使職權、自主運作。我國中央二級獨立機關共<b>三個</b>：<b>中央選舉委員會、公平交易委員會、國家通訊傳播委員會 (NCC)</b><br><span class="tiny">陷阱：<b>金管會不是獨立機關</b>（是部會級的一般行政機關）<span class="yr">114</span></span></td></tr>
+<tr><td class="k">公營事業</td><td>政府全資或出資<b>逾半數</b>。目的：經營公用事業促進經建、增加國庫收入、維持物價穩定便利民生。<br><b>不以獲利為前提、不追求超額利潤</b> <span class="yr">114</span></td></tr>
+</tbody></table></div>
+
+<div class="box law">
+<span class="lbl">台電自己的考點</span>
+<p><span class="yr">114</span> 第 22 題直接問台電：<b>為國營事業</b> ✔｜<b>適用政府採購法</b> ✔｜<b>主管機關為經濟部</b> ✔｜<b>不適用公司法</b> ✘。台電是「台灣電力<b>股份有限公司</b>」，依公司法設立，當然適用公司法。<br>延伸：憲法 §144「公用事業及其他有獨占性之企業，以<b>公營</b>為原則」<span class="yr">114</span>。</p>
+</div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c2">讀完了</label></div>
+
+<!-- ============ CH3 ============ -->
+<h3 class="ch" id="c3"><span class="n">CH 3</span>組織行為、文化與病象</h3>
+
+<h4 class="sub">3-1　非正式組織</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:62px"></th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k">優點</td><td>滿足社會需求、分擔正式組織壓力、維持團體價值、提供溝通管道、增加穩定性</td></tr>
+<tr><td class="k">缺點</td><td><b>反對改變</b>、<b>傳播謠言</b>（滾雪球效應）、<b>角色／任務上的衝突</b>、要求順從產生壓力<br><span class="tiny">陷阱：「使正式組織的離職率增加」<b>不是</b>缺點——非正式組織反而<b>降低</b>離職率 <span class="yr">113</span></span></td></tr>
+</tbody></table></div>
+
+<p><b>達爾頓 (Dalton) 的非正式團體四型</b> <span class="yr">115</span>：</p>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:92px">類型</th><th>特徵</th></tr></thead>
+<tbody>
+<tr><td class="k">垂直共棲</td><td>長官與部屬<b>互相</b>維護：長官掩飾部屬錯誤並提拔之，部屬也維護長官利益（雙向互惠）</td></tr>
+<tr><td class="k">垂直寄生</td><td>部屬<b>單方</b>接受長官照顧而不回報（單向索取）</td></tr>
+<tr><td class="k">水平防守</td><td>同層級人員結合，<b>對抗來自上級的變革威脅</b>（守勢）</td></tr>
+<tr><td class="k">水平攻擊</td><td>同層級人員結合，<b>主動要求改變現狀</b>（攻勢）</td></tr>
+</tbody></table></div>
+<p class="tiny">記法：<b>共棲＝互相，寄生＝單向</b>；<b>防守＝保住現狀，攻擊＝改變現狀</b>。</p>
+
+<h4 class="sub">3-2　哈理生的組織文化四型</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:92px">類型</th><th>特徵</th></tr></thead>
+<tbody>
+<tr><td class="k">權力取向</td><td><b>強調競爭、崇尚弱肉強食</b>，權力集中於少數人 <span class="yr">113</span></td></tr>
+<tr><td class="k">角色取向</td><td>強調依法行事、按部就班，重視法規與程序（＝官僚文化）</td></tr>
+<tr><td class="k">工作（任務）取向</td><td>一切以達成目標為導向，彈性高</td></tr>
+<tr><td class="k">人員取向</td><td>以成員需求與自我實現為中心</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">3-3　莫根的組織意象（Morgan 八隱喻）</h4>
+<p>莫根 (Gareth Morgan) 把組織比喻成八種意象。考點集中在前三個：</p>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">意象</th><th>意涵</th></tr></thead>
+<tbody>
+<tr><td class="k">組織是<b>大腦</b></td><td>具備<b>感知、監測、審視環境</b>的能力，能自我矯正 →<b>學習型組織</b> <span class="yr">115</span></td></tr>
+<tr><td class="k">組織是機器</td><td>官僚制、標準化、可預測</td></tr>
+<tr><td class="k">組織是有機體</td><td>開放系統，與環境互動、有生命週期</td></tr>
+<tr><td class="k">組織是心靈囚籠</td><td>成員被既有思維困住，無法跳脫</td></tr>
+<tr><td class="k">組織是流變與轉變</td><td>強調持續變動的過程</td></tr>
+</tbody></table></div>
+<p class="tiny">其餘三個：政治系統、文化、支配的工具。</p>
+
+<h4 class="sub">3-4　組織病象總表（高頻！）</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:130px">名稱</th><th>意涵</th></tr></thead>
+<tbody>
+<tr><td class="k">白京生定律<br><span class="tiny">Parkinson's Law</span></td><td><b>官員數量與工作量無關而自然增加</b>（行政機關肥大症）。又稱「建築物症候群」</td></tr>
+<tr><td class="k">彼得原則<br><span class="tiny">Peter Principle</span></td><td>在層級組織中，每個人終將<b>升遷到自己無法勝任的職位</b></td></tr>
+<tr><td class="k">邁爾斯定律<br><span class="tiny">Miles's Law</span></td><td><b>職位決定立場</b>——屁股決定腦袋 <span class="yr">112</span></td></tr>
+<tr><td class="k">寡頭鐵律<br><span class="tiny">Michels</span></td><td>任何組織最終必由少數菁英掌控</td></tr>
+<tr><td class="k">不稀罕效應<br><span class="tiny">BOHICA</span></td><td>成員對改革採<b>消極抵制</b>：「忍一忍就過去了」</td></tr>
+<tr><td class="k">墨菲定律</td><td>凡可能出錯的事，終將出錯</td></tr>
+<tr><td class="k">格勒善定律</td><td>例行公事驅逐創新——<b>劣幣驅逐良幣</b>的行政版</td></tr>
+<tr><td class="k">玻璃天花板</td><td>阻擋<b>女性</b>升遷至高階的<b>無形</b>障礙 <span class="yr">115</span></td></tr>
+<tr><td class="k">搭便車<br><span class="tiny">Free Rider</span></td><td>團體規模愈大，個人愈可能<b>只享受權利、不盡義務</b> <span class="yr">112</span></td></tr>
+<tr><td class="k">螃蟹效應</td><td>同儕互相牽制拉扯，誰都爬不出去</td></tr>
+<tr><td class="k">破窗理論</td><td>小失序不處理會引發更大失序</td></tr>
+<tr><td class="k">手錶定律</td><td>兩隻錶反而讓人無法確定時間——標準不一造成混亂</td></tr>
+<tr><td class="k">公有地悲劇</td><td>共有資源因人人過度使用而耗竭</td></tr>
+<tr><td class="k">鄰避情結<br><span class="tiny">NIMBY</span></td><td><b>「不要蓋在我家後院」</b>——發電廠、變電所、焚化爐選址 <span class="yr">114</span></td></tr>
+</tbody></table></div>
+<div class="box">
+<span class="lbl">一句話分辨最常搞混的四個</span>
+<p><b>白京生</b>＝人愈來愈多｜<b>彼得</b>＝升到不能勝任｜<b>邁爾斯</b>＝換位置換腦袋｜<b>不稀罕</b>＝忍一忍就過去</p>
+</div>
+
+<h4 class="sub">3-5　唐斯的五種官僚人格</h4>
+<p>唐斯 (Anthony Downs)：<b>爬升者（往上爬）、保守者（求安穩）、狂熱者（專注特定政策）、倡導者（關心較廣領域）、政治家（關心整體社會利益）</b>。</p>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">115</span> 問「非屬之」，答案是<span class="a">冷漠者</span>（唐斯的第二型叫「保守者」，不是冷漠者）。</p></div>
+
+<h4 class="sub">3-6　團體盲思（Groupthink）</h4>
+<p>詹尼斯 (Janis) 提出。容易發生在：<b>團體成員高度同質性</b> <span class="yr">115</span>、團體凝聚力過高、與外界隔絕、有強勢領導者、缺乏客觀評估程序。徵候包括：無懈可擊的錯覺、集體合理化、自我設限、對異議者施壓、全體一致的錯覺。</p>
+<p class="tiny">反向思考：選項若寫「團體內高度競爭」「常與外部團體互動」「具明確程序及規範」，都是<b>預防</b>團體盲思的條件，不是發生條件。</p>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c3">讀完了</label></div>
+<!-- ============ CH4 ============ -->
+<h3 class="ch" id="c4"><span class="n">CH 4</span>激勵理論</h3>
+<p class="lead">115 年一口氣考了 6 題激勵、4 題領導，是近年最大的分數池。</p>
+
+<h4 class="sub">4-1　內容理論 vs 過程理論 vs 增強理論</h4>
+<div class="map">
+<div class="r">激勵理論・全景心智圖</div>
+<ul>
+<li class="b1">內容理論（What：什麼東西能激勵人）
+  <ul>
+  <li class="b2">馬斯洛 需求層次論（5 層）</li>
+  <li class="b2">阿特福 ERG 理論（3 層）</li>
+  <li class="b2">赫茲伯格 雙因子論（保健／激勵）</li>
+  <li class="b2">麥克里蘭 三需求論（成就／權力／親和）</li>
+  <li class="b2">麥格瑞格 X 理論／Y 理論</li>
+  </ul></li>
+<li class="b1">過程理論（How：激勵如何產生）
+  <ul>
+  <li class="b2">弗若姆 期望理論</li>
+  <li class="b2">亞當斯 公平理論</li>
+  <li class="b2">洛克 目標設定理論</li>
+  </ul></li>
+<li class="b1">增強理論（After：用後果改變行為）
+  <ul><li class="b2">史金納 四種增強</li></ul></li>
+</ul>
+</div>
+
+<h4 class="sub">4-2　馬斯洛 × ERG × 赫茲伯格　三合一對照</h4>
+<div class="tw"><table>
+<thead><tr><th class="c" style="width:44px">高↑</th><th>馬斯洛 5 層</th><th>阿特福 ERG</th><th>赫茲伯格 雙因子</th></tr></thead>
+<tbody>
+<tr><td class="c">5</td><td><b>自我實現</b>需求</td><td rowspan="2"><b>成長 Growth</b></td><td rowspan="3"><b>激勵因子</b><br><span class="tiny">成就感、上級賞識、升遷發展、工作本身、責任、成長<br>→ 有了會滿意，沒有不會不滿</span></td></tr>
+<tr><td class="c">4</td><td><b>尊榮</b>（自尊）需求</td></tr>
+<tr><td class="c">3</td><td><b>社會</b>（愛與隸屬）需求</td><td rowspan="2"><b>關係 Relatedness</b></td></tr>
+<tr><td class="c">2</td><td><b>安全</b>需求</td><td rowspan="2"><b>保健（維生）因子</b><br><span class="tiny"><b>薪酬待遇</b>、工作環境、公司政策、人際關係、監督方式、工作保障<br>→ 沒有會不滿，有了也只是「不不滿」</span></td></tr>
+<tr><td class="c">1</td><td><b>生理</b>需求</td><td><b>生存 Existence</b></td></tr>
+</tbody></table></div>
+
+<div class="box">
+<span class="lbl">三個一定要記牢的點</span>
+<p><b>① 馬斯洛由低到高：生理 → 安全 → 社會 → 尊榮 → 自我實現。</b><span class="yr">115</span> 直接考排序。<br>
+<b>② ERG 由低到高：生存 → 關係 → 成長。</b><span class="yr">115</span> 考排序，<span class="yr">114</span> 考英文縮寫（E 生存／R 關係／G 成長）。ERG 與馬斯洛最大差別：ERG 允許<b>挫折—退化</b>，可同時追求多種需求，不必逐級而上。<br>
+<b>③ 薪資／薪酬待遇是「保健因子」，不是激勵因子。</b><span class="yr">114</span><span class="yr">115</span> 兩年都考這一點，是全章最高頻的單一考點。</p>
+</div>
+
+<h4 class="sub">4-3　史金納的增強理論（四型）</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">類型</th><th>做法</th><th>例</th></tr></thead>
+<tbody>
+<tr><td class="k">正增強<br>Positive</td><td>給予<b>愉快</b>的後果，鼓勵行為再發生</td><td>表現好 → 發獎金</td></tr>
+<tr><td class="k">負增強<br>Negative</td><td><b>移除</b>不愉快的刺激，鼓勵行為再發生</td><td>表現好 → 免除加班／不用再被盯</td></tr>
+<tr><td class="k">懲罰<br>Punishment</td><td>施加<b>不愉快</b>的後果，制止行為</td><td><b>子女說謊 → 禁足</b> <span class="yr">115</span></td></tr>
+<tr><td class="k">消滅（撤銷）<br>Extinction</td><td><b>撤除</b>原有的獎賞，使行為自然消失</td><td>不再理會愛出風頭的員工</td></tr>
+</tbody></table></div>
+<div class="box trap">
+<span class="lbl">負增強 ≠ 懲罰（每年必混）</span>
+<p>兩者都跟「不愉快」有關，差別在<b>方向</b>：<br>
+<b>負增強＝拿走壞東西，目的是「鼓勵」好行為。</b><br>
+<b>懲罰＝給予壞東西，目的是「制止」壞行為。</b><br>
+「禁足」是<b>給</b>孩子一個不愉快後果來制止說謊 → 懲罰。<span class="yr">113</span> 另考過假選項「關懷」不屬四型之一。</p>
+</div>
+
+<h4 class="sub">4-4　弗若姆的期望理論（VIE）</h4>
+<p>激勵力量 = <b>期望 (Expectancy)</b> × <b>工具 (Instrumentality)</b> × <b>價值／期望值 (Valence)</b></p>
+<ul>
+<li><b>期望</b>：我努力，做得到嗎？（努力 → 績效）</li>
+<li><b>工具</b>：我做到了，會有獎賞嗎？（績效 → 報酬）</li>
+<li><b>價值</b>：那個獎賞，我在乎嗎？（報酬 → 個人價值）</li>
+</ul>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">115</span> 問「不包括下列何種要素」，答案是<span class="a">學習度 (Learning Ability)</span>。三要素中<b>任一為零，激勵力量即為零</b>。</p></div>
+
+<h4 class="sub">4-5　其他必備</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:120px">理論</th><th>核心</th></tr></thead>
+<tbody>
+<tr><td class="k">亞當斯 公平理論</td><td>員工比較<b>自己的（報酬÷投入）與他人的（報酬÷投入）</b>；不公平感才是不滿來源</td></tr>
+<tr><td class="k">麥克里蘭 三需求</td><td><b>成就</b>需求、<b>權力</b>需求、<b>親和</b>需求</td></tr>
+<tr><td class="k">麥格瑞格 X／Y</td><td>X：人性本惰，需嚴密監督（＝傳統理論）／Y：人性向上，宜授權參與（＝修正理論）</td></tr>
+<tr><td class="k">阿吉里斯 成熟—不成熟</td><td>組織若過度控制，將使成員停留在不成熟狀態</td></tr>
+<tr><td class="k">洛克 目標設定</td><td><b>具體且具挑戰性</b>的目標最能激勵；連結 SMART 原則與 MBO</td></tr>
+</tbody></table></div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c4">讀完了</label></div>
+
+<!-- ============ CH5 ============ -->
+<h3 class="ch" id="c5"><span class="n">CH 5</span>領導理論</h3>
+
+<h4 class="sub">5-1　領導理論的三階段演進</h4>
+<div class="chain">
+  <div class="s"><b>特質論</b><span>領導者是天生的<br>（偉人論）</span></div><div class="ar">→</div>
+  <div class="s"><b>行為論</b><span>領導是可學的行為<br>李文／李克特／管理格道</span></div><div class="ar">→</div>
+  <div class="s"><b>權變論</b><span>看情境決定<br>費德勒／路徑目標／情境</span></div><div class="ar">→</div>
+  <div class="s"><b>新型領導</b><span>轉換型／交易型<br>魅力型／服務型</span></div>
+</div>
+
+<h4 class="sub">5-2　行為論：兩個必考分類</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:150px">學者</th><th>分類</th></tr></thead>
+<tbody>
+<tr><td class="k">李文、懷特、李彼特<br><span class="tiny">Lewin / White / Lippitt</span></td>
+<td><b>領導三分法</b>：<b>獨裁式</b>（權威式）、<b>民主式</b>、<b>放任式</b><br><span class="tiny">陷阱：假選項「<b>環境式領導</b>」 <span class="yr">115</span>。結論：<b>民主式</b>領導的工作品質與士氣最佳。</span></td></tr>
+<tr><td class="k">李克特 Likert</td>
+<td><b>領導四系統</b>（由不信任到完全信任）：<br>① <b>剝削—權威型</b>（完全不信任部屬）<br>② <b>仁慈—權威型</b>（施恩式的信任）<br>③ <b>諮詢型</b>（相當信任但保留最終決定）<br>④ <b>參與型</b>（<b>完全信任部屬、高度授權</b>）<span class="yr">115</span></td></tr>
+<tr><td class="k">布萊克與毛頓<br>管理格道</td>
+<td>以「關心生產」×「關心員工」畫成 9×9 方格：<b>(9,9) 團隊型最佳</b>；(1,1) 無為型、(9,1) 業績型、(1,9) 鄉村俱樂部型、(5,5) 中庸型</td></tr>
+<tr><td class="k">俄亥俄州立大學</td>
+<td><b>體制（定規）</b> vs <b>體恤（關懷）</b>兩構面</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">5-3　權變論三大家</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:130px">理論</th><th>情境變項</th><th>結論</th></tr></thead>
+<tbody>
+<tr><td class="k">費德勒 Fiedler<br>權變領導理論</td>
+<td><b>三項</b>：① 領導者與部屬<b>關係</b> ② 工作<b>結構</b> ③ <b>職位權力</b><br><span class="tiny">陷阱：假選項「組織規模」 <span class="yr">113</span></span></td>
+<td>情境<b>極有利或極不利</b> → 工作導向佳；情境<b>中等</b> → 關係導向佳</td></tr>
+
+<tr><td class="k">浩思與米契爾<br>路徑—目標理論</td>
+<td>四種領導行為：<b>指導型、支援型、參與型、成就型</b></td>
+<td>任務<b>模糊、結構化程度低</b> → <b>指導型</b>最有效 <span class="yr">112</span>；任務單調乏味 → 支援型</td></tr>
+
+<tr><td class="k">赫塞與布蘭查<br>情境領導理論</td>
+<td>部屬<b>成熟度</b>（能力＋意願）</td>
+<td><b>領導風格應隨部屬成熟度與情境調整</b> <span class="yr">114</span>：<br>告知 → 推銷 → 參與 → 授權</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">5-4　明茲伯格的管理者十大角色</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">三大類</th><th>角色</th></tr></thead>
+<tbody>
+<tr><td class="k">人際關係角色</td><td><b>頭臉人物 (Figurehead)、領導人 (Leader)、聯絡人 (Liaison)</b></td></tr>
+<tr><td class="k">資訊角色</td><td><b>監控者、傳播者 (Disseminator)、發言人</b></td></tr>
+<tr><td class="k">決策角色</td><td><b>企業家、危機處理者、資源分配者、談判者</b></td></tr>
+</tbody></table></div>
+<div class="box trap">
+<span class="lbl">連兩年的同一個陷阱</span>
+<p><span class="yr">112</span>「非屬人際角色」→ 答案<span class="a">傳播者</span>（屬資訊角色）。<br>
+<span class="yr">115</span>「三大類不包括下列何者」→ 答案<span class="a">服務角色</span>（根本不存在）。</p>
+</div>
+
+<h4 class="sub">5-5　新型領導</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:96px">類型</th><th>核心</th></tr></thead>
+<tbody>
+<tr><td class="k">交易型領導</td><td>以<b>部屬外在需求與動機</b>為影響機制，順從與忠誠建立在<b>交換互惠</b>基礎上（給獎賞換績效）</td></tr>
+<tr><td class="k">轉換型領導</td><td>提升部屬<b>內在動機與價值</b>，使其超越自我利益。四要素：魅力、激勵鼓舞、智識啟發、個別關懷</td></tr>
+<tr><td class="k">魅力型領導</td><td>靠領導者個人特質使部屬追隨</td></tr>
+<tr><td class="k">服務型領導</td><td>領導者先是服務者，以成就他人為目的（連結新公共服務）</td></tr>
+</tbody></table></div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c5">讀完了</label></div>
+
+<!-- ============ CH6 ============ -->
+<h3 class="ch" id="c6"><span class="n">CH 6</span>決策、溝通與衝突</h3>
+
+<h4 class="sub">6-1　賽蒙的行政決策理論</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">概念</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k">有限理性</td><td>人的認知能力、資訊與時間都有限，<b>不可能是絕對理性</b></td></tr>
+<tr><td class="k">行政人 vs 經濟人</td><td>賽蒙反對古典經濟學的「<b>經濟人</b>」（追求最佳解），主張「<b>行政人</b>」——<b>只求滿意解</b></td></tr>
+<tr><td class="k">滿意決策</td><td>不可能比較所有方案，只能<b>選出一個令人滿意的方案</b>即停止搜尋 <span class="yr">114</span></td></tr>
+<tr><td class="k">決策 vs 執行</td><td>賽蒙認為<b>「決定」的重要性高於「執行」</b>；行政的核心即決策</td></tr>
+</tbody></table></div>
+<div class="box trap">
+<span class="lbl"><span class="yr">114</span> 該題四個選項的正誤</span>
+<p>(A) 主張決策不是有限理性而是絕對理性 → ✘ 完全相反<br>
+(B) 反對「行政人」主張「經濟人」 → ✘ 主客顛倒<br>
+(C) 不可能比較所有方案，只能選出令人滿意的方案 → <b>✔ 正解</b><br>
+(D) 執行重要程度高於決定 → ✘ 相反</p>
+</div>
+
+<h4 class="sub">6-2　決策模式的理性程度排序</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th class="c" style="width:44px">理性</th><th style="width:130px">模式</th><th>代表／要點</th></tr></thead>
+<tbody>
+<tr><td class="c">最高</td><td class="k">廣博理性模式</td><td>假設資訊完全、能比較所有方案，選出最佳解（理想狀態）</td></tr>
+<tr><td class="c">↓</td><td class="k">滿意決策模式</td><td><b>賽蒙</b>：有限理性，求滿意不求最佳</td></tr>
+<tr><td class="c">↓</td><td class="k">綜合（混合）掃描</td><td><b>艾桑尼</b>：大方向用廣博、細節用漸進，折衷兩者</td></tr>
+<tr><td class="c">↓</td><td class="k">漸進決策模式</td><td><b>林布隆</b>：以現狀為基礎小幅修正，「摸著石頭過河」</td></tr>
+<tr><td class="c">↓</td><td class="k">政治性決策模式</td><td>決策是各方勢力妥協的結果</td></tr>
+<tr><td class="c">最低</td><td class="k">垃圾桶決策模式</td><td><b>柯恩、馬區、歐爾森</b>：問題、解決方案、參與者、決策機會四股流<br>隨機碰撞，適用於「<b>無政府狀態</b>」的組織</td></tr>
+</tbody></table></div>
+<div class="box trap">
+<span class="lbl"><span class="yr">115</span> 第 4 題屬爭議題</span>
+<p>該題四個選項依上表通說<b>皆有瑕疵</b>（例如 (A) 把滿意模式排在漸進之後、(D) 把漸進排在滿意之前）。作答時請以台電官方公告答案為準。<b>但觀念上請只記住上表這一條排序</b>，它才是其他年度會重複考的東西。</p>
+</div>
+
+<h4 class="sub">6-3　衝突管理</h4>
+<p><b>賽蒙解決衝突的四種途徑</b> <span class="yr">113</span>：</p>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:84px">途徑</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k">問題解決</td><td>共同尋找能滿足各方的新方案（最理想）</td></tr>
+<tr><td class="k">說服</td><td><b>使個人放棄己見、不再堅持個人目標</b>，改認同上位目標</td></tr>
+<tr><td class="k">協商</td><td>透過討價還價各退一步</td></tr>
+<tr><td class="k">政治</td><td>訴諸外力、結盟或權力運作解決</td></tr>
+</tbody></table></div>
+
+<p><b>團體（團體「間」）衝突的成因</b>：<b>目標的差異</b>、<b>個人認知的差異</b>、<b>參與決策的需要</b>、資源有限、職責界限不清、相互依賴程度高、溝通不良。</p>
+<div class="box trap">
+<span class="lbl">一個很細但很關鍵的區分</span>
+<p><span class="yr">113</span>「非屬造成<b>團體</b>衝突的因素」→ 答案<span class="a">職位的競爭</span>。<br>
+理由：<b>「職位的競爭」是「個人與個人之間」的衝突來源</b>（我跟你搶同一個缺），不是「團體與團體之間」的衝突來源。團體間衝突的根源在於<b>目標不同、認知不同、想參與決策</b>。<br>
+考場判準：看到題幹寫「<b>團體</b>衝突」，就把所有「個人層次」的選項先排除。</p>
+</div>
+
+<p><b>個人心理衝突三型</b> <span class="yr">112</span>：</p>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:84px">類型</th><th>情境</th><th>白話</th></tr></thead>
+<tbody>
+<tr><td class="k">雙趨衝突</td><td>兩者<b>皆想要</b>，只能擇一</td><td>魚與熊掌</td></tr>
+<tr><td class="k">雙避衝突</td><td><b>兩者皆具威脅性、皆想避免</b>，卻被迫擇一</td><td>前有狼後有虎</td></tr>
+<tr><td class="k">趨避衝突</td><td>同一目標<b>又想要又害怕</b></td><td>想吃又怕胖</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">6-4　行政溝通</h4>
+<p><b>哈及特 (Hodgetts) 的有效溝通順序</b> <span class="yr">112</span>：</p>
+<div class="chain">
+  <div class="s"><b>③ 注意</b><span>引起對方注意</span></div><div class="ar">→</div>
+  <div class="s"><b>② 理解</b><span>使其了解內容</span></div><div class="ar">→</div>
+  <div class="s"><b>④ 接受</b><span>使其願意接受</span></div><div class="ar">→</div>
+  <div class="s"><b>① 行動</b><span>付諸行動</span></div>
+</div>
+<p class="tiny">口訣：<b>注意 → 理解 → 接受 → 行動</b>。四個動詞剛好由淺入深，順序題只要記住「注意」開頭、「行動」結尾就能刪去大半選項。</p>
+
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:96px">分類軸</th><th>類型</th></tr></thead>
+<tbody>
+<tr><td class="k">依方向</td><td>下行、上行、平行（橫向）、斜向溝通</td></tr>
+<tr><td class="k">依形式</td><td>正式溝通／非正式溝通（<b>葡萄藤</b> grapevine，速度快但易失真）</td></tr>
+<tr><td class="k">依媒介</td><td>書面、口頭、<b>視聽溝通</b>（Podcast、影音）、電子溝通</td></tr>
+<tr><td class="k">依回饋</td><td>單向／<b>雙向</b>溝通</td></tr>
+</tbody></table></div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c6">讀完了</label></div>
+<!-- ============ CH7 ============ -->
+<h3 class="ch" id="c7"><span class="n">CH 7</span>人事行政</h3>
+
+<h4 class="sub">7-1　人事分類制度</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:92px">制度</th><th>以什麼為核心</th><th>特徵</th></tr></thead>
+<tbody>
+<tr><td class="k">品位分類</td><td><b>人</b>（官等）</td><td>重學歷資歷、彈性大、易升遷；英國、日本傳統制</td></tr>
+<tr><td class="k">職位分類</td><td><b>事</b>（職位）</td><td>同工同酬、專業化；美國 1923 年起</td></tr>
+<tr><td class="k">混合制</td><td>人＋事</td><td>官等（簡薦委）＋職等（1–14 職等）併立</td></tr>
+</tbody></table></div>
+<div class="box trap">
+<span class="lbl">這一題有兩套說法，請記台電的那一套</span>
+<p><span class="yr">113</span> 問「我國目前採用之人事分類制度」，<b>官方答案為「職位分類」</b>。<br>
+但多數行政學教科書會告訴你：我國自民國 76 年起實施<b>官等職等併立制</b>，學理上稱為「簡薦委與職位分類之<b>混合制</b>」。<br>
+兩種說法都有所本——我國制度的<b>骨幹確實是職位分類</b>（以職務歸系、職等定俸），只是保留了官等作為身分表徵。<br>
+<b>作答原則：台電考題若四個選項並列「品位分類／職位分類／混合制／授權制」，依歷年官方答案選「職位分類」；若題目明確問「官等職等併立制屬何種制度」，才答混合制。</b></p>
+</div>
+
+<h4 class="sub">7-2　人事業務的科學管理三方法</h4>
+<p><b>人員分類</b>、<b>統一管理</b>、<b>管理科學及電腦的應用</b>。<br><span class="tiny">陷阱：<span class="yr">113</span> 假選項為<span class="a">充分授權</span>。</span></p>
+
+<h4 class="sub">7-3　考試的四項基本要求</h4>
+<p><b>公開競爭性、正確性（效度）、可靠性（信度）、廣博性</b>。<br><span class="tiny">陷阱：<span class="yr">113</span> 假選項為<span class="a">差異性</span>。</span></p>
+
+<h4 class="sub">7-4　考績</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:96px">四大原則</th><th>意涵</th></tr></thead>
+<tbody>
+<tr><td class="k">公平確實</td><td>一視同仁、資料屬實</td></tr>
+<tr><td class="k">客觀周密</td><td>去除主觀好惡，多方蒐證</td></tr>
+<tr><td class="k">重德識才</td><td>兼顧品德與才能</td></tr>
+<tr><td class="k"><b>認真嚴格</b></td><td><b>信賞必罰</b>——既有積極鼓勵作用，也有消極嚇阻作用 <span class="yr">113</span></td></tr>
+</tbody></table></div>
+<p><b>考績評量方法</b>：圖表評量法、<b>目標評量法</b>（依預先建立的標準衡量品質、數量、完成時限）<span class="yr">112</span>、強迫分配法、強迫式選擇法、重大事件法、評述報告法、人與人比較法。</p>
+<p class="tiny">考績種類：年終考績（任職滿 1 年）、<b>另予考績</b>（同一年度內連續任職滿 6 個月未滿 1 年）、專案考績（重大功過隨時辦理）。</p>
+
+<h4 class="sub">7-5　薪給（俸給）原則</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:80px">原則</th><th>意涵</th></tr></thead>
+<tbody>
+<tr><td class="k">平等性</td><td>同工同酬</td></tr>
+<tr><td class="k"><b>適應性</b></td><td><b>薪給應與物價指數保持平衡，物價上漲時薪給隨之調整</b> <span class="yr">113</span></td></tr>
+<tr><td class="k">平衡性</td><td>與民間同類工作待遇相當，避免落差</td></tr>
+<tr><td class="k">效率性</td><td>薪給能激發工作效率</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">7-6　組織發展策略</h4>
+<p>勞倫斯與勞西 (Lawrence &amp; Lorsch)：<b>發展個人、發展團體、發展組織</b> 三層次。<br><span class="tiny">陷阱：<span class="yr">113</span> 假選項為<span class="a">發展目標</span>。</span></p>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c7">讀完了</label></div>
+
+<!-- ============ CH8 ============ -->
+<h3 class="ch" id="c8"><span class="n">CH 8</span>財務行政</h3>
+
+<h4 class="sub">8-1　預算循環（順序題必考）</h4>
+<div class="chain">
+  <div class="s"><b>② 預算編製</b><span>行政院主計總處<br>彙編概算</span></div><div class="ar">→</div>
+  <div class="s"><b>③ 預算審議</b><span>立法院<br>審查議決</span></div><div class="ar">→</div>
+  <div class="s"><b>① 預算執行</b><span>各機關<br>依法定預算支用</span></div><div class="ar">→</div>
+  <div class="s"><b>⑤ 決算</b><span>執行結果<br>之總報告</span></div><div class="ar">→</div>
+  <div class="s"><b>④ 審計</b><span>審計部<br>審核決算</span></div>
+</div>
+<p class="tiny"><span class="yr">114</span> 考的正是這個順序：編製 → 審議 → 執行 → <b>決算 → 審計</b>。最後兩步最容易寫反：<b>先有決算，才有人來審計</b>。</p>
+
+<h4 class="sub">8-2　預算的四個階段名稱</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:96px">名稱</th><th>意涵</th><th>誰的階段</th></tr></thead>
+<tbody>
+<tr><td class="k">概算</td><td><b>各主管機關依施政計畫初步估計的收支</b> <span class="yr">113</span></td><td>各機關</td></tr>
+<tr><td class="k">預算案</td><td>行政院彙整後送立法院審議者</td><td>行政院 → 立法院</td></tr>
+<tr><td class="k">法定預算</td><td>經立法院<b>議決、總統公布</b>之預算</td><td>已完成立法</td></tr>
+<tr><td class="k">分配預算</td><td>依法定預算分期分項的執行計畫</td><td>執行階段</td></tr>
+</tbody></table></div>
+<p class="mn">概 → 案 → 法 → 分</p>
+
+<h4 class="sub">8-3　特殊預算類型</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:96px">類型</th><th>時機／內容</th></tr></thead>
+<tbody>
+<tr><td class="k">追加預算</td><td>法定預算<b>執行中</b>因既定政策或經費不足而追加</td></tr>
+<tr><td class="k"><b>特別預算</b></td><td>因<b>國防緊急、國家經濟重大變故、重大災變、不定期或數年一次之重大政事</b>而編列。<br><span class="tiny">例：因應美國關稅之出口供應鏈支持方案 <span class="yr">114</span>、前瞻基礎建設、防疫紓困</span></td></tr>
+<tr><td class="k">零基預算</td><td><b>每年預算從假定的「零點」重新評估</b>，不以上年度為基礎 <span class="yr">114</span></td></tr>
+<tr><td class="k">績效預算</td><td>以「工作／業務計畫」為中心，重視成本與產出</td></tr>
+<tr><td class="k">設計計畫預算<br>PPBS</td><td>結合長程規劃、方案設計與預算</td></tr>
+<tr><td class="k">總額預算</td><td>先訂支出總額上限，再於額度內分配</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">8-4　諾馬克的八項傳統預算原則</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:92px">原則</th><th>意涵</th></tr></thead>
+<tbody>
+<tr><td class="k">公開</td><td>預算內容應公開周知</td></tr>
+<tr><td class="k">明確</td><td>收支科目清楚易懂</td></tr>
+<tr><td class="k">完整</td><td>一切收支均列入，不得有預算外收支</td></tr>
+<tr><td class="k">統一</td><td>各項收入統籌支應各項支出</td></tr>
+<tr><td class="k">事前決定</td><td>預算須於年度開始前完成審議</td></tr>
+<tr><td class="k">限定</td><td>用途、金額、時間三方面受限制</td></tr>
+<tr><td class="k"><b>嚴密</b></td><td><b>預算應對真正支出有約束力，並力求與決算一致</b> <span class="yr">113</span></td></tr>
+<tr><td class="k">平衡</td><td>歲入與歲出應求平衡</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">8-5　政府會計基礎</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">基礎</th><th>認列時點</th></tr></thead>
+<tbody>
+<tr><td class="k">現金基礎</td><td>實際<b>收付現金</b>時入帳</td></tr>
+<tr><td class="k">應計基礎<br>（權責發生制）</td><td>權利或義務<b>發生</b>時即入帳</td></tr>
+<tr><td class="k"><b>契約責任基礎</b></td><td><b>年度預算內「請求權或責任之發生」均應計帳</b>（如簽約、發包即入帳）<span class="yr">113</span></td></tr>
+</tbody></table></div>
+
+<h4 class="sub">8-6　審計制度</h4>
+<p><b>作用</b>：防止行政機關之不法收支、防止中飽私囊與浪費公帑、增進行政績效、確保財務公開。</p>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">113</span> 問「非屬審計制度之作用」，答案是<span class="a">加重行政機關之財務責任</span>——審計是<b>確保／監督</b>財務責任，不是「加重」。</p></div>
+<p class="tiny">審計權屬<b>監察院審計部</b>；決算由行政院提出，審計長於 3 個月內完成審核並提出審核報告於立法院。</p>
+
+<h4 class="sub">8-7　國稅 vs 地方稅（<span class="yr">115</span> 新考點）</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:80px"></th><th>稅目</th></tr></thead>
+<tbody>
+<tr><td class="k">國稅</td><td>所得稅、<b>遺產及贈與稅</b>、<b>營業稅</b>、貨物稅、<b>菸酒稅</b>、證券交易稅、期貨交易稅、礦區稅、關稅、特種貨物及勞務稅</td></tr>
+<tr><td class="k">地方稅</td><td><b>房屋稅</b>、地價稅、土地增值稅、田賦、契稅、使用牌照稅、印花稅、娛樂稅</td></tr>
+</tbody></table></div>
+<p class="mn">記地方稅就好：房地增田契、牌照印花娛樂</p>
+
+<h4 class="sub">8-8　政府預算的四大功能</h4>
+<p><b>配置</b>（資源分配）、<b>分配</b>（所得重分配）、<b>穩定</b>（平抑景氣波動）、<b>成長</b>（以大量支出促進經濟成長）。</p>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c8">讀完了</label></div>
+
+<!-- ============ CH9 ============ -->
+<h3 class="ch" id="c9"><span class="n">CH 9</span>公共政策</h3>
+
+<h4 class="sub">9-1　政策運作五階段</h4>
+<div class="chain">
+  <div class="s"><b>問題認定</b></div><div class="ar">→</div>
+  <div class="s"><b>政策規劃</b></div><div class="ar">→</div>
+  <div class="s"><b>政策合法化</b></div><div class="ar">→</div>
+  <div class="s"><b>政策執行</b></div><div class="ar">→</div>
+  <div class="s"><b>政策評估</b></div>
+</div>
+
+<h4 class="sub">9-2　羅威與沙利斯伯瑞的政策分類（高頻）</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:110px">類型</th><th>定義</th><th>賽局性質</th><th>例</th></tr></thead>
+<tbody>
+<tr><td class="k">分配性政策</td><td>政府將<b>財貨、服務或義務分配</b>給不同標的人口享受或承擔</td><td><b>非零和</b></td><td>社會福利、公共建設、老農津貼</td></tr>
+<tr><td class="k">管制性政策</td><td>設立特殊原則或規範，<b>限制或拘束</b>標的人口的行動自由</td><td><b>零和</b></td><td>環保管制、交通處罰、食安規範</td></tr>
+<tr><td class="k">重分配性政策</td><td>將某一標的人口的資源<b>轉移</b>給另一標的人口</td><td><b>零和</b></td><td><b>綜合所得稅</b>、社會保險、遺產稅</td></tr>
+<tr><td class="k">自我管制性政策</td><td>政府僅作<b>原則性規範</b>，由該標的人口<b>自行決定</b>政策活動的實際進行方式；<br>其限制型態在<b>增加選擇利益的方式</b>，而非減少取得利益的方式</td><td>非零和</td><td>專門職業公會自律、商業同業公會</td></tr>
+</tbody></table></div>
+<div class="box trap">
+<span class="lbl">連兩年的同一個陷阱</span>
+<p><span class="yr">115</span>「下列何者有誤」→ 答案<span class="a">管制性政策是非零和賽局的政策</span>。<b>管制性與重分配性是「零和」，分配性與自我管制性是「非零和」。</b>零和＝有人得利必有人受損。</p>
+</div>
+
+<h4 class="sub">9-3　政策工具三分法</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:96px">類型</th><th>政府介入程度</th><th>工具</th></tr></thead>
+<tbody>
+<tr><td class="k">自願性工具</td><td>最低</td><td>家庭與社區、志願性組織、<b>市場</b></td></tr>
+<tr><td class="k">混合性工具</td><td>中</td><td>資訊與勸勉、補貼、<b>使用者付費</b>、<b>租稅（徵稅）</b>、財產權拍賣 <span class="yr">114</span></td></tr>
+<tr><td class="k">強制性工具</td><td>最高</td><td>管制（法規命令）、<b>公營事業</b>、直接提供</td></tr>
+</tbody></table></div>
+<p class="tiny">記法：政府<b>直接下命令</b>才是強制；<b>用錢引導</b>（稅、補貼、使用者付費）都是混合。</p>
+
+<h4 class="sub">9-4　卡普蘭的政策規劃原則</h4>
+<p><b>公正無私、個人受益、劣勢者利益、分配普遍、持續進行、人民自主、緊急處理</b>（七項）。</p>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">112</span> 假選項為<span class="a">團體受益原則</span>——正確是「<b>個人</b>受益」，公共政策最終須使<b>個人</b>受益。</p></div>
+
+<h4 class="sub">9-5　安斯坦的公民參與階梯</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:96px">層級</th><th>階梯（由高到低）</th></tr></thead>
+<tbody>
+<tr><td class="k">公民權力</td><td><b>① 公民控制 ② 授權權力 ③ 夥伴關係</b> ← 影響力最大 <span class="yr">112</span></td></tr>
+<tr><td class="k">象徵性參與</td><td>④ 諮詢 ⑤ 諮商 ⑥ 告知（公告）</td></tr>
+<tr><td class="k">無參與</td><td>⑦ 治療 ⑧ 操縱（補救式參與）← 影響力最小</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">9-6　三種「失靈」（最容易混）</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:96px">類型</th><th>誰失靈</th><th>原因</th></tr></thead>
+<tbody>
+<tr><td class="k">市場失靈</td><td>市場</td><td>公共財、外部性、獨占、資訊不對稱 → <b>政府介入的理由</b>；也是<b>從經濟學角度解釋非營利組織存在</b>的理論 <span class="yr">113</span></td></tr>
+<tr><td class="k">政府失靈</td><td>政府</td><td>政府介入後，因<b>民意、利益團體介入</b>、直接民主困境、分權化、官僚預算極大化等，反而難獲理想效果 <span class="yr">114</span></td></tr>
+<tr><td class="k">政策失靈</td><td>單一政策</td><td>目標與目的界定不明、規劃過程與內容不當、執行能力不足、<b>政策環境快速變動</b><br><span class="tiny">陷阱：「政策環境相對穩定」<b>不是</b>失靈原因 <span class="yr">112</span></span></td></tr>
+<tr><td class="k">志願（慈善）失靈</td><td>非營利組織</td><td>慈善不足性、特殊性、父權性、業餘性</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">9-7　開放資料與電子化政府</h4>
+<p><b>開放資料 (Open Data) 的主要目標</b>：<span class="a">促進資料透明與公共應用創新</span> <span class="yr">114</span>。不是為了讓特定機構獲利，也不是降低治理程度。</p>
+<p><b>電子化政府的目的</b>：提升服務品質與效率、增進民眾參與、便民。<br><span class="tiny">陷阱：<span class="yr">114</span>「E 化政府之推動目的<b>最主要</b>係為了減少紙本作業」→ <b>錯</b>。減紙只是附帶效果，不是主要目的。</span></p>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c9">讀完了</label></div>
+
+<!-- ============ CH10 ============ -->
+<h3 class="ch" id="c10"><span class="n">CH 10</span>管理新途徑、公私協力與府際關係</h3>
+
+<h4 class="sub">10-1　管理工具一覽（四年考 17 題）</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:120px">工具</th><th>核心內容</th></tr></thead>
+<tbody>
+<tr><td class="k">目標管理 MBO</td><td>杜拉克提出。步驟：<b>① 主管設立初步目標 → ② 確立權責劃分並建立員工目標 → ④ 執行並確保資源與目標一致 → ③ 定期檢測評估</b> <span class="yr">114</span><br><span class="tiny">記法：先有目標（①②）→ 再去執行（④）→ 最後檢討（③）。「評估」必定在最後。</span></td></tr>
+<tr><td class="k">SMART 原則</td><td><b>S</b>pecific 明確具體｜<b>M</b>easurable 可衡量｜<b>A</b>chievable 可達成／可實現｜<b>R</b>elevant 關聯性（符合現實）｜<b>T</b>ime-bound 時限性<br><span class="tiny">陷阱：假選項「<b>可回饋</b>原則」 <span class="yr">112</span></span></td></tr>
+<tr><td class="k">SWOT 分析</td><td><b>S</b>trengths 優勢｜<b>W</b>eaknesses <b>劣勢</b> <span class="yr">115</span>｜<b>O</b>pportunities 機會｜<b>T</b>hreats <b>威脅</b><br><span class="tiny">陷阱：把 T 寫成「<b>趨勢</b> Trend」 <span class="yr">114</span></span></td></tr>
+<tr><td class="k">POSDCORB</td><td>古立克的七項管理功能：<b>P</b>lanning 計畫、<b>O</b>rganizing 組織、<b>S</b>taffing 用人、<b>D</b>irecting 指揮、<b>CO</b>ordinating 協調、<b>R</b>eporting 報告、<b>B</b>udgeting 預算</td></tr>
+<tr><td class="k">TQM 全面品質管理</td><td>事先預防、全員參與、顧客導向、持續改善 <span class="yr">115</span></td></tr>
+<tr><td class="k">標竿學習</td><td>與<b>表現優異者比較</b>並學習改進 <span class="yr">114</span></td></tr>
+<tr><td class="k">組織再造 BPR</td><td>韓默與錢辟：<b>① 從組織最基本的問題重新思考 ② 徹底更新作業流程 ③ 在成本、品質、服務、速度上獲得明顯改善</b><br><span class="tiny">陷阱：「汰除效率不彰的成員」<b>不是</b> BPR 的定義——BPR 改的是<b>流程</b>不是裁人 <span class="yr">113</span></span></td></tr>
+<tr><td class="k">平衡計分卡 BSC</td><td>四構面：財務、顧客、內部流程、學習與成長。是<b>績效管理／策略管理</b>工具，<b>不是</b>預算分配的衡量依據 <span class="yr">114</span></td></tr>
+<tr><td class="k">要徑法 CPM</td><td>用於大型專案時程管理。<b>要徑＝耗時最長的作業路徑；要徑上的活動一旦延遲，必然影響專案完工期限</b><br><span class="tiny">陷阱：說「要徑上的活動延遲也不會影響完工期限」→ <b>錯</b> <span class="yr">112</span></span></td></tr>
+<tr><td class="k">扁平化管理</td><td>減少層級，<b>提高命令傳達速度與效率</b> <span class="yr">114</span></td></tr>
+</tbody></table></div>
+
+<h4 class="sub">10-2　學習型組織與知識管理</h4>
+<p><b>聖吉 (Peter Senge) 第五項修練</b>：<b>自我超越、改善心智模式、建立共同願景、團隊學習、系統思考</b>（系統思考為第五項，整合前四項）。<br><span class="tiny">陷阱：<span class="yr">112</span> 假選項為<span class="a">利己取向</span>。</span></p>
+
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px"></th><th>外顯知識 Explicit</th><th>默會（內隱）知識 Tacit</th></tr></thead>
+<tbody>
+<tr><td class="k">能否表達</td><td><b>具語言性與結構性</b>，可用文字、影像、聲音留存</td><td><b>只可意會不可言傳</b></td></tr>
+<tr><td class="k">學習方式</td><td>閱讀文件、SOP、資料庫</td><td><b>情境模擬、感受、體會、師徒制</b> <span class="yr">115</span></td></tr>
+<tr><td class="k">核心</td><td>以「物／文件」為核心</td><td>以<b>「人」</b>為核心，透過人與人接觸傳遞</td></tr>
+</tbody></table></div>
+<p class="tiny">野中郁次郎的 SECI 模式：共同化 (Socialization)、外化 (Externalization)、結合 (Combination)、內化 (Internalization)。</p>
+
+<h4 class="sub">10-3　危機管理（努梅克三階段）</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">階段</th><th>管理活動</th></tr></thead>
+<tbody>
+<tr><td class="k">危機爆發<b>前</b></td><td><b>危機計畫系統、危機訓練系統、危機感應系統</b></td></tr>
+<tr><td class="k">危機爆發<b>時</b></td><td><b>危機指揮中心、危機資源管理系統、危機情境監測系統</b></td></tr>
+<tr><td class="k">危機解決<b>後</b></td><td><b>加速復原工作、危機調查評估（學習與修正）</b> <span class="yr">114</span></td></tr>
+</tbody></table></div>
+<p class="tiny">記法：<b>事前「計畫、訓練、感應」，事中「指揮、資源、監測」，事後「復原、評估」。</b>看到「評估／調查」就是事後。</p>
+
+<h4 class="sub">10-4　非營利組織（NPO）</h4>
+<p><b>定義</b>：法律禁止將剩餘收入或利潤分配給領導者與員工，須運用在未來服務或資助對象的組織，又稱<b>第三部門</b> <span class="yr">114</span>。核心特徵是<b>「不分配盈餘」</b>，不是「不能賺錢」。</p>
+<p><b>克拉馬 (Kramer) 的四種角色</b>：</p>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">角色</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k">先驅者</td><td>開發政府尚未提供的創新服務</td></tr>
+<tr><td class="k"><b>改革或倡導者</b></td><td>扮演<b>批評者、看守者、給予壓力者</b>，促使政府改善服務 <span class="yr">113</span></td></tr>
+<tr><td class="k">價值守護者</td><td>維護多元價值與公民參與</td></tr>
+<tr><td class="k">服務提供者</td><td>直接提供政府力有未逮的服務</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">10-5　民營化與 BOT 家族（極高頻）</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:74px">模式</th><th>全名</th><th>誰蓋</th><th>所有權</th><th>誰營運／結局</th></tr></thead>
+<tbody>
+<tr><td class="k">BOT</td><td>Build–Operate–Transfer</td><td>民間興建</td><td>營運期間歸民間</td><td>民間營運 → 期滿<b>移轉</b>給政府</td></tr>
+<tr><td class="k">BTO</td><td>Build–Transfer–Operate</td><td>民間興建</td><td><b>完工即移轉政府</b></td><td>再由民間營運 <span class="yr">112</span></td></tr>
+<tr><td class="k">BOO</td><td>Build–Own–Operate</td><td><b>民間自備私有土地</b>興建</td><td><b>永久歸民間所有</b></td><td>民間自營或委託第三人營運 <span class="yr">114</span></td></tr>
+<tr><td class="k">OT</td><td>Operate–Transfer</td><td><b>政府已蓋好</b></td><td>政府</td><td>交民間營運 → 期滿營運權<b>歸還政府</b> <span class="yr">113</span></td></tr>
+<tr><td class="k">ROT</td><td>Rehabilitate–Operate–Transfer</td><td>政府舊建物，民間<b>整建</b></td><td>政府</td><td>民間營運 → 期滿移轉</td></tr>
+<tr><td class="k">DBFO</td><td>Design–Build–Finance–Operate</td><td>民間設計、興建、融資、營運</td><td><b>完工後所有權移轉行政機關</b></td><td>民間營運 <span class="yr">112</span></td></tr>
+</tbody></table></div>
+<div class="box">
+<span class="lbl">三秒破解法</span>
+<p>看到題目先找兩個關鍵字：<br>
+<b>有沒有「Build」＝政府蓋的還是民間蓋的？</b>沒有 B（OT、ROT）＝政府蓋的。<br>
+<b>有沒有「Transfer」＝最後歸誰？</b>沒有 T（BOO）＝永遠是民間的。<br>
+<b>Transfer 排在哪＝什麼時候移轉？</b>排中間 (BTO)＝完工就給政府；排最後 (BOT)＝期滿才給政府。</p>
+</div>
+
+<p><b>民營化的目的</b>：調整政府角色發揮市場機能、增進事業自主提高經營績效、籌措建設財源加速公共投資、<b>增加</b>產業競爭。<br><span class="tiny">陷阱：<span class="yr">114</span>「減少產業競爭，有效利用資源」→ <b>錯</b>，民營化是為了<b>引進</b>競爭。</span></p>
+
+<h4 class="sub">10-6　公私協力（PPP）</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:96px">模式</th><th>關係</th></tr></thead>
+<tbody>
+<tr><td class="k">垂直分隔</td><td>公私各做各的，互不相干</td></tr>
+<tr><td class="k">垂直互補</td><td>私部門<b>依附於</b>公部門之下，單純配合</td></tr>
+<tr><td class="k"><b>水平互補</b></td><td>私部門<b>不再只是依存或配合</b>，與公部門形成<b>對等的合作夥伴</b>關係 <span class="yr">112</span></td></tr>
+<tr><td class="k">水平融合</td><td>公私完全融合為一體</td></tr>
+</tbody></table></div>
+<p><b>公私協力</b>＝由公部門與私部門<b>共同提供公共服務</b> <span class="yr">114</span>。</p>
+
+<h4 class="sub">10-7　行政生態理論（雷格斯 Riggs）</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:96px">社會型態</th><th>對應</th><th>行政特質</th></tr></thead>
+<tbody>
+<tr><td class="k">鎔合型<br>Fused</td><td><b>農業社會／低度開發</b></td><td>功能未分化，一人身兼多職</td></tr>
+<tr><td class="k">稜柱型<br>Prismatic</td><td><b>過渡社會／開發中</b></td><td><b>異質性</b>、形式主義、重疊性、異見性；<b>雷格斯理論主要在解釋開發中國家</b></td></tr>
+<tr><td class="k">繞射型<br>Diffracted</td><td><b>工業社會／已開發</b></td><td>重視法規制度、平等、高度專業分工</td></tr>
+</tbody></table></div>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">115</span>「下列敘述何者有誤」→ 答案<span class="a">主要解釋已開發國家的行政現象</span>。雷格斯的核心貢獻正是解釋<b>開發中（過渡型）國家</b>。</p></div>
+
+<h4 class="sub">10-8　行政責任確保途徑（吉伯特 Gilbert）</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th></th><th>正式</th><th>非正式</th></tr></thead>
+<tbody>
+<tr><td class="k">內部</td><td>行政管理監督、人事／主計／政風、上級指揮監督</td><td>行政倫理、專業主義、弊端揭發</td></tr>
+<tr><td class="k">外部</td><td><b>議會控制、司法控制（行政訴訟、國家賠償）</b>、監察院、選舉 <span class="yr">115</span></td><td>公民參與、利益團體、傳播媒體、資訊公開</td></tr>
+</tbody></table></div>
+<p class="tiny">判斷法：<b>「法院、立法院、監察院」＝外部正式</b>；<b>「上級、政風、主計」＝內部正式</b>；<b>「媒體、民眾、利益團體」＝外部非正式</b>；<b>「良心、專業倫理」＝內部非正式</b>。</p>
+
+<h4 class="sub">10-9　府際關係與行政裁量倫理</h4>
+<p><b>府際關係 (IGR)</b>：研究<b>中央與地方政府之間的互動與協調</b> <span class="yr">114</span>，也包含地方與地方之間。</p>
+<p><b>行政裁量的倫理困境</b>：角色衝突、認知衝突、<b>利益衝突</b>（個人利益與公務員義務相衝突）<span class="yr">112</span>、權威衝突。</p>
+<p><b>行政管理 vs 企業管理</b> <span class="yr">114</span>：</p>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:96px"></th><th>行政管理</th><th>企業管理</th></tr></thead>
+<tbody>
+<tr><td class="k">目的</td><td>公共利益</td><td>利潤</td></tr>
+<tr><td class="k">性質</td><td>具公權力與獨占性</td><td>面對市場自由競爭</td></tr>
+<tr><td class="k">運作重點</td><td>依法行政</td><td>生產行銷流程</td></tr>
+<tr><td class="k">績效評估</td><td><b>不易評估</b>（目標多元模糊）</td><td>容易評估（有財務指標）</td></tr>
+<tr><td class="k">受監督程度</td><td><b>高</b>（受民意、監察、審計監督）</td><td>相對低</td></tr>
+</tbody></table></div>
+<p class="tiny">陷阱：<span class="yr">114</span> 的錯誤選項正是把最後兩列<b>整個寫反</b>——「行政管理容易評估績效，企業管理容易受監督」。</p>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c10">讀完了</label></div>
+</div><!-- /#adm -->
+
+<div id="law">
+<h2 class="sec">第二篇　法律常識</h2>
+<p class="lead">法律常識 25 題的特性跟行政學完全相反：<b>幾乎不考理解，只考「記得不記得」</b>。範圍看似無邊無際，但四年下來的分布其實很集中——民法最多、行政法次之、再來是兩個訴訟法。本篇把條文按主題重新編組，最後再用〈數字速查總表〉收尾。</p>
+
+<div class="box trap">
+<span class="lbl">讀法律常識的唯一正確姿勢</span>
+<p>不要按照法典順序讀。要按<b>「主題」橫向集中</b>：把散在民法、民訴、刑訴、消保法裡的「各種期間」抓在一起背；把「視為 vs 推定」「無效 vs 撤銷 vs 效力未定」抓在一起辨。本篇每一章的表格都是這樣設計的。</p>
+</div>
+
+<!-- ============ CH11 ============ -->
+<h3 class="ch" id="c11"><span class="n">CH 11</span>法學基礎與中央法規標準法</h3>
+
+<h4 class="sub">11-1　法律位階（金字塔）</h4>
+<div class="chain">
+  <div class="s"><b>憲法</b><span>最高位階</span></div><div class="ar">＞</div>
+  <div class="s"><b>法律</b><span>法・律・條例・通則</span></div><div class="ar">＞</div>
+  <div class="s"><b>命令</b><span>規程・規則・細則・辦法<br>綱要・標準・準則</span></div>
+</div>
+<p><b>中央法規標準法 §11</b>：法律不得牴觸<b>憲法</b>；命令不得牴觸憲法或法律；下級機關訂定之命令不得牴觸上級機關之命令。違反者無效。<span class="yr">114</span><span class="yr">115</span></p>
+
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">原則</th><th>意涵</th></tr></thead>
+<tbody>
+<tr><td class="k"><b>法律優位</b>原則<br><span class="tiny">（消極的依法行政）</span></td><td><b>法律不得牴觸憲法，命令不得牴觸憲法或法律</b>——下位階不得違反上位階 <span class="yr">115</span></td></tr>
+<tr><td class="k"><b>法律保留</b>原則<br><span class="tiny">（積極的依法行政）</span></td><td>涉及人民權利義務之重要事項，<b>必須有法律明文依據</b>才能為之</td></tr>
+<tr><td class="k">法律不溯及既往</td><td>新法原則上不適用於施行前已終結之事實</td></tr>
+<tr><td class="k">法安定性原則</td><td>法秩序應維持穩定，人民得預見</td></tr>
+</tbody></table></div>
+<p class="tiny">一句話分辨：<b>優位＝不可以牴觸（禁止違反）；保留＝沒有法律就不可以做（要求授權）。</b></p>
+
+<h4 class="sub">11-2　中央法規標準法・必背條文</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:56px">條</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k">§2</td><td>法律得定名為<b>法、律、條例、通則</b></td></tr>
+<tr><td class="k">§3</td><td>命令得定名為<b>規程、規則、細則、辦法、綱要、標準、準則</b>（七種）</td></tr>
+<tr><td class="k">§8</td><td>法規條文應分<b>條</b>直行書寫，冠以「第某條」，並得分為<b>項、款、目</b><br>→ 書寫順序：<b>條 → 項 → 款 → 目</b> <span class="yr">113</span></td></tr>
+<tr><td class="k">§12–13</td><td>法規明定「自公布日施行」者，<b>自公布之日起算至第 3 日起發生效力</b><br><span class="tiny">例：7/1 公布 → 7/3 生效（公布日算第 1 日）</span></td></tr>
+<tr><td class="k">§14</td><td>法規特定有施行日期者，<b>自該特定日起發生效力</b> <span class="yr">112</span></td></tr>
+<tr><td class="k">§20</td><td>法規<b>修正</b>之情形：① 基於政策或事實之需要 ② 因有關法規之修正或廢止而應配合修正 ③ <b>規定之主管機關或執行機關已裁併或變更</b> <span class="yr">113</span> ④ 同一事項規定於二以上法規無分別存在必要</td></tr>
+<tr><td class="k">§21</td><td>法規<b>廢止</b>之情形：機關裁併而無承受、規範事項已完成或廢棄、法規已無適用或準用、同一事項已定有新法規</td></tr>
+</tbody></table></div>
+<div class="box trap"><span class="lbl">修正 vs 廢止（每年必混）</span>
+<p><b>主管機關「裁併或變更」→ 修正</b>（法規本身還要用，只是機關名稱要改）<span class="yr">113</span><br>
+<b>機關裁併「而無承受其業務之機關」→ 廢止</b>（整個法規沒人管了，不必存在）</p></div>
+
+<h4 class="sub">11-3　法律解釋方法</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:92px">方法</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k">文義解釋</td><td>依法條文字的通常意義解釋（最優先）</td></tr>
+<tr><td class="k">體系解釋</td><td>參酌該條在整部法律中的位置與關聯</td></tr>
+<tr><td class="k"><b>歷史解釋</b></td><td><b>依立法過程資料（立法理由、審查紀錄），探究立法者當時的目的與原意</b> <span class="yr">113</span></td></tr>
+<tr><td class="k">目的解釋</td><td>依法律所欲達成的目的解釋</td></tr>
+<tr><td class="k">合憲解釋</td><td>有多種解釋可能時，選擇合於憲法者</td></tr>
+<tr><td class="k">擴張解釋</td><td>把文義範圍放寬</td></tr>
+<tr><td class="k">限縮解釋</td><td>把文義範圍縮小</td></tr>
+<tr><td class="k">當然解釋</td><td>舉重明輕、舉輕明重（「禁止攀折花木」當然也禁止砍樹）</td></tr>
+<tr><td class="k">反面解釋</td><td>從正面規定推出反面結論</td></tr>
+<tr><td class="k">類推適用</td><td>法律未規定之事項，比附援引相類似之規定（<b>刑法禁止不利被告之類推</b>）</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">11-4　法律的分類</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">分類</th><th>說明與例子</th></tr></thead>
+<tbody>
+<tr><td class="k">實體法／程序法</td><td>實體法＝規定權利義務本身（民法、刑法、公司法）<br>程序法＝規定實現權利的程序（民訴、<b>刑訴</b>、行政程序法、行政訴訟法）</td></tr>
+<tr><td class="k">普通法／特別法</td><td><b>特別法優於普通法</b>。例：民法（普通）vs 消保法、公司法（特別）</td></tr>
+<tr><td class="k">公法／私法</td><td>公法＝憲法、行政法、刑法、訴訟法；私法＝民法、商事法</td></tr>
+<tr><td class="k">強行法／任意法</td><td>強行法不得以當事人合意排除；任意法可以</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">11-5　兩組最常考的法律效果用語</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:96px">用語</th><th>意義</th><th>能否舉反證推翻</th></tr></thead>
+<tbody>
+<tr><td class="k"><b>推定</b></td><td>法律先暫時認定某事實，但允許當事人舉證推翻</td><td><b>可以</b></td></tr>
+<tr><td class="k"><b>視為</b>（擬制）</td><td>法律強制把 A 當作 B，<b>不容反證</b></td><td><b>不可以</b></td></tr>
+</tbody></table></div>
+<div class="tw"><table>
+<thead><tr><th style="width:96px">效力狀態</th><th>意義</th><th>典型例子</th></tr></thead>
+<tbody>
+<tr><td class="k">無效</td><td><b>自始、當然、確定</b>不生效力，不待主張</td><td>違反強制禁止規定；股東會決議<b>內容</b>違反法令或章程 <span class="yr">112</span>；定型化契約違反公告「不得記載事項」 <span class="yr">115</span>；抵銷附條件或期限 <span class="yr">112</span></td></tr>
+<tr><td class="k">得撤銷</td><td>先有效，經撤銷後<b>溯及</b>失效</td><td>受詐欺脅迫之意思表示；股東會<b>召集程序或決議方法</b>違法 → 股東得訴請法院撤銷</td></tr>
+<tr><td class="k">效力未定</td><td>須待他人承認才確定</td><td>限制行為能力人未得允許之契約；無權處分</td></tr>
+</tbody></table></div>
+<p class="tiny"><b>公司法的經典對比</b>：決議<b>內容</b>違法 → <b>無效</b>（§191）；決議<b>召集程序／方法</b>違法 → 得<b>訴請撤銷</b>（§189）。內容＝無效，程序＝撤銷。</p>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c11">讀完了</label></div>
+
+<!-- ============ CH12 ============ -->
+<h3 class="ch" id="c12"><span class="n">CH 12</span>憲法與中央政府</h3>
+
+<h4 class="sub">12-1　五院職權速查</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:80px">機關</th><th>職權</th></tr></thead>
+<tbody>
+<tr><td class="k">立法院</td><td><b>議決法律案</b>（憲 §63）<span class="yr">114</span>、預算案、戒嚴案、大赦案、宣戰案、媾和案、條約案；追認緊急命令 <span class="yr">112</span>；行使人事同意權；提出總統副總統彈劾案、罷免案</td></tr>
+<tr><td class="k">行政院</td><td>國家最高行政機關；提出預算案、決算</td></tr>
+<tr><td class="k"><b>司法院</b></td><td><b>民事、刑事、行政訴訟之審判｜公務員之懲戒｜統一解釋法律及命令｜憲法解釋</b><br><span class="tiny">陷阱：<b>公務人員之銓敘屬考試院</b>，不是司法院 <span class="yr">115</span></span></td></tr>
+<tr><td class="k">考試院</td><td>考試；公務人員之<b>銓敘</b>、保障、撫卹、退休；任免、考績、級俸、陞遷、褒獎之法制事項</td></tr>
+<tr><td class="k">監察院</td><td>彈劾、糾舉、糾正、審計</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">12-2　憲法數字題</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:150px">項目</th><th class="c" style="width:90px">數字</th><th>條文</th></tr></thead>
+<tbody>
+<tr><td>選舉權年齡</td><td class="c"><b>滿 20 歲</b></td><td>憲 §130</td></tr>
+<tr><td>被選舉權年齡（一般）</td><td class="c">滿 23 歲</td><td>憲 §130</td></tr>
+<tr><td><b>總統、副總統</b>被選舉年齡</td><td class="c"><b>滿 40 歲</b></td><td>憲 §45 <span class="yr">113</span></td></tr>
+<tr><td>立法委員法定總額</td><td class="c"><b>113 人</b></td><td>增修 §4 <span class="yr">113</span></td></tr>
+<tr><td>立委任期</td><td class="c">4 年</td><td>增修 §4</td></tr>
+<tr><td>緊急命令發布後送立法院追認</td><td class="c">10 日內</td><td>增修 §2 <span class="yr">112</span></td></tr>
+</tbody></table></div>
+<p class="tiny">立委 113 人 = 區域 73 ＋ 原住民 6（平地 3、山地 3）＋ 全國不分區及僑居國外國民 34。</p>
+
+<h4 class="sub">12-3　選舉方法與立法院臨時會</h4>
+<p><b>憲法 §129</b>：本憲法所規定之各種選舉，除本憲法別有規定外，以<b>普通、平等、直接及無記名投票</b>之方法行之。<br><span class="tiny">陷阱：<span class="yr">115</span>「非屬憲法 §129 之選舉方法」→ 答案<span class="a">間接選舉</span>（應為<b>直接</b>選舉）。</span></p>
+<p><b>立法院臨時會</b>（憲 §69）：① 總統之咨請 ② 立法委員<b>四分之一以上</b>之請求。<br><span class="tiny">陷阱：<span class="yr">112</span> 選項寫「行政院院長之咨請」→ 錯，是<b>總統</b>。</span></p>
+
+<h4 class="sub">12-4　憲法 §144（台電考生務必記）</h4>
+<div class="box law">
+<span class="lbl">憲法 §144</span>
+<p>「<b>公用事業及其他有獨占性之企業，以公營為原則</b>，其經法律許可者，得由國民經營之。」<span class="yr">114</span></p>
+</div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c12">讀完了</label></div>
+
+<!-- ============ CH13 ============ -->
+<h3 class="ch" id="c13"><span class="n">CH 13</span>行政程序法與行政行為</h3>
+
+<h4 class="sub">13-1　行政行為的七種類型（先建立地圖）</h4>
+<div class="map">
+<div class="r">行政行為・分類地圖</div>
+<ul>
+<li class="b1">對外發生法律效果
+  <ul>
+  <li class="b2"><b>行政處分</b>—對<b>具體事件</b>、<b>個別</b>對外直接發生法律效果的<b>單方</b>行為</li>
+  <li class="b2"><b>法規命令</b>—對<b>不特定多數人</b>、<b>抽象</b>事項，對外<b>直接</b>發生法規範效力</li>
+  <li class="b2"><b>行政契約</b>—公法上的雙方合意</li>
+  </ul></li>
+<li class="b1">原則上不直接對外
+  <ul>
+  <li class="b2"><b>行政規則</b>—上級對下級、長官對屬官，<b>一般、抽象</b>之規定，<b>不直接對外</b>發生法規範效力</li>
+  <li class="b2"><b>行政指導</b>—不具法律上強制力的輔導、建議</li>
+  <li class="b2"><b>行政計畫</b>—方法、步驟、措施的設計與規劃</li>
+  <li class="b2"><b>事實行為</b>—如宣導、統計</li>
+  </ul></li>
+</ul>
+</div>
+
+<h4 class="sub">13-2　四個最常考的定義條文</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:96px">行為</th><th>法條定義（考題幾乎逐字照抄）</th></tr></thead>
+<tbody>
+<tr><td class="k">行政計畫<br><span class="tiny">§163</span></td><td>行政機關為將來<b>一定期限內</b>達成特定之目的或實現一定之構想，事前就達成該目的或實現該構想有關之<b>方法、步驟或措施</b>等所為之<b>設計與規劃</b> <span class="yr">114</span></td></tr>
+<tr><td class="k">行政指導<br><span class="tiny">§165</span></td><td>行政機關在其職權或所掌事務範圍內，為實現一定之行政目的，以<b>輔導、協助、勸告、建議或其他不具法律上強制力之方法</b>，促請<b>特定人</b>為一定作為或不作為之行為</td></tr>
+<tr><td class="k">行政規則<br><span class="tiny">§159</span></td><td>上級機關對下級機關、或長官對屬官，依其權限或職權為規範機關內部秩序及運作，所為<b>非直接對外</b>發生法規範效力之<b>一般、抽象</b>之規定</td></tr>
+<tr><td class="k">陳情<br><span class="tiny">§168</span></td><td>人民對於行政興革之建議、行政法令之查詢、行政違失之舉發或行政上權益之維護，得向主管機關<b>陳情</b> <span class="yr">115</span></td></tr>
+</tbody></table></div>
+
+<div class="box trap">
+<span class="lbl">行政指導的三個固定考點</span>
+<p>① 應以<b>不具法律上強制力</b>之方法為之 ✔<br>
+② 應<b>明示目的、內容及負責指導者</b>（§167）✔<br>
+③ 相對人<b>明確拒絕</b>時，行政機關<b>應即停止，並不得據此對相對人為不利之處置</b>（§166 II）✔ <span class="yr">113</span><br>
+④ 行政指導係對<b>「特定人」</b>為之 —— 選項若寫「<b>不特定人</b>」即為<b>錯誤</b> <span class="yr">114</span></p>
+</div>
+
+<div class="box trap">
+<span class="lbl">行政規則的固定陷阱</span>
+<p><span class="yr">113</span>「有關行政規則之敘述，下列何者有誤」→ 答案<span class="a">直接對外發生法規範效力</span>。<br>
+<b>行政規則＝對內；法規命令＝對外。</b>行政規則應<b>下達</b>下級機關或屬官；法規命令應<b>發布</b>。</p>
+</div>
+
+<h4 class="sub">13-3　行政處分的瑕疵與更正</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">情形</th><th>處理</th></tr></thead>
+<tbody>
+<tr><td class="k">顯然錯誤<br><span class="tiny">誤寫、誤算等</span></td><td><b>處分機關得隨時或依申請更正</b>（§101）——不必訴願、不必訴訟、處分也不會因此無效 <span class="yr">113</span></td></tr>
+<tr><td class="k">違法處分</td><td>原則上得<b>撤銷</b>，溯及失效</td></tr>
+<tr><td class="k">合法處分</td><td>因情事變更等得<b>廢止</b>，向將來失效</td></tr>
+<tr><td class="k">無效處分</td><td>重大明顯瑕疵（§111）：不能由書面得知處分機關、應以證書作成而未給予、內容對任何人均屬不能實現、所要求之行為構成犯罪、違背公序良俗等</td></tr>
+</tbody></table></div>
+<p class="tiny">同一個觀念在民訴也出現：<b>民訴 §232 判決如有誤寫、誤算或其他類此之顯然錯誤 → 法院得依聲請或依職權以「裁定」更正</b> <span class="yr">114</span>。行政處分更正、民事判決更正，兩題都考過。</p>
+
+<h4 class="sub">13-4　公法上請求權時效</h4>
+<div class="box law">
+<span class="lbl">行政程序法 §131</span>
+<p>公法上之請求權，於請求權人為<b>人民</b>時，除法律另有規定外，因<b>五年</b>間不行使而消滅；於請求權人為<b>行政機關</b>時，因<b>十年</b>間不行使而消滅。<span class="yr">115</span></p>
+<p class="tiny">記法：<b>人民 5 年、機關 10 年</b>（機關比較會拖，給它久一點）。</p>
+</div>
+
+<h4 class="sub">13-5　行政法基本原則</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">原則</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k">依法行政</td><td>法律優位 ＋ 法律保留</td></tr>
+<tr><td class="k">明確性原則</td><td>行政行為之內容應明確（§5）</td></tr>
+<tr><td class="k">平等原則</td><td>非有正當理由，不得為差別待遇（§6）</td></tr>
+<tr><td class="k">比例原則<br><span class="tiny">§7</span></td><td>① <b>適當性</b>：方法有助於目的達成 ② <b>必要性</b>：選擇損害最小者 ③ <b>衡量性</b>（狹義比例）：損害與目的須成比例<br><span class="tiny">口訣：<b>合目的、最小侵害、不過當</b></span></td></tr>
+<tr><td class="k">誠信與信賴保護</td><td>行政行為應以誠實信用為之，並保護人民正當合理之信賴（§8）</td></tr>
+<tr><td class="k">有利不利一律注意</td><td>應於當事人有利及不利之情形一律注意（§9）</td></tr>
+<tr><td class="k">裁量不得逾越濫用</td><td>§10</td></tr>
+</tbody></table></div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c13">讀完了</label></div>
+
+<!-- ============ CH14 ============ -->
+<h3 class="ch" id="c14"><span class="n">CH 14</span>行政罰、行政執行與行政救濟</h3>
+
+<h4 class="sub">14-1　罰金 vs 罰鍰（每年都在考）</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:80px"></th><th>罰金</th><th>罰鍰</th></tr></thead>
+<tbody>
+<tr><td class="k">性質</td><td><b>刑罰</b>（刑法主刑之一）</td><td><b>行政罰</b></td></tr>
+<tr><td class="k">誰裁處</td><td>法院判決</td><td>行政機關</td></tr>
+<tr><td class="k">依據</td><td>刑法、刑事特別法</td><td>行政罰法、各行政法規</td></tr>
+</tbody></table></div>
+<p class="tiny"><span class="yr">113</span> 直接考：<b>罰金屬刑罰、罰鍰屬行政罰</b>。另記：<b>沒收</b>與<b>沒入</b>亦同此邏輯（沒收＝刑法，沒入＝行政罰）。</p>
+
+<h4 class="sub">14-2　行政罰法 §2　四種裁罰性不利處分</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">類型</th><th>例示</th></tr></thead>
+<tbody>
+<tr><td class="k">限制或禁止行為</td><td>限制或停止營業、吊扣證照、命令停工、禁止製造販賣、禁止出入港口機場</td></tr>
+<tr><td class="k">剝奪或消滅資格、權利</td><td>命令歇業、<b>命令解散</b>、撤銷或廢止許可、吊銷證照、註銷登記</td></tr>
+<tr><td class="k"><b>影響名譽之處分</b></td><td><b>公布姓名或名稱</b>、公布照片</td></tr>
+<tr><td class="k"><b>警告性處分</b></td><td><b>警告、告誡、記點、記次、講習、輔導教育</b></td></tr>
+</tbody></table></div>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">115</span>「非屬警告性處分」→ 答案<span class="a">公布姓名或名稱</span>（那是<b>影響名譽</b>之處分）。<br>口訣：警告性＝<b>警、誡、點、次、講、輔</b>；名譽性＝<b>公布姓名、公布照片</b>。</p></div>
+
+<h4 class="sub">14-3　行政執行法</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">項目</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k">執行方法</td><td>① 公法上金錢給付義務之執行 ② 行為或不行為義務之執行（<b>代履行、怠金</b>）③ <b>即時強制</b></td></tr>
+<tr><td class="k">即時強制手段</td><td>對<b>人</b>之管束、對<b>物</b>之扣留使用處置或限制使用、對<b>住宅建築物</b>之進入、其他必要處置</td></tr>
+<tr><td class="k"><b>管束時限</b></td><td><b>對於人之管束，不得逾 24 小時</b>（§37 II）<span class="yr">112</span></td></tr>
+<tr><td class="k">執行時間</td><td>原則不得於夜間、星期日或其他休息日為之</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">14-4　行政救濟流程圖</h4>
+<div class="chain">
+  <div class="s"><b>行政處分</b><span>違法或不當</span></div><div class="ar">→</div>
+  <div class="s"><b>訴願</b><span>處分書達到次日起<br><b>30 日</b>內提起</span></div><div class="ar">→</div>
+  <div class="s"><b>行政訴訟</b><span>訴願決定書送達次日起<br><b>2 個月</b>內起訴</span></div><div class="ar">→</div>
+  <div class="s"><b>上訴 / 抗告</b><span>最高行政法院</span></div>
+</div>
+
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:120px">項目</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k">訴願期間</td><td>自行政處分達到或公告期滿之<b>次日起 30 日</b>內</td></tr>
+<tr><td class="k">訴願管轄</td><td>向原處分機關遞送，由<b>上級機關</b>受理</td></tr>
+<tr><td class="k">訴願決定種類</td><td>① <b>不受理</b>（程序不合法，如非屬訴願救濟範圍之事項 <span class="yr">115</span>、逾期）② <b>駁回</b>（無理由）③ <b>撤銷或變更原處分</b>（有理由）</td></tr>
+<tr><td class="k"><b>行政訴訟起訴期間</b></td><td>訴願決定書送達之<b>次日起 2 個月</b>內 <span class="yr">113</span></td></tr>
+</tbody></table></div>
+
+<h4 class="sub">14-5　行政訴訟四種類型（判斷題必考）</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:110px">類型</th><th>使用時機</th><th>白話</th></tr></thead>
+<tbody>
+<tr><td class="k">撤銷訴訟</td><td>不服<b>已作成</b>的違法行政處分，請求撤銷它</td><td>「把這個處分撤掉」</td></tr>
+<tr><td class="k"><b>課予義務訴訟</b></td><td>① <b>怠為處分</b>：依法申請，機關於法定期間內<b>應作為而不作為</b><br>② <b>拒絕申請</b>：機關駁回申請<br>→ 經訴願仍未獲救濟者 <span class="yr">115</span></td><td>「叫機關做出我要的處分」</td></tr>
+<tr><td class="k">確認訴訟</td><td>確認處分無效、確認公法上法律關係成立或不成立</td><td>「確認這件事有效／無效」</td></tr>
+<tr><td class="k">一般給付訴訟</td><td>請求作成行政處分<b>以外</b>之特定作為、不作為或給付（如請求返還溢繳費用）</td><td>「給我錢／做某件事」</td></tr>
+</tbody></table></div>
+<div class="box">
+<span class="lbl">一個判斷口訣</span>
+<p><b>我要機關「不要做」→ 撤銷訴訟。我要機關「去做」→ 課予義務訴訟。</b><br>
+<span class="yr">115</span> 那題：申請攤販營業許可證，機關逾期不理，訴願被駁回 → 人民要的是<b>拿到許可證</b>（要機關去做），所以是<b>課予義務訴訟</b>。</p>
+</div>
+<p class="tiny">我國行政訴訟現制為<b>三級二審</b>（地方行政訴訟庭 → 高等行政法院 → 最高行政法院）。</p>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c14">讀完了</label></div>
+<!-- ============ CH15 ============ -->
+<h3 class="ch" id="c15"><span class="n">CH 15</span>民法：總則與債編</h3>
+<p class="lead">民法四年考 18 題，是法律常識的最大宗。</p>
+
+<h4 class="sub">15-1　權利能力與行為能力</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:130px">類別</th><th>對象</th><th>法律行為效力</th></tr></thead>
+<tbody>
+<tr><td class="k">完全行為能力人</td><td><b>滿 18 歲之成年人</b> <span class="tag hot">修法</span>；未成年已結婚者（現制已無此情形）</td><td>所為法律行為完全有效，<b>不需法定代理人同意</b></td></tr>
+<tr><td class="k">限制行為能力人</td><td>滿 7 歲以上之未成年人</td><td>單獨行為 → <b>無效</b>；契約行為 → <b>效力未定</b>（須法代承認）<br>例外有效：純獲法律上利益、依年齡身分日常必需</td></tr>
+<tr><td class="k">無行為能力人</td><td>未滿 7 歲之未成年人、<b>受監護宣告</b>之人</td><td>所為法律行為<b>無效</b>，由法定代理人代為</td></tr>
+<tr><td class="k">受輔助宣告之人</td><td>因精神障礙致意思表示能力顯有不足者</td><td><b>並非無行為能力</b>；僅特定重要行為須經輔助人同意</td></tr>
+</tbody></table></div>
+<div class="box trap">
+<span class="lbl"><span class="yr">112</span> 那題的完整拆解</span>
+<p>「甲為年滿 18 歲且未受監護宣告亦未受輔助宣告之人」——<br>
+(A) 依公職人員選舉罷免法，甲有選舉權 → <b>✘ 錯誤</b>。選舉權須<b>滿 20 歲</b>（憲法 §130），民法成年下修為 18 歲<b>並未</b>連動修改選舉年齡。<br>
+(B) 甲訂立之契約無須法代同意即有效 → ✔<br>
+(C) 甲得擔任公司之發起人 → ✔（公司法 §128 發起人須有行為能力）<br>
+(D) 甲所為之單獨行為有效 → ✔</p>
+</div>
+
+<h4 class="sub">15-2　死亡宣告</h4>
+<p>民法 §9：受死亡宣告者，以<b>判決內所確定死亡之時</b>，<b>推定</b>其為死亡。<span class="yr">113</span></p>
+<p class="tiny">兩個關鍵字都會被動手腳：時點必須是<b>「判決內所確定死亡之時」</b>（不是聲請之時）；效果必須是<b>「推定」</b>（不是「視為」，因為人可能還活著，必須允許反證）。</p>
+
+<h4 class="sub">15-3　消滅時效（超高頻・務必成表記憶）</h4>
+<div class="tw"><table>
+<thead><tr><th class="c" style="width:74px">期間</th><th>請求權類型</th><th>條</th></tr></thead>
+<tbody>
+<tr><td class="c k">15 年</td><td><b>一般請求權</b>（法律無特別規定者）</td><td>§125</td></tr>
+<tr><td class="c k">5 年</td><td><b>利息、紅利、租金、贍養費、退職金</b>，及其他<b>1 年或不及 1 年之定期給付債權</b><br><span class="tiny">→ <b>房屋租金債權</b>之消滅時效為 <b>5 年</b> <span class="yr">115</span></span></td><td>§126</td></tr>
+<tr><td class="c k">2 年</td><td>① 旅店、飲食店、娛樂場之住宿飲食座費及墊款<br>② 運送費及運送人墊款<br>③ 以租賃動產為營業者之租價<br>④ <b>醫生、藥師、看護生之診費、藥費、報酬及墊款</b><br>⑤ <b>律師、會計師、公證人之報酬及其墊款</b> <span class="yr">114</span><br>⑥ 律師會計師公證人所收當事人物件之交還<br>⑦ 技師、承攬人之報酬及其墊款<br>⑧ <b>商人、製造人、手工業人所供給之商品及產物之代價</b></td><td>§127</td></tr>
+</tbody></table></div>
+<div class="box">
+<span class="lbl">§127 的 2 年怎麼記</span>
+<p class="mn">住吃玩、運送租、醫藥律會、技師承攬、商人貨款</p>
+<p class="tiny">關鍵判斷：<b>「專業人士的報酬」與「商人的貨款」都是 2 年</b>；<b>「錢生錢」（利息、租金）是 5 年</b>；其他沒講到的就是 <b>15 年</b>。<br><span class="yr">112</span> 考「時效最長者」→ 選項是承攬人報酬(2)、<b>利息(5)</b>、商品代價(2)、律師報酬(2) → 答案<b>利息</b>。</p>
+</div>
+<p><b>時效完成的效果</b>：債務人取得<b>拒絕給付抗辯權</b>（不是債權消滅）。民法 §144 II：請求權已經時效消滅，<b>債務人仍為履行之給付者，不得以不知時效為理由請求返還</b>；以契約承認該債務或提出擔保者亦同。<span class="yr">113</span></p>
+
+<h4 class="sub">15-4　債之發生四大原因</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:96px">原因</th><th>要件／定義</th></tr></thead>
+<tbody>
+<tr><td class="k">契約</td><td>當事人互相意思表示一致</td></tr>
+<tr><td class="k"><b>不當得利</b><br><span class="tiny">§179</span></td><td><b>無法律上之原因而受利益，致他人受損害者，應返還其利益。雖有法律上之原因，而其後已不存在者，亦同。</b> <span class="yr">114</span></td></tr>
+<tr><td class="k">無因管理</td><td>未受委任，並無義務，而為他人管理事務</td></tr>
+<tr><td class="k">侵權行為</td><td>因故意或過失，不法侵害他人之權利者，負損害賠償責任（§184）</td></tr>
+</tbody></table></div>
+<p class="tiny">另有<b>懸賞廣告</b>（以廣告聲明對完成一定行為之人給與報酬）。</p>
+
+<h4 class="sub">15-5　各種之債・定義反查表（超高頻）</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:74px">契約</th><th>定義關鍵字</th><th>年度</th></tr></thead>
+<tbody>
+<tr><td class="k">買賣</td><td>一方移轉財產權於他方，他方支付價金</td><td></td></tr>
+<tr><td class="k">租賃</td><td>一方以物租與他方使用收益，他方支付租金</td><td></td></tr>
+<tr><td class="k">承攬</td><td>一方為他方<b>完成一定之工作</b>，他方於工作完成後給付報酬<br><span class="tiny">重點在「完成結果」</span></td><td></td></tr>
+<tr><td class="k">僱傭</td><td>一方於一定或不定期限內為他方<b>服勞務</b>，他方給付報酬<br><span class="tiny">重點在「提供勞務本身」</span></td><td></td></tr>
+<tr><td class="k"><b>委任</b></td><td>當事人約定，一方<b>委託他方處理事務</b>，他方允為處理<br><span class="tiny">關於勞務給付之契約，不屬於法律所定其他契約之種類者，<b>適用「委任」之規定</b>（§529）<span class="yr">115</span></span></td><td><span class="yr">113</span><span class="yr">115</span></td></tr>
+<tr><td class="k"><b>居間</b></td><td>一方為他方<b>報告訂約之機會</b>或<b>為訂約之媒介</b>，他方給付報酬<br><span class="tiny">白話＝仲介、介紹人</span></td><td><span class="yr">115</span></td></tr>
+<tr><td class="k">寄託</td><td>一方以物交付他方，他方允為保管</td><td></td></tr>
+<tr><td class="k">合會</td><td>會首與會員間及會員相互間之金錢給付契約（標會）</td><td></td></tr>
+</tbody></table></div>
+<div class="box">
+<span class="lbl">承攬 / 僱傭 / 委任 三秒分辨</span>
+<p><b>承攬</b>＝我只要<b>結果</b>（裝潢完成才付錢）<br><b>僱傭</b>＝我買你的<b>時間</b>（上班就有薪水）<br><b>委任</b>＝我請你<b>處理事務</b>（律師、經理人，重在信賴與裁量）<br>還分不清時記：<b>勞務契約找不到歸類 → 一律適用委任。</b></p>
+</div>
+
+<h4 class="sub">15-6　租賃與抵銷的兩個定番條文</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:74px">條</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k">§422</td><td>不動產之租賃契約，其期限<b>逾一年</b>者，應以字據訂立之，未以字據訂立者，<b>視為不定期限之租賃</b> <span class="yr">112</span></td></tr>
+<tr><td class="k">§335 II</td><td>抵銷之意思表示，<b>附有條件或期限者，無效</b> <span class="yr">112</span></td></tr>
+</tbody></table></div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c15">讀完了</label></div>
+
+<!-- ============ CH16 ============ -->
+<h3 class="ch" id="c16"><span class="n">CH 16</span>民法：物權、親屬與繼承</h3>
+
+<h4 class="sub">16-1　擔保物權三兄弟（定義反查）</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:96px">物權</th><th>定義關鍵字</th><th>要不要移轉占有</th></tr></thead>
+<tbody>
+<tr><td class="k">抵押權<br><span class="tiny">§860</span></td><td>債權人對於債務人或第三人<b>不移轉占有</b>而供擔保之<b>不動產</b>，得就其賣得價金優先受償</td><td><b>不移轉</b>（房子還你住）</td></tr>
+<tr><td class="k"><b>動產質權</b><br><span class="tiny">§884</span></td><td>債權人對於債務人或第三人<b>移轉占有</b>而供其債權擔保之<b>動產</b>，得就該動產賣得價金優先受償 <span class="yr">114</span></td><td><b>要移轉</b>（東西押在我這）</td></tr>
+<tr><td class="k">留置權</td><td>債權人<b>占有</b>他人之動產，其債權之發生與該動產有牽連關係，債權已屆清償期未受清償者，得留置之</td><td>本來就占有</td></tr>
+<tr><td class="k">典權</td><td>支付典價，<b>占有他人之不動產</b>而為使用收益之權</td><td>用益物權，非擔保物權</td></tr>
+</tbody></table></div>
+<p class="tiny">判斷公式：<b>不動產＋不移轉占有 → 抵押權｜動產＋移轉占有 → 質權</b>。</p>
+
+<p><b>普通抵押權之擔保範圍</b>（§861）：<b>原債權、利息、遲延利息、違約金、實行抵押權之費用</b>。<br><span class="tiny">陷阱：<span class="yr">115</span>「非屬擔保範圍」→ 答案<span class="a">因抵押物隱有瑕疵而生之損害賠償</span>。</span></p>
+
+<h4 class="sub">16-2　物權變動的生效時點</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:130px">原因</th><th>動產</th><th>不動產</th></tr></thead>
+<tbody>
+<tr><td class="k">法律行為（買賣等）</td><td><b>交付</b>時生效</td><td><b>登記</b>時生效</td></tr>
+<tr><td class="k"><b>繼承</b>、強制執行、徵收、法院判決</td><td colspan="2"><b>非因法律行為而取得 → 不待交付或登記，於「原因發生時」即生效。<br>繼承 → 被繼承人死亡時</b> <span class="yr">112</span></td></tr>
+</tbody></table></div>
+
+<h4 class="sub">16-3　親等計算</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:130px">關係</th><th>親系與親等</th></tr></thead>
+<tbody>
+<tr><td class="k">父母、子女</td><td>直系血親 1 親等</td></tr>
+<tr><td class="k">祖父母、孫子女</td><td>直系血親 2 親等</td></tr>
+<tr><td class="k">兄弟姊妹</td><td>旁系血親 2 親等</td></tr>
+<tr><td class="k">伯叔姑舅姨、姪甥</td><td>旁系血親 3 親等</td></tr>
+<tr><td class="k"><b>表（堂）兄弟姊妹</b></td><td><b>旁系血親 4 親等</b> <span class="yr">112</span></td></tr>
+<tr><td class="k">配偶之血親</td><td>血親之配偶、配偶之血親、配偶之血親之配偶 → <b>姻親</b></td></tr>
+</tbody></table></div>
+<p class="tiny">旁系血親算法：從己身<b>數到同源的直系尊親屬</b>，再往下數到該親屬。表兄弟＝我→父(1)→祖父(2)→伯父(3)→表兄(4)。</p>
+
+<h4 class="sub">16-4　結婚與家庭成員</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">項目</th><th>規定</th></tr></thead>
+<tbody>
+<tr><td class="k">結婚年齡</td><td><b>男女未滿 18 歲者，不得結婚</b> <span class="tag hot">修法</span>（已統一為 18 歲）</td></tr>
+<tr><td class="k">結婚形式要件</td><td>應以<b>書面</b>為之，有<b>二人以上證人簽名</b>，並應由<b>雙方當事人向戶政機關為結婚之登記</b></td></tr>
+<tr><td class="k">近親不得結婚<br><span class="tiny">§983</span></td><td>① 直系血親及直系姻親<br>② 旁系血親在<b>六親等以內</b>者（但表兄弟姊妹以外之四親等及六親等旁系血親，輩分相同者不在此限）<br>③ 旁系姻親在<b>五親等以內</b>，<b>輩分不相同</b>者</td></tr>
+</tbody></table></div>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">112</span>「下列何者有誤」→ 答案<span class="a">五親等內輩分相同之旁系姻親，不得結婚</span>。<b>輩分相同的旁系姻親可以結婚</b>；不能結婚的是<b>輩分不相同</b>者。</p></div>
+
+<p><b>家庭暴力防治法之「家庭成員」</b>：配偶或<b>前配偶</b>；現有或曾有同居關係、家長家屬或家屬間關係者；現為或曾為直系血親或<b>直系姻親</b>；現為或曾為<b>四親等以內</b>之旁系血親或旁系姻親。<br><span class="tiny">陷阱：<span class="yr">112</span>「非屬家庭成員」→ 答案<span class="a">六親等之旁系血親</span>（上限是<b>四</b>親等）。</span></p>
+
+<h4 class="sub">16-5　繼承順序與應繼分（<span class="yr">115</span> 新型情境題）</h4>
+<div class="tw"><table>
+<thead><tr><th class="c" style="width:64px">順位</th><th style="width:130px">繼承人</th><th>配偶的應繼分</th></tr></thead>
+<tbody>
+<tr><td class="c k">第一</td><td>直系血親卑親屬<br><span class="tiny">（子女、孫）</span></td><td><b>與其他繼承人平均分配</b></td></tr>
+<tr><td class="c k">第二</td><td>父母</td><td rowspan="2"><b>二分之一</b></td></tr>
+<tr><td class="c k">第三</td><td>兄弟姊妹</td></tr>
+<tr><td class="c k">第四</td><td><b>祖父母</b></td><td><b>三分之二</b></td></tr>
+<tr><td class="c k">—</td><td>無上述任何順位繼承人</td><td><b>全部</b></td></tr>
+</tbody></table></div>
+<div class="box">
+<span class="lbl"><span class="yr">115</span> 第 42 題怎麼算</span>
+<p>甲夫乙妻無子女（無第一順位）、甲無兄弟姊妹（無第三順位）、甲之父母已歿（無第二順位），僅祖父丙、祖母丁生存 → 由<b>第四順位祖父母</b>與配偶乙共同繼承。<br>
+配偶與<b>第三或第四順位</b>同為繼承時，應繼分為遺產之<b>三分之二</b>（§1144 ③）。<br>
+丁拋棄繼承，只影響祖父母那 1/3 內部如何分配（全歸丙），<b>不改變乙的 2/3</b>。<br>→ 答案：<b>三分之二</b>。</p>
+</div>
+<p class="tiny">另記<b>特留分</b>：直系血親卑親屬、父母、配偶 → 應繼分之 <b>1/2</b>；兄弟姊妹、祖父母 → 應繼分之 <b>1/3</b>。</p>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c16">讀完了</label></div>
+
+<!-- ============ CH17 ============ -->
+<h3 class="ch" id="c17"><span class="n">CH 17</span>刑法</h3>
+
+<h4 class="sub">17-1　犯罪行為的類型</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">類型</th><th>定義</th></tr></thead>
+<tbody>
+<tr><td class="k">作為犯</td><td>以積極行為實現構成要件</td></tr>
+<tr><td class="k"><b>不作為犯</b></td><td>對於犯罪結果之發生，<b>法律上有防止之義務，能防止而不防止者，與因積極行為發生結果者同</b>（§15）<span class="yr">113</span><br><span class="tiny">須有「保證人地位」</span></td></tr>
+<tr><td class="k">加重結果犯</td><td>因犯罪致發生一定之結果而有加重其刑之規定者，<b>以行為人能預見其發生者為限</b>（如傷害致死）</td></tr>
+<tr><td class="k">中止犯</td><td>已著手於犯罪行為之實行，而<b>因己意中止</b>或防止其結果之發生者 → <b>減輕或免除其刑</b></td></tr>
+<tr><td class="k">障礙未遂</td><td>因外在因素而未得逞 → 得按既遂犯之刑減輕之</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">17-2　責任能力與不罰事由</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:110px">條</th><th>對象</th><th class="c" style="width:120px">效果</th></tr></thead>
+<tbody>
+<tr><td class="k">§18 I</td><td>未滿 14 歲人之行為</td><td class="c"><b>不罰</b></td></tr>
+<tr><td class="k">§18 II</td><td><b>14 歲以上未滿 18 歲</b>人之行為</td><td class="c">得減輕其刑</td></tr>
+<tr><td class="k">§18 III</td><td><b>滿 80 歲</b>人之行為</td><td class="c">得減輕其刑</td></tr>
+<tr><td class="k">§19 I</td><td>行為時因精神障礙<b>不能辨識</b>其行為違法</td><td class="c"><b>不罰</b></td></tr>
+<tr><td class="k">§19 II</td><td>辨識能力<b>顯著減低</b></td><td class="c">得減輕其刑</td></tr>
+<tr><td class="k">§20</td><td><b>瘖啞人</b>之行為</td><td class="c">得減輕其刑</td></tr>
+<tr><td class="k">§21</td><td>依法令之行為／依上級公務員命令之職務上行為</td><td class="c"><b>不罰</b></td></tr>
+<tr><td class="k"><b>§22</b></td><td><b>業務上之正當行為</b>（如醫師手術）</td><td class="c"><b>不罰</b> <span class="yr">114</span></td></tr>
+<tr><td class="k">§23</td><td>正當防衛</td><td class="c"><b>不罰</b>（過當者得減免）</td></tr>
+<tr><td class="k">§24</td><td>緊急避難</td><td class="c"><b>不罰</b>（過當者得減免）</td></tr>
+</tbody></table></div>
+<div class="box">
+<span class="lbl">「不罰」vs「得減輕」怎麼分</span>
+<p><b>不罰</b>（全免）：未滿 14 歲、精神障礙不能辨識、依法令、依命令、<b>業務上正當行為</b>、正當防衛、緊急避難。<br>
+<b>得減輕</b>（打折）：14–18 歲、滿 80 歲、瘖啞人、精神障礙顯著減低、中止犯（減或免）。<br>
+口訣：<b>「小於14、完全不能辨識、法律准你做」＝不罰；「年紀偏大偏小、能力打折」＝得減。</b></p>
+</div>
+
+<h4 class="sub">17-3　刑法 §57　科刑應審酌事項（連兩年考）</h4>
+<p>科刑時應以行為人之責任為基礎，並審酌一切情狀，尤應注意下列事項：</p>
+<div class="tw"><table class="tight">
+<tbody>
+<tr><td>① 犯罪之<b>動機、目的</b></td><td>② 犯罪時所受之<b>刺激</b></td><td>③ 犯罪之<b>手段</b></td></tr>
+<tr><td>④ 犯罪行為人之<b>生活狀況</b></td><td>⑤ 犯罪行為人之<b>品行</b></td><td>⑥ 犯罪行為人之<b>智識程度</b></td></tr>
+<tr><td>⑦ 犯罪行為人與被害人之<b>關係</b></td><td>⑧ 犯罪行為人<b>違反義務之程度</b></td><td>⑨ 犯罪所生之<b>危險或損害</b></td></tr>
+<tr><td colspan="3">⑩ 犯罪<b>後之態度</b></td></tr>
+</tbody></table></div>
+<div class="box trap"><span class="lbl">兩年的假選項</span>
+<p><span class="yr">114</span> → <span class="a">犯罪行為人之性別</span>｜<span class="yr">115</span> → <span class="a">犯罪後之社會觀感</span><br>
+判斷法：<b>與「這個人怎麼犯、為何犯、犯後如何」有關的都在列；與「他是誰的天生屬性」「社會怎麼看」無關的都不在列。</b></p></div>
+
+<h4 class="sub">17-4　告訴乃論罪（務必背清單）</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:120px">類別</th><th>罪名</th></tr></thead>
+<tbody>
+<tr><td class="k">妨害名譽</td><td><b>公然侮辱罪、誹謗罪</b></td></tr>
+<tr><td class="k">妨害秘密</td><td><b>妨害書信秘密罪、窺視竊聽竊錄罪</b></td></tr>
+<tr><td class="k">妨害自由</td><td><b>侵入住居罪</b>、強制罪（部分）</td></tr>
+<tr><td class="k">傷害</td><td>普通傷害罪、過失傷害罪（重傷、傷害致死<b>非</b>告訴乃論）</td></tr>
+<tr><td class="k">妨害婚姻家庭</td><td>和誘罪、略誘罪（部分）</td></tr>
+<tr><td class="k">財產犯罪</td><td>親屬間竊盜、詐欺、侵占（§324、§338、§343 準用）</td></tr>
+<tr><td class="k"><b>非</b>告訴乃論</td><td><b>加工墮胎罪</b> <span class="yr">113</span>、殺人、強盜、一般竊盜、一般詐欺、偽造文書</td></tr>
+</tbody></table></div>
+<p class="tiny">記法：<b>告訴乃論多半是「被害人自己決定要不要追究」的私領域糾紛</b>（名譽、秘密、住居、親屬間財產）。涉及生命與公共安全者一律非告訴乃論。</p>
+
+<h4 class="sub">17-5　沒收與保安處分</h4>
+<p><b>刑法 §38</b>：<b>違禁物，不問屬於犯罪行為人與否，沒收之</b>（絕對沒收）。<span class="yr">112</span><br>供犯罪所用、犯罪預備之物或犯罪所生之物，<b>屬於犯罪行為人者</b>，得沒收之。</p>
+<p><b>保安處分</b>：感化教育、監護、禁戒、強制工作、強制治療、保護管束、驅逐出境。<br><span class="tiny">陷阱：<b>易科罰金不是保安處分</b>（是刑罰的易刑處分）。</span></p>
+
+<h4 class="sub">17-6　竊盜 vs 詐欺（<span class="yr">115</span> 情境題）</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:80px"></th><th>竊盜罪</th><th>詐欺罪</th></tr></thead>
+<tbody>
+<tr><td class="k">行為</td><td>違反他人意思，<b>破壞持有、建立新持有</b></td><td><b>施用詐術 → 使人陷於錯誤 → 被害人「基於意思」交付</b>財物</td></tr>
+<tr><td class="k">關鍵</td><td>被害人<b>不知情、未同意</b></td><td>被害人<b>有同意，但同意是被騙來的</b></td></tr>
+</tbody></table></div>
+<div class="box">
+<span class="lbl">櫻桃換箱案的分析</span>
+<p>甲把高價櫻桃裝進箱底、低價櫻桃鋪表層，乙依 599 元結帳並完成交易。<br>
+關鍵在於：<b>乙「同意」把整箱交給甲</b>，只是這個同意建立在錯誤認知上——而這個錯誤是甲用「重新包裝」的詐術製造的。財物是<b>基於乙的意思交付</b>的，不是甲趁乙不備拿走的。<br>
+→ 成立<b>詐欺罪</b>（實務見解亦同）。若甲是趁乙不注意直接把櫻桃塞進口袋帶走，才是竊盜。</p>
+</div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c17">讀完了</label></div>
+<!-- ============ CH18 ============ -->
+<h3 class="ch" id="c18"><span class="n">CH 18</span>民事訴訟法與刑事訴訟法</h3>
+
+<h4 class="sub">18-1　民事訴訟程序的四條路</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:96px">程序</th><th>適用時機</th><th>關鍵數字</th></tr></thead>
+<tbody>
+<tr><td class="k">小額訴訟</td><td>訴訟標的金額或價額在一定金額以下</td><td><b>新臺幣 10 萬元以下</b> <span class="yr">113</span></td></tr>
+<tr><td class="k">簡易訴訟</td><td>金額或價額逾 10 萬元、在一定金額以下</td><td>50 萬元以下</td></tr>
+<tr><td class="k">通常訴訟</td><td>逾 50 萬元</td><td>—</td></tr>
+<tr><td class="k"><b>督促程序</b></td><td>債權人之請求，以給付<b>金錢或其他代替物或有價證券之一定數量</b>為標的者，得聲請法院發<b>支付命令</b>（§508）</td><td><span class="yr">115</span></td></tr>
+</tbody></table></div>
+
+<h4 class="sub">18-2　保全程序（假扣押／假處分／假執行）</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:96px">制度</th><th>用於什麼請求</th><th>目的</th></tr></thead>
+<tbody>
+<tr><td class="k"><b>假扣押</b></td><td><b>金錢</b>請求或得易為金錢請求者</td><td>凍結債務人財產，防止脫產</td></tr>
+<tr><td class="k"><b>假處分</b><br><span class="tiny">§532</span></td><td><b>金錢請求以外</b>之請求 <span class="yr">114</span></td><td>維持現狀（如禁止移轉某棟房屋）</td></tr>
+<tr><td class="k">假執行</td><td>判決尚未確定前，先予執行</td><td>提前實現勝訴利益</td></tr>
+</tbody></table></div>
+<p class="mn">要錢＝假扣押；不是要錢＝假處分</p>
+
+<h4 class="sub">18-3　民訴其他必背</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:74px">條</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k">§70</td><td>訴訟代理人就其受委任之事件有為一切訴訟行為之權，但<b>捨棄、認諾、撤回、和解、提起反訴、上訴或再審之訴，及選任代理人，須受特別委任</b><br><span class="tiny">→ <b>「代受送達」不需特別委任</b> <span class="yr">113</span></span></td></tr>
+<tr><td class="k">§138 II</td><td><b>寄存送達，自寄存之日起，經 10 日發生效力</b> <span class="yr">112</span></td></tr>
+<tr><td class="k">§191</td><td>兩造無正當理由遲誤言詞辯論期日者，視為合意停止訴訟程序；如於<b>4 個月</b>內不續行訴訟者，<b>視為撤回其訴或上訴</b> <span class="yr">115</span></td></tr>
+<tr><td class="k">§232</td><td>判決如有誤寫、誤算或其他類此之顯然錯誤者，法院得依聲請或依職權以<b>裁定更正</b> <span class="yr">114</span></td></tr>
+<tr><td class="k">§440</td><td>提起上訴，應於第一審判決<b>送達後 20 日</b>之不變期間內為之 <span class="yr">114</span></td></tr>
+</tbody></table></div>
+
+<h4 class="sub">18-4　強制執行法</h4>
+<p><b>動產</b>之強制執行方法（§45）：<b>查封、拍賣、變賣</b>。<br><span class="tiny">陷阱：<span class="yr">115</span>「非屬動產強制執行方法」→ 答案<span class="a">強制管理</span>——<b>強制管理是「不動產」的執行方法</b>。</span></p>
+
+<h4 class="sub">18-5　刑事訴訟法核心</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">項目</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k"><b>當事人</b><br><span class="tiny">§3</span></td><td><b>檢察官、自訴人、被告</b>（三者）<br><span class="tiny">陷阱：<b>法官不是當事人</b>，法官是審判者 <span class="yr">115</span></span></td></tr>
+<tr><td class="k">辯護人人數<br><span class="tiny">§28</span></td><td>每一被告選任辯護人<b>不得逾 3 人</b> <span class="yr">115</span></td></tr>
+<tr><td class="k"><b>押票簽名</b><br><span class="tiny">§102</span></td><td>押票應由<b>法官</b>簽名 <span class="yr">114</span>（羈押權屬法官，非檢察官）</td></tr>
+<tr><td class="k"><b>緩起訴處分</b></td><td>由<b>檢察官</b>為之 <span class="yr">113</span>；緩起訴期間 1～3 年</td></tr>
+<tr><td class="k"><b>公務員告發</b><br><span class="tiny">§241</span></td><td>公務員因執行職務知有犯罪嫌疑者，<b>應為告發</b> <span class="yr">114</span></td></tr>
+<tr><td class="k">附帶民事訴訟</td><td>因犯罪而受損害之人，於刑事訴訟程序得對被告及依民法負賠償責任之人提起，請求回復損害 <span class="yr">113</span></td></tr>
+<tr><td class="k">上訴期間</td><td>自送達判決後 <b>20 日</b>內</td></tr>
+</tbody></table></div>
+
+<div class="box law">
+<span class="lbl">告訴／告發／自首／自訴　四個「告」的分辨</span>
+<p><b>告訴</b>＝<b>被害人</b>或其他有告訴權人，向偵查機關申告犯罪並表示訴追之意<br>
+<b>告發</b>＝<b>第三人</b>（非被害人）向偵查機關報告犯罪事實。<b>公務員知有犯罪嫌疑「應」告發</b><br>
+<b>自首</b>＝<b>犯人自己</b>在未被發覺前向機關申告自己的犯罪<br>
+<b>自訴</b>＝<b>被害人不經檢察官</b>，直接向法院提起訴訟（須委任律師）</p>
+</div>
+
+<p><b>撤銷緩起訴的三種情形</b>（§253-3）：<br>① 於緩起訴期間內<b>故意</b>更犯有期徒刑以上刑之罪，而在期間內受有期徒刑以上刑之宣告<br>② 緩起訴前，因<b>故意</b>犯他罪，而在緩起訴期間內受有期徒刑以上刑之宣告<br>③ 違背應遵守或履行之事項（如未依條件向公庫支付一定金額）<br>
+<span class="tiny">陷阱：<span class="yr">112</span>「不得撤銷」→ 答案<span class="a">緩起訴期間內「過失」犯罪並於「期滿後」受宣告</span>。兩個要件都不符：必須<b>故意</b>，且必須<b>在緩起訴期間內受宣告</b>。</span></p>
+
+<h4 class="sub">18-6　程序法基本原則</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">原則</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k"><b>不告不理</b></td><td>法院非經當事人請求，不得對案件主動加以裁判（與行政機關可主動作為相對）<span class="yr">112</span></td></tr>
+<tr><td class="k">以原就被</td><td>管轄法院原則上為<b>被告</b>住所地法院</td></tr>
+<tr><td class="k">罪刑法定</td><td>行為之處罰，以行為時之法律有明文規定者為限</td></tr>
+<tr><td class="k">無罪推定</td><td>被告未經審判證明有罪確定前，推定其為無罪</td></tr>
+</tbody></table></div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c18">讀完了</label></div>
+
+<!-- ============ CH19 ============ -->
+<h3 class="ch" id="c19"><span class="n">CH 19</span>商事法：公司・票據・保險</h3>
+
+<h4 class="sub">19-1　公司法四種公司</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:110px">種類</th><th>股東人數</th><th>責任</th></tr></thead>
+<tbody>
+<tr><td class="k">無限公司</td><td><b>2 人以上</b></td><td>全體股東對公司債務負<b>連帶無限清償</b>責任</td></tr>
+<tr><td class="k"><b>有限公司</b></td><td><b>1 人以上</b> <span class="yr">114</span></td><td>各股東<b>就其出資額為限</b>，對公司負其責任 <span class="yr">113</span></td></tr>
+<tr><td class="k">兩合公司</td><td>1 人以上無限責任股東＋1 人以上有限責任股東</td><td>混合</td></tr>
+<tr><td class="k">股份有限公司</td><td><b>2 人以上</b>股東或<b>政府／法人股東 1 人</b></td><td>股東就其所認股份對公司負責</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">19-2　公司負責人（公司法 §8）</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">類別</th><th>對象</th></tr></thead>
+<tbody>
+<tr><td class="k">當然負責人</td><td>無限／兩合公司之<b>執行業務或代表公司之股東</b>；有限／股份有限公司之<b>董事</b></td></tr>
+<tr><td class="k">職務負責人<br><span class="tiny">在執行職務範圍內</span></td><td>公司之<b>經理人</b>、清算人或<b>臨時管理人</b>；股份有限公司之<b>發起人、監察人、檢查人、重整人、重整監督人</b></td></tr>
+<tr><td class="k">實質負責人</td><td>非董事而實質執行董事業務或實質控制公司之人</td></tr>
+</tbody></table></div>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">115</span>「何者仍非為公司負責人」→ 答案<span class="a">依 §173 報經主管機關許可自行召集股東會之少數股東</span>。少數股東<b>不在 §8 II 的列舉名單內</b>；經理人（未兼董事）、臨時管理人、法院選派之檢查人則<b>都是</b>。</p></div>
+
+<h4 class="sub">19-3　票據法三種票據</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:74px">票據</th><th>誰付款</th><th>定義（§2–4）</th></tr></thead>
+<tbody>
+<tr><td class="k">匯票</td><td><b>第三人</b>（付款人）</td><td>發票人委託<b>付款人</b>於指定之到期日，無條件支付與受款人或執票人</td></tr>
+<tr><td class="k"><b>本票</b></td><td><b>發票人自己</b></td><td>發票人簽發一定之金額，於指定之到期日，<b>由自己</b>無條件支付與受款人或執票人 <span class="yr">114</span></td></tr>
+<tr><td class="k">支票</td><td><b>金融業者</b></td><td>發票人簽發一定之金額，委託金融業者於<b>見票時</b>無條件支付</td></tr>
+</tbody></table></div>
+<p><b>票據法 §7</b>：票據上記載金額之<b>文字與號碼不符</b>時，<b>以文字為準</b> <span class="yr">114</span>。<br><span class="tiny">記法：大寫（文字）難以竄改，當然以文字為準。</span></p>
+
+<h4 class="sub">19-4　保險法三個易混名詞</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:96px">名詞</th><th>定義</th></tr></thead>
+<tbody>
+<tr><td class="k"><b>複保險</b><br><span class="tiny">§35</span></td><td><b>要保人</b>對於<b>同一保險利益、同一保險事故</b>，與<b>數保險人</b>分別訂立數個保險之契約行為 <span class="yr">114</span></td></tr>
+<tr><td class="k">再保險</td><td><b>保險人</b>以其所承保之危險，轉向<b>另一保險人</b>投保（保險公司的保險）</td></tr>
+<tr><td class="k">保險代位</td><td>保險人給付賠償金後，<b>代位行使</b>被保險人對第三人之請求權</td></tr>
+</tbody></table></div>
+<p class="tiny">分辨關鍵：<b>複保險的主體是「要保人」，再保險的主體是「保險人」。</b></p>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c19">讀完了</label></div>
+
+<!-- ============ CH20 ============ -->
+<h3 class="ch" id="c20"><span class="n">CH 20</span>智慧財產權與行政管制特別法</h3>
+
+<h4 class="sub">20-1　著作權：人格權 vs 財產權</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:110px"></th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k">著作<b>人格</b>權</td><td><b>公開發表權、姓名表示權、禁止不當變更（同一性保持）權</b><br><span class="tiny">專屬於著作人本身，<b>不得讓與或繼承</b></span></td></tr>
+<tr><td class="k">著作<b>財產</b>權</td><td><b>重製、公開口述、公開播送、公開上映、公開演出、公開傳輸、公開展示、改作、編輯、散布、出租、輸入</b>等權<br><span class="tiny">可讓與、可繼承、可授權</span></td></tr>
+</tbody></table></div>
+<div class="box trap"><span class="lbl">陷阱</span><p><span class="yr">112</span>「非屬著作財產權」→ 答案<span class="a">公開發表權</span>（那是<b>人格</b>權）。<br>記法：<b>「公開發表」只有一次、只屬於作者本人 → 人格權；其他各種「公開○○」都是財產權。</b></p></div>
+
+<h4 class="sub">20-2　著作權法的「公開○○」定義（定義反查）</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:110px">行為</th><th>定義關鍵字</th></tr></thead>
+<tbody>
+<tr><td class="k"><b>公開演出</b></td><td>以<b>演技、舞蹈、歌唱、彈奏樂器或其他方法向現場之公眾</b>傳達著作內容 <span class="yr">113</span></td></tr>
+<tr><td class="k">公開口述</td><td>以<b>言詞或其他方法</b>向公眾傳達<b>語文</b>著作內容</td></tr>
+<tr><td class="k">公開播送</td><td>基於公眾直接收聽或收視為目的，以<b>有線電、無線電或其他器材之廣播系統</b>傳送訊息</td></tr>
+<tr><td class="k">公開傳輸</td><td>以<b>網路或其他通訊方法</b>，使公眾得於<b>各自選定之時間或地點</b>接收</td></tr>
+<tr><td class="k">公開上映</td><td>以單一或多數視聽機或其他傳送影像之方法於<b>同一時間</b>向現場或特定場所之公眾傳達<b>視聽</b>著作內容</td></tr>
+<tr><td class="k">公開展示</td><td>向公眾展示<b>未發行之美術著作或攝影著作</b></td></tr>
+<tr><td class="k"><b>改作</b></td><td>以<b>翻譯、編曲、改寫、拍攝影片或其他方法</b>就原著作另為創作 <span class="yr">114</span></td></tr>
+<tr><td class="k">重製</td><td>以印刷、複印、錄音、錄影、攝影、筆錄或其他方法<b>直接、間接、永久或暫時之重複製作</b></td></tr>
+</tbody></table></div>
+<p><b>著作財產權存續期間</b>（§30）：原則上存續於著作人之<b>生存期間及其死亡後 50 年</b> <span class="yr">115</span>。</p>
+
+<h4 class="sub">20-3　商標法與專利法</h4>
+<div class="tw"><table>
+<thead><tr><th style="width:110px">標識</th><th>用途</th></tr></thead>
+<tbody>
+<tr><td class="k">商標</td><td>表彰自己商品／服務之標識</td></tr>
+<tr><td class="k">證明標章</td><td>用以<b>證明</b>他人商品或服務之特性、品質、產地等（如 CAS、正字標記）</td></tr>
+<tr><td class="k"><b>團體標章</b></td><td>具法人資格之公會、協會或其他團體，為表彰其<b>會員之會籍</b>，並藉以與非該團體會員相區別之標識 <span class="yr">112</span></td></tr>
+<tr><td class="k">團體商標</td><td>團體為指示其<b>會員所提供之商品或服務</b>，並與非會員者相區別之標識</td></tr>
+</tbody></table></div>
+<p class="tiny">商標法 §72：商標權人對輸入或輸出之物品有侵害其商標權之虞者，得向<b>海關</b>申請先予查扣 <span class="yr">114</span>。（不是智慧財產局，也不是法院。）</p>
+<p><b>專利法 §2</b>：專利分為 <b>① 發明專利 ② 新型專利 ③ 設計專利</b> 三種。<br><span class="tiny">陷阱：<span class="yr">114</span> 假選項為<span class="a">發現專利</span>——「<b>發現</b>」自然界既有事物<b>不可專利</b>，必須是「發明」。</span></p>
+<p class="tiny">專利權期間：發明 20 年、新型 10 年、設計 15 年（自申請日起算）。</p>
+
+<h4 class="sub">20-4　個人資料保護法：特種個資</h4>
+<div class="box law">
+<span class="lbl">個資法 §6</span>
+<p>有關<b>病歷、醫療、基因、性生活、健康檢查、犯罪前科</b>之個人資料，<b>不得蒐集、處理或利用</b>（除法定例外）。<span class="yr">113</span></p>
+<p class="mn">病醫基性健犯</p>
+<p class="tiny">財務情況、家庭、職業、聯絡方式等屬<b>一般</b>個資，不是特種個資。</p>
+</div>
+
+<h4 class="sub">20-5　公平交易法</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:96px">名詞</th><th>定義</th></tr></thead>
+<tbody>
+<tr><td class="k"><b>獨占</b></td><td>事業在相關市場處於<b>無競爭狀態</b>，或具有<b>壓倒性地位，可排除競爭之能力</b>者 <span class="yr">112</span></td></tr>
+<tr><td class="k">結合</td><td>事業間合併、持股、受讓營業或財產、經常共同經營、直接或間接控制他事業之業務經營或人事任免</td></tr>
+<tr><td class="k">聯合行為</td><td>事業以契約、協議或其他方式之合意，<b>共同決定商品價格或限制數量、技術、交易對象</b>，足以影響市場功能</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">20-6　消費者保護法</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:74px">條</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k">§2</td><td><b>定型化契約條款</b>：企業經營者為與<b>多數</b>消費者訂立<b>同類</b>契約之用，所提出<b>預先擬定</b>之契約條款 <span class="yr">113</span><br><span class="tiny">相對概念：<b>個別磋商條款</b>＝由當事人個別磋商而合意之條款（個別磋商條款<b>優先</b>於定型化契約條款）</span></td></tr>
+<tr><td class="k">§11-1</td><td>訂立定型化契約前，應有<b>30 日以內</b>之合理期間供消費者<b>審閱</b>全部條款 <span class="yr">112</span></td></tr>
+<tr><td class="k">§17</td><td>定型化契約中出現中央主管機關公告<b>應記載而未記載</b>者，仍構成契約內容；出現公告<b>不得記載</b>之事項者，<b>其條款無效</b> <span class="yr">115</span></td></tr>
+<tr><td class="k">§19</td><td>通訊交易或訪問交易之消費者，得於收受商品或接受服務後 <b>7 日</b>內解除契約（<b>七日鑑賞期</b>）</td></tr>
+<tr><td class="k">§43</td><td>企業經營者對於消費者之申訴，應於申訴之日起 <b>15 日</b>內妥適處理 <span class="yr">114</span></td></tr>
+</tbody></table></div>
+
+<h4 class="sub">20-7　勞動基準法</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:74px">條</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k">§9</td><td>勞動契約分定期與不定期。<b>臨時性、短期性、季節性及特定性工作得為定期契約；有繼續性工作應為不定期契約</b> <span class="yr">115</span></td></tr>
+<tr><td class="k">§23</td><td>雇主應置備勞工工資清冊，並應保存 <b>5 年</b> <span class="yr">114</span></td></tr>
+<tr><td class="k">§30</td><td>正常工作時間每日不得超過 <b>8 小時</b>，每週不得超過 <b>40 小時</b>；出勤紀錄保存 5 年</td></tr>
+<tr><td class="k">§32</td><td>延長工時連同正常工時一日不得超過 12 小時；一個月延長工時不得超過 46 小時</td></tr>
+<tr><td class="k"><b>§32 IV</b></td><td>因<b>天災、事變或突發事件</b>，雇主有使勞工在正常工作時間以外工作之必要者，得將工作時間延長之，但應於延長開始後 <b>24 小時</b>內通知工會 <span class="yr">113</span></td></tr>
+</tbody></table></div>
+
+<h4 class="sub">20-8　性別平等工作法 <span class="tag hot">修法</span></h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:74px">條</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="k">§15</td><td><b>流產產假</b>：妊娠滿 3 個月以上流產者 → 產假 <b>4 星期</b>；妊娠 2 個月以上未滿 3 個月流產 → 產假 <b>1 星期</b>；<b>妊娠未滿 2 個月流產 → 產假 5 日</b> <span class="yr">114</span><br>分娩前後 → 產假 <b>8 星期</b>；陪產檢及陪產假 <b>7 日</b></td></tr>
+<tr><td class="k">§20</td><td><b>家庭照顧假</b>：家庭成員<b>預防接種</b>、發生<b>嚴重之疾病</b>或其他<b>重大事故須親自照顧</b>時，全年以 <b>7 日</b>為限<br><span class="tiny">陷阱：<span class="yr">113</span>「非屬事由」→ 答案<span class="a">家庭成員畢業典禮</span></span></td></tr>
+<tr><td class="k">§13</td><td><b>性騷擾防治</b>：僱用受僱者 <b>10 人以上未達 30 人</b>者，應訂定<b>申訴管道</b>並公開揭示；<b>30 人以上</b>者，應訂定<b>性騷擾防治措施、申訴及懲戒辦法</b>並公開揭示<br><span class="tag hot">修法</span><span class="tiny">112 年考時尚為「30 人以上」單一門檻；113 年 3 月新法施行後改為<b>雙門檻</b>，請以現行條文為準</span></td></tr>
+</tbody></table></div>
+
+<h4 class="sub">20-9　地方制度法</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:96px">自治法規</th><th>誰訂定</th><th>特徵</th></tr></thead>
+<tbody>
+<tr><td class="k">自治條例</td><td>地方<b>立法</b>機關通過、行政機關公布</td><td>相當於地方的「法律」</td></tr>
+<tr><td class="k"><b>自治規則</b></td><td><b>地方行政機關</b>訂定並發布或下達 <span class="yr">112</span></td><td>相當於地方的「命令」</td></tr>
+<tr><td class="k">委辦規則</td><td>地方行政機關為辦理<b>上級委辦事項</b>訂定</td><td>須報委辦機關核定</td></tr>
+<tr><td class="k">自律規則</td><td>地方<b>立法機關</b>訂定</td><td>規範議會內部事務</td></tr>
+</tbody></table></div>
+<div class="tw"><table class="tight">
+<thead><tr><th style="width:74px"></th><th>意義</th></tr></thead>
+<tbody>
+<tr><td class="k"><b>核定</b></td><td>上級政府或主管機關對於下級<b>所陳報之事項加以審查，並作成決定，以完成該事項之法定效力</b> <span class="yr">112</span>（<b>有實質審查、要點頭</b>）</td></tr>
+<tr><td class="k">備查</td><td>下級將事項<b>知會</b>上級，使其<b>知悉</b>而已（<b>不需同意</b>）</td></tr>
+</tbody></table></div>
+<p class="tiny">記法：<b>核定＝要核准才生效；備查＝報備即可。</b>另：中央與直轄市權限爭議，由<b>立法院</b>院會議決。</p>
+
+<h4 class="sub">20-10　公務員服務法與詐欺犯罪危害防制條例 <span class="tag hot">新法</span></h4>
+<p><b>公務員服務法 §16（旋轉門條款）</b>：公務員離職後 <b>3 年</b>內，不得擔任與其<b>離職前 5 年</b>內之職務直接相關之營利事業董事、監察人、經理、執行業務之股東或顧問。<span class="yr">112</span><br><span class="tiny">記法：<b>離職後 3 年、回看 5 年</b>。</span></p>
+<div class="box law">
+<span class="lbl">詐欺犯罪危害防制條例（113.7.31 制定）</span>
+<p>架構：<b>就源防詐機制</b>（金融防詐、電信防詐、數位經濟防詐）＋<b>溯源打詐執法</b>。<br>
+主管機關分工（§3）：<b>中央主管機關為內政部</b> <span class="yr">115</span>；金融主管機關為<b>金管會</b>；電信主管機關為 <b>NCC</b>；數位經濟主管機關為<b>數位發展部</b>；法務主管機關為<b>法務部</b>。</p>
+<p class="tiny">本條例已於 115 年再度修法調整高額詐欺級距與量刑規定，<b>考前務必查對現行條文</b>。</p>
+</div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="c20">讀完了</label></div>
+</div><!-- /#law -->
+<h2 class="sec" id="papers">112–115 年考古題全解</h2>
+<p class="lead">四份試卷、200 題，逐題標出答案、一句話考點與對應章節。開「背誦模式」後答案會被蓋住，點一下才揭曉——可以當成隨身題庫用。</p>
+
+<div class="box trap">
+<span class="lbl">關於答案來源，我必須誠實說明</span>
+<p><b>113 年度</b>的答案取自你提供的試題檔內附之官方標示。<b>112、114、115 年度</b>的檔案未附答案，下表為依現行法規與通說<b>推導</b>所得。我已逐題檢核，但仍<b>強烈建議</b>到台電官網「甄試簡章與試題 → 歷年新進僱用人員試題解答」下載官方答案卷核對。<br>
+下表中標示 <span class="tag hot">爭議</span> 者，是四個選項依通說皆有瑕疵、或學界見解分歧的題目，請務必以官方公告為準。</p>
+</div>
+
+<details open>
+<summary>112 年度（50 題）</summary>
+<div class="bd"><div class="tw"><table class="pp">
+<thead><tr><th class="no">#</th><th class="an">答</th><th>考點</th><th class="tp">章節</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td class="an">B</td><td>團體愈大，個人只享權利不盡義務＝<b>搭便車</b></td><td class="tp">CH3 病象</td></tr>
+<tr><td class="no">2</td><td class="an">C</td><td>「太強調開放透明」是優點，非新公共行政所受批判</td><td class="tp">CH1 典範</td></tr>
+<tr><td class="no">3</td><td class="an">C</td><td>韋伯年代無「專案管理」概念</td><td class="tp">CH1 官僚</td></tr>
+<tr><td class="no">4</td><td class="an">D</td><td>第五項修練無「利己取向」（應為系統思考等五項）</td><td class="tp">CH10 學習型</td></tr>
+<tr><td class="no">5</td><td class="an">D</td><td>SMART 無「可回饋」（R＝關聯性）</td><td class="tp">CH10 工具</td></tr>
+<tr><td class="no">6</td><td class="an">C</td><td>事業部制應為「<b>集權式政策、分權式管理</b>」，選項寫反</td><td class="tp">CH2 組織型態</td></tr>
+<tr><td class="no">7</td><td class="an">B</td><td>控制幅度與工作反覆性成<b>正</b>比，非反比</td><td class="tp">CH2 控制幅度</td></tr>
+<tr><td class="no">8</td><td class="an">A</td><td>穆尼雷利四原則為協調、階梯、機能、幕僚，無「平衡」</td><td class="tp">CH2 組織原則</td></tr>
+<tr><td class="no">9</td><td class="an">C</td><td>民間設計興建融資營運、完工移轉所有權＝BTO（本題亦可對照 DBFO）</td><td class="tp">CH10 BOT家族</td></tr>
+<tr><td class="no">10</td><td class="an">C</td><td>溝通順序：注意→理解→接受→行動＝③②④①</td><td class="tp">CH6 溝通</td></tr>
+<tr><td class="no">11</td><td class="an">A</td><td>私立基金會屬<b>公益</b>類，非互益類</td><td class="tp">CH2 組織分類</td></tr>
+<tr><td class="no">12</td><td class="an">B</td><td>有機式管理適用<b>變動</b>環境，非穩定環境</td><td class="tp">CH2 組織型態</td></tr>
+<tr><td class="no">13</td><td class="an">A</td><td>路徑目標理論：任務模糊低結構→<b>指導型</b></td><td class="tp">CH5 權變</td></tr>
+<tr><td class="no">14</td><td class="an">C</td><td>職位決定立場＝<b>邁爾斯定律</b></td><td class="tp">CH3 病象</td></tr>
+<tr><td class="no">15</td><td class="an">B</td><td>兩者皆想避免卻須擇一＝<b>雙避衝突</b></td><td class="tp">CH6 衝突</td></tr>
+<tr><td class="no">16</td><td class="an">C</td><td>依預建標準衡量品質數量時限＝<b>目標評量法</b></td><td class="tp">CH7 考績</td></tr>
+<tr><td class="no">17</td><td class="an">A</td><td>傳播者屬<b>資訊</b>角色，非人際角色</td><td class="tp">CH5 十大角色</td></tr>
+<tr><td class="no">18</td><td class="an">D</td><td>個人利益與公務員義務衝突＝<b>利益的衝突</b></td><td class="tp">CH10 行政倫理</td></tr>
+<tr><td class="no">19</td><td class="an">C</td><td>公民參與階梯最高階＝<b>公民控制式</b></td><td class="tp">CH9 參與階梯</td></tr>
+<tr><td class="no">20</td><td class="an">A</td><td><span class="tag hot">爭議</span>原則性規範、增加選擇利益方式＝自我管制性政策；亦有解為分配性政策，請核對官方</td><td class="tp">CH9 政策分類</td></tr>
+<tr><td class="no">21</td><td class="an">B</td><td>要徑上活動延遲<b>必然</b>影響完工期限</td><td class="tp">CH10 要徑法</td></tr>
+<tr><td class="no">22</td><td class="an">B</td><td>私部門與公部門對等合作＝<b>水平互補</b></td><td class="tp">CH10 公私協力</td></tr>
+<tr><td class="no">23</td><td class="an">C</td><td>大數據 3V＝Volume／Variety／Velocity，無「有效性」</td><td class="tp">CH10 工具</td></tr>
+<tr><td class="no">24</td><td class="an">D</td><td>卡普蘭為「<b>個人</b>受益原則」，非團體受益</td><td class="tp">CH9 規劃原則</td></tr>
+<tr><td class="no">25</td><td class="an">B</td><td>政策環境<b>快速變動</b>才是失靈原因，「相對穩定」非</td><td class="tp">CH9 失靈</td></tr>
+<tr><td class="no">26</td><td class="an">A</td><td>表兄弟姊妹＝旁系血親<b>四</b>親等</td><td class="tp">CH16 親等</td></tr>
+<tr><td class="no">27</td><td class="an">D</td><td>法院非經請求不主動裁判＝<b>不告不理</b></td><td class="tp">CH18 原則</td></tr>
+<tr><td class="no">28</td><td class="an">A</td><td>民法成年 18 歲，但<b>選舉權仍須滿 20 歲</b></td><td class="tp">CH15 行為能力</td></tr>
+<tr><td class="no">29</td><td class="an">B</td><td>繼承非法律行為，於<b>被繼承人死亡時</b>生效</td><td class="tp">CH16 物權變動</td></tr>
+<tr><td class="no">30</td><td class="an">D</td><td>家暴法家庭成員上限為<b>四</b>親等旁系血親</td><td class="tp">CH16 家庭成員</td></tr>
+<tr><td class="no">31</td><td class="an">D</td><td>定型化契約審閱期＝<b>30 日以內</b></td><td class="tp">CH20 消保法</td></tr>
+<tr><td class="no">32</td><td class="an">A</td><td>旁系姻親五親等內<b>輩分不相同</b>者才不得結婚</td><td class="tp">CH16 結婚</td></tr>
+<tr><td class="no">33</td><td class="an">A</td><td>旋轉門：離職後 <b>3 年</b>、回看離職前 5 年</td><td class="tp">CH20 公務員服務法</td></tr>
+<tr><td class="no">34</td><td class="an">D</td><td>特定施行日期者，<b>自該特定日</b>生效</td><td class="tp">CH11 法規標準法</td></tr>
+<tr><td class="no">35</td><td class="an">B</td><td>撤銷緩起訴須「<b>故意</b>」且「<b>期間內</b>受宣告」，過失+期滿後不符</td><td class="tp">CH18 緩起訴</td></tr>
+<tr><td class="no">36</td><td class="an">B</td><td>地方行政機關訂定發布＝<b>自治規則</b></td><td class="tp">CH20 地制法</td></tr>
+<tr><td class="no">37</td><td class="an">B</td><td>利息 5 年＞承攬報酬／商品代價／律師報酬皆 2 年</td><td class="tp">CH15 消滅時效</td></tr>
+<tr><td class="no">38</td><td class="an">D</td><td>抵銷之意思表示附條件或期限者<b>無效</b></td><td class="tp">CH15 債編</td></tr>
+<tr><td class="no">39</td><td class="an">B</td><td>緊急命令須送<b>立法院</b>追認</td><td class="tp">CH12 憲法</td></tr>
+<tr><td class="no">40</td><td class="an">A</td><td>對人之管束不得逾 <b>24 小時</b></td><td class="tp">CH14 行政執行</td></tr>
+<tr><td class="no">41</td><td class="an">C</td><td>公開<b>發表</b>權屬著作<b>人格</b>權</td><td class="tp">CH20 著作權</td></tr>
+<tr><td class="no">42</td><td class="an">B</td><td>股東會決議<b>內容</b>違法＝無效（程序違法才是撤銷）</td><td class="tp">CH19 公司法</td></tr>
+<tr><td class="no">43</td><td class="an">D</td><td>不動產租賃逾 1 年未立字據＝<b>視為不定期限</b></td><td class="tp">CH15 租賃</td></tr>
+<tr><td class="no">44</td><td class="an">A</td><td><b>違禁物</b>不問屬於何人均沒收</td><td class="tp">CH17 沒收</td></tr>
+<tr><td class="no">45</td><td class="an">D</td><td>當時法為 30 人以上 <span class="tag hot">修法</span>現行改為 10／30 雙門檻</td><td class="tp">CH20 性平法</td></tr>
+<tr><td class="no">46</td><td class="an">B</td><td>表彰會員會籍之標識＝<b>團體標章</b></td><td class="tp">CH20 商標</td></tr>
+<tr><td class="no">47</td><td class="an">D</td><td>寄存送達自寄存日起 <b>10 日</b>生效</td><td class="tp">CH18 民訴</td></tr>
+<tr><td class="no">48</td><td class="an">C</td><td>無競爭狀態或壓倒性地位＝<b>獨占</b></td><td class="tp">CH20 公平法</td></tr>
+<tr><td class="no">49</td><td class="an">B</td><td>臨時會：總統咨請或立委 <b>1/4 以上</b>請求</td><td class="tp">CH12 立法院</td></tr>
+<tr><td class="no">50</td><td class="an">C</td><td>審查並作成決定以完成法定效力＝<b>核定</b></td><td class="tp">CH20 地制法</td></tr>
+</tbody></table></div></div>
+</details>
+
+<details>
+<summary>113 年度（50 題・官方答案）</summary>
+<div class="bd"><div class="tw"><table class="pp">
+<thead><tr><th class="no">#</th><th class="an">答</th><th>考點</th><th class="tp">章節</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td class="an">A</td><td>四種觀點為管理、政治、公共政策、公共性，無「公平」</td><td class="tp">CH1</td></tr>
+<tr><td class="no">2</td><td class="an">C</td><td>官僚制為「<b>對事不對人</b>」</td><td class="tp">CH1 官僚</td></tr>
+<tr><td class="no">3</td><td class="an">B</td><td>修正理論時期基礎＝<b>行為科學</b></td><td class="tp">CH1 分期</td></tr>
+<tr><td class="no">4</td><td class="an">D</td><td>使人放棄己見＝<b>說服</b></td><td class="tp">CH6 衝突</td></tr>
+<tr><td class="no">5</td><td class="an">D</td><td>艾桑尼三型：強制／功利／規範，無「服務型」</td><td class="tp">CH2 分類</td></tr>
+<tr><td class="no">6</td><td class="an">D</td><td>集思廣益是<b>委員制</b>優點</td><td class="tp">CH2 首長制</td></tr>
+<tr><td class="no">7</td><td class="an">B</td><td>崇尚弱肉強食＝<b>權力取向</b>文化</td><td class="tp">CH3 文化</td></tr>
+<tr><td class="no">8</td><td class="an">A</td><td>從經濟學解釋 NPO 存在＝<b>市場失靈理論</b></td><td class="tp">CH9 失靈</td></tr>
+<tr><td class="no">9</td><td class="an">B</td><td>薪給隨物價調整＝<b>適應性</b>原則</td><td class="tp">CH7 薪給</td></tr>
+<tr><td class="no">10</td><td class="an">A</td><td>人事科學管理三法無「充分授權」</td><td class="tp">CH7</td></tr>
+<tr><td class="no">11</td><td class="an">C</td><td>增強四型無「關懷」</td><td class="tp">CH4 增強</td></tr>
+<tr><td class="no">12</td><td class="an">C</td><td>費德勒三情境無「組織規模」</td><td class="tp">CH5 權變</td></tr>
+<tr><td class="no">13</td><td class="an">A</td><td>考試四要求無「差異性」</td><td class="tp">CH7 考試</td></tr>
+<tr><td class="no">14</td><td class="an">D</td><td>信賞必罰＝<b>認真嚴格</b>原則</td><td class="tp">CH7 考績</td></tr>
+<tr><td class="no">15</td><td class="an">D</td><td>組織發展三層次無「發展目標」</td><td class="tp">CH7 組織發展</td></tr>
+<tr><td class="no">16</td><td class="an">B</td><td>請求權或責任發生即計帳＝<b>契約責任基礎</b></td><td class="tp">CH8 會計基礎</td></tr>
+<tr><td class="no">17</td><td class="an">A</td><td>審計是「<b>確保</b>」而非「加重」財務責任</td><td class="tp">CH8 審計</td></tr>
+<tr><td class="no">18</td><td class="an">A</td><td>非正式組織反而<b>降低</b>離職率</td><td class="tp">CH3 非正式</td></tr>
+<tr><td class="no">19</td><td class="an">D</td><td>預算與決算力求一致＝<b>嚴密</b>原則</td><td class="tp">CH8 預算原則</td></tr>
+<tr><td class="no">20</td><td class="an">B</td><td>批評者、看守者、壓力者＝<b>改革或倡導者</b></td><td class="tp">CH10 NPO</td></tr>
+<tr><td class="no">21</td><td class="an">C</td><td>BPR 改流程不是「汰除成員」</td><td class="tp">CH10 組織再造</td></tr>
+<tr><td class="no">22</td><td class="an">A</td><td>政府蓋好交民間營運、期滿歸還＝<b>OT</b></td><td class="tp">CH10 BOT家族</td></tr>
+<tr><td class="no">23</td><td class="an">B</td><td>「職位的競爭」是<b>個人</b>衝突來源，非<b>團體間</b>衝突因素</td><td class="tp">CH6 衝突</td></tr>
+<tr><td class="no">24</td><td class="an">B</td><td>各機關初步估計之收支＝<b>概算</b></td><td class="tp">CH8 預算</td></tr>
+<tr><td class="no">25</td><td class="an">C</td><td>我國人事分類制度＝<b>職位分類</b>（學理稱官職併立之混合制，台電採前者）</td><td class="tp">CH7 人事分類</td></tr>
+<tr><td class="no">26</td><td class="an">D</td><td>時效消滅後仍為給付者，<b>不得請求返還</b></td><td class="tp">CH15 時效</td></tr>
+<tr><td class="no">27</td><td class="an">B</td><td>主管機關裁併或變更→法規應<b>修正</b></td><td class="tp">CH11</td></tr>
+<tr><td class="no">28</td><td class="an">D</td><td>書寫順序＝<b>條、項、款、目</b></td><td class="tp">CH11</td></tr>
+<tr><td class="no">29</td><td class="an">D</td><td>總統副總統被選舉年齡＝<b>40 歲</b></td><td class="tp">CH12</td></tr>
+<tr><td class="no">30</td><td class="an">A</td><td>立委法定總額＝<b>113 人</b></td><td class="tp">CH12</td></tr>
+<tr><td class="no">31</td><td class="an">C</td><td>探究立法者原意＝<b>歷史解釋</b></td><td class="tp">CH11 解釋</td></tr>
+<tr><td class="no">32</td><td class="an">C</td><td>委託他方處理事務＝<b>委任</b>契約</td><td class="tp">CH15 各種之債</td></tr>
+<tr><td class="no">33</td><td class="an">A</td><td>死亡宣告以判決內確定死亡之時「<b>推定</b>」死亡</td><td class="tp">CH15</td></tr>
+<tr><td class="no">34</td><td class="an">D</td><td>顯然錯誤→處分機關得<b>隨時或依申請更正</b></td><td class="tp">CH13 處分</td></tr>
+<tr><td class="no">35</td><td class="an">A</td><td>小額訴訟＝<b>10 萬元</b>以下</td><td class="tp">CH18 民訴</td></tr>
+<tr><td class="no">36</td><td class="an">B</td><td>有防止義務能防止而不防止＝<b>不作為犯</b></td><td class="tp">CH17</td></tr>
+<tr><td class="no">37</td><td class="an">C</td><td><b>罰金＝刑罰、罰鍰＝行政罰</b></td><td class="tp">CH14</td></tr>
+<tr><td class="no">38</td><td class="an">A</td><td><b>加工墮胎罪非</b>告訴乃論</td><td class="tp">CH17 告訴乃論</td></tr>
+<tr><td class="no">39</td><td class="an">C</td><td>緩起訴處分由<b>檢察官</b>為之</td><td class="tp">CH18 刑訴</td></tr>
+<tr><td class="no">40</td><td class="an">D</td><td>刑事程序中請求回復損害＝<b>附帶民事訴訟</b></td><td class="tp">CH18 刑訴</td></tr>
+<tr><td class="no">41</td><td class="an">B</td><td>拒絕行政指導→應即停止且<b>不得為不利處置</b></td><td class="tp">CH13 行政指導</td></tr>
+<tr><td class="no">42</td><td class="an">A</td><td>行政規則<b>不</b>直接對外發生法規範效力</td><td class="tp">CH13 行政規則</td></tr>
+<tr><td class="no">43</td><td class="an">D</td><td><b>代受送達</b>不需特別委任</td><td class="tp">CH18 民訴</td></tr>
+<tr><td class="no">44</td><td class="an">A</td><td>不服訴願決定→<b>2 個月</b>內提行政訴訟</td><td class="tp">CH14 救濟</td></tr>
+<tr><td class="no">45</td><td class="an">D</td><td>預先擬定供多數人同類契約＝<b>定型化契約條款</b></td><td class="tp">CH20 消保法</td></tr>
+<tr><td class="no">46</td><td class="an">B</td><td>1 人以上股東、就出資額負責＝<b>有限公司</b></td><td class="tp">CH19 公司法</td></tr>
+<tr><td class="no">47</td><td class="an">D</td><td>演技舞蹈歌唱向現場公眾傳達＝<b>公開演出</b></td><td class="tp">CH20 著作權</td></tr>
+<tr><td class="no">48</td><td class="an">C</td><td>特種個資：病醫基性健犯→<b>健康檢查</b></td><td class="tp">CH20 個資法</td></tr>
+<tr><td class="no">49</td><td class="an">B</td><td>家庭照顧假無「畢業典禮」事由</td><td class="tp">CH20 性平法</td></tr>
+<tr><td class="no">50</td><td class="an">A</td><td>天災事變延長工時→<b>24 小時</b>內通知工會</td><td class="tp">CH20 勞基法</td></tr>
+</tbody></table></div></div>
+</details>
+
+<details>
+<summary>114 年度（50 題）</summary>
+<div class="bd"><div class="tw"><table class="pp">
+<thead><tr><th class="no">#</th><th class="an">答</th><th>考點</th><th class="tp">章節</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td class="an">B</td><td>情境領導＝風格隨<b>部屬成熟度</b>與情境調整</td><td class="tp">CH5</td></tr>
+<tr><td class="no">2</td><td class="an">D</td><td>公營事業<b>不以獲利為前提</b>、不求超額利潤</td><td class="tp">CH2 公營事業</td></tr>
+<tr><td class="no">3</td><td class="an">D</td><td>行政績效<b>不易</b>評估、企業<b>較少</b>受監督，選項寫反</td><td class="tp">CH10</td></tr>
+<tr><td class="no">4</td><td class="an">C</td><td>自治權＋獨立產品＋分部經理負績效＝<b>事業部組織</b></td><td class="tp">CH2</td></tr>
+<tr><td class="no">5</td><td class="an">A</td><td>行政人員為憲政秩序捍衛者＝<b>黑堡宣言</b></td><td class="tp">CH1</td></tr>
+<tr><td class="no">6</td><td class="an">B</td><td>成員受惠（如政黨）＝<b>互利組織</b></td><td class="tp">CH2 分類</td></tr>
+<tr><td class="no">7</td><td class="an">A</td><td>自備私地興建、擁有所有權＝<b>BOO</b></td><td class="tp">CH10 BOT家族</td></tr>
+<tr><td class="no">8</td><td class="an">B</td><td>MBO：①設目標②權責分工④執行③評估</td><td class="tp">CH10 MBO</td></tr>
+<tr><td class="no">9</td><td class="an">C</td><td>徵稅與使用者付費＝<b>混合性工具</b></td><td class="tp">CH9 政策工具</td></tr>
+<tr><td class="no">10</td><td class="an">C</td><td>民營化為<b>增加</b>競爭，非減少</td><td class="tp">CH10 民營化</td></tr>
+<tr><td class="no">11</td><td class="an">D</td><td>編製→審議→執行→<b>決算→審計</b>＝②③①⑤④</td><td class="tp">CH8 預算循環</td></tr>
+<tr><td class="no">12</td><td class="an">B</td><td>行政法人進用人員<b>不具</b>公務人員身分</td><td class="tp">CH2 行政法人</td></tr>
+<tr><td class="no">13</td><td class="an">C</td><td>獨立機關僅公平會與 NCC＝<b>2 個</b>（金管會非）</td><td class="tp">CH2 獨立機關</td></tr>
+<tr><td class="no">14</td><td class="an">D</td><td>政府介入受民意利益團體影響＝<b>政府失靈</b></td><td class="tp">CH9 失靈</td></tr>
+<tr><td class="no">15</td><td class="an">D</td><td>不要蓋在我家後院＝<b>鄰避情結</b></td><td class="tp">CH3 病象</td></tr>
+<tr><td class="no">16</td><td class="an">C</td><td>賽蒙：只能選出令人滿意的方案</td><td class="tp">CH6 決策</td></tr>
+<tr><td class="no">17</td><td class="an">C</td><td>危機解決後＝<b>危機調查評估</b></td><td class="tp">CH10 危機管理</td></tr>
+<tr><td class="no">18</td><td class="an">B</td><td>SWOT 的 T＝<b>Threats 威脅</b>，非趨勢</td><td class="tp">CH10 工具</td></tr>
+<tr><td class="no">19</td><td class="an">D</td><td>因應關稅之專案編列＝<b>特別預算</b></td><td class="tp">CH8 預算類型</td></tr>
+<tr><td class="no">20</td><td class="an">A</td><td>開放資料目標＝<b>資料透明與公共應用創新</b></td><td class="tp">CH9</td></tr>
+<tr><td class="no">21</td><td class="an">C</td><td>禁止分配盈餘之第三部門＝<b>非營利組織</b></td><td class="tp">CH10 NPO</td></tr>
+<tr><td class="no">22</td><td class="an">B</td><td>台電為股份有限公司，<b>適用</b>公司法</td><td class="tp">CH2 台電</td></tr>
+<tr><td class="no">23</td><td class="an">B</td><td>府際關係＝<b>中央與地方</b>互動協調</td><td class="tp">CH10 府際</td></tr>
+<tr><td class="no">24</td><td class="an">C</td><td>E 化政府主要目的非「減少紙本」</td><td class="tp">CH9</td></tr>
+<tr><td class="no">25</td><td class="an">A</td><td>零基預算＝每年從「零點」重新評估</td><td class="tp">CH8</td></tr>
+<tr><td class="no">26</td><td class="an">D</td><td>事前就方法步驟措施之設計規劃＝<b>行政計畫</b></td><td class="tp">CH13</td></tr>
+<tr><td class="no">27</td><td class="an">C</td><td>行政指導係對<b>特定人</b>為之，非不特定人</td><td class="tp">CH13</td></tr>
+<tr><td class="no">28</td><td class="an">C</td><td>同一利益事故與數保險人訂約＝<b>複保險</b></td><td class="tp">CH19 保險法</td></tr>
+<tr><td class="no">29</td><td class="an">A</td><td>有限公司最少 <b>1 名</b>股東</td><td class="tp">CH19 公司法</td></tr>
+<tr><td class="no">30</td><td class="an">B</td><td>專利僅發明、新型、設計，無「<b>發現</b>專利」</td><td class="tp">CH20 專利</td></tr>
+<tr><td class="no">31</td><td class="an">D</td><td>妊娠未滿 2 個月流產→產假 <b>5 日</b></td><td class="tp">CH20 性平法</td></tr>
+<tr><td class="no">32</td><td class="an">A</td><td>消費申訴應於 <b>15 日</b>內妥適處理</td><td class="tp">CH20 消保法</td></tr>
+<tr><td class="no">33</td><td class="an">B</td><td>票據金額文字與號碼不符→<b>以文字為準</b></td><td class="tp">CH19 票據</td></tr>
+<tr><td class="no">34</td><td class="an">C</td><td>移轉占有之動產擔保＝<b>動產質權</b></td><td class="tp">CH16 物權</td></tr>
+<tr><td class="no">35</td><td class="an">D</td><td>工資清冊應保存 <b>5 年</b></td><td class="tp">CH20 勞基法</td></tr>
+<tr><td class="no">36</td><td class="an">A</td><td>議決法律案＝<b>立法院</b>（憲 §63）</td><td class="tp">CH12</td></tr>
+<tr><td class="no">37</td><td class="an">C</td><td>商標侵權輸出入查扣→向<b>海關</b>申請</td><td class="tp">CH20 商標</td></tr>
+<tr><td class="no">38</td><td class="an">A</td><td>押票應由<b>法官</b>簽名</td><td class="tp">CH18 刑訴</td></tr>
+<tr><td class="no">39</td><td class="an">A</td><td>民事上訴期間＝送達後 <b>20 日</b></td><td class="tp">CH18 民訴</td></tr>
+<tr><td class="no">40</td><td class="an">B</td><td>無法律上原因而受利益＝<b>不當得利</b></td><td class="tp">CH15 債編</td></tr>
+<tr><td class="no">41</td><td class="an">D</td><td>法律不得牴觸<b>憲法</b></td><td class="tp">CH11</td></tr>
+<tr><td class="no">42</td><td class="an">C</td><td>翻譯編曲改寫拍片另為創作＝<b>改作</b></td><td class="tp">CH20 著作權</td></tr>
+<tr><td class="no">43</td><td class="an">D</td><td>刑法 §57 不審酌「犯罪行為人之<b>性別</b>」</td><td class="tp">CH17</td></tr>
+<tr><td class="no">44</td><td class="an">B</td><td>判決顯然錯誤→<b>裁定更正</b></td><td class="tp">CH18 民訴</td></tr>
+<tr><td class="no">45</td><td class="an">A</td><td>金錢請求<b>以外</b>之保全＝<b>假處分</b></td><td class="tp">CH18 保全</td></tr>
+<tr><td class="no">46</td><td class="an">B</td><td>公用事業及獨占性企業以<b>公營</b>為原則</td><td class="tp">CH12 憲 §144</td></tr>
+<tr><td class="no">47</td><td class="an">A</td><td><b>業務上正當行為不罰</b>；瘖啞人／80 歲／14–18 歲僅得減輕</td><td class="tp">CH17</td></tr>
+<tr><td class="no">48</td><td class="an">A</td><td>公務員執行職務知有犯罪嫌疑→應<b>告發</b></td><td class="tp">CH18 刑訴</td></tr>
+<tr><td class="no">49</td><td class="an">B</td><td>律師會計師公證人報酬時效＝<b>2 年</b></td><td class="tp">CH15 時效</td></tr>
+<tr><td class="no">50</td><td class="an">B</td><td>由<b>自己</b>無條件支付＝<b>本票</b></td><td class="tp">CH19 票據</td></tr>
+</tbody></table></div></div>
+</details>
+
+<details>
+<summary>115 年度（50 題）</summary>
+<div class="bd"><div class="tw"><table class="pp">
+<thead><tr><th class="no">#</th><th class="an">答</th><th>考點</th><th class="tp">章節</th></tr></thead>
+<tbody>
+<tr><td class="no">1</td><td class="an">A</td><td>五種協調機制中應為「<b>技能</b>標準化」，非人員標準化</td><td class="tp">CH2 明茲伯格</td></tr>
+<tr><td class="no">2</td><td class="an">C</td><td>扁平式對環境變動反應<b>快</b></td><td class="tp">CH2 扁平式</td></tr>
+<tr><td class="no">3</td><td class="an">B</td><td>長官與部屬<b>互相</b>維護＝<b>垂直共棲</b></td><td class="tp">CH3 達爾頓</td></tr>
+<tr><td class="no">4</td><td class="an">—</td><td><span class="tag hot">爭議</span>四選項依通說皆有瑕疵。通說排序：廣博理性＞滿意＞混合掃描＞漸進＞政治性＞垃圾桶。請以官方答案為準</td><td class="tp">CH6 決策模式</td></tr>
+<tr><td class="no">5</td><td class="an">B</td><td>阻擋女性升遷之無形障礙＝<b>玻璃天花板</b></td><td class="tp">CH3 病象</td></tr>
+<tr><td class="no">6</td><td class="an">A</td><td>ERG 由低到高＝生存→關係→成長</td><td class="tp">CH4 ERG</td></tr>
+<tr><td class="no">7</td><td class="an">C</td><td>說謊禁足＝<b>給予</b>不愉快後果制止行為＝<b>懲罰</b></td><td class="tp">CH4 增強</td></tr>
+<tr><td class="no">8</td><td class="an">C</td><td>馬斯洛低到高＝③生理⑤安全①社會④尊榮②自我實現</td><td class="tp">CH4 需求層次</td></tr>
+<tr><td class="no">9</td><td class="an">A</td><td><b>薪酬待遇＝保健因素</b>（其餘三者為激勵因子）</td><td class="tp">CH4 雙因子</td></tr>
+<tr><td class="no">10</td><td class="an">B</td><td>唐斯五型無「冷漠者」（應為<b>保守者</b>）</td><td class="tp">CH3 官僚人格</td></tr>
+<tr><td class="no">11</td><td class="an">C</td><td>期望理論三要素無「學習度」</td><td class="tp">CH4 期望理論</td></tr>
+<tr><td class="no">12</td><td class="an">D</td><td>領導三分法無「環境式領導」</td><td class="tp">CH5 李文</td></tr>
+<tr><td class="no">13</td><td class="an">D</td><td>完全信任、高度授權＝<b>參與型</b></td><td class="tp">CH5 李克特</td></tr>
+<tr><td class="no">14</td><td class="an">A</td><td>三大角色無「服務角色」</td><td class="tp">CH5 十大角色</td></tr>
+<tr><td class="no">15</td><td class="an">D</td><td>SWOT 的 W＝<b>Weaknesses 劣勢</b></td><td class="tp">CH10 工具</td></tr>
+<tr><td class="no">16</td><td class="an">C</td><td>TQM＝<b>全面品質管理</b></td><td class="tp">CH10 工具</td></tr>
+<tr><td class="no">17</td><td class="an">B</td><td>默會知識只可意會，需情境模擬體會學習</td><td class="tp">CH10 知識管理</td></tr>
+<tr><td class="no">18</td><td class="an">A</td><td>具感知監測審視環境能力＝<b>組織是大腦</b></td><td class="tp">CH3 莫根</td></tr>
+<tr><td class="no">19</td><td class="an">D</td><td>團體盲思好發於<b>成員高度同質性</b></td><td class="tp">CH3 團體盲思</td></tr>
+<tr><td class="no">20</td><td class="an">D</td><td><b>管制性政策為「零和」</b>賽局，非非零和</td><td class="tp">CH9 政策分類</td></tr>
+<tr><td class="no">21</td><td class="an">C</td><td>古立克 4P 無「依計畫 Project」</td><td class="tp">CH2 分部化</td></tr>
+<tr><td class="no">22</td><td class="an">C</td><td>NPM 視民眾為<b>顧客</b>；視為公民是<b>新公共服務</b></td><td class="tp">CH1 NPM</td></tr>
+<tr><td class="no">23</td><td class="an">A</td><td><b>房屋稅</b>為地方稅；營業稅、菸酒稅、遺贈稅為國稅</td><td class="tp">CH8 稅制</td></tr>
+<tr><td class="no">24</td><td class="an">B</td><td>雷格斯主要解釋<b>開發中（稜柱型）</b>國家</td><td class="tp">CH10 行政生態</td></tr>
+<tr><td class="no">25</td><td class="an">D</td><td>法院行政訴訟與國賠＝<b>外部正式</b>確保途徑</td><td class="tp">CH10 行政責任</td></tr>
+<tr><td class="no">26</td><td class="an">C</td><td>下位階不得牴觸上位階＝<b>法律優位原則</b></td><td class="tp">CH11</td></tr>
+<tr><td class="no">27</td><td class="an">B</td><td><b>公務人員之銓敘屬考試院</b>，非司法院</td><td class="tp">CH12 五院</td></tr>
+<tr><td class="no">28</td><td class="an">C</td><td>憲 §129 為普通、平等、<b>直接</b>、無記名，無間接選舉</td><td class="tp">CH12</td></tr>
+<tr><td class="no">29</td><td class="an">C</td><td>公法上請求權：<b>人民 5 年</b>（機關 10 年）</td><td class="tp">CH13</td></tr>
+<tr><td class="no">30</td><td class="an">A</td><td>行政興革建議、法令查詢、違失舉發＝<b>陳情</b></td><td class="tp">CH13</td></tr>
+<tr><td class="no">31</td><td class="an">A</td><td>非屬訴願救濟範圍→<b>不受理</b>決定</td><td class="tp">CH14 訴願</td></tr>
+<tr><td class="no">32</td><td class="an">A</td><td>公布姓名屬<b>影響名譽</b>之處分，非警告性</td><td class="tp">CH14 行政罰</td></tr>
+<tr><td class="no">33</td><td class="an">D</td><td>要求機關作成許可處分＝<b>課予義務訴訟</b></td><td class="tp">CH14 行政訴訟</td></tr>
+<tr><td class="no">34</td><td class="an">D</td><td>§57 不審酌「犯罪後之<b>社會觀感</b>」</td><td class="tp">CH17</td></tr>
+<tr><td class="no">35</td><td class="an">C</td><td>刑訴當事人為檢察官、自訴人、被告，<b>法官非</b></td><td class="tp">CH18 刑訴</td></tr>
+<tr><td class="no">36</td><td class="an">B</td><td>報告訂約機會或為媒介＝<b>居間</b></td><td class="tp">CH15 各種之債</td></tr>
+<tr><td class="no">37</td><td class="an">B</td><td>每一被告選任辯護人不得逾 <b>3 人</b></td><td class="tp">CH18 刑訴</td></tr>
+<tr><td class="no">38</td><td class="an">C</td><td>被害人「基於意思」交付＋行為人施詐術＝<b>詐欺罪</b></td><td class="tp">CH17 竊盜vs詐欺</td></tr>
+<tr><td class="no">39</td><td class="an">C</td><td>租金屬定期給付債權，時效 <b>5 年</b></td><td class="tp">CH15 時效</td></tr>
+<tr><td class="no">40</td><td class="an">B</td><td>勞務契約無其他類型可歸→適用<b>委任</b></td><td class="tp">CH15 各種之債</td></tr>
+<tr><td class="no">41</td><td class="an">D</td><td>抵押權擔保範圍不含「抵押物隱有瑕疵之損害賠償」</td><td class="tp">CH16 物權</td></tr>
+<tr><td class="no">42</td><td class="an">D</td><td>配偶與第四順位祖父母共同繼承→<b>三分之二</b></td><td class="tp">CH16 繼承</td></tr>
+<tr><td class="no">43</td><td class="an">D</td><td>合意停止後 <b>4 個月</b>不續行→視為撤回</td><td class="tp">CH18 民訴</td></tr>
+<tr><td class="no">44</td><td class="an">A</td><td>支付命令屬<b>督促程序</b></td><td class="tp">CH18 民訴</td></tr>
+<tr><td class="no">45</td><td class="an">D</td><td><b>強制管理</b>是不動產執行方法，非動產</td><td class="tp">CH18 強執法</td></tr>
+<tr><td class="no">46</td><td class="an">D</td><td><b>有繼續性工作</b>應為不定期契約</td><td class="tp">CH20 勞基法</td></tr>
+<tr><td class="no">47</td><td class="an">C</td><td>著作財產權存續至著作人死亡後 <b>50 年</b></td><td class="tp">CH20 著作權</td></tr>
+<tr><td class="no">48</td><td class="an">A</td><td>詐欺犯罪危害防制條例中央主管機關＝<b>內政部</b></td><td class="tp">CH20 新法</td></tr>
+<tr><td class="no">49</td><td class="an">A</td><td>§173 自行召集股東會之<b>少數股東非</b>公司負責人</td><td class="tp">CH19 公司法</td></tr>
+<tr><td class="no">50</td><td class="an">B</td><td>出現公告「不得記載事項」之條款→<b>無效</b></td><td class="tp">CH20 消保法</td></tr>
+</tbody></table></div></div>
+</details>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="papers">刷完了</label></div>
+<h2 class="sec" id="numbers">數字速查總表</h2>
+<p class="lead">法律常識每年固定出 5～8 題純數字題。這一頁是全手冊投資報酬率最高的部分——考前三天把它背到反射，等於現賺 10～16 分。</p>
+
+<h4 class="sub">期間・日數</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th class="c" style="width:74px">數字</th><th>內容</th><th style="width:96px">出處</th></tr></thead>
+<tbody>
+<tr><td class="c k">3 日</td><td>法規明定「自公布日施行」→ 自公布日起算<b>至第 3 日</b>生效</td><td>中標法 §13</td></tr>
+<tr><td class="c k">5 日</td><td>妊娠<b>未滿 2 個月</b>流產之產假</td><td>性平法 §15</td></tr>
+<tr><td class="c k">7 日</td><td>通訊／訪問交易<b>鑑賞期</b>；陪產檢及陪產假；家庭照顧假全年上限</td><td>消保 §19、性平 §15、§20</td></tr>
+<tr><td class="c k">10 日</td><td><b>寄存送達</b>自寄存日起 10 日生效；緊急命令發布後送立法院追認</td><td>民訴 §138、增修 §2</td></tr>
+<tr><td class="c k">15 日</td><td>企業經營者處理<b>消費申訴</b>期限</td><td>消保法 §43</td></tr>
+<tr><td class="c k">20 日</td><td><b>民事上訴</b>期間（第一審判決送達後）；刑事上訴期間</td><td>民訴 §440、刑訴 §349</td></tr>
+<tr><td class="c k">24 小時</td><td><b>對人之管束</b>上限；天災事變延長工時後通知工會期限</td><td>行執 §37、勞基 §32</td></tr>
+<tr><td class="c k">30 日</td><td><b>訴願</b>期間（處分達到次日起）；定型化契約<b>審閱期</b>（30 日<b>以內</b>）</td><td>訴願 §14、消保 §11-1</td></tr>
+<tr><td class="c k">1 星期</td><td>妊娠 2 個月以上未滿 3 個月流產之產假</td><td>性平法 §15</td></tr>
+<tr><td class="c k">4 星期</td><td>妊娠滿 3 個月以上流產之產假</td><td>性平法 §15</td></tr>
+<tr><td class="c k">8 星期</td><td><b>分娩前後</b>之產假</td><td>性平法 §15</td></tr>
+<tr><td class="c k">2 個月</td><td>不服訴願決定→提起<b>行政訴訟</b>期間</td><td>訴願 §90</td></tr>
+<tr><td class="c k">4 個月</td><td>合意停止訴訟後不續行→<b>視為撤回</b>其訴或上訴</td><td>民訴 §191</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">年數</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th class="c" style="width:74px">數字</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="c k">1～3 年</td><td>緩起訴期間</td></tr>
+<tr><td class="c k">2 年</td><td>民法 §127：住宿飲食、運送、動產租價、<b>醫藥費</b>、<b>律師會計師公證人報酬</b>、技師承攬報酬、<b>商品代價</b></td></tr>
+<tr><td class="c k">3 年</td><td><b>旋轉門</b>：公務員離職後 3 年內不得任職（回看離職前 5 年職務）</td></tr>
+<tr><td class="c k">5 年</td><td>民法 §126：<b>利息、紅利、租金</b>、贍養費、退職金等定期給付／<b>公法上請求權（人民）</b>／<b>勞工工資清冊保存</b>／出勤紀錄保存</td></tr>
+<tr><td class="c k">10 年</td><td><b>公法上請求權（行政機關）</b>／新型專利權期間</td></tr>
+<tr><td class="c k">15 年</td><td>民法 §125 <b>一般請求權</b>時效／設計專利權期間</td></tr>
+<tr><td class="c k">20 年</td><td>發明專利權期間</td></tr>
+<tr><td class="c k">50 年</td><td><b>著作財產權</b>存續：著作人生存期間及死亡後 50 年</td></tr>
+</tbody></table></div>
+
+<h4 class="sub">人數・金額・年齡</h4>
+<div class="tw"><table class="tight">
+<thead><tr><th class="c" style="width:88px">數字</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td class="c k">1 人</td><td><b>有限公司</b>最少股東數；股份有限公司之政府或法人股東得為 1 人</td></tr>
+<tr><td class="c k">2 人</td><td>無限公司、股份有限公司最少股東數；結婚須 2 人以上證人簽名</td></tr>
+<tr><td class="c k">3 人</td><td>每一被告選任辯護人上限</td></tr>
+<tr><td class="c k">10 人</td><td>性平法：僱用 10 人以上未達 30 人→應訂<b>申訴管道</b>並公開揭示 <span class="tag hot">修法</span></td></tr>
+<tr><td class="c k">30 人</td><td>性平法：僱用 30 人以上→應訂<b>性騷擾防治措施、申訴及懲戒辦法</b></td></tr>
+<tr><td class="c k">113 人</td><td>立法委員法定總額</td></tr>
+<tr><td class="c k">10 萬元</td><td><b>小額訴訟</b>程序上限</td></tr>
+<tr><td class="c k">50 萬元</td><td>簡易訴訟程序上限</td></tr>
+<tr><td class="c k">7 歲</td><td>未滿 7 歲＝無行為能力；7 歲以上未成年＝限制行為能力</td></tr>
+<tr><td class="c k">14 歲</td><td>未滿 14 歲之行為<b>不罰</b>；14 以上未滿 18 得減輕</td></tr>
+<tr><td class="c k">18 歲</td><td><b>成年</b>年齡／結婚年齡 <span class="tag hot">修法</span></td></tr>
+<tr><td class="c k">20 歲</td><td><b>選舉權</b>年齡（未隨民法下修）</td></tr>
+<tr><td class="c k">23 歲</td><td>一般公職被選舉權年齡</td></tr>
+<tr><td class="c k">40 歲</td><td><b>總統、副總統</b>被選舉年齡</td></tr>
+<tr><td class="c k">80 歲</td><td>滿 80 歲之行為得減輕其刑</td></tr>
+<tr><td class="c k">1/4</td><td>立委<b>四分之一以上</b>請求得開臨時會</td></tr>
+<tr><td class="c k">四親等</td><td>家暴法「家庭成員」之旁系血親／姻親上限</td></tr>
+<tr><td class="c k">2/3</td><td>配偶與<b>第三或第四順位</b>繼承人共同繼承之應繼分</td></tr>
+<tr><td class="c k">1/2</td><td>配偶與<b>第二順位（父母）</b>共同繼承之應繼分</td></tr>
+</tbody></table></div>
+
+<div class="box">
+<span class="lbl">最容易互相干擾的三組，請特別隔離記憶</span>
+<p><b>① 30 日 vs 15 日：</b>訴願 30 日、審閱期 30 日以內；<b>消費申訴 15 日</b>。<br>
+<b>② 20 日 vs 2 個月：</b>民刑事上訴 20 日；<b>行政訴訟起訴 2 個月</b>。<br>
+<b>③ 5 年 vs 10 年：</b>公法上請求權<b>人民 5 年、機關 10 年</b>。</p>
+</div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="numbers">背完了</label></div>
+
+<h2 class="sec" id="confuse">易混淆一擊破</h2>
+<p class="lead">這一頁收的是「你明明讀過，但在考場上會猶豫三秒」的成對概念。每一組都給一句判準。</p>
+
+<div class="tw"><table>
+<thead><tr><th style="width:170px">易混組</th><th>判準（一句話解決）</th></tr></thead>
+<tbody>
+<tr><td class="k">負增強 vs 懲罰</td><td><b>負增強＝拿走壞東西以鼓勵；懲罰＝給予壞東西以制止。</b></td></tr>
+<tr><td class="k">保健因子 vs 激勵因子</td><td><b>錢與環境＝保健；成就與成長＝激勵。</b>薪資永遠是保健。</td></tr>
+<tr><td class="k">馬斯洛 vs ERG</td><td>馬斯洛 5 層須<b>逐級而上</b>；ERG 3 層可<b>同時追求、挫折退化</b>。</td></tr>
+<tr><td class="k">垂直共棲 vs 垂直寄生</td><td><b>共棲＝互相；寄生＝單向。</b></td></tr>
+<tr><td class="k">白京生 vs 彼得 vs 邁爾斯</td><td><b>白京生＝人變多；彼得＝升到不勝任；邁爾斯＝換位置換腦袋。</b></td></tr>
+<tr><td class="k">首長制 vs 委員制</td><td><b>快又能保密＝首長制；集思廣益＝委員制。</b></td></tr>
+<tr><td class="k">扁平式 vs 高聳式</td><td><b>扁平＝層級少、幅度大、反應快。</b></td></tr>
+<tr><td class="k">互利 vs 公益組織</td><td><b>成員自己受惠＝互利（工會、政黨）；社會大眾受惠＝公益（警消、基金會）。</b></td></tr>
+<tr><td class="k">管制性 vs 自我管制性</td><td><b>政府直接訂規則管你＝管制性；政府只訂原則、你自己管自己＝自我管制性。</b></td></tr>
+<tr><td class="k">零和 vs 非零和政策</td><td><b>管制性、重分配性＝零和；分配性、自我管制性＝非零和。</b></td></tr>
+<tr><td class="k">市場／政府／政策失靈</td><td><b>市場自己失靈→政府該介入；政府介入後仍失靈＝政府失靈；單一政策沒達標＝政策失靈。</b></td></tr>
+<tr><td class="k">BOT vs BTO vs BOO vs OT</td><td>看 <b>T 在哪裡</b>：T 在中間＝完工即交政府；T 在最後＝期滿才交；<b>沒有 T＝永遠民間的</b>；<b>沒有 B＝政府蓋的</b>。</td></tr>
+<tr><td class="k">概算 vs 預算案 vs 法定預算</td><td><b>機關估的＝概算；送立院的＝預算案；通過公布的＝法定預算。</b></td></tr>
+<tr><td class="k">決算 vs 審計</td><td><b>先決算（報告執行結果），後審計（審計部來查）。</b></td></tr>
+<tr><td class="k">法律優位 vs 法律保留</td><td><b>優位＝不可牴觸；保留＝沒授權就不能做。</b></td></tr>
+<tr><td class="k">法規修正 vs 廢止</td><td><b>機關裁併「有人接手」→修正；「沒人接手」→廢止。</b></td></tr>
+<tr><td class="k">行政規則 vs 法規命令</td><td><b>行政規則對內（下達）；法規命令對外（發布）。</b></td></tr>
+<tr><td class="k">行政處分 vs 法規命令</td><td><b>具體個別＝處分；抽象一般＝命令。</b></td></tr>
+<tr><td class="k">行政指導 vs 行政計畫</td><td><b>指導＝對「特定人」的勸告；計畫＝對未來的設計規劃。</b></td></tr>
+<tr><td class="k">撤銷訴訟 vs 課予義務訴訟</td><td><b>要機關「別做」＝撤銷；要機關「去做」＝課予義務。</b></td></tr>
+<tr><td class="k">罰金 vs 罰鍰</td><td><b>罰金＝刑罰（法院）；罰鍰＝行政罰（機關）。</b>沒收／沒入同理。</td></tr>
+<tr><td class="k">警告性 vs 影響名譽處分</td><td><b>警誡點次講輔＝警告性；公布姓名照片＝影響名譽。</b></td></tr>
+<tr><td class="k">推定 vs 視為</td><td><b>推定可以舉證推翻；視為不容反證。</b></td></tr>
+<tr><td class="k">無效 vs 撤銷 vs 效力未定</td><td><b>無效＝自始死；撤銷＝先活後溯及死；效力未定＝等人點頭。</b></td></tr>
+<tr><td class="k">承攬 vs 僱傭 vs 委任</td><td><b>要結果＝承攬；買時間＝僱傭；處理事務＝委任。</b>歸不了類的勞務契約→委任。</td></tr>
+<tr><td class="k">抵押權 vs 質權 vs 留置權</td><td><b>不動產不移轉占有＝抵押；動產移轉占有＝質權；本來就占有且債權有牽連＝留置。</b></td></tr>
+<tr><td class="k">假扣押 vs 假處分</td><td><b>要錢＝假扣押；不是要錢＝假處分。</b></td></tr>
+<tr><td class="k">告訴／告發／自首／自訴</td><td><b>被害人說＝告訴；第三人說＝告發；自己說＝自首；自己告到法院＝自訴。</b></td></tr>
+<tr><td class="k">竊盜 vs 詐欺</td><td><b>被害人不知情＝竊盜；被害人被騙後自己交出＝詐欺。</b></td></tr>
+<tr><td class="k">複保險 vs 再保險</td><td><b>要保人重複投保＝複保險；保險人自己去投保＝再保險。</b></td></tr>
+<tr><td class="k">決議內容 vs 程序違法</td><td><b>內容違法＝無效；召集程序或決議方法違法＝得訴請撤銷。</b></td></tr>
+<tr><td class="k">團體標章 vs 團體商標</td><td><b>標章表彰「會籍」；商標表彰「會員的商品／服務」。</b></td></tr>
+<tr><td class="k">核定 vs 備查</td><td><b>核定要上級點頭才生效；備查只是報備。</b></td></tr>
+<tr><td class="k">自治條例 vs 自治規則</td><td><b>議會通過＝自治條例；行政機關訂定＝自治規則。</b></td></tr>
+</tbody></table></div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="confuse">讀完了</label></div>
+
+<h2 class="sec" id="mnemo">口訣總集</h2>
+<div class="tw"><table>
+<thead><tr><th style="width:170px">主題</th><th>口訣</th></tr></thead>
+<tbody>
+<tr><td class="k">行政學四大時期</td><td class="mn">傳統管科學、修正行為學、整合系統權變、新公管市場</td></tr>
+<tr><td class="k">古立克分部化 4P</td><td class="mn">目的、過程、人（對象）、地區</td></tr>
+<tr><td class="k">穆尼雷利四原則</td><td class="mn">協調、階梯、機能、幕僚（沒有平衡）</td></tr>
+<tr><td class="k">布勞與史考特</td><td class="mn">成員互利、老闆企業、顧客服務、大眾公益</td></tr>
+<tr><td class="k">馬斯洛由低到高</td><td class="mn">生理、安全、社會、尊榮、自我實現</td></tr>
+<tr><td class="k">ERG 由低到高</td><td class="mn">生存 E、關係 R、成長 G</td></tr>
+<tr><td class="k">期望理論三要素</td><td class="mn">做得到（期望）、有獎賞（工具）、我想要（價值）</td></tr>
+<tr><td class="k">李克特四系統</td><td class="mn">剝削、仁慈、諮詢、參與（信任度遞增）</td></tr>
+<tr><td class="k">明茲伯格十角色</td><td class="mn">人際：頭臉、領導、聯絡｜資訊：監控、傳播、發言｜決策：企業家、危機、資源、談判</td></tr>
+<tr><td class="k">溝通順序</td><td class="mn">注意 → 理解 → 接受 → 行動</td></tr>
+<tr><td class="k">預算循環</td><td class="mn">編、審、執、決、計（決算在審計前）</td></tr>
+<tr><td class="k">預算四階段名稱</td><td class="mn">概 → 案 → 法 → 分</td></tr>
+<tr><td class="k">MBO 步驟</td><td class="mn">定目標 → 分權責 → 去執行 → 做評估</td></tr>
+<tr><td class="k">POSDCORB</td><td class="mn">計畫、組織、用人、指揮、協調、報告、預算</td></tr>
+<tr><td class="k">SMART</td><td class="mn">明確、可衡量、可達成、關聯性、有時限</td></tr>
+<tr><td class="k">危機管理三階段</td><td class="mn">前：計畫訓練感應｜中：指揮資源監測｜後：復原評估</td></tr>
+<tr><td class="k">雷格斯三社會</td><td class="mn">鎔合（農業）、稜柱（過渡）、繞射（工業）</td></tr>
+<tr><td class="k">吉伯特四途徑</td><td class="mn">法院立院監院＝外部正式｜媒體民眾＝外部非正式｜上級政風＝內部正式｜良心倫理＝內部非正式</td></tr>
+<tr><td class="k">中標法法律名稱</td><td class="mn">法、律、條例、通則</td></tr>
+<tr><td class="k">中標法命令名稱</td><td class="mn">規程、規則、細則、辦法、綱要、標準、準則</td></tr>
+<tr><td class="k">法條書寫順序</td><td class="mn">條、項、款、目</td></tr>
+<tr><td class="k">比例原則三子原則</td><td class="mn">合目的、最小侵害、不過當</td></tr>
+<tr><td class="k">民法 §127 兩年時效</td><td class="mn">住吃玩、運送租、醫藥律會、技師承攬、商人貨款</td></tr>
+<tr><td class="k">繼承順序</td><td class="mn">卑親屬、父母、兄弟姊妹、祖父母</td></tr>
+<tr><td class="k">刑法不罰事由</td><td class="mn">未滿十四、不能辨識、依法依命、業務正當、正當防衛、緊急避難</td></tr>
+<tr><td class="k">刑法得減輕</td><td class="mn">十四到十八、滿八十、瘖啞人、辨識顯著減低</td></tr>
+<tr><td class="k">著作人格權三權</td><td class="mn">公開發表、姓名表示、禁止不當變更</td></tr>
+<tr><td class="k">特種個資</td><td class="mn">病、醫、基、性、健、犯</td></tr>
+<tr><td class="k">地方稅</td><td class="mn">房地增田契、牌照印花娛樂</td></tr>
+<tr><td class="k">專利三種</td><td class="mn">發明、新型、設計（沒有「發現」）</td></tr>
+</tbody></table></div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="mnemo">背完了</label></div>
+
+<h2 class="sec" id="final">考前七日清單</h2>
+<div class="tw"><table>
+<thead><tr><th style="width:74px">剩餘</th><th>該做的事</th></tr></thead>
+<tbody>
+<tr><td class="k">D-7</td><td>重刷 115 與 114 兩份考古題，<b>限時 50 分鐘</b>。把錯的題號圈起來，只看那幾章。</td></tr>
+<tr><td class="k">D-6</td><td>到<b>全國法規資料庫</b>查核本手冊標示 <span class="tag hot">修法</span> 的條文：性平法 §13／§15、民法成年與結婚年齡、詐欺犯罪危害防制條例。另查<b>當年度新通過或大修的法律</b>。</td></tr>
+<tr><td class="k">D-5</td><td>只讀〈易混淆一擊破〉。對每一組能說出判準才過關。</td></tr>
+<tr><td class="k">D-4</td><td>行政學：把 CH2 組織分類、CH4 激勵三合一表、CH5 領導演進、CH10 BOT 家族四張表默寫出來。</td></tr>
+<tr><td class="k">D-3</td><td>只讀〈數字速查總表〉。用遮答案的方式自測三輪。</td></tr>
+<tr><td class="k">D-2</td><td>重刷 113 與 112 考古題（限時）。整份錯題本再過一次。</td></tr>
+<tr><td class="k">D-1</td><td><b>不讀新東西。</b>只看〈口訣總集〉與自己的錯題本。確認准考證、文具（2B 鉛筆、橡皮擦）、考場交通。早睡。</td></tr>
+</tbody></table></div>
+
+<div class="box">
+<span class="lbl">考場上的三個動作</span>
+<p><b>① 先在「有誤／非屬／不包括」上畫圈。</b>這一科最大的失分來源不是不會，是看錯題目問什麼。<br>
+<b>② 四個選項逐一標 ○／×，標完再選。</b>不要看到像的就跳答。<br>
+<b>③ 絕對不留空白。</b>現制不倒扣，任何題目都要劃記；真的不會就選<b>敘述最長、最完整</b>的那一個，或排除兩個明顯錯的再猜。</p>
+</div>
+
+<div class="box trap">
+<span class="lbl">最後一句</span>
+<p>這一科的對手不是題目，是<b>「讀過但想不起來」</b>。所以最有效的最後衝刺不是再讀一遍課本，而是<b>反覆用遮答案的方式自我輸出</b>。把上面的表格關起來，用嘴巴說一次——說得出來才算會。</p>
+</div>
+
+<div class="done-wrap"><label class="done"><input type="checkbox" data-ch="final">準備好了</label></div>
+
+<hr class="soft">
+<p class="tiny">本手冊依據台灣電力公司 112～115 年度新進僱用人員甄試「專業科目 A（行政學概要、法律常識）」試題編寫。考試科目、配分、題型與招考規定均以台電公司當年度正式簡章公告為準；法條內容請以全國法規資料庫現行條文為準。113 年度答案取自試題檔所附官方標示，其餘年度為推導結果，建議與台電官網公告之答案卷核對。</p>
+
+</main>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  var KEY="taipower-a-progress";
+
+  // ---- mask mode ----
+  var maskBtn=document.getElementById("mask-btn");
+  maskBtn.addEventListener("click",function(){
+    var on=document.body.classList.toggle("mask");
+    maskBtn.setAttribute("aria-pressed",on?"true":"false");
+    if(!on){
+      document.querySelectorAll(".a.show,td.an.show").forEach(function(e){e.classList.remove("show");});
+    }
+  });
+  document.addEventListener("click",function(e){
+    if(!document.body.classList.contains("mask"))return;
+    var t=e.target.closest(".a, td.an");
+    if(t)t.classList.toggle("show");
+  });
+
+  // ---- menu (mobile) ----
+  var menuBtn=document.getElementById("menu-btn"),toc=document.getElementById("toc");
+  menuBtn.addEventListener("click",function(){
+    var on=toc.classList.toggle("open");
+    menuBtn.setAttribute("aria-expanded",on?"true":"false");
+  });
+  toc.addEventListener("click",function(e){
+    if(e.target.tagName==="A"&&window.innerWidth<=980){
+      toc.classList.remove("open");menuBtn.setAttribute("aria-expanded","false");
+    }
+  });
+
+  // ---- progress ----
+  var boxes=Array.prototype.slice.call(document.querySelectorAll("label.done input"));
+  var fill=document.getElementById("pfill"),ptxt=document.getElementById("ptxt");
+  function paint(){
+    var n=boxes.filter(function(b){return b.checked;}).length;
+    fill.style.width=(boxes.length?n/boxes.length*100:0)+"%";
+    ptxt.textContent=n+"/"+boxes.length;
+  }
+  function load(){
+    try{
+      var raw=localStorage.getItem(KEY);
+      if(!raw)return;
+      var d=JSON.parse(raw)||{};
+      boxes.forEach(function(b){if(d[b.dataset.ch])b.checked=true;});
+    }catch(err){}
+  }
+  function save(){
+    try{
+      var d={};
+      boxes.forEach(function(b){if(b.checked)d[b.dataset.ch]=1;});
+      localStorage.setItem(KEY,JSON.stringify(d));
+    }catch(err){}
+  }
+  load();paint();
+  boxes.forEach(function(b){b.addEventListener("change",function(){save();paint();});});
+
+  // ---- search filter ----
+  var q=document.getElementById("q");
+  var units=Array.prototype.slice.call(document.querySelectorAll("main .tw, main .card, main .box, main .map, main .chain, main details, main p, main ul, main ol, main h4.sub"));
+  var headings=Array.prototype.slice.call(document.querySelectorAll("main h2.sec, main h3.ch"));
+  var timer;
+  q.addEventListener("input",function(){
+    clearTimeout(timer);
+    timer=setTimeout(run,180);
+  });
+  function run(){
+    var s=q.value.trim().toLowerCase();
+    if(!s){
+      units.concat(headings).forEach(function(u){u.classList.remove("hidden");});
+      return;
+    }
+    units.forEach(function(u){
+      var hit=(u.textContent||"").toLowerCase().indexOf(s)>-1;
+      u.classList.toggle("hidden",!hit);
+      if(hit&&u.tagName==="DETAILS")u.open=true;
+    });
+    headings.forEach(function(h){
+      var n=h.nextElementSibling,any=false;
+      while(n&&!/^H2$/.test(n.tagName)&&!(h.tagName==="H3"&&n.tagName==="H3")){
+        if(!n.classList.contains("hidden")&&(n.textContent||"").trim())any=true;
+        n=n.nextElementSibling;
+      }
+      h.classList.toggle("hidden",!any&&(h.textContent||"").toLowerCase().indexOf(s)===-1);
+    });
+  }
+
+  // ---- toc active state ----
+  var links=Array.prototype.slice.call(toc.querySelectorAll("a"));
+  var targets=links.map(function(a){return document.getElementById(a.getAttribute("href").slice(1));}).filter(Boolean);
+  if("IntersectionObserver" in window){
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(!en.isIntersecting)return;
+        links.forEach(function(a){
+          a.classList.toggle("on",a.getAttribute("href")==="#"+en.target.id);
+        });
+      });
+    },{rootMargin:"-80px 0px -70% 0px",threshold:0});
+    targets.forEach(function(t){io.observe(t);});
+  }
+})();
+</script>
+</body>
+</html>
