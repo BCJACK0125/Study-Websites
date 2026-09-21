@@ -1,0 +1,2317 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>台電僱員 企業管理概論 完全攻略講義</title>
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  --bg:#fbfaf7; --panel:#ffffff; --ink:#1f2328; --ink2:#4a5058; --ink3:#767d87;
+  --line:#e3e0d8; --line2:#efece5;
+  --accent:#8a1f1f; --accent2:#b8860b; --accent3:#1e5f74;
+  --hot:#c0392b; --warm:#d98324; --cool:#2d7d6f;
+  --mark:#fff3c4; --code:#f4f1ea;
+  --shadow:0 1px 2px rgba(0,0,0,.05),0 6px 20px rgba(0,0,0,.04);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#15171a; --panel:#1c1f23; --ink:#e8e6e1; --ink2:#b9b6af; --ink3:#8a8780;
+    --line:#2e3238; --line2:#24282d;
+    --accent:#e08a8a; --accent2:#e0bb63; --accent3:#7fc3d6;
+    --hot:#ef8b7c; --warm:#e8b06a; --cool:#74c4b2;
+    --mark:#4a3f16; --code:#22262b;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 6px 20px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#15171a; --panel:#1c1f23; --ink:#e8e6e1; --ink2:#b9b6af; --ink3:#8a8780;
+  --line:#2e3238; --line2:#24282d;
+  --accent:#e08a8a; --accent2:#e0bb63; --accent3:#7fc3d6;
+  --hot:#ef8b7c; --warm:#e8b06a; --cool:#74c4b2;
+  --mark:#4a3f16; --code:#22262b;
+}
+*{box-sizing:inherit}
+html{scroll-behavior:smooth; scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px)}
+body{
+  margin:0; background:var(--bg); color:var(--ink);
+  font-family:"Noto Serif TC","Source Han Serif TC",-apple-system,BlinkMacSystemFont,"PingFang TC","Microsoft JhengHei",serif;
+  font-size:16.5px; line-height:1.85; letter-spacing:.01em;
+  -webkit-text-size-adjust:100%;
+}
+.sans{font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif}
+
+/* ---------- layout ---------- */
+.wrap{max-width:1280px;margin:0 auto;padding:0 20px;display:flex;gap:34px;align-items:flex-start}
+#toc{
+  position:sticky; top:calc(env(safe-area-inset-top,0px) + 14px);
+  width:250px; flex:0 0 250px; max-height:calc(100vh - 40px); overflow-y:auto;
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC","Microsoft JhengHei",sans-serif;
+  font-size:13.4px; line-height:1.6; padding:16px 0 40px;
+}
+#toc h4{margin:0 0 8px;font-size:11px;letter-spacing:.14em;color:var(--ink3);font-weight:700}
+#toc a{display:block;padding:4.5px 10px;color:var(--ink2);text-decoration:none;border-left:2px solid transparent;border-radius:0 5px 5px 0}
+#toc a:hover{background:var(--line2);color:var(--ink)}
+#toc a.lv1{font-weight:700;color:var(--ink);margin-top:14px;font-size:13.8px;border-left-color:var(--accent)}
+#toc a.lv2{padding-left:20px}
+main{flex:1 1 auto;min-width:0;padding:0 0 100px}
+@media(max-width:940px){ #toc{display:none} .wrap{padding:0 15px} body{font-size:16px} }
+
+/* ---------- topbar ---------- */
+.topbar{
+  position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line);
+  padding-top:env(safe-area-inset-top,0px);
+}
+.topbar-in{max-width:1280px;margin:0 auto;padding:9px 20px;display:flex;align-items:center;gap:14px;
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;font-size:13px}
+.topbar b{color:var(--accent);letter-spacing:.02em}
+.topbar .sp{flex:1}
+.btn{cursor:pointer;border:1px solid var(--line);background:var(--panel);color:var(--ink2);
+  border-radius:7px;padding:5px 11px;font-size:12.5px;font-family:inherit}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+
+/* ---------- cover ---------- */
+.cover{padding:64px 0 44px;border-bottom:3px double var(--line);margin-bottom:34px}
+.cover .kicker{font-size:12.5px;letter-spacing:.3em;color:var(--accent2);font-weight:700;
+  font-family:-apple-system,"PingFang TC",sans-serif}
+.cover h1{font-size:40px;line-height:1.28;margin:16px 0 10px;letter-spacing:.02em}
+.cover .sub{font-size:17px;color:var(--ink2);margin-bottom:22px}
+.cover .meta{display:flex;flex-wrap:wrap;gap:8px}
+.chip{display:inline-block;font-size:12.5px;padding:4px 11px;border:1px solid var(--line);
+  border-radius:20px;color:var(--ink2);background:var(--panel);
+  font-family:-apple-system,"PingFang TC",sans-serif}
+@media(max-width:700px){.cover h1{font-size:29px}.cover{padding:36px 0 30px}}
+
+/* ---------- headings ---------- */
+h2.part{
+  font-size:13px;letter-spacing:.26em;color:var(--accent2);font-weight:700;margin:70px 0 0;
+  font-family:-apple-system,"PingFang TC",sans-serif;padding-bottom:7px;border-bottom:1px solid var(--line)
+}
+h3{font-size:25px;margin:38px 0 14px;line-height:1.4;padding-left:14px;border-left:5px solid var(--accent)}
+h4{font-size:18.5px;margin:30px 0 10px;color:var(--ink);
+   padding-bottom:5px;border-bottom:1px dashed var(--line)}
+h5{font-size:15.5px;margin:20px 0 7px;color:var(--accent3);font-weight:700}
+p{margin:.65em 0}
+a{color:var(--accent3)}
+
+/* ---------- components ---------- */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:11px;padding:16px 19px;margin:16px 0;box-shadow:var(--shadow)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:760px){.grid2,.grid3{grid-template-columns:1fr}}
+
+table{width:100%;border-collapse:collapse;margin:15px 0;font-size:14.6px;background:var(--panel);
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang TC","Noto Sans TC",sans-serif;line-height:1.65}
+.tblwrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:15px 0;border-radius:9px;border:1px solid var(--line)}
+.tblwrap table{margin:0;border:0;min-width:520px}
+th,td{border:1px solid var(--line);padding:8px 11px;vertical-align:top;text-align:left}
+th{background:var(--line2);font-weight:700;color:var(--ink);white-space:nowrap}
+tbody tr:nth-child(even){background:color-mix(in srgb,var(--line2) 45%,transparent)}
+td.ctr,th.ctr{text-align:center}
+.num{font-variant-numeric:tabular-nums}
+
+.box{border-radius:10px;padding:13px 17px;margin:16px 0;border:1px solid var(--line);background:var(--panel)}
+.box .bt{font-size:12.5px;font-weight:700;letter-spacing:.1em;margin-bottom:6px;
+  font-family:-apple-system,"PingFang TC",sans-serif;display:flex;align-items:center;gap:7px}
+.box.key{border-left:5px solid var(--accent)}       .box.key .bt{color:var(--accent)}
+.box.mnem{border-left:5px solid var(--accent2);background:color-mix(in srgb,var(--mark) 26%,var(--panel))}
+.box.mnem .bt{color:var(--accent2)}
+.box.trap{border-left:5px solid var(--hot)}         .box.trap .bt{color:var(--hot)}
+.box.tmpl{border-left:5px solid var(--accent3)}     .box.tmpl .bt{color:var(--accent3)}
+.box.exam{border-left:5px solid var(--cool);background:color-mix(in srgb,var(--cool) 6%,var(--panel))}
+.box.exam .bt{color:var(--cool)}
+
+mark{background:var(--mark);color:var(--ink);padding:0 3px;border-radius:3px}
+.kw{font-weight:700;color:var(--accent);border-bottom:2px solid color-mix(in srgb,var(--accent) 30%,transparent)}
+.en{font-family:Georgia,"Times New Roman",serif;font-style:italic;color:var(--ink3);font-size:.93em}
+code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;background:var(--code);
+  padding:1px 6px;border-radius:4px;font-size:.9em}
+.formula{background:var(--code);border-radius:8px;padding:11px 15px;margin:11px 0;
+  font-family:ui-monospace,Menlo,Consolas,monospace;font-size:14.4px;line-height:1.95;overflow-x:auto;white-space:pre-wrap}
+
+/* 歷屆出處 tag */
+.yr{display:inline-block;font-size:11.5px;padding:1.5px 7px;border-radius:5px;margin:2px 3px 2px 0;
+  background:color-mix(in srgb,var(--accent3) 14%,transparent);color:var(--accent3);
+  border:1px solid color-mix(in srgb,var(--accent3) 30%,transparent);white-space:nowrap;
+  font-family:-apple-system,"PingFang TC",sans-serif;font-variant-numeric:tabular-nums}
+.yr.hot{background:color-mix(in srgb,var(--hot) 14%,transparent);color:var(--hot);
+  border-color:color-mix(in srgb,var(--hot) 32%,transparent)}
+.srcline{margin:9px 0 4px;font-size:12.5px;color:var(--ink3);font-family:-apple-system,"PingFang TC",sans-serif}
+
+/* 熱度星級 */
+.stars{color:var(--warm);letter-spacing:2px;font-size:14px}
+
+/* 2x2 矩陣 */
+.mtx{display:grid;grid-template-columns:78px 1fr 1fr;grid-template-rows:auto auto auto;
+  gap:0;margin:18px 0;font-family:-apple-system,"PingFang TC",sans-serif;font-size:13.8px}
+.mtx>div{border:1px solid var(--line);padding:11px;background:var(--panel)}
+.mtx .lbl{background:var(--line2);display:flex;align-items:center;justify-content:center;
+  text-align:center;font-weight:700;font-size:12.5px;color:var(--ink2)}
+.mtx .cell b{display:block;font-size:15px;margin-bottom:3px;color:var(--accent)}
+.mtx .cell small{color:var(--ink2);line-height:1.55;display:block;font-size:12.6px}
+.mtx-cap{font-size:12.5px;color:var(--ink3);text-align:center;margin-top:-8px;
+  font-family:-apple-system,"PingFang TC",sans-serif}
+
+/* 流程鏈 */
+.flow{display:flex;flex-wrap:wrap;align-items:stretch;gap:0;margin:16px 0;
+  font-family:-apple-system,"PingFang TC",sans-serif;font-size:13.6px}
+.flow .st{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:8px 13px;
+  display:flex;flex-direction:column;justify-content:center;min-width:0;flex:1 1 auto;text-align:center}
+.flow .st b{display:block;color:var(--accent);font-size:14.2px}
+.flow .st small{color:var(--ink3);font-size:11.8px;display:block;line-height:1.45}
+.flow .ar{display:flex;align-items:center;padding:0 7px;color:var(--ink3);font-size:15px;flex:0 0 auto}
+@media(max-width:700px){.flow{flex-direction:column}.flow .ar{transform:rotate(90deg);padding:3px 0;justify-content:center}}
+
+/* 層級/心智圖 */
+.tree{font-family:-apple-system,"PingFang TC",sans-serif;font-size:14px;margin:16px 0;
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:16px 18px;overflow-x:auto}
+.tree .root{font-weight:700;color:var(--accent);font-size:15.5px;margin-bottom:8px}
+.tree ul{list-style:none;margin:0;padding-left:18px;border-left:1px dashed var(--line)}
+.tree>ul{padding-left:6px;border:0}
+.tree li{margin:5px 0;position:relative;padding-left:14px;line-height:1.65}
+.tree li::before{content:"";position:absolute;left:0;top:.72em;width:9px;height:1px;background:var(--line)}
+.tree>ul>li{padding-left:0}.tree>ul>li::before{display:none}
+.tree .n1{font-weight:700;color:var(--accent3)}
+.tree .n2{color:var(--ink)}
+.tree small{color:var(--ink3);font-size:12.4px}
+
+/* 金字塔 */
+.pyr{margin:18px auto;max-width:560px;font-family:-apple-system,"PingFang TC",sans-serif}
+.pyr div{margin:3px auto;padding:9px 12px;text-align:center;border-radius:6px;color:#fff;font-size:13.8px}
+.pyr small{opacity:.88;font-size:12px}
+
+details{border:1px solid var(--line);border-radius:9px;margin:11px 0;background:var(--panel);overflow:hidden}
+details>summary{cursor:pointer;padding:11px 16px;font-weight:700;font-size:15px;
+  font-family:-apple-system,"PingFang TC",sans-serif;list-style:none;color:var(--accent3)}
+details>summary::-webkit-details-marker{display:none}
+details>summary::before{content:"▸ ";color:var(--ink3)}
+details[open]>summary::before{content:"▾ "}
+details[open]>summary{border-bottom:1px solid var(--line2);background:var(--line2)}
+details .dbody{padding:4px 18px 14px}
+
+ul.tight,ol.tight{margin:.5em 0;padding-left:1.45em}
+ul.tight li,ol.tight li{margin:.3em 0}
+hr{border:0;border-top:1px solid var(--line);margin:34px 0}
+.small{font-size:13.6px;color:var(--ink2)}
+.center{text-align:center}
+.backtop{display:block;text-align:right;font-size:12px;color:var(--ink3);text-decoration:none;margin-top:18px}
+
+
+/* mobile TOC */
+.mtoc{display:none;margin:0 0 26px}
+.mtoc>summary{font-size:14.5px}
+.mtoc .cols{display:grid;grid-template-columns:1fr 1fr;gap:2px 12px;padding:6px 16px 14px;
+  font-family:-apple-system,"PingFang TC",sans-serif;font-size:13.2px}
+.mtoc .cols a{display:block;padding:4px 0;color:var(--ink2);text-decoration:none;border-bottom:1px solid var(--line2)}
+.mtoc .cols a.hd{font-weight:700;color:var(--accent);border-bottom:0;padding-top:9px}
+@media(max-width:940px){.mtoc{display:block}}
+@media(max-width:430px){.mtoc .cols{grid-template-columns:1fr}}
+
+@media print{
+  #toc,.topbar,.backtop{display:none}
+  body{font-size:11pt;background:#fff;color:#000}
+  .wrap{display:block;max-width:none;padding:0}
+  details{page-break-inside:avoid} details>summary{color:#000}
+  details:not([open])>.dbody{display:block}
+  h3{page-break-after:avoid} table{page-break-inside:avoid}
+}
+</style>
+</head>
+<body>
+<div class="topbar"><div class="topbar-in">
+  <b>台電僱員 · 企業管理概論</b><span class="sp"></span>
+  <button class="btn" onclick="openAll()">全部展開</button>
+  <button class="btn" onclick="closeAll()">全部收合</button>
+  <button class="btn" onclick="tgTheme()">明／暗</button>
+</div></div>
+<div class="wrap">
+<nav id="toc">
+  <h4>目 錄</h4>
+  <a class="lv1" href="#p0">Part 0　考情戰略</a>
+  <a class="lv2" href="#s0-1">0-1 考試制度與配分</a>
+  <a class="lv2" href="#s0-2">0-2 八年命題大數據</a>
+  <a class="lv2" href="#s0-3">0-3 60分鐘作答戰術</a>
+  <a class="lv2" href="#s0-4">0-4 讀書計畫表</a>
+  <a class="lv1" href="#p1">Part 1　管理基礎</a>
+  <a class="lv2" href="#c1">Ch1 企業與管理基本概念</a>
+  <a class="lv2" href="#c2">Ch2 管理思想演進</a>
+  <a class="lv2" href="#c3">Ch3 經營環境與國際化</a>
+  <a class="lv2" href="#c4">Ch4 企業倫理與社會責任</a>
+  <a class="lv1" href="#p2">Part 2　管理功能</a>
+  <a class="lv2" href="#c5">Ch5 規劃與決策</a>
+  <a class="lv2" href="#c6">Ch6 策略管理</a>
+  <a class="lv2" href="#c7">Ch7 組織結構與設計</a>
+  <a class="lv2" href="#c8">Ch8 組織文化·變革·創新</a>
+  <a class="lv2" href="#c9">Ch9 領導</a>
+  <a class="lv2" href="#c10">Ch10 激勵</a>
+  <a class="lv2" href="#c11">Ch11 溝通·團隊·衝突</a>
+  <a class="lv2" href="#c12">Ch12 控制</a>
+  <a class="lv1" href="#p3">Part 3　企業機能</a>
+  <a class="lv2" href="#c13">Ch13 生產與作業管理</a>
+  <a class="lv2" href="#c14">Ch14 行銷管理</a>
+  <a class="lv2" href="#c15">Ch15 人力資源管理</a>
+  <a class="lv2" href="#c16">Ch16 財務管理</a>
+  <a class="lv2" href="#c17">Ch17 研發·資訊·知識</a>
+  <a class="lv1" href="#p4">Part 4　應試工具箱</a>
+  <a class="lv2" href="#t1">4-1 計算題公式速查</a>
+  <a class="lv2" href="#t2">4-2 名詞解釋庫</a>
+  <a class="lv2" href="#t3">4-3 申論答題模板</a>
+  <a class="lv2" href="#t35">4-3b 歷屆問答題全覽</a>
+  <a class="lv2" href="#t4">4-4 學者人名速查</a>
+  <a class="lv2" href="#t45">4-4b 易混淆總整理</a>
+  <a class="lv2" href="#t5">4-5 數字口訣總表</a>
+  <a class="lv2" href="#t6">4-6 108–115 答案總表</a>
+  <a class="lv2" href="#t7">4-7 考前7天 Checklist</a>
+</nav>
+<main>
+<div class="cover">
+  <div class="kicker">TAIPOWER · 新進僱用人員甄試 · 專業科目 B</div>
+  <h1>企業管理概論<br>完全攻略講義</h1>
+  <div class="sub">以 108–115 年共 8 屆、160 題填充 + 32 題問答的全量逆向工程，<br>拆解命題邏輯、重建知識地圖、附申論模板與速記口訣。</div>
+  <div class="meta">
+    <span class="chip">17 章知識體系</span>
+    <span class="chip">八年命題熱區統計</span>
+    <span class="chip">80+ 圖表與矩陣</span>
+    <span class="chip">計算題公式速查</span>
+    <span class="chip">名詞解釋庫 60 則</span>
+    <span class="chip">申論答題模板</span>
+  </div>
+</div>
+<details class="mtoc"><summary>目錄 ／ 快速跳轉</summary><div class="cols">
+<a class="hd" href="#p0">Part 0 考情戰略</a>
+<a href="#s0-1">0-1 考試制度與配分</a><a href="#s0-2">0-2 八年命題大數據</a>
+<a href="#s0-3">0-3 60分鐘作答戰術</a><a href="#s0-4">0-4 讀書計畫表</a>
+<a class="hd" href="#p1">Part 1 管理基礎</a>
+<a href="#c1">Ch1 企業與管理基本概念</a><a href="#c2">Ch2 管理思想演進</a>
+<a href="#c3">Ch3 經營環境與國際化</a><a href="#c4">Ch4 企業倫理與社會責任</a>
+<a class="hd" href="#p2">Part 2 管理功能</a>
+<a href="#c5">Ch5 規劃與決策</a><a href="#c6">Ch6 策略管理</a>
+<a href="#c7">Ch7 組織結構與設計</a><a href="#c8">Ch8 組織文化·變革·創新</a>
+<a href="#c9">Ch9 領導</a><a href="#c10">Ch10 激勵</a>
+<a href="#c11">Ch11 溝通·團隊·衝突</a><a href="#c12">Ch12 控制</a>
+<a class="hd" href="#p3">Part 3 企業機能</a>
+<a href="#c13">Ch13 生產與作業管理</a><a href="#c14">Ch14 行銷管理</a>
+<a href="#c15">Ch15 人力資源管理</a><a href="#c16">Ch16 財務管理</a>
+<a href="#c17">Ch17 研發·資訊·知識</a>
+<a class="hd" href="#p4">Part 4 應試工具箱</a>
+<a href="#t1">4-1 計算題公式速查</a><a href="#t2">4-2 名詞解釋庫</a>
+<a href="#t3">4-3 申論答題模板</a><a href="#t35">4-3b 歷屆問答題全覽</a>
+<a href="#t4">4-4 學者人名速查</a><a href="#t45">4-4b 易混淆總整理</a>
+<a href="#t5">4-5 數字口訣總表</a><a href="#t6">4-6 108–115 答案總表</a>
+<a href="#t7">4-7 考前7天 Checklist</a>
+</div></details>
+<h2 class="part" id="p0">PART 0　考情戰略：先看懂題目怎麼出，再決定怎麼讀</h2>
+
+<h3 id="s0-1">0-1　考試制度與配分結構</h3>
+<p>台電新進僱用人員甄試「綜合行政」類共考 5 科：國文 20%、英文 20%、<b>專業科目 A</b>（行政學概要 + 法律常識）30%、<b>專業科目 B（企業管理概論）</b>30%。普通科目與專業 A 採測驗式（選擇題），<mark>專業 B 是唯一的非測驗式科目</mark>——這正是它的決勝點：選擇題可以猜，填充題與申論題不行。</p>
+
+<div class="tblwrap"><table>
+<thead><tr><th>項目</th><th>內容</th><th>對備考的意義</th></tr></thead>
+<tbody>
+<tr><td>節次／時間</td><td>第 3 節，<b>60 分鐘</b></td><td>平均每分鐘要產出 1.67 分，速度比深度重要</td></tr>
+<tr><td>題型一</td><td>填充題 20 題 × 2 分＝<b>40 分</b></td><td>純關鍵字回憶，不給部分分，會就是會</td></tr>
+<tr><td>題型二</td><td>問答題 4 大題＝<b>60 分</b><br>（固定：名詞解釋 5 小題×3 分＋申論 3 題×15 分）</td><td>申論有部分分，「寫得出架構」比「寫得完美」重要</td></tr>
+<tr><td>作答工具</td><td>黑／藍原子筆或鋼筆；<b>禁用計算機</b></td><td>所有計算題數字都設計成心算可解，別怕</td></tr>
+<tr><td>作答空間</td><td>答案卷正反 2 面，<b>不補發</b></td><td>版面要預先分配，申論不能寫到爆版</td></tr>
+<tr><td>作答規範</td><td>毋須抄題、須依序標題號；問答題須詳列過程，未詳列不給分</td><td>計算題一定要寫公式與代入過程</td></tr>
+</tbody></table></div>
+
+<div class="box trap"><div class="bt">⚠ 三個容易踩雷的制度細節</div>
+<ol class="tight">
+<li><b>「答案卷只有正反兩面」</b>：60 分的問答題若名詞解釋寫太滿，後面三題申論會沒地方寫。建議先用鉛筆（或目視）分配：名詞解釋佔 1/4 面、三題申論各佔約 1/2 面。</li>
+<li><b>「未詳列解答過程不予給分」</b>：112 年 EOQ、114 年利潤計算這類題，只寫答案＝0 分。公式 → 代入 → 得數 → 單位，四步缺一不可。</li>
+<li><b>禁用計算機但考計算</b>：八年來每年固定 2–4 題計算（財務比率、損益兩平、PERT、EOQ、報酬率），數字都被刻意設計得很乾淨（如 115 年 ROA＝4%×3＝12%）。算出醜數字＝多半算錯，立刻回頭檢查。</li>
+</ol></div>
+
+<h3 id="s0-2">0-2　八年命題大數據（108–115）：熱區在哪裡</h3>
+<p>把 8 屆共 <b>160 題填充 + 32 則問答小題</b>逐題歸類後，命題重心呈現非常穩定的形狀。這張表是整本講義的「投資報酬率地圖」。</p>
+
+<div class="tblwrap"><table>
+<thead><tr><th>章節領域</th><th class="ctr">八年累計題數</th><th class="ctr">熱度</th><th>出題長相</th></tr></thead>
+<tbody>
+<tr><td><b>Ch7–8 組織（結構／設計／文化／變革）</b></td><td class="ctr num">≈24</td><td class="ctr stars">★★★★★</td><td>六大設計元素、控制幅度、職權、組織圖、7S、組織生命週期、Greiner、Lewin 變革</td></tr>
+<tr><td><b>Ch14 行銷管理</b></td><td class="ctr num">≈22</td><td class="ctr stars">★★★★★</td><td>PLC、STP、4P/4C、服務特性、通路、訂價、消費者行為</td></tr>
+<tr><td><b>Ch16 財務管理</b></td><td class="ctr num">≈20</td><td class="ctr stars">★★★★★</td><td>四大報表、財務比率計算、損益兩平、籌資工具、NPV</td></tr>
+<tr><td><b>Ch6 策略管理</b></td><td class="ctr num">≈18</td><td class="ctr stars">★★★★★</td><td>五力（4 次！）、BCG（3 次）、SWOT、安索夫（2 次申論）、Porter 競爭策略、價值鏈</td></tr>
+<tr><td><b>Ch5 規劃與決策</b></td><td class="ctr num">≈16</td><td class="ctr stars">★★★★☆</td><td>決策程序、決策偏誤、群體決策技術、SMART、衝突類型、預測</td></tr>
+<tr><td><b>Ch1–2 管理概論與思想演進</b></td><td class="ctr num">≈16</td><td class="ctr stars">★★★★☆</td><td>Katz 三能力（3 次）、Mintzberg 角色、X/Y/超 Y、泰勒、管理與企業機能</td></tr>
+<tr><td><b>Ch10 激勵</b></td><td class="ctr num">≈15</td><td class="ctr stars">★★★★☆</td><td>增強理論（3 次）、雙因子、ERG、三需求、JCM（2 次）、工作設計</td></tr>
+<tr><td><b>Ch3 環境與經濟常識</b></td><td class="ctr num">≈15</td><td class="ctr stars">★★★★☆</td><td>PESTEL、通膨／失業／景氣燈號、市場結構、規模（不）經濟、國際化</td></tr>
+<tr><td><b>Ch9 領導</b></td><td class="ctr num">≈13</td><td class="ctr stars">★★★★☆</td><td>管理方格（2 次）、路徑-目標（2 次）、Fiedler、情境領導、LMX、五種權力</td></tr>
+<tr><td><b>Ch11 溝通／團隊／衝突</b></td><td class="ctr num">≈12</td><td class="ctr stars">★★★☆☆</td><td>溝通程序（編／解碼）、溝通網絡、正式與非正式溝通、社會賦閒（3 次！）</td></tr>
+<tr><td><b>Ch13 生產與作業管理</b></td><td class="ctr num">≈11</td><td class="ctr stars">★★★☆☆</td><td>PERT／要徑（3 次）、EOQ（2 次）、JIT／精實／TPS（3 次）、負荷圖</td></tr>
+<tr><td><b>Ch15 人力資源管理</b></td><td class="ctr num">≈11</td><td class="ctr stars">★★★☆☆</td><td>工作分析、績效評估誤差（月暈／尖角）、五大人格、工作輪調</td></tr>
+<tr><td><b>Ch4 倫理與社會責任</b></td><td class="ctr num">≈8</td><td class="ctr stars">★★★☆☆</td><td>管理綠化（3 次！）、CSR 兩觀點、道德四觀點、ESG、公司治理</td></tr>
+<tr><td><b>Ch17 創新／知識／資訊</b></td><td class="ctr num">≈8</td><td class="ctr stars">★★★☆☆</td><td>破壞式創新、知識管理、智慧資本、敏捷管理、專利</td></tr>
+<tr><td><b>Ch12 控制</b></td><td class="ctr num">≈6</td><td class="ctr stars">★★☆☆☆</td><td>控制程序三步驟、控制權變因素、有效控制特徵、事前控制、內控</td></tr>
+</tbody></table></div>
+
+<div class="box key"><div class="bt">◆ 從數據讀出的 7 條命題規律</div>
+<ol class="tight">
+<li><b>「學者＋理論名稱」是填充題的主結構。</b>八年 160 題中超過六成題幹以「某某(英文名)提出的○○理論……」開頭。因此<mark>人名、英文原文、理論名稱三者必須綁在一起背</mark>，只記中文會在題幹認不出人。</li>
+<li><b>同一考點會跨年換句話問。</b>例：管理綠化考了 110（市場途徑）、114（市場途徑）、113（申論四階段）；社會賦閒考了 111 填充、112 名詞、115 名詞。<mark>考古題不是「考過就不會再考」，而是「考過代表它在命題委員的口袋名單裡」。</mark></li>
+<li><b>申論題偏愛「列舉型」題幹。</b>八年 24 題申論中，有 20 題長得像「請問有哪 N 個階段／N 種類型／N 個構面／N 項特徵，請逐一列舉並說明之」。→ 讀書時要以「數字＋條列」為儲存格式，不要記成一段散文。</li>
+<li><b>名詞解釋每年固定 5 題 15 分（108 年為 3 題）</b>，且明顯偏好「效應／法則／現象」類的趣味名詞：霍桑效應、鯰魚效應、穀倉效應、木桶定律、熱爐法則、長鞭效應、彼得原理、比馬龍效應、玻璃天花板、尖角效應……這是<b>最容易用小成本拿滿分的 15 分</b>。</li>
+<li><b>每年必有計算。</b>財務比率與損益兩平是核心；PERT 期望時間、EOQ 每隔幾年出現一次。</li>
+<li><b>114–115 年出現明顯的「實務化／時事化」轉向</b>：ESG、敏捷管理(Agile)、阿米巴經營、艾森豪矩陣、內部控制制度、綠電與再生能源、平衡計分卡、知識管理。這些是傳統教科書較薄的部分，卻是近兩年最愛考的地方——<mark>本講義 Ch17 與 Ch4 特別加厚處理。</mark></li>
+<li><b>台電自帶題。</b>108 年考「願景」直接引用台電公司願景、114 年考管理綠化搬出「開發再生能源、提供綠電」、114 年考市場區隔用「不同用電量的電價方案」。<b>把台電的願景、ESG 作為與電價政策讀熟，等於附贈分數</b>（口試也用得上）。</li>
+</ol></div>
+
+<h3 id="s0-3">0-3　60 分鐘作答戰術</h3>
+<div class="flow">
+<div class="st"><b>① 填充 20 題</b><small>12–15 分鐘</small></div><div class="ar">→</div>
+<div class="st"><b>② 名詞解釋 5 則</b><small>8–10 分鐘</small></div><div class="ar">→</div>
+<div class="st"><b>③ 申論 3 題</b><small>各 9–11 分鐘</small></div><div class="ar">→</div>
+<div class="st"><b>④ 回頭補填充</b><small>5 分鐘</small></div>
+</div>
+
+<div class="grid2">
+<div class="box key"><div class="bt">填充題戰術</div>
+<ul class="tight">
+<li><b>一律不空白。</b>沒有倒扣，想到相關名詞就寫。台電公布的標準答案通常列出 3–8 種可接受寫法（例：113 年第 10 題「魅力／領袖魅力／超人／感召」皆可），<mark>意思對就給分，用詞不必一字不差</mark>。</li>
+<li><b>卡住立刻跳過</b>，在題號旁畫圈，最後 5 分鐘回頭。一題只值 2 分，不值得卡 3 分鐘。</li>
+<li>不確定時<b>寫「中文＋英文」雙保險</b>（如「即時生產／JIT」），增加命中標準答案的機率。</li>
+</ul></div>
+<div class="box tmpl"><div class="bt">申論題戰術</div>
+<ul class="tight">
+<li><b>先給定義、再給架構、最後展開。</b>閱卷者找的是關鍵字與條列項數，不是文采。</li>
+<li>題目說「4 個階段」就<b>一定要寫滿 4 點</b>；寫 3 點 ≈ 只拿 3/4 分。真的忘了第 4 點，就用邏輯推一個合理的補上去（空白必零分）。</li>
+<li><b>每點格式固定：</b>「（一）名稱（英文）：一句定義。→ 一句說明或舉例。」<br>兩行一點，3 題申論剛好不爆版。</li>
+<li>能畫圖就畫（安索夫矩陣、管理方格、期望理論關聯圖是歷屆明文要求畫圖的題目）。<b>圖是獨立給分項</b>。</li>
+</ul></div>
+</div>
+
+<h3 id="s0-4">0-4　讀書計畫：怎麼用這本講義</h3>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">階段</th><th>做什麼</th><th>對應本講義</th><th class="ctr">建議時間</th></tr></thead>
+<tbody>
+<tr><td class="ctr"><b>Ⅰ 建骨架</b></td><td>只讀每章開頭的「架構圖」與粗體關鍵字，不求懂細節，求知道「這科有哪些盒子」</td><td>Ch1–Ch17 的心智圖與表格</td><td class="ctr">7–10 天</td></tr>
+<tr><td class="ctr"><b>Ⅱ 填血肉</b></td><td>逐章精讀，邊讀邊用「歷屆出處標籤」核對：這個考點考過幾次？考哪一種問法？</td><td>全書內文＋<span class="yr">115-3</span> 類標籤</td><td class="ctr">20–25 天</td></tr>
+<tr><td class="ctr"><b>Ⅲ 練輸出</b></td><td>遮住答案自問自答；把每章「申論模板」默寫一次；計算題每題至少手算兩遍</td><td>Part 4-1、4-3</td><td class="ctr">10–14 天</td></tr>
+<tr><td class="ctr"><b>Ⅳ 模擬</b></td><td>限時 60 分鐘寫完一整份考古題（108→115 由舊到新），寫完立刻對答案並標記錯因</td><td>Part 4-6 答案總表</td><td class="ctr">8 天（每天 1 份）</td></tr>
+<tr><td class="ctr"><b>Ⅴ 衝刺</b></td><td>只讀 Part 4 的速查表、口訣總表、名詞庫；不碰新東西</td><td>Part 4-1～4-7</td><td class="ctr">最後 7 天</td></tr>
+</tbody></table></div>
+
+<div class="box mnem"><div class="bt">✦ 最重要的一個讀法建議</div>
+<p style="margin:2px 0">這科的最大陷阱是<b>「讀過覺得都懂、下筆一個字都想不起來」</b>。填充題考的是<u>主動回憶</u>，不是辨識。因此每讀完一小節，請立刻闔上，用一句話問自己：「剛剛那個理論，是誰提的？分幾類？各叫什麼？」——<mark>答不出來就等於沒讀。</mark>本講義每章末的「填充題必背關鍵字」就是為這個動作設計的。</p></div>
+<a class="backtop" href="#p0">↑ 回目錄</a>
+<h2 class="part" id="p1">PART 1　管理基礎：所有題目的共同地基</h2>
+
+<!-- ================= Ch1 ================= -->
+<h3 id="c1">Ch1　企業與管理的基本概念　<span class="stars">★★★★☆</span></h3>
+<div class="srcline">歷屆出處：<span class="yr hot">108-1 管理功能</span><span class="yr">108-9 企業機能</span><span class="yr">108-14 願景</span><span class="yr">108問1-3 效能</span><span class="yr hot">109-1 概念化能力</span><span class="yr hot">111-5 技術能力</span><span class="yr">112-6 發言人</span><span class="yr hot">113-11 概念化能力</span><span class="yr">114-1 社團法人</span><span class="yr">114-11 五管六管</span><span class="yr">115-11 Y理論</span></div>
+
+<div class="tree"><div class="root">Ch1 知識地圖</div>
+<ul>
+<li><span class="n1">企業組織型態</span><ul>
+  <li><span class="n2">獨資／合夥／公司</span> <small>— 公司法：社團法人</small></li>
+  <li><span class="n2">公司四類型</span> <small>— 無限、有限、兩合、股份有限</small></li>
+  <li><span class="n2">非營利組織、社會企業、中小企業</span></li></ul></li>
+<li><span class="n1">管理的定義與本質</span><ul>
+  <li><span class="n2">效率 vs 效能</span> <small>— 把事做對 vs 做對的事</small></li>
+  <li><span class="n2">管理功能（4 大）</span> <small>— 規劃‧組織‧領導‧控制</small></li>
+  <li><span class="n2">企業機能（五管／六管）</span> <small>— 產銷人發財＋資</small></li>
+  <li><span class="n2">管理矩陣</span> <small>— 管理功能 × 企業機能</small></li></ul></li>
+<li><span class="n1">管理者</span><ul>
+  <li><span class="n2">Katz 三技能</span> <small>— 技術‧人際‧概念化</small></li>
+  <li><span class="n2">Mintzberg 十大角色</span> <small>— 人際‧資訊‧決策</small></li>
+  <li><span class="n2">組織層級</span> <small>— 高階‧中階‧基層</small></li></ul></li>
+<li><span class="n1">使命·願景·目標</span></li>
+</ul></div>
+
+<h4>1-1　效率與效能：最基礎也最常被拿來當名詞解釋</h4>
+<div class="tblwrap"><table>
+<thead><tr><th></th><th>效率 Efficiency</th><th>效能 Effectiveness（效果）</th></tr></thead>
+<tbody>
+<tr><th>定義</th><td>以最少投入獲得最大產出，重視<b>手段／過程</b></td><td>達成組織既定目標的程度，重視<b>結果／目的</b></td></tr>
+<tr><th>口語</th><td>Doing things <b>right</b>　把事情做對</td><td>Doing the <b>right</b> things　做對的事情</td></tr>
+<tr><th>關注</th><td>資源耗用（成本、時間、人力）</td><td>目標達成（市佔、獲利、滿意度）</td></tr>
+<tr><th>Drucker 觀點</th><td colspan="2">兩者應兼顧，但<mark>效能優先於效率</mark>——方向錯了，跑得再快也沒用。</td></tr>
+</tbody></table></div>
+<div class="box exam"><div class="bt">📝 歷屆原題</div><p style="margin:2px 0"><b>108 問答1-(3)</b>：名詞解釋「效能(Effectiveness)」（5 分）。<br><b>擬答：</b>效能又稱效果，係指組織「達成既定目標的程度」，強調的是「做對的事」(doing the right things)，關注產出結果是否符合組織目的；相對於效率著重投入與產出之比率（做對事情的方法），效能著重目標本身的正確性與達成度。杜拉克認為管理者應先確保效能，再追求效率。</p></div>
+
+<h4>1-2　管理功能（管理程序）四大功能</h4>
+<div class="flow">
+<div class="st"><b>規劃 Planning</b><small>定目標、訂策略、擬計畫</small></div><div class="ar">→</div>
+<div class="st"><b>組織 Organizing</b><small>分工、授權、建結構</small></div><div class="ar">→</div>
+<div class="st"><b>領導 Leading</b><small>激勵、溝通、帶人</small></div><div class="ar">→</div>
+<div class="st"><b>控制 Controlling</b><small>衡量、比較、矯正</small></div>
+</div>
+<p class="small">※ 費堯(Fayol) 原始版本為 <b>5 項</b>：規劃、組織、<b>指揮</b>、<b>協調</b>、控制（POCCC）；現代教科書（Robbins）合併為 4 項，把「指揮＋協調」歸入領導。<mark>看到題目問「費堯」就想 5 項；問「當代管理學者」就答 4 項。</mark>另有學者加入「用人(Staffing)」成為 POSDC 五功能。</p>
+<div class="box exam"><div class="bt">📝 歷屆原題</div><p style="margin:2px 0"><b>108-1</b>：管理功能係指管理者運用規劃、<u>____</u>、領導及控制等 4 大主要功能。→ <b>組織</b></p></div>
+
+<h4>1-3　企業機能：五管與六管</h4>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">機能</th><th>英文</th><th>核心工作</th></tr></thead>
+<tbody>
+<tr><td class="ctr"><b>生產</b>作業管理</td><td class="en">Production / Operations</td><td>製程設計、產能規劃、品質、存貨、供應鏈</td></tr>
+<tr><td class="ctr"><b>行銷</b>管理</td><td class="en">Marketing</td><td>STP、4P、品牌、通路、顧客關係</td></tr>
+<tr><td class="ctr"><b>人力資源</b>管理</td><td class="en">Human Resource</td><td>選、育、用、留</td></tr>
+<tr><td class="ctr"><b>研究發展</b>管理</td><td class="en">R&amp;D</td><td>新產品開發、技術創新、專利</td></tr>
+<tr><td class="ctr"><b>財務</b>管理</td><td class="en">Finance</td><td>籌資、投資、股利、營運資金</td></tr>
+<tr><td class="ctr"><b>資訊</b>管理（第六管）</td><td class="en">Information</td><td>MIS、ERP、數位轉型</td></tr>
+</tbody></table></div>
+<div class="box mnem"><div class="bt">✦ 口訣</div><p style="margin:2px 0"><b>「產、銷、人、發、財」＋「資」＝六管</b>。<br>管理功能是「<b>怎麼管</b>」（HOW，橫向通用），企業機能是「<b>管什麼</b>」（WHAT，縱向專業），兩者交叉即<b>管理矩陣</b>（如「行銷規劃」＝行銷機能 × 規劃功能）。<br><b>114-11 原題</b>即考此：產銷人__財＝研發、六管再加__＝資訊。</p></div>
+
+<h4>1-4　Katz 三大管理技能：八年考三次的超級熱點</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>技能</th><th>英文</th><th>意涵</th><th>誰最需要</th></tr></thead>
+<tbody>
+<tr><td><b>技術能力</b></td><td class="en">Technical Skill</td><td>運用特定專業知識、工具與技巧完成工作的能力</td><td><b>基層</b>管理者最重要<br><span class="yr">111-5</span></td></tr>
+<tr><td><b>人際能力</b></td><td class="en">Human Skill</td><td>與人共事、溝通、激勵、建立團隊的能力</td><td><b>各層級同等重要</b>（水平線）</td></tr>
+<tr><td><b>概念化能力</b></td><td class="en">Conceptual Skill</td><td>將組織視為整體、抽絲剝繭理出頭緒、洞察各部門互動與環境關係的能力</td><td><b>高階</b>管理者最重要<br><span class="yr hot">109-1</span><span class="yr hot">113-11</span></td></tr>
+</tbody></table></div>
+<div class="box mnem"><div class="bt">✦ 記憶圖像</div>
+<p style="margin:2px 0">畫一個倒三角：<b>越往上（高階）概念化越寬，越往下（基層）技術能力越寬，人際能力從上到下一樣寬。</b><br>題幹關鍵字對照：出現「<u>抽絲剝繭、理出頭緒、宏觀、整體、職位越高越重要</u>」＝概念化；出現「<u>專業、工具、與基層直接接觸、引導部屬發現問題</u>」＝技術能力。</p></div>
+
+<h4>1-5　Mintzberg 管理者十大角色</h4>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">三大類</th><th>角色</th><th>意涵（考點）</th></tr></thead>
+<tbody>
+<tr><td class="ctr" rowspan="3"><b>人際角色</b><br><span class="en">Interpersonal</span></td><td>頭臉人物／代表人 Figurehead</td><td>象徵性、法律性、禮儀性職責（剪綵、接待）</td></tr>
+<tr><td>領導者 Leader</td><td>激勵、指導、任用部屬</td></tr>
+<tr><td>聯絡者 Liaison</td><td>維繫組織內外的人脈網絡</td></tr>
+<tr><td class="ctr" rowspan="3"><b>資訊角色</b><br><span class="en">Informational</span></td><td>監督者／偵察者 Monitor</td><td>蒐集內外部資訊</td></tr>
+<tr><td>傳播者 Disseminator</td><td>將資訊<b>向組織內部</b>傳遞</td></tr>
+<tr><td><b>發言人 Spokesperson</b></td><td><mark>代表組織<b>對外</b>發表企業政策、計畫及成果</mark> <span class="yr">112-6</span></td></tr>
+<tr><td class="ctr" rowspan="4"><b>決策角色</b><br><span class="en">Decisional</span></td><td>創業家 Entrepreneur</td><td>主動尋找機會、推動變革與創新</td></tr>
+<tr><td>危機處理者 Disturbance Handler</td><td>處理突發、非預期的重大干擾</td></tr>
+<tr><td>資源分配者 Resource Allocator</td><td>決定人力、預算、時間如何配置</td></tr>
+<tr><td>談判者 Negotiator</td><td>代表組織進行重要協商</td></tr>
+</tbody></table></div>
+<div class="box trap"><div class="bt">⚠ 最常混淆</div><p style="margin:2px 0"><b>傳播者 vs 發言人</b>：傳播者是「對<u>內</u>」轉達，發言人是「對<u>外</u>」發表。112 年就是考「代表組織對外發表企業政策、計畫及成果」→ <b>發言人</b>。<br><b>危機處理者 vs 創業家</b>：創業家是<u>主動</u>求變，危機處理者是<u>被動</u>救火。</p></div>
+
+<h4>1-6　企業組織型態與使命願景</h4>
+<div class="grid2">
+<div class="card"><h5>公司的法律性質</h5>
+<p class="small" style="margin:2px 0">《公司法》第 1 條：以營利為目的，依本法組織、登記、成立之<b>社團法人</b>。<span class="yr">114-1</span><br>四種公司：<b>無限</b>公司（2 人以上股東負連帶無限責任）、<b>有限</b>公司（1 人以上，出資額為限）、<b>兩合</b>公司（無限＋有限責任股東各 1 人以上）、<b>股份有限</b>公司（2 人以上股東或 1 政府/法人股東，股份為限）。</p></div>
+<div class="card"><h5>使命 vs 願景 vs 目標</h5>
+<p class="small" style="margin:2px 0"><b>使命 Mission</b>＝我們「為何存在」、現在在做什麼事業。<br><b>願景 Vision</b>＝<mark>展現組織未來經營雄心與企圖、長期努力可實現的遠景</mark>。<span class="yr">108-14</span>（台電：「成為卓越且值得信賴的世界級電力事業集團」）<br><b>目標 Objectives</b>＝願景的可衡量化、具時限的具體陳述（見 SMART，Ch5）。</p></div>
+</div>
+
+<div class="box key"><div class="bt">◆ Ch1 填充題必背關鍵字</div>
+<p style="margin:2px 0">效率／效能・規劃-組織-領導-控制・費堯五功能(POCCC)・產銷人發財(資)・管理矩陣・Katz(技術/人際/概念化)・Mintzberg(人際/資訊/決策、發言人、傳播者、頭臉人物)・社團法人・無限/有限/兩合/股份有限・使命/願景/目標</p></div>
+<a class="backtop" href="#p1">↑ 回目錄</a>
+
+<!-- ================= Ch2 ================= -->
+<h3 id="c2">Ch2　管理思想演進　<span class="stars">★★★★☆</span></h3>
+<div class="srcline">歷屆出處：<span class="yr">109-13 經濟人</span><span class="yr">111-6 例外管理</span><span class="yr hot">111-7 超Y理論</span><span class="yr">113問1-1 霍桑效應</span><span class="yr">114-2 差別計件工資</span><span class="yr">115-11 Y理論</span></div>
+
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">時期</th><th>學派</th><th>代表人物</th><th>核心主張與必考關鍵字</th></tr></thead>
+<tbody>
+<tr><td class="ctr" rowspan="3"><b>古典</b><br>理性典範</td>
+<td><b>科學管理學派</b></td><td>泰勒 <span class="en">F. W. Taylor</span>（科學管理之父）<br>甘特 Gantt、吉爾伯斯 Gilbreth 夫婦</td>
+<td>時間動作研究、<b>差別計件工資制</b><span class="yr">114-2</span>、<b>例外管理</b><span class="yr">111-6</span>（日常事務授權部屬，管理者專注例外與重要事務）、工作標準化、科學選才；視人為「<b>經濟人</b>」<span class="yr">109-13</span>，假定人的思考與行為皆目標理性；<b>甘特圖</b>；動素分析</td></tr>
+<tr><td><b>管理程序（行政）學派</b></td><td>費堯 <span class="en">Henri Fayol</span>（管理程序之父／現代管理之父）</td>
+<td>五大管理功能（規劃‧組織‧指揮‧協調‧控制）＋<b>14 項管理原則</b>（分工、職權與職責、紀律、<mark>指揮統一</mark>、<mark>目標一致（指揮鏈）</mark>、報酬公平、集權、階梯原則、團隊精神…）</td></tr>
+<tr><td><b>官僚／科層體制學派</b></td><td>韋伯 <span class="en">Max Weber</span></td>
+<td>理想科層體制：分工、職權層級、正式遴選、正式規章、<b>非人情化</b>、生涯導向。<br><b>三種職權類型</b>：<u>傳統型</u>（世襲慣例）、<u>神格/魅力型 charismatic</u>（對特定與特殊神蹟、英雄主義、獨特人格特質的傾心）<span class="yr hot">113-10</span>、<u>法理型</u>（依法定職位）</td></tr>
+<tr><td class="ctr" rowspan="2"><b>行為</b><br>人性典範</td>
+<td><b>人群關係學派</b></td><td>梅堯 <span class="en">Elton Mayo</span>／霍桑研究</td>
+<td><b>霍桑效應</b>：員工因「意識到被觀察、受重視」而改變行為、提高產出；發現<b>非正式組織</b>與<b>社會需求</b>才是生產力關鍵。<span class="yr hot">113問1-1</span></td></tr>
+<tr><td><b>行為科學學派</b></td><td>馬斯洛、麥克葛瑞格、赫茲伯格、巴納德(Barnard)</td>
+<td>需求層次、X/Y 理論、雙因子理論；巴納德的<b>職權接受論</b>（職權來自部屬的接受）與<b>貢獻-滿足平衡</b></td></tr>
+<tr><td class="ctr"><b>計量</b></td><td><b>管理科學／作業研究學派</b></td><td>二戰 OR 團隊</td>
+<td>以數學模式、統計、線性規劃、模擬解決管理問題；PERT、CPM、EOQ、決策樹皆屬之</td></tr>
+<tr><td class="ctr" rowspan="2"><b>整合</b></td><td><b>系統學派</b></td><td>卡斯特 Kast、羅森威 Rosenzweig</td>
+<td>組織＝開放系統：投入→轉換→產出→回饋；<b>次系統、綜效(synergy)</b><span class="yr">110-19</span>、熵(entropy)、殊途同歸性</td></tr>
+<tr><td><b>權變學派</b></td><td>費德勒、伍華德 Woodward、莫爾斯與洛希</td>
+<td><mark>沒有放諸四海皆準的最佳管理方式</mark>，「It depends」；四大權變變數：組織規模、技術例行性、環境不確定性、個別差異</td></tr>
+</tbody></table></div>
+
+<h4>2-1　人性假設三部曲（幾乎年年入題）</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>理論</th><th>提出者</th><th>人性假設</th><th>對應管理方式</th></tr></thead>
+<tbody>
+<tr><td><b>X 理論</b></td><td rowspan="2">麥克葛瑞格<br><span class="en">D. McGregor</span></td><td>人天生厭惡工作、逃避責任、缺乏企圖心、需被強迫</td><td>嚴密監督、集權、胡蘿蔔與棍子、外在控制</td></tr>
+<tr><td><b>Y 理論</b></td><td><mark>工作如同遊戲般自然、能自我指導與自我控制、會主動承擔責任、<b>普遍具良好決策能力</b>與創造力</mark><span class="yr hot">115-11</span></td><td>授權、參與管理、目標管理、自我控制</td></tr>
+<tr><td><b>超 Y 理論</b><br><span class="en">Super Y / Contingency</span></td><td>莫爾斯與洛希<br><span class="en">J. Morse &amp; J. Lorsch</span></td><td><mark>X 或 Y 都不是絕對；人與環境皆會隨時改變</mark>，人性是權變的<span class="yr hot">111-7</span></td><td>尋求<b>人、工作與組織三者間的完美搭配</b>（fit）；因人因事制宜</td></tr>
+</tbody></table></div>
+<div class="box mnem"><div class="bt">✦ 口訣</div><p style="margin:2px 0"><b>X 懶、Y 勤、超 Y 看狀況。</b>題幹只要出現「<u>都不是絕對／隨時改變／完美搭配／權變觀點</u>」→ 超 Y 理論（莫爾斯與洛希）。<br>另有 <b>Z 理論</b>（大內 William Ouchi）：融合美日管理，強調<u>長期僱用、共識決策、全面關懷、緩慢升遷</u>。</p></div>
+
+<div class="box exam"><div class="bt">📝 計算題示範：泰勒差別計件工資（114-2）</div>
+<p class="small" style="margin:2px 0">標準工時 4 小時、標準件數 40 支；未達標準每支 5 元，達成標準每支 10 元。員工甲工作 4 小時生產 80 支。</p>
+<div class="formula">80 支 ≥ 標準 40 支 → 達成標準 → 全部按「高費率」計酬
+工資 = 80 支 × 10 元 = <b>800 元</b></div>
+<p class="small" style="margin:2px 0"><b>觀念：</b>差別計件工資制是<mark>「全有全無」的雙費率制</mark>——達標就<u>全部產量</u>用高費率，未達標就<u>全部產量</u>用低費率，不是分段累進。這是本題唯一陷阱（誤解成 40×5+40×10＝600 就錯了）。</p></div>
+
+<div class="box key"><div class="bt">◆ Ch2 填充題必背關鍵字</div>
+<p style="margin:2px 0">泰勒/科學管理之父/時間動作研究/差別計件/例外管理/經濟人・費堯/管理程序之父/14原則/指揮統一・韋伯/科層體制/傳統-魅力(神格)-法理三職權/非人情化・梅堯/霍桑研究/霍桑效應/非正式組織・巴納德/職權接受論・X-Y-超Y-Z理論・莫爾斯與洛希・系統學派/綜效/熵・權變學派</p></div>
+<a class="backtop" href="#p1">↑ 回目錄</a>
+
+<!-- ================= Ch3 ================= -->
+<h3 id="c3">Ch3　經營環境、國際化與經濟常識　<span class="stars">★★★★☆</span></h3>
+<div class="srcline">歷屆出處：<span class="yr">108-10 獨占市場</span><span class="yr">109-12 市場失靈</span><span class="yr">109-17 規模不經濟</span><span class="yr">110-18 通貨膨脹</span><span class="yr">110-19 綜效</span><span class="yr">111-9 黃藍燈</span><span class="yr">111-10 摩擦性失業</span><span class="yr">111-14 跨國企業</span><span class="yr">111問4 Hofstede</span><span class="yr">108問4 全球化驅力</span><span class="yr hot">115-1 痛苦指數</span><span class="yr hot">115-16 PESTEL</span></div>
+
+<h4>3-1　環境架構：總體環境 vs 任務環境</h4>
+<div class="tree"><div class="root">企業經營環境</div>
+<ul>
+<li><span class="n1">總體環境（一般環境 General Environment）</span><small>　間接影響、企業無法控制</small>
+<ul><li><span class="n2">PESTEL 六大面向</span><small>：<b>P</b>olitical 政治法律／<b>E</b>conomic 經濟／<b>S</b>ocial 社會文化／<b>T</b>echnological 科技／<b>E</b>nvironmental 自然環境／<b>L</b>egal 法律；常再加人口統計、全球化國際局勢</small></li></ul></li>
+<li><span class="n1">任務環境（特定環境 Task Environment）</span><small>　直接影響、可部分影響</small>
+<ul><li><span class="n2">顧客、供應商、競爭者、壓力團體、政府主管機關、策略聯盟夥伴</span></li></ul></li>
+<li><span class="n1">內部環境</span><small>　組織文化、資源、能力、員工、股東、董事會</small></li>
+</ul></div>
+<p class="small"><b>115-16 原題</b>：「總體環境不會直接影響企業，但會透過競爭環境因素間接影響……又稱為 PESTEL，包含 <u>政治</u>、經濟、社會文化、<u>科技</u>、自然環境等因素、法律、人口統計、全球化國際局勢。」</p>
+
+<div class="box key"><div class="bt">◆ 環境不確定性矩陣（Robbins）</div>
+<div class="mtx">
+  <div class="lbl">　</div><div class="lbl">環境簡單</div><div class="lbl">環境複雜</div>
+  <div class="lbl">穩定</div>
+  <div class="cell"><b>格 1：低不確定性</b><small>環境要素少且相似、變化小　例：飲料瓶製造</small></div>
+  <div class="cell"><b>格 2</b><small>要素多且不同、但變化小　例：大學、醫院</small></div>
+  <div class="lbl">動態</div>
+  <div class="cell"><b>格 3</b><small>要素少但變化快　例：流行服飾</small></div>
+  <div class="cell"><b>格 4：高不確定性</b><small>要素多且變化快　例：電子／半導體</small></div>
+</div>
+<p class="small" style="margin:2px 0">兩個構面：<b>複雜程度</b>（要素數量與相似性）× <b>變化程度</b>（穩定／動態）。不確定性越高，組織越需要<u>有機式結構、邊界擴張、策略聯盟</u>來因應。</p></div>
+
+<h4>3-2　必考經濟常識速查</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>名詞</th><th>定義與考點</th></tr></thead>
+<tbody>
+<tr><td><b>痛苦指數</b><br>Misery Index</td><td><mark>通貨膨脹率 ＋ 失業率</mark>的總和，用以衡量民眾經濟痛苦程度。<span class="yr hot">115-1</span></td></tr>
+<tr><td><b>通貨膨脹</b></td><td>注入經濟體系的貨幣超過實際產出，導致<b>物價水準持續上漲</b>。<span class="yr">110-18</span><br>延伸：<b>停滯性通膨 Stagflation</b>＝經濟停滯（高失業、低成長）與高通膨<u>同時發生</u>。<span class="yr">109問3-(4)</span></td></tr>
+<tr><td><b>失業類型</b></td><td><b>摩擦性</b>：轉職過渡期、資訊不流通造成的暫時失業<span class="yr">111-10</span>／<b>結構性</b>：技能與產業需求不相符／<b>循環性</b>：景氣衰退造成／<b>季節性</b></td></tr>
+<tr><td><b>景氣對策信號</b><br>（景氣燈號）</td><td>綜合判斷分數 9 分制五燈號：<br><span class="mono">45–38 紅燈（過熱）｜37–32 黃紅燈｜31–23 綠燈（穩定）｜<b>22–17 黃藍燈</b>｜16–9 藍燈（低迷）</span><br><b>黃藍燈</b>＝景氣短期內可能轉穩或衰退，政府可適時採取<u>擴張</u>措施。<span class="yr">111-9</span></td></tr>
+<tr><td><b>市場結構四類型</b></td><td>依競爭者家數由無到多：<b>獨占</b>（1 家）→ <b>寡占</b>（少數）→ <b>獨占性競爭</b>（多、產品差異化）→ <b>完全競爭</b>（眾多、同質）。<span class="yr">108-10</span></td></tr>
+<tr><td><b>市場失靈</b></td><td>因外部性、公共財、資訊不對稱、獨占等因素，市場無法達到完全競爭與資源最適配置，<u>違反柏拉圖效率</u>的現象。<span class="yr">109-12</span></td></tr>
+<tr><td><b>規模經濟／不經濟</b></td><td><b>規模經濟</b>：產量擴大使單位成本下降。<br><b>規模不經濟</b>：規模持續擴大後，內部管理複雜度增加、協調困難，反使單位成本上升。<span class="yr">109-17</span></td></tr>
+<tr><td><b>綜效 Synergy</b></td><td>整合兩項資源後，總效果大於個別效果加總（<mark>1+1&gt;2</mark>）。<span class="yr">110-19</span> 類型：營運綜效、財務綜效、管理綜效。</td></tr>
+<tr><td><b>共享經濟</b></td><td>透過平台將閒置資源的<b>使用權</b>暫時移轉給他人，以提高資源利用效率的模式（Uber、Airbnb）。<span class="yr">110問1-(3)</span></td></tr>
+</tbody></table></div>
+
+<h4>3-3　企業國際化</h4>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">Bartlett &amp; Ghoshal 四類型</th><th class="ctr">全球整合度</th><th class="ctr">地區回應度</th><th>特色</th></tr></thead>
+<tbody>
+<tr><td class="ctr"><b>國際型 International</b></td><td class="ctr">低</td><td class="ctr">低</td><td>母公司移轉知識與技術至海外，海外依賴母國</td></tr>
+<tr><td class="ctr"><b>多國型 Multinational</b></td><td class="ctr">低</td><td class="ctr"><b>高</b></td><td>各國子公司高度自主、在地化，分權經營</td></tr>
+<tr><td class="ctr"><b>全球型 Global</b></td><td class="ctr"><b>高</b></td><td class="ctr">低</td><td>集權、標準化產品追求規模經濟與成本效率</td></tr>
+<tr><td class="ctr"><b>跨國型 Transnational</b></td><td class="ctr"><b>高</b></td><td class="ctr"><b>高</b></td><td><mark>兼顧全球整合效率、地區差異化與世界性開發創新，依各地情況彈性配置資源</mark><span class="yr hot">111-14</span></td></tr>
+</tbody></table></div>
+
+<div class="box tmpl"><div class="bt">📐 申論模板：Hofstede 國家文化價值觀構面（111問4）</div>
+<ol class="tight">
+<li><b>權力距離 Power Distance</b>：社會成員對組織中權力分配不平等的接受程度。高權力距離（如馬來西亞）尊卑分明、集權；低權力距離（如丹麥）強調平等參與。</li>
+<li><b>個人主義／集體主義 Individualism vs Collectivism</b>：重視個人成就與自由，或重視團體歸屬與集體利益。</li>
+<li><b>陽剛／陰柔 Masculinity vs Femininity</b>（成就導向／關懷導向）：推崇競爭、果斷、物質成就，或推崇合作、謙遜、生活品質與關懷弱勢。</li>
+<li><b>不確定性規避 Uncertainty Avoidance</b>：對模糊與風險的容忍度。高規避者偏好明確規章、終身僱用、抗拒變革。</li>
+<li><b>長期／短期導向 Long-term vs Short-term Orientation</b>：重視節儉、堅毅與未來回報，或重視傳統、面子與立即成果。</li>
+<li>（2010 年新增）<b>放任／約束 Indulgence vs Restraint</b>：社會允許人們自由追求享樂與慾望滿足的程度。</li>
+</ol></div>
+
+<div class="box tmpl"><div class="bt">📐 申論模板：全球化的 5 大驅力（108問4）</div>
+<ol class="tight">
+<li><b>市場驅力</b>：各國消費者需求與生活型態趨同，全球性顧客與通路出現，可移轉的品牌與行銷手法。</li>
+<li><b>成本驅力</b>：追求規模經濟與範疇經濟、各國要素成本差異（低工資、原料）、產品開發成本高昂需分攤。</li>
+<li><b>政府（政策）驅力</b>：關稅與非關稅障礙下降、WTO／FTA、區域經濟整合、法規標準趨於一致、外資政策開放。</li>
+<li><b>科技（技術）驅力</b>：運輸與通訊成本大幅下降、網際網路與資通訊技術使跨國協作與即時管理成為可能。</li>
+<li><b>競爭驅力</b>：競爭者全球化、相互依存度提高、跨國併購與策略聯盟盛行，迫使企業亦須全球布局以免被邊緣化。</li>
+</ol></div>
+<a class="backtop" href="#p1">↑ 回目錄</a>
+
+<!-- ================= Ch4 ================= -->
+<h3 id="c4">Ch4　企業倫理、社會責任與公司治理　<span class="stars">★★★★☆</span></h3>
+<div class="srcline">歷屆出處：<span class="yr">108-17 公司治理</span><span class="yr">109-2 功利主義</span><span class="yr">109-10 社會經濟觀點</span><span class="yr hot">110-1 管理綠化-市場途徑</span><span class="yr">112-18 ESG的G</span><span class="yr hot">113問2 管理綠化四階段</span><span class="yr">113-9 管理道德影響因素</span><span class="yr hot">114-17 管理綠化-市場途徑</span><span class="yr">115-13 社會責任</span></div>
+<p><b>八年內管理綠化考了 3 次（110 填充、113 申論、114 填充），是本章 CP 值最高的考點。</b></p>
+
+<h4>4-1　管理綠化（The Greening of Management）</h4>
+<div class="box tmpl"><div class="bt">📐 申論全文模板（113問2，15 分）</div>
+<p style="margin:4px 0"><b>（一）何謂管理綠化（3 分）</b><br>管理綠化係指管理者在進行決策與規劃時，<u>體認組織活動與自然環境間的緊密關聯</u>，主動將環境保護與生態永續納入企業目標、策略與日常營運之中，以降低企業對環境的負面衝擊並創造環境價值的管理思維與作為。</p>
+<p style="margin:4px 0"><b>（二）依綠化程度（shapes of green）可分為 4 個階段（12 分）</b></p>
+<ol class="tight">
+<li><b>守法途徑（法律途徑 Legal Approach）</b>——綠化程度最低。企業僅<u>被動遵守法律要求</u>，做到法規最低標準即可，對環保沒有主動作為，屬社會義務層次。</li>
+<li><b>市場途徑（Market Approach）</b>——企業<u>對顧客的環境偏好有所回應</u>，顧客對環保產品有任何要求，組織都盡可能提供，以滿足市場需求為導向。<span class="yr hot">110-1</span><span class="yr hot">114-17</span></li>
+<li><b>利害關係人途徑（Stakeholder Approach）</b>——企業回應的對象由顧客擴大到<u>所有利害關係人</u>（員工、供應商、社區、環保團體等）的環境要求，主動與各方對話並調整營運。</li>
+<li><b>行動主義途徑（深綠途徑 Activist / Dark Green Approach）</b>——綠化程度最高。企業<u>主動尋求保護地球自然資源的方法</u>，將環保視為自身應盡的社會責任與核心價值，即使無外部壓力亦積極投入。</li>
+</ol>
+<p class="small" style="margin:4px 0">※ 本模板同時可直接答 110-1 與 114-17 的填充（皆為「市場」途徑）。114 年題目「A 公司積極開發再生能源、提供更多綠電滿足客戶需求」→ 因強調「<u>滿足客戶需求</u>」，答<b>市場途徑</b>。</p></div>
+
+<h4>4-2　企業社會責任（CSR）兩大觀點</h4>
+<div class="tblwrap"><table>
+<thead><tr><th></th><th>古典觀點（股東觀點）</th><th>社會經濟觀點</th></tr></thead>
+<tbody>
+<tr><th>代表</th><td>傅利曼 <span class="en">Milton Friedman</span></td><td>現代主流觀點</td></tr>
+<tr><th>主張</th><td>管理者唯一的社會責任就是<b>為股東追求利潤極大化</b>；從事社會活動等於花股東的錢</td><td><mark>企業的責任遠超過創造利潤，還包含保護及增進社會福祉</mark><span class="yr">109-10</span></td></tr>
+<tr><th>關鍵詞</th><td>股東、利潤、受託責任</td><td>利害關係人、長期生存、社會福祉</td></tr>
+</tbody></table></div>
+<p class="small"><b>社會責任的三個層次：</b>社會義務(Social Obligation，僅符合法律與經濟責任) → 社會回應(Social Responsiveness，回應當前流行的社會需求) → <b>社會責任(Social Responsibility，主動追求長期對社會有益的目標)</b>。<br>115-13 原題：「代表影響企業決策價值與方向的標準，是企業在善盡法律與經濟義務外，去追求長期對社會有益的目標」→ <b>社會責任</b>。</p>
+<p class="small"><b>Carroll 社會責任金字塔（由下而上）：</b>經濟責任 → 法律責任 → 倫理責任 → 慈善（自由裁量）責任。</p>
+
+<h4>4-3　ESG 與公司治理</h4>
+<div class="grid3">
+<div class="card"><h5>E　環境 Environmental</h5><p class="small" style="margin:2px 0">溫室氣體排放、能源使用、水資源、廢棄物、生物多樣性、氣候變遷因應（台電：淨零、再生能源、減煤）</p></div>
+<div class="card"><h5>S　社會 Social</h5><p class="small" style="margin:2px 0">員工權益與職安、人權、供應鏈管理、產品責任、社區關係、客戶隱私</p></div>
+<div class="card"><h5>G　公司治理 Governance</h5><p class="small" style="margin:2px 0">董事會結構與獨立性、資訊揭露透明度、內部控制、股東權益、誠信經營、防弊機制<span class="yr">112-18</span></p></div>
+</div>
+<p class="small"><b>公司治理定義（108-17、112-18）：</b>一種指導及管理的機制，以<u>落實公司經營者的責任</u>為目的，藉由加強公司績效管理且兼顧其他利害關係人利益，以<b>保障股東權益</b>。</p>
+
+<h4>4-4　道德決策的四種觀點與影響管理道德的因素</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>觀點</th><th>判準</th><th>優缺點</th></tr></thead>
+<tbody>
+<tr><td><b>功利主義</b> Utilitarian</td><td><mark>著重行為的「結果」而非動機</mark>，最佳行為是能為最多數人爭取最大利益者<span class="yr hot">109-2</span></td><td>＋效率與生產力高；－可能忽視少數人權益</td></tr>
+<tr><td><b>權利觀點</b> Rights</td><td>尊重並保護個人的基本權利與自由（隱私、言論、正當程序）</td><td>＋保障個人；－可能阻礙效率</td></tr>
+<tr><td><b>正義觀點</b> Justice</td><td>公平、公正、不偏頗地執行規則（同工同酬、不歧視）</td><td>＋保障弱勢；－可能降低冒險與創新誘因</td></tr>
+<tr><td><b>整合社會契約論</b><br>Integrative Social Contracts</td><td>結合「一般社會契約」與「特定社群既有規範」，依當地實際慣例做決策</td><td>＋務實、尊重文化差異；－可能為陋習開脫</td></tr>
+</tbody></table></div>
+<div class="box key"><div class="bt">◆ 影響管理道德的 5 大因素（113-9）</div>
+<p style="margin:2px 0">① <b>道德發展階段</b>（Kohlberg：前習俗 → 習俗 → 原則）　② <b>個人特質</b>（價值觀、自我強度 ego strength、內外控傾向）　③ <b>組織的結構設計</b>（規章明確度、績效評估、獎懲、上司示範）　④ <b>組織文化</b>　⑤ <b>道德問題的強度</b>（傷害大小、共識程度、發生機率、立即性、接近性、集中度）</p></div>
+<div class="box key"><div class="bt">◆ Ch4 填充題必背關鍵字</div>
+<p style="margin:2px 0">管理綠化四途徑（守法/市場/利害關係人/行動主義）・古典觀點vs社會經濟觀點・社會義務/回應/責任・Carroll金字塔・ESG(環境/社會/公司治理)・公司治理・功利/權利/正義/整合社會契約・道德發展階段・事件強度・利害關係人（見 Ch6 邊界擴張策略）</p></div>
+<a class="backtop" href="#p1">↑ 回目錄</a>
+<h2 class="part" id="p2">PART 2　管理功能：規劃 · 組織 · 領導 · 控制</h2>
+
+<!-- ================= Ch5 ================= -->
+<h3 id="c5">Ch5　規劃與決策　<span class="stars">★★★★☆</span></h3>
+<div class="srcline">歷屆出處：<span class="yr">108-11 決策風格</span><span class="yr">110-2 定錨效應</span><span class="yr">110-4 OGSM</span><span class="yr">110問1-1 群體迷思</span><span class="yr">110問1-2 自利偏差</span><span class="yr">111-13 趨避衝突</span><span class="yr">111-16 Simon設計活動</span><span class="yr">111問1-1 承諾升高</span><span class="yr">112-12 執行方案</span><span class="yr">112問2 群體決策優缺點</span><span class="yr hot">113-3 德菲法</span><span class="yr hot">113-13 SMART</span><span class="yr">114-19 艾森豪矩陣</span><span class="yr">114問4 Lewin三衝突</span><span class="yr hot">115-14 質化預測</span><span class="yr hot">115-15 雙趨衝突</span></div>
+
+<h4>5-1　目標設定：SMART 與 MBO</h4>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">字母</th><th>英文</th><th>中文</th><th>說明</th></tr></thead>
+<tbody>
+<tr><td class="ctr"><b>S</b></td><td class="en">Specific</td><td>明確具體的</td><td>目標敘述清楚，不含糊（「提升客服品質」→「客訴回覆時間縮短至 24 小時內」）</td></tr>
+<tr><td class="ctr"><b>M</b></td><td class="en">Measurable</td><td>可衡量的</td><td>能以數字或明確標準檢核</td></tr>
+<tr><td class="ctr"><b>A</b></td><td class="en">Attainable / Achievable</td><td><mark>可達成的</mark><span class="yr hot">113-13</span></td><td>具挑戰性但非遙不可及</td></tr>
+<tr><td class="ctr"><b>R</b></td><td class="en">Realistic / Relevant</td><td>符合現實的／相關的</td><td>與組織整體策略一致、資源可支持</td></tr>
+<tr><td class="ctr"><b>T</b></td><td class="en">Time-bound / Timely</td><td>具時效性的</td><td>有明確完成期限</td></tr>
+</tbody></table></div>
+<div class="grid2">
+<div class="card"><h5>目標管理 MBO（Drucker）</h5><p class="small" style="margin:2px 0">四要素：<b>目標具體化、參與決策（上下共同設定）、明確時限、績效回饋</b>。<br>特色：目標由上而下層層展開形成<u>目標連鎖</u>，強調自我控制（呼應 Y 理論）。</p></div>
+<div class="card"><h5>OGSM 一頁計畫表<span class="yr">110-4</span></h5><p class="small" style="margin:2px 0"><b>O</b>bjective 最終目的（質化的願景）→ <b>G</b>oal 具體目標（量化）→ <b>S</b>trategy <mark>策略</mark>（達成手段）→ <b>M</b>easure 檢核（衡量指標與行動計畫）。</p></div>
+</div>
+
+<h4>5-2　決策：理性決策程序（8 步驟）</h4>
+<div class="flow" style="font-size:12.8px">
+<div class="st"><b>1 界定問題</b></div><div class="ar">→</div>
+<div class="st"><b>2 確認決策準則</b></div><div class="ar">→</div>
+<div class="st"><b>3 決定準則權重</b></div><div class="ar">→</div>
+<div class="st"><b>4 發展可行方案</b></div><div class="ar">→</div>
+<div class="st"><b>5 分析方案</b></div><div class="ar">→</div>
+<div class="st"><b>6 選擇方案</b></div><div class="ar">→</div>
+<div class="st"><b>7 執行方案</b><small>112-12</small></div><div class="ar">→</div>
+<div class="st"><b>8 評估決策效能</b></div>
+</div>
+<div class="grid2">
+<div class="card"><h5>Simon 決策三部曲<span class="yr">111-16</span></h5>
+<p class="small" style="margin:2px 0">① <b>情報（智慧）活動 Intelligence</b>：蒐集環境資訊、發現問題。<br>② <b>設計活動 Design</b>：發展與分析可行方案。<br>③ <b>選擇活動 Choice</b>：從方案中選定並執行。<br>（部分版本加 ④ 檢討活動 Review）</p></div>
+<div class="card"><h5>Simon 有限理性<span class="yr">109問3-1</span></h5>
+<p class="small" style="margin:2px 0"><b>有限理性 Bounded Rationality</b>：決策者受資訊不完整、時間壓力、認知能力限制，無法達成完全理性，只能在簡化的模型中求<mark>「滿意解」(satisficing)</mark>而非「最佳解」(optimizing)。</p></div>
+</div>
+
+<h4>5-3　決策風格與決策偏誤（高頻名詞解釋來源）</h4>
+<div class="box key"><div class="bt">◆ Robbins 四種決策風格<span class="yr">108-11</span></div>
+<div class="mtx">
+  <div class="lbl">　</div><div class="lbl">理性思考</div><div class="lbl">直覺思考</div>
+  <div class="lbl">低模糊<br>容忍度</div>
+  <div class="cell"><b>指示型 Directive</b><small>效率、邏輯、短期、資訊少即決策</small></div>
+  <div class="cell"><b>行為型 Behavioral</b><small>重視他人感受、追求接納、避免衝突</small></div>
+  <div class="lbl">高模糊<br>容忍度</div>
+  <div class="cell"><b>分析型 Analytic</b><small>謹慎、蒐集大量資訊、方案多、能適應新情況</small></div>
+  <div class="cell"><b>觀念型 Conceptual</b><small>視野廣、長期導向、創意解決方案</small></div>
+</div>
+<p class="mtx-cap">兩構面：思考方式（理性／直覺）× 對模糊的容忍程度（低／高）</p></div>
+
+<div class="tblwrap"><table>
+<thead><tr><th>決策偏誤／現象</th><th>意涵</th></tr></thead>
+<tbody>
+<tr><td><b>定錨效應</b> Anchoring<span class="yr">110-2</span></td><td>決策者過度依賴<u>初期資訊</u>作為起始點（錨），心中有定案後便<u>無法依後續資訊適當調整</u>。</td></tr>
+<tr><td><b>承諾升高</b> Escalation of Commitment<span class="yr">111問1-1</span></td><td>明知先前決策已被證明錯誤，仍因<u>不願承認失敗、沉沒成本心理</u>而持續投入更多資源，導致損失擴大。</td></tr>
+<tr><td><b>自利偏差</b> Self-serving Bias<span class="yr">110問1-2</span></td><td>將<u>成功歸因於自身能力與努力，失敗歸咎於外在環境或他人</u>，以維護自尊。</td></tr>
+<tr><td><b>群體迷思</b> Groupthink<span class="yr">110問1-1</span></td><td>高凝聚力群體為維持和諧與一致，<u>壓抑異議、拒絕外部資訊、產生無懈可擊的錯覺</u>，導致決策品質低落。</td></tr>
+<tr><td><b>社會賦閒</b> Social Loafing<span class="yr hot">111-20</span><span class="yr">112問1-4</span><span class="yr">115問1-3</span></td><td>個人在團體中工作時所付出的努力<u>比自己單獨工作時更少</u>（搭便車效應）。</td></tr>
+<tr><td><b>可得性偏誤</b> Availability</td><td>過度依賴最容易想起、印象鮮明的近期資訊做判斷。</td></tr>
+<tr><td><b>過度自信</b>、<b>確認偏誤</b>、<b>框架偏誤</b>、<b>代表性偏誤</b>、<b>事後諸葛</b>(Hindsight)</td><td>其他常見偏誤，可能作為新題材出現。</td></tr>
+</tbody></table></div>
+
+<h4>5-4　群體決策</h4>
+<div class="box tmpl"><div class="bt">📐 申論模板：群體決策及其優缺點（112問2，15 分）</div>
+<p style="margin:4px 0"><b>（一）何謂群體決策（3 分）</b>：指由兩人以上組成的群體，透過集體互動、意見交換與整合，共同針對特定問題發展並選擇方案的決策方式。</p>
+<p style="margin:4px 0"><b>（二）優點（各 4 分，舉 3 項）</b></p>
+<ol class="tight">
+<li><b>資訊與知識更完整</b>：集合多人專業與經驗，考量面向更周延。</li>
+<li><b>方案更多元、決策品質提高</b>：不同觀點激盪出更多替代方案。</li>
+<li><b>提高接受度與執行意願</b>：參與者對決策有認同感，減少執行阻力（合法性亦較高）。</li>
+</ol>
+<p style="margin:4px 0"><b>（三）缺點（舉 3 項）</b></p>
+<ol class="tight">
+<li><b>耗時且成本高</b>：集會與協調需花費大量時間人力。</li>
+<li><b>少數人壟斷／從眾壓力</b>：易被高職位或強勢者主導，產生<u>群體迷思</u>。</li>
+<li><b>責任歸屬不清</b>：決策由集體作成，事後難以究責，且易發生<u>社會賦閒</u>與<u>群體極化</u>。</li>
+</ol></div>
+
+<div class="tblwrap"><table>
+<thead><tr><th>改善群體決策的技術</th><th>做法</th><th>特徵</th></tr></thead>
+<tbody>
+<tr><td><b>腦力激盪法</b> Brainstorming</td><td>面對面自由發想，禁止批評、鼓勵量多與搭便車聯想</td><td>重量不重質，先發散後收斂</td></tr>
+<tr><td><b>名目群體法</b> Nominal Group</td><td>成員<u>在場但先獨立書面寫下</u>意見，再輪流發表、討論、投票排序</td><td>避免發言被壓抑</td></tr>
+<tr><td><b>德菲法</b> Delphi<span class="yr hot">113-3</span></td><td><mark>成員彼此不會碰面，透過匿名問卷多回合蒐集專家意見，反覆修正，最後得到明確且一致的結論</mark></td><td>匿名、不見面、多回合、專家</td></tr>
+<tr><td><b>電子會議</b> Electronic Meeting</td><td>以電腦連線匿名輸入意見即時彙整</td><td>快速、匿名、誠實</td></tr>
+<tr><td><b>魔鬼代言人</b> Devil's Advocate</td><td>指派專人扮演反對角色，刻意挑戰共識</td><td>防止群體迷思</td></tr>
+</tbody></table></div>
+<div class="box trap"><div class="bt">⚠ 最常混淆：名目群體法 vs 德菲法</div><p style="margin:2px 0"><b>名目群體法＝「人在場、口不開」</b>（先寫後說，仍面對面）；<b>德菲法＝「人不見面」</b>（全程匿名問卷、多回合）。113 年題幹寫「<u>彼此不會碰面、透過匿名、問卷蒐集</u>」→ 必是德菲法。</p></div>
+
+<h4>5-5　衝突類型（Lewin）與時間管理</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>衝突類型</th><th>結構</th><th>例子</th></tr></thead>
+<tbody>
+<tr><td><b>雙趨衝突</b><br>Approach-Approach<span class="yr hot">115-15</span></td><td>兩個目標<u>都想要</u>，但只能得其一</td><td>「魚與熊掌不可兼得」；兩個都想去的好學校只能選一個</td></tr>
+<tr><td><b>雙避衝突</b><br>Avoidance-Avoidance</td><td>兩個目標<u>都不想要</u>，卻必須選一個</td><td>「前有狼後有虎」；不唸書怕當掉、唸書又很累</td></tr>
+<tr><td><b>趨避衝突</b><br>Approach-Avoidance<span class="yr hot">111-13</span></td><td>同一目標<u>又愛又恨、好惡相間</u></td><td>想吃美食又怕體重增加</td></tr>
+<tr><td class="small" colspan="3">※ 部分教科書再加<b>雙重趨避衝突</b>（Double Approach-Avoidance）：兩個選項各自都有利有弊。</td></tr>
+</tbody></table></div>
+
+<div class="box key"><div class="bt">◆ 艾森豪矩陣（時間管理四象限）<span class="yr">114-19</span></div>
+<div class="mtx">
+  <div class="lbl">　</div><div class="lbl">緊急</div><div class="lbl">不緊急</div>
+  <div class="lbl">重要</div>
+  <div class="cell"><b>Ⅰ 立刻做 Do</b><small>危機、火燒眉毛的期限</small></div>
+  <div class="cell"><b>Ⅱ 排程做 Decide</b><small>規劃、預防、能力建構（最該投資的象限）</small></div>
+  <div class="lbl">不重要</div>
+  <div class="cell"><b>Ⅲ 授權 Delegate</b><small>多數電話、會議、他人的急事</small></div>
+  <div class="cell"><b>Ⅳ 刪除 Delete</b><small>瑣事、無謂的娛樂</small></div>
+</div>
+<p class="mtx-cap">兩軸＝「重要性」 × 「<b>緊急度／急迫性</b>」</p></div>
+
+<h4>5-6　預測技術<span class="yr hot">115-14</span></h4>
+<div class="grid2">
+<div class="card"><h5>質化（定性）預測</h5><p class="small" style="margin:2px 0">運用<b>具專業知識的個人或團體之意見或判斷</b>去預測未來，適用於缺乏歷史資料時。<br>方法：<u>專家意見法、德菲法、綜合銷售員意見法、顧客意見評量（市場調查）、高階主管群體意見法</u>。</p></div>
+<div class="card"><h5>量化（定量）預測</h5><p class="small" style="margin:2px 0">運用<b>歷史數據與數學模型</b>推估未來。<br>方法：<u>時間數列分析（移動平均、指數平滑、趨勢外推）、迴歸分析、計量經濟模型</u>。</p></div>
+</div>
+<div class="box key"><div class="bt">◆ Ch5 填充題必背關鍵字</div>
+<p style="margin:2px 0">SMART五原則・MBO四要素・OGSM・理性決策8步驟・Simon(情報/設計/選擇)・有限理性/滿意解・指示-分析-觀念-行為型・定錨/承諾升高/自利偏差/群體迷思/社會賦閒・腦力激盪/名目群體/德菲/電子會議・雙趨/雙避/趨避・艾森豪矩陣/緊急度・質化vs量化預測</p></div>
+<a class="backtop" href="#p2">↑ 回目錄</a>
+
+<!-- ================= Ch6 ================= -->
+<h3 id="c6">Ch6　策略管理　<span class="stars">★★★★★</span></h3>
+<div class="srcline">歷屆出處：<span class="yr">108-2 SWOT的O</span><span class="yr">108-16 7S策略</span><span class="yr">109-3 水平併購</span><span class="yr">109-16 價值鏈</span><span class="yr hot">110-12 BCG金牛</span><span class="yr">110-13 威脅</span><span class="yr">110-20 成本領導</span><span class="yr">110問2 Aaker品牌權益</span><span class="yr hot">111-12 五力-購買者</span><span class="yr">111-15 內部標竿</span><span class="yr">111-18 探勘型</span><span class="yr hot">111問2 安索夫矩陣</span><span class="yr hot">112-19 BCG成長率</span><span class="yr">113-12 邊界擴張</span><span class="yr hot">113-16 五力-新進入者</span><span class="yr hot">113-17 BCG問號</span><span class="yr">114-12 平衡計分卡</span><span class="yr hot">115-9 垂直/水平整合</span><span class="yr hot">115-12 五力</span><span class="yr hot">115問3 安索夫矩陣</span></div>
+<p><b>本章是全科第一大熱區。五力分析 8 年考 4 次、BCG 考 3 次、安索夫矩陣申論考 2 次。</b></p>
+
+<h4>6-1　策略層級與策略規劃程序</h4>
+<div class="tree"><div class="root">策略三層級</div>
+<ul>
+<li><span class="n1">① 總體（公司）策略 Corporate</span> <small>— 我們要做哪些事業？　成長／穩定／緊縮策略、BCG 矩陣</small></li>
+<li><span class="n1">② 事業（競爭）策略 Business</span> <small>— 在這個事業中如何競爭？　Porter 三大競爭策略、五力分析</small></li>
+<li><span class="n1">③ 功能（機能）策略 Functional</span> <small>— 各部門如何支援？　行銷／生產／人資／財務策略</small></li>
+</ul></div>
+<p class="small">策略規劃程序：確認使命與目標 → 外部分析（機會/威脅）→ 內部分析（優勢/劣勢）→ <b>SWOT</b> → 形成策略 → 執行策略 → 評估結果。</p>
+<p class="small"><b>SWOT</b>：<b>S</b>trength 優勢（內）、<b>W</b>eakness 劣勢（內）、<b>O</b>pportunity 機會（外）<span class="yr">108-2</span>、<b>T</b>hreat 威脅（外）<span class="yr">110-13</span>。<br>延伸策略配對：SO 攻擊／進取、WO 扭轉／改善、ST 多角化／差異、WT 防禦／撤退。</p>
+
+<h4>6-2　Porter 五力分析（★最高頻，8 年 4 次）</h4>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">力量</th><th>什麼時候這股力量「強」（對產業不利）</th><th>關鍵判斷字</th></tr></thead>
+<tbody>
+<tr><td class="ctr"><b>① 新進入者的威脅</b><br><span class="en">Threat of New Entrants</span></td><td>進入障礙低時威脅大。<mark>進入障礙包含：規模經濟、專利保全、品牌忠誠度、資本需求、通路取得、政府法規、轉換成本</mark><span class="yr hot">113-16</span></td><td>規模經濟／專利／品牌忠誠度／進入障礙</td></tr>
+<tr><td class="ctr"><b>② 供應商的議價能力</b></td><td>供應商家數少、投入品獨特、轉換成本高、可向前整合</td><td>上游／原料／獨家供應</td></tr>
+<tr><td class="ctr"><b>③ 購買者（採購者／消費者）的議價能力</b><span class="yr hot">111-12</span></td><td>買方集中、採購量大、產品標準化、資訊充分、可向後整合</td><td>下游／顧客／買方</td></tr>
+<tr><td class="ctr"><b>④ 替代品的威脅</b></td><td>替代品性價比高、轉換成本低</td><td>取代／其他滿足方式</td></tr>
+<tr><td class="ctr"><b>⑤ 現有競爭者的競爭強度</b></td><td>同業家數多且勢均力敵、產業成長慢、固定成本高、退出障礙高</td><td>同業／現存產業／競爭程度</td></tr>
+</tbody></table></div>
+<div class="box mnem"><div class="bt">✦ 口訣</div><p style="margin:2px 0"><b>「上下新替現」</b>＝上游供應商、下游購買者、新進入者、替代品、現有競爭者。<br>115-12 題幹把五力全列出來只是要你答「<b>五力（分析）</b>」；113、111 則是挖掉其中一力。<mark>看到「規模經濟、專利、品牌忠誠度」就是在講「進入障礙」→ 新進入者的威脅。</mark></p></div>
+
+<h4>6-3　BCG 矩陣（8 年 3 次）</h4>
+<div class="box key"><div class="bt">◆ 波士頓顧問團 BCG Matrix</div>
+<div class="mtx">
+  <div class="lbl">市場<br>成長率<br>高</div>
+  <div class="cell"><b>❓ 問題事業 Question Mark</b><small>高成長‧低佔有<br><mark>需大量資源投注</mark>，前途未定<br>策略：<b>建立(Build)</b> 或放棄<span class="yr hot">113-17</span></small></div>
+  <div class="cell"><b>⭐ 明星事業 Star</b><small>高成長‧高佔有<br>需再投資以維持地位<br>策略：<b>建立/維持</b></small></div>
+  <div class="lbl">市場<br>成長率<br>低</div>
+  <div class="cell"><b>🐕 落水狗 Dog</b><small>低成長‧低佔有<br>雞肋事業<br>策略：<b>收割(Harvest)／撤資(Divest)</b></small></div>
+  <div class="cell"><b>🐄 金牛事業 Cash Cow</b><small>低成長‧<b>高佔有</b><span class="yr">110-12</span><br>現金主要來源，支援問題與明星<br>策略：<b>維持(Hold)／收割</b></small></div>
+  <div class="lbl">　</div><div class="lbl">相對市場佔有率 低</div><div class="lbl">相對市場佔有率 高</div>
+</div>
+<p class="mtx-cap">縱軸＝該產品的<b>市場成長率</b>（預期成長）<span class="yr">112-19</span>；橫軸＝<b>相對於最大競爭者</b>的市場佔有率（注意：由右向左遞減）</p></div>
+<div class="box trap"><div class="bt">⚠ 三個必記細節</div><p style="margin:2px 0">① <b>橫軸是「相對」市場佔有率</b>（本公司佔有率 ÷ 最大競爭者佔有率），不是絕對佔有率。<br>② 橫軸<b>由左至右是由高到低</b>（多數教科書畫法），所以明星在左上、金牛在左下——但考填充只要記「高成長高佔有＝明星、低成長高佔有＝金牛、高成長低佔有＝問題、雙低＝落水狗」即可。<br>③ 理想的現金流路徑：<b>問題 → 明星 → 金牛</b>；金牛的現金拿去餵問題與明星。</p></div>
+
+<h4>6-4　安索夫產品／市場擴張矩陣（申論考 2 次，必須會畫）</h4>
+<div class="box key"><div class="bt">◆ Ansoff Product/Market Grid<span class="yr hot">111問2</span><span class="yr hot">115問3</span></div>
+<div class="mtx">
+  <div class="lbl">　</div><div class="lbl">現有產品</div><div class="lbl">新產品</div>
+  <div class="lbl">現有<br>市場</div>
+  <div class="cell"><b>市場滲透 Market Penetration</b><small>以現有產品在現有市場提高使用量與市佔<br>例：降價促銷、加強廣告、集點活動、提高購買頻率</small></div>
+  <div class="cell"><b>產品開發 Product Development</b><small>對現有顧客推出新產品<br>例：電信商推新資費方案、飲料推新口味</small></div>
+  <div class="lbl">新<br>市場</div>
+  <div class="cell"><b>市場開發 Market Development</b><small>把現有產品賣到新市場（新地區、新客層）<br>例：國內品牌進軍東南亞、男性保養品推向女性</small></div>
+  <div class="cell"><b>多角化 Diversification</b><small>新產品進入新市場，風險最高<br>例：台電跨足充電樁／綠能售電；鴻海跨足電動車</small></div>
+</div>
+<p class="mtx-cap">兩變數：<b>產品</b>（現有／新）× <b>市場</b>（現有／新）　→ 風險由左上往右下遞增</p>
+<p class="small" style="margin:6px 0 0"><b>作答提醒：</b>115 年題目明文「<u>請繪出該擴張矩陣（7 分），並分別說明 4 種策略替代方案之內涵與例子（8 分）</u>」——<mark>圖 7 分、說明 8 分，圖一定要畫且標出兩個軸名。</mark></p></div>
+
+<h4>6-5　Porter 三大競爭策略與價值鏈</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>策略</th><th>競爭優勢來源</th><th>做法</th></tr></thead>
+<tbody>
+<tr><td><b>成本領導</b> Cost Leadership<span class="yr">110-20</span></td><td>低成本</td><td><mark>以低價為主要競爭手段，追求生產上的規模經濟，嚴格管控研發、生產、行銷費用</mark></td></tr>
+<tr><td><b>差異化</b> Differentiation</td><td>獨特性</td><td>提供顧客認知為獨特的產品/服務（品質、設計、品牌、服務），可收取溢價</td></tr>
+<tr><td><b>集中化</b> Focus（利基）</td><td>聚焦特定區隔</td><td>在狹窄的市場區隔中採成本集中或差異化集中</td></tr>
+<tr><td colspan="3" class="small">※ 同時追求低成本與差異化卻兩者皆不到位，稱為 <b>「卡在中間」(Stuck in the middle)</b>。</td></tr>
+</tbody></table></div>
+<p class="small"><b>價值鏈 Value Chain（Porter）</b><span class="yr">109-16</span>：企業經營活動的所有環節，從原物料到送達最終消費者手中，每一階段都有貢獻。<br><b>主要活動</b>：進貨後勤 → 生產作業 → 出貨後勤 → 行銷與銷售 → 服務；<b>支援活動</b>：企業基礎建設、人力資源管理、技術發展、採購。<br><b>價值鏈 vs 供應鏈</b>：價值鏈重「<u>價值如何被創造（內部）</u>」，供應鏈重「<u>物流與資訊如何流動（跨組織）</u>」。</p>
+
+<h4>6-6　成長策略、Miles &amp; Snow 與其他工具</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>工具／概念</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td><b>整合式成長</b><span class="yr hot">115-9</span></td><td><b>垂直整合</b>：整合上游（向後整合，掌握原料）或下游（向前整合，掌握通路）。<br><b>水平整合</b>：與<u>同一產業鏈相同位置</u>的其他組織（通常是競爭者）結合，以擴大市場或達規模經濟、發揮綜效。<span class="yr">109-3 水平併購</span></td></tr>
+<tr><td><b>密集式成長</b></td><td>即安索夫的市場滲透、市場開發、產品開發。</td></tr>
+<tr><td><b>多角化成長</b></td><td><u>同心圓（相關）多角化</u>／<u>水平多角化</u>／<u>複合式（非相關）多角化</u>。</td></tr>
+<tr><td><b>Miles &amp; Snow 適應策略</b><span class="yr">111-18</span></td><td><b>①探勘（前瞻）型 Prospector</b>：<mark>主動積極開發新市場與新產品，強調持續創新維持成長動力</mark>。<br><b>②防禦型 Defender</b>：守住穩定的小眾市場，重效率與成本。<br><b>③分析型 Analyzer</b>：穩定核心＋跟隨創新，模仿成功者。<br><b>④反應型 Reactor</b>：無一致策略，被動應付（唯一的失敗型）。</td></tr>
+<tr><td><b>標竿管理</b> Benchmarking<span class="yr">111-15</span></td><td>從競爭者或非競爭者中找出使企業達到優越績效的最佳方法。<br><b>內部標竿</b>：在<u>同一企業內</u>挑選績效最好的部門作為學習對象。<br><b>競爭標竿</b>（直接競爭者）／<b>功能標竿</b>（不同產業的相同功能，如物流業向 7-11 學）／<b>一般（通用）標竿</b>。</td></tr>
+<tr><td><b>平衡計分卡 BSC</b><span class="yr">114-12</span></td><td>柯普朗與諾頓（Kaplan &amp; Norton）提出，突破傳統只重財務的缺點，以四構面完整評估績效：<b>財務、顧客、企業內部流程、學習與成長</b>。（因果：學習成長 → 內部流程 → 顧客 → 財務）</td></tr>
+<tr><td><b>麥肯錫 7S 模型</b><span class="yr">108-16</span><span class="yr hot">115-20</span></td><td><b>硬體 3S</b>：策略 Strategy、結構 Structure、制度/系統 System。<br><b>軟體 4S</b>：風格 Style、人員 Staff、技能 Skill、<mark>共享價值 Shared Value（位於七要素之中樞地位）</mark>。</td></tr>
+<tr><td><b>利害關係人管理矩陣</b><span class="yr">113-12</span></td><td>兩構面：利害關係人的<b>重要性</b> × 組織所處環境的<b>不確定性</b>。<br>低重要+低不確定 → <b>監督</b>策略；高重要+低不確定 → <b>溝通</b>；<mark>普通重要+高不確定 → <b>邊界擴張</b> Boundary Spanning</mark>；高重要+高不確定 → <b>夥伴/合作</b>策略。</td></tr>
+<tr><td><b>微笑曲線</b><span class="yr">112-8</span></td><td>宏碁集團創辦人<b>施振榮</b>提出：附加價值兩端高（左端研發／專利、右端行銷／品牌），中段製造組裝附加價值最低；企業應不斷往附加價值高的區塊移動與定位。</td></tr>
+<tr><td><b>核心能力</b>（Prahalad &amp; Hamel）</td><td>具價值性、稀少性、不可模仿性、不可替代性（VRIO/VRIN）的能力，是持久競爭優勢來源。</td></tr>
+</tbody></table></div>
+
+<div class="box tmpl"><div class="bt">📐 申論模板：Aaker 品牌權益五構面（110問2）</div>
+<p style="margin:4px 0">品牌權益(brand equity)係品牌為商品與服務所帶來的<u>附加價值</u>。Aaker 認為由下列 5 個層面構成：</p>
+<ol class="tight">
+<li><b>品牌知名度 Brand Awareness</b>：消費者能回憶或辨認該品牌的程度，是品牌權益的基礎。</li>
+<li><b>知覺品質 Perceived Quality</b>：消費者主觀認知的整體品質水準，直接影響購買理由與溢價能力。</li>
+<li><b>品牌聯想 Brand Associations</b>：消費者看到品牌時所連結的一切記憶與意象（代言人、屬性、使用情境）。</li>
+<li><b>品牌忠誠度 Brand Loyalty</b>：顧客重複購買並抗拒競爭者拉攏的程度，是最核心的價值來源（可降低行銷成本）。</li>
+<li><b>其他專屬品牌資產 Other Proprietary Assets</b>：專利、商標、通路關係等可保護品牌不被模仿的法律或關係資產。</li>
+</ol></div>
+<div class="box key"><div class="bt">◆ Ch6 填充題必背關鍵字</div>
+<p style="margin:2px 0">SWOT・五力（新進入者/供應商/購買者/替代品/現有競爭者）・進入障礙・BCG（明星/問題/金牛/落水狗、成長率×相對佔有率）・安索夫（滲透/市場開發/產品開發/多角化）・成本領導/差異化/集中化/卡在中間・價值鏈・垂直整合/水平整合・Miles&amp;Snow（探勘/防禦/分析/反應）・標竿（內部/競爭/功能/一般）・BSC四構面・7S與共享價值・邊界擴張・微笑曲線/施振榮・核心能力</p></div>
+<a class="backtop" href="#p2">↑ 回目錄</a>
+<!-- ================= Ch7 ================= -->
+<h3 id="c7">Ch7　組織結構與設計　<span class="stars">★★★★★</span></h3>
+<div class="srcline">歷屆出處：<span class="yr">108-15 組織結構</span><span class="yr">108問1-1 扁平式組織</span><span class="yr hot">109-4 指揮鏈</span><span class="yr">109-7 矩陣式</span><span class="yr">109-9 幕僚職權</span><span class="yr hot">110-3 控制幅度</span><span class="yr">112-1 組織生命週期</span><span class="yr hot">112-2 職權</span><span class="yr hot">112-11 控制幅度</span><span class="yr">113-18 Greiner硬化危機</span><span class="yr">111-11 Greiner創造力</span><span class="yr">114-16 有機式組織</span><span class="yr hot">115-10 指揮鏈</span><span class="yr hot">115問2 職權三種</span></div>
+
+<h4>7-1　組織設計的六大元素（Robbins）</h4>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">元素</th><th>核心問題</th><th>考點</th></tr></thead>
+<tbody>
+<tr><td class="ctr"><b>① 專業分工</b><br>Work Specialization</td><td>工作要細分到什麼程度？</td><td>又稱勞動分工；過度分工造成疲乏、無聊、缺勤（→工作擴大化/豐富化）</td></tr>
+<tr><td class="ctr"><b>② 部門化</b><br>Departmentalization</td><td>工作如何分組？</td><td>功能別、產品別、地區別、顧客別、程序別；<b>矩陣式</b>＝2 種以上部門化方式併用<span class="yr">109-7</span></td></tr>
+<tr><td class="ctr"><b>③ 指揮鏈</b><br>Chain of Command</td><td>向誰報告？</td><td><mark>由組織高層延伸至基層、界定誰向誰報告的連續職權線</mark>。含三概念：職權、職責、<b>指揮統一</b>（一人一主管）<span class="yr hot">109-4</span><span class="yr hot">115-10</span></td></tr>
+<tr><td class="ctr"><b>④ 控制幅度</b><br>Span of Control</td><td>一個主管管幾人？</td><td><mark>管理者能直接且有效控管的部屬人數</mark>。幅度大→層級少→<b>扁平式</b>；幅度小→層級多→<b>高聳式</b><span class="yr hot">110-3</span><span class="yr hot">112-11</span></td></tr>
+<tr><td class="ctr"><b>⑤ 集權與分權</b><br>Centralization</td><td>決策權在哪一層？</td><td>集權＝決策集中高層；分權＝下授基層。環境愈不確定、組織愈大 → 愈宜分權</td></tr>
+<tr><td class="ctr"><b>⑥ 正式化</b><br>Formalization</td><td>規章標準化程度？</td><td>工作被規章、程序、SOP 規範的程度</td></tr>
+</tbody></table></div>
+<div class="box mnem"><div class="bt">✦ 口訣</div><p style="margin:2px 0"><b>「分、部、指、幅、權、式」</b>——分工、部門化、指揮鏈、控制幅度、集權分權、正式化。<br><b>組織圖揭露的 4 項資訊</b><span class="yr">109-4</span><span class="yr hot">115-10</span>：<u>任務、分工、管理的層級、指揮鏈</u>。</p></div>
+
+<h4>7-2　職權（Authority）：115 年申論考題</h4>
+<div class="box tmpl"><div class="bt">📐 申論模板：職權及其三種行使關係（115問2，15 分）</div>
+<p style="margin:4px 0"><b>（一）何謂職權（3 分）</b><br>職權係指<mark>在某一管理職位上所擁有或被賦予的合法權力</mark>，管理者據以發布命令、要求部屬服從並期待其執行。此種權力<u>從屬於「職位」而非「個人」</u>，當任職者離開該職位時，此權力即隨之消失。<span class="yr hot">112-2</span></p>
+<p style="margin:4px 0"><b>（二）依行使關係可分為 3 種（各 4 分）</b></p>
+<ol class="tight">
+<li><b>直線職權 Line Authority</b>：賦予管理者<u>直接指揮部屬工作</u>的職權，沿指揮鏈由上而下，對組織目標達成負直接責任（如生產部經理對生產線員工）。</li>
+<li><b>幕僚職權 Staff Authority</b>：<mark>僅輔助直線職權進行管理工作，本身並無直接指揮部屬的職權</mark><span class="yr">109-9</span>，以建議、協助、服務為主（如法務、企劃、人事幕僚）。</li>
+<li><b>功能職權 Functional Authority</b>：幕僚或其他部門主管，在其<u>專業領域內</u>對非其直屬單位行使的有限指揮權（如會計長要求各部門依統一格式編製報表）。它是直線與幕僚的折衷，用以提高專業效率，但可能違反指揮統一原則。</li>
+</ol></div>
+<p class="small"><b>延伸：巴納德職權接受論</b>——職權的有效性最終取決於<u>部屬是否接受</u>，需滿足四條件：部屬能理解、認為與組織目標一致、與個人利益不衝突、有能力執行。</p>
+
+<h4>7-3　機械式 vs 有機式組織</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>構面</th><th>機械式 Mechanistic</th><th>有機式 Organic<span class="yr">114-16</span></th></tr></thead>
+<tbody>
+<tr><th>組織層級</th><td>多（高聳）</td><td><b>少（扁平）</b></td></tr>
+<tr><th>控制幅度</th><td>窄（小）</td><td><b>寬（高）</b></td></tr>
+<tr><th>正式化</th><td>高（規章嚴密）</td><td><b>低</b></td></tr>
+<tr><th>集權程度</th><td>高（集權）</td><td><b>低（分權）</b></td></tr>
+<tr><th>溝通</th><td>垂直、正式</td><td>橫向、跨部門、網絡式</td></tr>
+<tr><th>適用環境</th><td>穩定、簡單、例行技術</td><td>動態、複雜、創新導向</td></tr>
+</tbody></table></div>
+<p class="small">※ <b>114-16 原題</b>：「有機式組織之特點包含：組織層級少，管理幅度 <u>高</u>，正式化程度低、集權程度 <u>低</u>，高彈性應變。」</p>
+
+<h4>7-4　組織結構型態</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>型態</th><th>特徵</th><th>優／缺</th></tr></thead>
+<tbody>
+<tr><td><b>功能式</b></td><td>依專業機能分部（產銷人發財）</td><td>＋專業化、規模經濟／－本位主義、橫向協調差</td></tr>
+<tr><td><b>事業部式（分部式）</b></td><td>依產品／地區／顧客成立獨立單位，自負盈虧</td><td>＋責任明確、培養通才／－資源重複、成本高</td></tr>
+<tr><td><b>矩陣式</b><span class="yr">109-7</span></td><td><mark>組織相當複雜或產品同時具有很多特性時，採 2 種以上部門化方式編組</mark>（如功能×專案）</td><td>＋彈性、資源共享／－<b>違反指揮統一</b>（雙頭馬車）、權責不清</td></tr>
+<tr><td><b>專案式／團隊式</b></td><td>以任務編組，任務完成即解散</td><td>＋機動／－不穩定</td></tr>
+<tr><td><b>扁平式組織</b><span class="yr">108問1-1</span></td><td><mark>管理層級少、控制幅度大</mark>的結構</td><td>＋溝通快、決策迅速、授權多、管理成本低／－主管負荷重、升遷管道少</td></tr>
+<tr><td><b>虛擬／網絡式組織</b></td><td>核心小團隊＋外包主要功能</td><td>＋極高彈性、低固定成本／－控制力弱、依賴外部</td></tr>
+<tr><td><b>無疆界組織</b></td><td>打破垂直、水平與外部疆界</td><td>強調跨部門團隊與策略聯盟</td></tr>
+</tbody></table></div>
+
+<h4>7-5　組織生命週期與 Greiner 成長模型</h4>
+<p class="small"><b>組織生命週期 4 階段</b><span class="yr">112-1</span>：<b>設立（創業）期 → 成長期 → 成熟期 → 衰退期</b>。</p>
+<div class="box key"><div class="bt">◆ Greiner 組織成長模型：每個成長都埋著一個危機</div>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">階段</th><th>透過什麼成長</th><th>引發什麼危機</th></tr></thead>
+<tbody>
+<tr><td class="ctr">1</td><td><b>創造力</b>成長 Creativity<span class="yr">111-11</span></td><td>→ <b>領導危機</b>（創業者無力管理日漸龐大的組織）</td></tr>
+<tr><td class="ctr">2</td><td><b>指揮（命令）</b>成長 Direction</td><td>→ <b>自主危機</b>（基層無決策權、綁手綁腳）</td></tr>
+<tr><td class="ctr">3</td><td><b>授權</b>成長 Delegation</td><td>→ <b>控制危機</b>（各單位各自為政，總部失控）</td></tr>
+<tr><td class="ctr">4</td><td><b>協調</b>成長 Coordination<br><span class="small">加強各部門間之協調功能達到成長</span></td><td>→ <mark><b>硬化／僵化／官僚危機 Red Tape</b></mark>（制度過多、流程繁瑣）<span class="yr hot">113-18</span></td></tr>
+<tr><td class="ctr">5</td><td><b>合作</b>成長 Collaboration</td><td>→ 心理飽和／成長危機（需靠跨組織聯盟或新結構突破）</td></tr>
+</tbody></table></div>
+<p class="small" style="margin:2px 0"><b>口訣：創、指、授、協、合 → 領、自、控、僵、飽。</b></p></div>
+
+<div class="box key"><div class="bt">◆ Ch7 填充題必背關鍵字</div>
+<p style="margin:2px 0">六元素（分工/部門化/指揮鏈/控制幅度/集權分權/正式化）・組織圖四資訊・指揮統一・職權（直線/幕僚/功能）・職權接受論・機械式vs有機式・功能/事業部/矩陣/扁平/虛擬/無疆界・組織生命週期四期・Greiner五階段與五危機</p></div>
+<a class="backtop" href="#p2">↑ 回目錄</a>
+
+<!-- ================= Ch8 ================= -->
+<h3 id="c8">Ch8　組織文化、變革與創新　<span class="stars">★★★★☆</span></h3>
+<div class="srcline">歷屆出處：<span class="yr">109-15 組織氣候</span><span class="yr">110-15 破壞性創新</span><span class="yr">110-16 系統思考</span><span class="yr">110-17 風險管理</span><span class="yr">110問3 組織變革三類型</span><span class="yr hot">113-1 儀式典禮</span><span class="yr hot">113-6 文化變數</span><span class="yr hot">114-8 Leavitt結構改變</span><span class="yr hot">114-14 Lewin三步驟</span></div>
+
+<h4>8-1　組織文化</h4>
+<div class="grid2">
+<div class="card"><h5>文化的傳承（社會化）方式<span class="yr hot">113-1</span></h5>
+<p class="small" style="margin:2px 0">主要透過 4 種方式：<b>① 故事 Stories ② 儀式／典禮 Rituals ③ 物質表徵與符號 Material Symbols ④ 語言 Language</b>，再加上社會化、價值觀及規範等其他方式傳達給員工。</p></div>
+<div class="card"><h5>Robbins 組織文化七構面</h5>
+<p class="small" style="margin:2px 0">創新與冒險、注重細節、結果導向、人員導向、團隊導向、進取性、穩定性。<br><b>強勢文化</b>：核心價值被廣泛共享且強烈信奉 → 高承諾、低流動率，但<u>可能成為變革的阻力</u>。</p></div>
+</div>
+<p class="small"><b>組織氣候 Organizational Climate</b><span class="yr">109-15</span>：哈佛學者<b>黎特文與史春格(Litwin &amp; Stringer)</b>提出，倡導以「<u>整體與主觀</u>」的環境觀念研究組織成員的行為動機。<br><b>氣候 vs 文化：</b>氣候是成員對環境的<u>主觀知覺</u>、較易變動；文化是深層的<u>共享價值與假定</u>、較穩定持久。</p>
+
+<h4>8-2　組織變革（110 申論題）</h4>
+<div class="box tmpl"><div class="bt">📐 申論模板：組織變革的 3 種類型（110問3，15 分）</div>
+<p style="margin:4px 0">組織變革係組織為因應內外部環境變動，對其人員、結構或技術所進行的有計畫調整。依變革標的可分為 3 類（Robbins / Leavitt）：</p>
+<ol class="tight">
+<li><b>結構的改變（Structure）</b><span class="yr hot">114-8</span>：改變組織的<u>結構要素或結構設計</u>，包括專業分工、部門化方式、指揮鏈、控制幅度、集權/分權程度與正式化；或重新設計工作、調整職權關係，例如由功能式改為事業部式、推動組織扁平化。</li>
+<li><b>技術的改變（Technology）</b>：改變組織<u>工作執行的方式、所使用的設備、方法與流程</u>，例如導入自動化設備、ERP 系統、AI 與智慧電網，以提升效率與品質。</li>
+<li><b>人員（行為）的改變（People）</b>：改變員工的<u>態度、期望、認知與行為</u>，透過教育訓練、團隊建立、調查回饋、敏感性訓練等組織發展(OD)技術，以形塑新的價值觀與合作模式。</li>
+</ol>
+<p class="small" style="margin:4px 0">※ Leavitt 原始架構為四要素（任務、結構、技術、人員）；台電 114 年考的就是<b>結構</b>改變。</p></div>
+
+<div class="box key"><div class="bt">◆ Lewin 變革三步驟<span class="yr hot">114-14</span></div>
+<div class="flow">
+<div class="st"><b>① 解凍 Unfreezing</b><small>打破現狀、增加驅動力／減少抗拒力，讓成員認知變革必要</small></div><div class="ar">→</div>
+<div class="st"><b>② 變革 Changing</b><small>實際推動新的行為、流程、結構</small></div><div class="ar">→</div>
+<div class="st"><b>③ 再凍結 Refreezing</b><small>透過制度、獎酬、文化將新狀態穩定下來</small></div>
+</div>
+<p class="small" style="margin:2px 0"><b>114 年原題</b>把 ①解凍 ②溝通 ③再凍結 ④重組 ⑤變革 打散，答案為 <b>①→⑤→③</b>。這題全對才給分，<mark>「溝通」與「重組」是干擾項</mark>。<br><b>Lewin 力場分析</b>：任何現狀都是<u>驅動力(Driving Forces)</u> 與 <u>抑制力(Restraining Forces)</u> 的均衡；變革＝增加驅動力或減少抑制力（後者較佳，阻力小）。</p></div>
+
+<div class="grid2">
+<div class="card"><h5>變革抗拒的原因</h5><p class="small" style="margin:2px 0"><b>個人層面</b>：習慣、安全感、經濟因素（怕減薪失業）、對未知的恐懼、選擇性資訊處理。<br><b>組織層面</b>：結構惰性、有限的變革焦點、群體惰性、對專業/權力關係/既有資源分配的威脅。</p></div>
+<div class="card"><h5>降低抗拒的方法（Kotter）</h5><p class="small" style="margin:2px 0">教育與溝通、參與、協助與支持、協商、操縱與收編、選擇適當人選、強制。<br>另可背 <b>Kotter 變革八步驟</b>：建立危機意識 → 成立領導聯盟 → 提出願景 → 溝通願景 → 授權員工行動 → 創造短期戰果 → 鞏固戰果再接再厲 → 讓新做法深植文化。</p></div>
+</div>
+
+<h4>8-3　創新與學習型組織</h4>
+<div class="box key"><div class="bt">◆ Robbins 激發創新的 3 項環境變數<span class="yr hot">113-6</span></div>
+<div class="tblwrap"><table>
+<thead><tr><th>變數</th><th>有利創新的條件</th></tr></thead>
+<tbody>
+<tr><td><b>結構變數</b></td><td>有機式結構、資源充裕、單位間頻繁溝通、低時間壓力、對創造力的支持</td></tr>
+<tr><td><b>文化變數</b></td><td><mark>對模稜兩可的接受度、對不切實際的容忍度、低度的外部控制、對不實際冒險的容忍、容忍衝突、注重結果（而非手段）、強調開放式系統、對矛盾的容忍</mark></td></tr>
+<tr><td><b>人力資源變數</b></td><td>積極推動訓練與發展、提供高工作保障、鼓勵成為<b>創意先鋒(Idea Champion)</b></td></tr>
+</tbody></table></div>
+<p class="small" style="margin:2px 0">113 年題幹列的正是文化變數的清單 → 答<b>文化（組織文化）</b>變數。</p></div>
+
+<div class="tblwrap"><table>
+<thead><tr><th>概念</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td><b>破壞式創新</b><br><span class="en">Disruptive Innovation</span>（Christensen）<span class="yr">110-15</span></td><td>產品、服務或流程上的創新，<mark>顛覆現有的市場競爭模式與遊戲規則，有利於市場新進者挑戰現有在位者</mark>。通常先從低階或全新市場切入，再向上侵蝕。<br>對照 <b>維持性創新</b>：在既有軌道上持續改良，有利在位者。</td></tr>
+<tr><td><b>彼得聖吉「第五項修練」</b><br>學習型組織五項修練</td><td>① <b>自我超越</b> ② <b>改善心智模式</b> ③ <b>建立共同願景</b> ④ <b>團隊學習</b> ⑤ <mark><b>系統思考</b>——強調以新思維方式擺脫錯誤的經驗與邏輯，運用整體性的觀點駕馭複雜的外在事物</mark>（第五項修練，整合前四項）<span class="yr">110-16</span></td></tr>
+<tr><td><b>風險管理</b><span class="yr">110-17</span></td><td>透過風險辨識、評估、因應（規避／降低／移轉／承擔）與監控，<u>降低不可控事件所帶來的威脅或損失</u>。</td></tr>
+<tr><td><b>危機管理 4R</b>（Robert Heath）<span class="yr">108-8</span></td><td><b>縮減力 Reduction</b> → <b>預備力 Readiness</b> → <b>反應力 Response</b> → <b>復原力 Recovery</b></td></tr>
+<tr><td><b>鯰魚效應</b> Catfish Effect<span class="yr">113問1-4</span></td><td>在一群沙丁魚中放入天敵鯰魚，使沙丁魚保持游動而存活。比喻組織引進<u>外部強勢人才或競爭者</u>，激發原有成員的危機意識與活力，避免組織僵化。</td></tr>
+<tr><td><b>穀倉效應</b> Silo Effect<span class="yr">113問1-5</span></td><td>組織各部門像獨立穀倉般各自為政、本位主義，<u>資訊不流通、缺乏橫向協調</u>，導致資源重複、決策失誤與整體效能下降。</td></tr>
+</tbody></table></div>
+
+<div class="box key"><div class="bt">◆ Ch8 填充題必背關鍵字</div>
+<p style="margin:2px 0">故事/儀式典禮/物質表徵符號/語言・強勢文化・組織氣候/黎特文與史春格・變革三類型（結構/技術/人員）・Leavitt・Lewin解凍-變革-再凍結・力場分析・變革抗拒與降低方法・Kotter八步驟・創新三變數（結構/文化/人力資源）・創意先鋒・破壞式創新・第五項修練/系統思考・危機管理4R・鯰魚效應/穀倉效應</p></div>
+<a class="backtop" href="#p2">↑ 回目錄</a>
+
+<!-- ================= Ch9 ================= -->
+<h3 id="c9">Ch9　領導　<span class="stars">★★★★★</span></h3>
+<div class="srcline">歷屆出處：<span class="yr hot">109問1 路徑-目標理論</span><span class="yr">110-5 LMX</span><span class="yr">110-7 專家權</span><span class="yr hot">111-4 管理方格(9,9)</span><span class="yr">111問1-5 僕人領導</span><span class="yr">112-9 民主式</span><span class="yr">112-17 任務導向</span><span class="yr hot">112問3 管理方格</span><span class="yr hot">113-2 參與型</span><span class="yr">113-10 魅力型職權</span><span class="yr hot">114-7 授權式</span><span class="yr hot">114問3 第五級領導</span><span class="yr hot">115問4 五種權力來源</span></div>
+
+<div class="tree"><div class="root">領導理論演進四階段</div>
+<ul>
+<li><span class="n1">① 特質論</span> <small>— 天生領袖？找出成功領導者的共同人格特質（企圖心、正直、自信、智慧…）</small></li>
+<li><span class="n1">② 行為論</span> <small>— 愛荷華(White &amp; Lippitt)、俄亥俄州立、密西根、管理方格、雷定三構面</small></li>
+<li><span class="n1">③ 權變論</span> <small>— Fiedler、Hersey &amp; Blanchard 情境領導、House 路徑-目標、領導者參與模式、LMX</small></li>
+<li><span class="n1">④ 當代理論</span> <small>— 魅力型、轉換型/交易型、願景型、僕人領導、第五級領導、真誠領導</small></li>
+</ul></div>
+
+<h4>9-1　權力來源：French &amp; Raven 五種（115 申論題）</h4>
+<div class="box tmpl"><div class="bt">📐 申論模板：傅蘭琪與雷芬的 5 種領導者權力來源（115問4，15 分）</div>
+<div class="tblwrap"><table>
+<thead><tr><th>權力</th><th>基礎</th><th>說明與例子</th></tr></thead>
+<tbody>
+<tr><td><b>① 法定權</b><br>Legitimate Power</td><td rowspan="3" class="ctr"><b>職位</b><br>權力<br><small>(來自組織賦予)</small></td><td>基於在組織結構中<u>所擔任的正式職位</u>而擁有的權力，部屬因其職位而服從（＝職權）。</td></tr>
+<tr><td><b>② 獎賞權</b><br>Reward Power</td><td>能給予他人所<u>想要的正面價值</u>（加薪、獎金、升遷、好考績、肯定）的權力。</td></tr>
+<tr><td><b>③ 強制權</b><br>Coercive Power</td><td>能施予他人<u>懲罰或使其恐懼</u>（處分、降級、解僱、調職）的權力。</td></tr>
+<tr><td><b>④ 專家權</b><br>Expert Power<span class="yr">110-7</span></td><td rowspan="2" class="ctr"><b>個人</b><br>權力<br><small>(來自個人特質)</small></td><td><mark>基於專業、特殊技術或知識而來的權力</mark>；部屬因其能解決問題而信服（如資深工程師）。</td></tr>
+<tr><td><b>⑤ 參考權</b><br>Referent Power</td><td>基於<u>個人特質、魅力或被認同崇拜</u>而產生的權力，他人願意主動追隨、模仿（如明星代言、精神領袖）。</td></tr>
+</tbody></table></div>
+<p class="small" style="margin:4px 0"><b>加分句：</b>其中法定、獎賞、強制三者源於「職位」，離開職位即消失；專家與參考權源於「個人」，隨個人移動而存在，對員工的績效與承諾影響最為正面。</p></div>
+
+<h4>9-2　行為論：管理方格（8 年考 2 次）</h4>
+<div class="box tmpl"><div class="bt">📐 申論模板：管理方格理論與五種代表型領導（112問3，15 分）</div>
+<p style="margin:4px 0"><b>（一）何謂管理方格（5 分）</b><br>布萊克(R. Blake)與摩頓(J. Mouton)提出，以<mark>「關心生產」（橫軸）與「關心人員」（縱軸）</mark>兩個構面各分 1–9 級，構成 9×9＝81 格的方格圖，用以描述並診斷領導風格。</p>
+<p style="margin:4px 0"><b>（二）5 種代表型領導方式（10 分）</b></p>
+<div class="mtx" style="grid-template-columns:78px 1fr 1fr">
+  <div class="lbl">關心人員<br>高 (9)</div>
+  <div class="cell"><b>(1,9) 鄉村俱樂部型</b><small>重人際和諧與滿足，忽視生產；氣氛融洽但績效不彰</small></div>
+  <div class="cell"><b>(9,9) 團隊型</b><small><mark>最有效的領導風格</mark>：兼顧生產目標與員工需求滿足，以相互依賴、共同目標建立信任與尊重</small><span class="yr hot">111-4</span></div>
+  <div class="lbl">關心人員<br>低 (1)</div>
+  <div class="cell"><b>(1,1) 放任（無為）型</b><small>兩者都不關心，僅做最低限度努力以保住職位</small></div>
+  <div class="cell"><b>(9,1) 任務（權威服從）型</b><small>只重生產效率，視人為機器，以權威要求服從</small></div>
+  <div class="lbl">　</div><div class="lbl">關心生產 低 (1)</div><div class="lbl">關心生產 高 (9)</div>
+</div>
+<p class="small" style="margin:2px 0">第五種：<b>(5,5) 中庸（組織人）型</b>——在績效與士氣間求取平衡妥協，維持差強人意的水準。</p></div>
+
+<div class="grid2">
+<div class="card"><h5>White &amp; Lippitt 三種領導風格<span class="yr">112-9</span></h5>
+<p class="small" style="margin:2px 0"><b>① 專制式（獨裁）</b>：主管獨斷決策、命令部屬執行。<br><b>② 民主式</b>：鼓勵參與、共同決策、授權（實驗顯示<u>士氣與滿意度最高</u>）。<br><b>③ 放任式</b>：完全授權、不干涉（績效通常最差）。</p></div>
+<div class="card"><h5>俄亥俄 vs 密西根</h5>
+<p class="small" style="margin:2px 0"><b>俄亥俄州立</b>：定規（體制）構面 Initiating Structure ／ 關懷構面 Consideration。<br><b>密西根大學</b>：生產導向 ／ 員工導向（結論：<u>員工導向較佳</u>）。<br><b>雷定(Reddin) 三構面</b>：在工作導向、關係導向外加入<b>「效能」</b>構面。</p></div>
+</div>
+
+<h4>9-3　權變理論三大主角</h4>
+<div class="box key"><div class="bt">◆ ① Fiedler 權變模型<span class="yr">112-17</span></div>
+<p class="small" style="margin:2px 0"><b>測量工具</b>：LPC 量表（Least Preferred Coworker，最不受歡迎的同事）。LPC 高分＝<u>關係導向</u>；LPC 低分＝<u>任務導向</u>。Fiedler 主張<mark>領導風格是與生俱來、難以改變的</mark>，因此應「換情境配合人」而非改變人。</p>
+<p class="small" style="margin:2px 0"><b>三個情境變數</b>：① 領導者與部屬關係（好/壞）② 任務結構（高/低）③ 職位權力（強/弱）。</p>
+<div class="formula">情境 <b>極端有利</b>（關係好+任務明確+職權強） → <b>任務導向</b>績效較高
+情境 <b>中等有利</b>                            → <b>關係導向</b>績效較高
+情境 <b>極端不利</b>（關係差+任務模糊+職權弱） → <b>任務導向</b>績效較高</div>
+<p class="small" style="margin:2px 0">112-17 原題即問「極端有利或極端不利時，<u>任務</u>導向績效較高」。<mark>口訣：兩端任務、中間關係。</mark></p></div>
+
+<div class="box key"><div class="bt">◆ ② Hersey &amp; Blanchard 情境領導理論<span class="yr hot">114-7</span></div>
+<p class="small" style="margin:2px 0">以部屬的<b>成熟度</b>（能力 Ability ＋ 意願 Willingness）決定領導風格：</p>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">部屬成熟度</th><th class="ctr">能力／意願</th><th>領導風格</th><th class="ctr">任務/關係</th></tr></thead>
+<tbody>
+<tr><td class="ctr">M1 低</td><td class="ctr">無能力、無意願</td><td><b>告知式 Telling</b>（指揮式）：明確指示做什麼、怎麼做</td><td class="ctr">高任務 低關係</td></tr>
+<tr><td class="ctr">M2 中低</td><td class="ctr">無能力、有意願</td><td><b>推銷式 Selling</b>（教練式）：說明並說服，兼顧指導與支持</td><td class="ctr">高任務 高關係</td></tr>
+<tr><td class="ctr">M3 中高</td><td class="ctr">有能力、無意願</td><td><b>參與式 Participating</b>（支持式）：共同決策、鼓勵溝通</td><td class="ctr">低任務 高關係</td></tr>
+<tr><td class="ctr">M4 高</td><td class="ctr"><mark>有能力、有意願</mark></td><td><mark><b>授權式 Delegating</b></mark>：交付責任、放手讓部屬自主執行</td><td class="ctr">低任務 低關係</td></tr>
+</tbody></table></div>
+<p class="small" style="margin:2px 0">口訣：<b>告 → 銷 → 參 → 授</b>（成熟度愈高，主管介入愈少）。114-7 題幹「能力和意願均佳、成熟度很高」→ <b>授權式</b>。</p></div>
+
+<div class="box tmpl"><div class="bt">📐 申論模板：③ House 路徑-目標理論（109問1／113-2）</div>
+<p style="margin:4px 0"><b>（一）何謂路徑-目標理論（3 分）</b><br>浩斯(Robert House)結合期望理論而提出，主要信念為：<mark>有效的領導者能移除障礙，讓跟隨者有更清楚的路徑，以協助他們達到工作目標的成就</mark>；領導者的職責在於釐清路徑、提供資源與支援，並使目標達成與個人報酬相連結。</p>
+<p style="margin:4px 0"><b>（二）4 種領導型態（12 分）</b></p>
+<ol class="tight">
+<li><b>指導型（指示型）Directive</b>：明確告知部屬期望為何、工作如何進行、排定工作進度並提供具體指引。適用於任務模糊、部屬經驗不足時。</li>
+<li><b>支持型 Supportive</b>：親切友善、關心部屬的需求與福祉，營造愉快的工作環境。適用於工作單調、壓力大時。</li>
+<li><b>參與型 Participative</b>：<mark>在制定決策前，和群體成員磋商，並採納他們建議</mark>的領導行為。適用於部屬有能力且希望自主時。<span class="yr hot">113-2</span></li>
+<li><b>成就導向型 Achievement-oriented</b>：設定具挑戰性的目標，期望部屬發揮最高水準，並表達對其能力的信心。適用於成就需求高的部屬。</li>
+</ol>
+<p class="small" style="margin:4px 0">※ 兩類權變變數：<b>環境因素</b>（任務結構、正式職權系統、工作群體）與<b>部屬個人特質</b>（內外控傾向、經驗、知覺能力）。</p></div>
+
+<div class="card"><h5>④ LMX 領導者-成員交換理論<span class="yr">110-5</span></h5>
+<p class="small" style="margin:2px 0">主張領導者因時間與資源有限，會<mark>劃分內團體(in-group)與外團體(out-group)</mark>。內團體成員享有較多信任、關注與特權，因而<u>有較高的績效評估、較低的離職率及較高的工作滿意度</u>；外團體則僅維持正式職權關係。</p></div>
+
+<h4>9-4　當代領導理論</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>理論</th><th>核心</th></tr></thead>
+<tbody>
+<tr><td><b>交易型領導</b> Transactional</td><td>以「<u>交換</u>」引導部屬：釐清角色與任務、依績效給予獎酬，屬例外管理與權變獎賞。</td></tr>
+<tr><td><b>轉換型領導</b> Transformational</td><td>以「<u>提升</u>」激發部屬超越自身利益：理想化影響（魅力）、鼓舞性激勵、智識啟發、個別關懷（<b>4I</b>）。效果優於交易型。</td></tr>
+<tr><td><b>魅力型領導</b> Charismatic</td><td>具有願景、願承擔個人風險、對部屬需求敏感、行為不落俗套，使追隨者產生英雄式崇拜。（對應 Weber 魅力型職權<span class="yr">113-10</span>）</td></tr>
+<tr><td><b>僕人領導</b> Servant Leadership<span class="yr">111問1-5</span></td><td>Greenleaf 提出。領導者<mark>先以「服務他人」為出發點，把部屬的成長與需求擺在自身利益之前</mark>，透過傾聽、同理、支持與授能來達成組織目標；領導是結果而非目的。</td></tr>
+</tbody></table></div>
+
+<div class="box tmpl"><div class="bt">📐 申論模板：Jim Collins《從 A 到 A+》第五級領導（114問3，15 分）</div>
+<ol class="tight">
+<li><b>第一級　有高度才幹的個人</b>：能運用個人天賦、知識、技能與良好工作習慣，做出建設性貢獻。</li>
+<li><b>第二級　有貢獻的團隊成員</b>：能貢獻個人能力以達成團隊目標，並與他人有效合作。</li>
+<li><b>第三級　勝任愉快的經理人</b>：能組織人力與資源，有效率、有效能地達成預定目標。</li>
+<li><b>第四級　有效能的領導者</b>：能揭示清晰動人的願景並帶動部屬全力以赴，追求高績效標準。</li>
+<li><b>第五級　第五級領導人</b>：<mark>結合「謙沖為懷的個性」與「專業堅持的意志」兩種矛盾特質</mark>——個人謙虛、不居功（成功歸於團隊與運氣，失敗攬在自己身上，即「窗子與鏡子」），但對組織長期卓越有近乎狂熱的企圖心與紀律，並會培養接班人使卓越延續。</li>
+</ol></div>
+<div class="box key"><div class="bt">◆ Ch9 填充題必背關鍵字</div>
+<p style="margin:2px 0">French&amp;Raven五權（法定/獎賞/強制/專家/參考）・管理方格(1,1)(1,9)(9,1)(9,9)(5,5)/團隊型・White&amp;Lippitt專制-民主-放任・俄亥俄(定規/關懷)・密西根・雷定三構面・Fiedler/LPC/兩端任務中間關係・情境領導告銷參授・路徑-目標四型態・LMX內外團體・交易vs轉換(4I)・魅力型・僕人領導・第五級領導</p></div>
+<a class="backtop" href="#p2">↑ 回目錄</a>
+<!-- ================= Ch10 ================= -->
+<h3 id="c10">Ch10　激勵　<span class="stars">★★★★★</span></h3>
+<div class="srcline">歷屆出處：<span class="yr hot">108問2 Maslow五層次</span><span class="yr">108問1-2 工作豐富化</span><span class="yr">109-5 JCM回饋性</span><span class="yr hot">109-18 公平理論</span><span class="yr">109問3-3 增強理論</span><span class="yr">110-6 成就需求</span><span class="yr">111-8 JCM自主性</span><span class="yr hot">111-17 負增強</span><span class="yr">112-3 ERG生存</span><span class="yr hot">112-15 保健因子</span><span class="yr hot">113問3 期望理論</span><span class="yr hot">113-14 工作豐富化</span><span class="yr hot">114-9 懲罰</span><span class="yr hot">115-2 正增強</span><span class="yr">115-8 工作輪調</span></div>
+
+<div class="tree"><div class="root">激勵理論兩大陣營</div>
+<ul>
+<li><span class="n1">內容理論（Content）— 「什麼」能激勵人？</span>
+<ul><li><span class="n2">Maslow 需求層次</span></li><li><span class="n2">Alderfer ERG</span></li><li><span class="n2">Herzberg 雙因子</span></li><li><span class="n2">McClelland 三需求</span></li><li><span class="n2">McGregor X-Y 理論</span></li></ul></li>
+<li><span class="n1">過程理論（Process）— 「如何」被激勵？</span>
+<ul><li><span class="n2">Vroom 期望理論</span></li><li><span class="n2">Adams 公平理論</span></li><li><span class="n2">Locke 目標設定理論</span></li><li><span class="n2">Skinner 增強理論</span></li><li><span class="n2">Hackman&amp;Oldham 工作特性模型</span></li></ul></li>
+</ul></div>
+
+<h4>10-1　Maslow 需求層次理論（108 申論題）</h4>
+<div class="pyr">
+<div style="background:#8a1f1f;width:46%"><b>自我實現 Self-actualization</b><br><small>成長、發揮潛能、自我完成</small></div>
+<div style="background:#a8542b;width:58%"><b>尊重需求 Esteem</b><br><small>自尊、自主、成就；地位、認同、受重視</small></div>
+<div style="background:#b8860b;width:70%"><b>社會（愛與隸屬）需求 Social</b><br><small>情感、歸屬、友誼、被接納</small></div>
+<div style="background:#3f7f6f;width:82%"><b>安全需求 Safety</b><br><small>人身與財產安全、工作保障、免於恐懼</small></div>
+<div style="background:#1e5f74;width:94%"><b>生理需求 Physiological</b><br><small>食、衣、住、行、性等維持生存的基本需求</small></div>
+</div>
+<div class="box tmpl"><div class="bt">📐 申論答題要點（108問2）</div>
+<p class="small" style="margin:2px 0">除逐一列舉五層次並說明外，務必補上<b>三個核心命題</b>（這是拿高分的關鍵）：<br>① <b>層次性</b>：需求由低而高排列，低階需求獲相當滿足後，才會追求高階需求。<br>② <b>未滿足才有激勵作用</b>：已滿足的需求不再具激勵力量。<br>③ <b>低階需求由外部滿足</b>（薪資、工作條件），<b>高階需求由內部滿足</b>（成就感、自我成長）。<br>並可舉管理應用：生理→薪資；安全→勞健保與職安；社會→團隊活動；尊重→表揚升遷；自我實現→授權與挑戰性工作。</p></div>
+
+<h4>10-2　內容理論比較表（一表打通四個理論）</h4>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">Maslow 需求層次</th><th class="ctr">Alderfer ERG<span class="yr">112-3</span></th><th class="ctr">Herzberg 雙因子<span class="yr hot">112-15</span></th><th class="ctr">McClelland 三需求<span class="yr">110-6</span></th></tr></thead>
+<tbody>
+<tr><td class="ctr">自我實現</td><td class="ctr" rowspan="2"><b>成長 Growth</b></td><td class="ctr" rowspan="2"><b>激勵因子</b><br><span class="small">（滿足因子）<br>成就、賞識、工作本身、<br>責任、升遷、成長</span></td><td class="ctr"><b>成就需求 nAch</b><br><span class="small">追求卓越、達成目標、克服挑戰</span></td></tr>
+<tr><td class="ctr">尊重（內在）</td><td class="ctr"><b>權力需求 nPow</b><br><span class="small">影響、控制他人的慾望</span></td></tr>
+<tr><td class="ctr">尊重（外在）</td><td class="ctr" rowspan="2"><b>關係 Relatedness</b></td><td class="ctr" rowspan="3"><b>保健因子</b><br><span class="small">（維持因子）<br>公司政策與行政、監督、<br>薪資、人際關係、<br>工作條件、工作保障</span></td><td class="ctr" rowspan="2"><b>歸屬（親和）需求 nAff</b><br><span class="small">追求友善親密的人際關係</span></td></tr>
+<tr><td class="ctr">社會</td></tr>
+<tr><td class="ctr">安全／生理</td><td class="ctr"><mark><b>生存 Existence</b></mark></td><td class="ctr">—</td></tr>
+</tbody></table></div>
+<div class="box key"><div class="bt">◆ 三個一定要背熟的關鍵論述</div>
+<ul class="tight">
+<li><b>ERG 與 Maslow 的差異</b>：① 可<u>同時</u>追求多種需求，不必逐級而上；② 提出<mark>「挫折-退化」(frustration-regression)</mark>——高階需求受挫時，會退回增強對低階需求的渴望。</li>
+<li><b>雙因子理論</b>：滿足的相反不是不滿足，而是「沒有滿足」。<mark>保健因子存在時「能防止員工工作不滿足」（消除不滿），但不能帶來滿足；激勵因子存在時才能激勵員工提升工作滿足感。</mark><span class="yr hot">112-15</span>　→ 管理意涵：改善薪資與制度只能消除抱怨，要真正激勵必須做<b>工作豐富化</b>。</li>
+<li><b>McClelland</b>：三種<u>後天習得</u>的需求；研究發現<b>高成就需求者</b>偏好① 個人負責② 適度風險（成功機率約 50%）③ 立即而明確的回饋，但<u>不一定是好的管理者</u>；優秀高階主管通常是<b>高權力需求、低歸屬需求</b>。</li>
+</ul></div>
+
+<h4>10-3　過程理論</h4>
+<div class="box tmpl"><div class="bt">📐 申論模板：Vroom 期望理論（113問3，15 分／要求繪圖）</div>
+<p style="margin:4px 0">佛洛姆(Victor Vroom)認為，個人之所以願意付出某種程度的努力，取決於他<u>預期</u>該行為能為自己帶來有吸引力的結果。其行為傾向由三項認知的<b>乘積</b>決定：</p>
+<div class="formula">激勵力量 (M) ＝ 期望 (E) × 工具性 (I) × 價值/吸引力 (V)
+　　　Motivation ＝ Expectancy × Instrumentality × Valence</div>
+<div class="flow">
+<div class="st"><b>個人努力</b><small>Effort</small></div><div class="ar">—①→</div>
+<div class="st"><b>個人績效</b><small>Performance</small></div><div class="ar">—②→</div>
+<div class="st"><b>組織獎酬</b><small>Reward</small></div><div class="ar">—③→</div>
+<div class="st"><b>個人目標</b><small>Personal Goals</small></div>
+</div>
+<ol class="tight">
+<li><b>① 期望（努力→績效）Expectancy</b>：個人認為「只要我努力，就能達成所要求績效水準」的主觀機率（0～1）。</li>
+<li><b>② 工具性（績效→獎酬）Instrumentality</b>：個人相信「達成績效後，組織確實會給我對應獎酬」的程度。</li>
+<li><b>③ 價值／吸引力（獎酬→個人目標）Valence</b>：該項獎酬能滿足個人需求、對個人的吸引程度。</li>
+</ol>
+<p class="small" style="margin:4px 0"><b>關鍵加分句：</b>三者為<mark>相乘關係，任一項為零，整體激勵力量即為零</mark>。故管理者須同時做到：提供訓練與資源以提高期望、建立公開公正的績效獎酬連結以提高工具性、並提供員工真正想要的差異化獎酬以提高價值。</p></div>
+
+<div class="grid2">
+<div class="card"><h5>Adams 公平理論<span class="yr">109-18</span></h5>
+<p class="small" style="margin:2px 0">員工會<mark>衡量自己的投入與報酬是否維持平衡，且會與他人比較來決定自己的努力程度</mark>。</p>
+<div class="formula" style="font-size:13px">自己的產出／自己的投入　vs　他人的產出／他人的投入</div>
+<p class="small" style="margin:2px 0">比值相等＝公平；比值低＝<u>報酬不足</u>（減少投入、要求加薪、離職）；比值高＝<u>報酬過高</u>（增加投入或合理化）。<br>四種參考對象：自己-內部、自己-外部、他人-內部、他人-外部。<br>延伸<b>組織正義</b>：分配正義、程序正義、互動正義。</p></div>
+<div class="card"><h5>Locke 目標設定理論</h5>
+<p class="small" style="margin:2px 0">① <b>明確具體</b>的目標比「盡力而為」更能提高績效；② 有<u>適度難度</u>且被<u>接受</u>的目標激勵效果最強；③ <b>回饋</b>（尤其自我產生的回饋）能強化效果；④ 自我效能(self-efficacy)高者設定更高目標並更持久。<br>→ 這是 SMART 與 MBO 的理論基礎。</p></div>
+</div>
+
+<h4>10-4　增強理論（Skinner）：8 年考 3 次的填充送分題</h4>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">方法</th><th class="ctr">做什麼</th><th class="ctr">對行為的效果</th><th>例子</th></tr></thead>
+<tbody>
+<tr><td class="ctr"><b>正增強</b><br>Positive Reinforcement</td><td class="ctr">給予<b>愉快</b>的結果</td><td class="ctr" rowspan="2"><b>增加</b>該行為<br>重複發生的機率</td><td><mark>對主動代表公司於外部活動獲得殊榮的員工，給予額外獎金</mark><span class="yr hot">115-2</span>；表揚、加薪</td></tr>
+<tr><td class="ctr"><b>負增強</b><br>Negative Reinforcement<br><span class="small">（負向強化／逃避學習）</span></td><td class="ctr">移除／避免<b>不愉快</b>的結果</td><td><mark>排除令員工不愉快的事件作為獎勵：上班準時，就不取消全勤獎金</mark><span class="yr hot">111-17</span></td></tr>
+<tr><td class="ctr"><b>懲罰</b><br>Punishment</td><td class="ctr">給予<b>不愉快</b>的結果</td><td class="ctr" rowspan="2"><b>減少</b>該行為<br>發生的機率</td><td><mark>員工做了不當行為，給予員工不想要的結果</mark>：記過、罰款、降級<span class="yr hot">114-9</span></td></tr>
+<tr><td class="ctr"><b>消弱</b><br>Extinction</td><td class="ctr">移除<b>愉快</b>的結果（不理會）</td><td>員工愛搞笑博取注意，主管一律不回應，行為自然消失</td></tr>
+</tbody></table></div>
+<div class="box mnem"><div class="bt">✦ 兩秒判斷法</div><p style="margin:2px 0">先問「<b>這招是要讓行為變多還是變少？</b>」→ 變多＝增強類、變少＝懲罰/消弱類。<br>再問「<b>是給東西還是拿走東西？</b>」→ 給愉快＝正增強、拿走不愉快＝負增強、給不愉快＝懲罰、拿走愉快＝消弱。<br><mark>最常錯：「負增強」不是懲罰！</mark>負增強是「你做對了，我就不罰你」，目的仍是<u>增加</u>好行為。</p></div>
+<p class="small"><b>熱爐法則 Hot Stove Rule</b><span class="yr">112問1-2</span>：比喻組織懲罰應如碰到熱爐，具備四項原則——<b>① 警告性</b>（爐火通紅，事先明示規則）<b>② 即刻性（立即性）</b>（一碰就燙，違規立即處理）<b>③ 一致性</b>（誰碰都燙，對事不對人）<b>④ 公平性／不偏私</b>（人人平等，無例外）。</p>
+
+<h4>10-5　工作設計與工作特性模型（JCM）</h4>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">五大核心構面</th><th>意涵</th><th class="ctr">→ 關鍵心理狀態</th></tr></thead>
+<tbody>
+<tr><td class="ctr"><b>技能多樣性</b></td><td>工作需運用多種不同技能與才能的程度</td><td class="ctr" rowspan="3">體驗到<br><b>工作的意義性</b></td></tr>
+<tr><td class="ctr"><b>任務完整性</b></td><td>工作是否需完成一件完整且可辨識的成品</td></tr>
+<tr><td class="ctr"><b>任務重要性</b></td><td>工作對他人生活或工作產生實質影響的程度</td></tr>
+<tr><td class="ctr"><b>自主性</b> Autonomy<span class="yr">111-8</span></td><td>個人在排程與執行方法上的自由與裁量程度</td><td class="ctr">體驗到<mark>對工作結果的<b>責任感</b></mark></td></tr>
+<tr><td class="ctr"><b>回饋性</b> Feedback<span class="yr">109-5</span></td><td>執行工作本身即能獲得直接明確的績效資訊</td><td class="ctr">瞭解工作的<b>實際結果</b></td></tr>
+</tbody></table></div>
+<div class="formula">激勵潛能分數 MPS ＝ [(技能多樣性＋任務完整性＋任務重要性) ÷ 3] × 自主性 × 回饋性</div>
+<p class="small">※ 自主性與回饋性是<b>相乘項</b>，任一為 0，MPS 即為 0 —— 這是常見的進階考點。</p>
+
+<div class="tblwrap"><table>
+<thead><tr><th>工作設計方法</th><th>方向</th><th>定義</th></tr></thead>
+<tbody>
+<tr><td><b>工作輪調</b> Job Rotation<span class="yr">115-8</span></td><td class="ctr">水平</td><td><mark>為讓員工培養多元技能並降低工作無聊程度，將員工定期或不定期轉換工作</mark>（職務內容層級不變）</td></tr>
+<tr><td><b>工作擴大化</b> Job Enlargement</td><td class="ctr">水平</td><td>增加同一層級工作的<u>種類與數量</u>（做更多樣的事），擴大工作範圍</td></tr>
+<tr><td><b>工作豐富化</b> Job Enrichment<span class="yr">108問1-2</span><span class="yr hot">113-14</span></td><td class="ctr"><b>垂直</b></td><td><mark>藉由給予部屬更多責任與權力，強化部屬對於工作的掌握度，並提升部屬自主性及參與管理之機會</mark>（垂直工作擴展），使員工能規劃、執行與評估自己的工作</td></tr>
+<tr><td><b>工作簡化</b> Job Simplification</td><td class="ctr">—</td><td>將工作拆解至最簡單重複的動作（科學管理思維，易導致疲乏）</td></tr>
+</tbody></table></div>
+<div class="box trap"><div class="bt">⚠ 三兄弟一句話分辨</div><p style="margin:2px 0"><b>輪調＝換位子（做別人的事）；擴大化＝加寬（同一層級做更多種）；豐富化＝加高（拿到原本主管的權責）。</b>只有豐富化是<u>垂直</u>的，也只有豐富化真正呼應赫茲伯格的激勵因子。</p></div>
+<div class="box key"><div class="bt">◆ Ch10 填充題必背關鍵字</div>
+<p style="margin:2px 0">Maslow五層次・ERG(生存/關係/成長)+挫折退化・雙因子(保健/激勵)・三需求(成就/權力/歸屬)・期望理論(期望×工具×價值)・公平理論・目標設定/自我效能・增強四法(正增強/負增強/懲罰/消弱)・熱爐法則四原則・JCM五構面與MPS・工作輪調/擴大化/豐富化</p></div>
+<a class="backtop" href="#p2">↑ 回目錄</a>
+
+<!-- ================= Ch11 ================= -->
+<h3 id="c11">Ch11　溝通、團隊與衝突　<span class="stars">★★★★☆</span></h3>
+<div class="srcline">歷屆出處：<span class="yr hot">109問2 Thomas五策略</span><span class="yr hot">111-19 群集連鎖</span><span class="yr hot">111-20 社會賦閒</span><span class="yr hot">112-4 編碼</span><span class="yr hot">113-7 鏈狀網絡</span><span class="yr hot">114-5 斜向溝通</span><span class="yr hot">115-3 解碼</span><span class="yr">115問1-4 葡萄藤</span></div>
+
+<h4>11-1　人際溝通程序（Robbins）：編碼與解碼年年出現</h4>
+<div class="flow" style="font-size:12.8px">
+<div class="st"><b>發訊者</b><small>Sender</small></div><div class="ar">→</div>
+<div class="st"><b>編碼</b><small>Encoding<br>112-4</small></div><div class="ar">→</div>
+<div class="st"><b>訊息</b><small>Message</small></div><div class="ar">→</div>
+<div class="st"><b>通道/媒介</b><small>Channel</small></div><div class="ar">→</div>
+<div class="st"><b>解碼</b><small>Decoding<br>115-3</small></div><div class="ar">→</div>
+<div class="st"><b>收訊者</b><small>Receiver</small></div><div class="ar">→</div>
+<div class="st"><b>回饋</b><small>Feedback</small></div>
+</div>
+<div class="tblwrap"><table><tbody>
+<tr><th style="width:110px">編碼 Encoding</th><td><mark>發訊者將欲傳遞之訊息「轉為符號的形式」，透過不同的語言、文字、肢體或語調等，做特定形式包裝</mark><span class="yr hot">112-4</span></td></tr>
+<tr><th>解碼 Decoding</th><td><mark>收訊者透過媒介接收到訊息後，將所接受的訊息予以翻譯、說明，轉換成他們可以理解的意思</mark><span class="yr hot">115-3</span></td></tr>
+<tr><th>噪音 Noise</th><td>干擾訊息正確傳遞的任何因素：語意差異、資訊超載、選擇性知覺、文化差異、實體干擾</td></tr>
+</tbody></table></div>
+
+<h4>11-2　正式溝通的流向<span class="yr hot">114-5</span></h4>
+<div class="tblwrap"><table>
+<thead><tr><th>流向</th><th>定義</th><th>用途／例子</th></tr></thead>
+<tbody>
+<tr><td><b>下行溝通</b></td><td>由上級流向下級</td><td>命令、政策宣達、績效回饋</td></tr>
+<tr><td><b>上行溝通</b></td><td>由下級流向上級</td><td>建議、報告、申訴、意見箱、員工滿意度調查</td></tr>
+<tr><td><b>平行（水平）溝通</b></td><td><u>同一層級</u>、不同部門之間</td><td>跨部門協調、會議</td></tr>
+<tr><td><b>斜向（對角）溝通</b></td><td><mark>不同部門且<u>不同層級</u>人員之間的溝通</mark></td><td>提高效率、減少時間浪費；例：行銷專員直接找財務部經理釐清預算<span class="yr hot">114-5</span></td></tr>
+</tbody></table></div>
+
+<h4>11-3　溝通網絡與非正式溝通</h4>
+<div class="grid2">
+<div class="card"><h5>正式溝通網絡（小團體網絡）</h5>
+<p class="small" style="margin:2px 0"><b>鏈狀 Chain</b><span class="yr hot">113-7</span>：<mark>溝通流動隨著正式的指揮鏈進行上下流動的模式</mark>，速度中等、正確性高、士氣中等，無明顯領袖。<br><b>輪狀 Wheel</b>：所有溝通經由中心人物（主管），速度快、正確性高、<u>領袖明顯</u>、士氣低。<br><b>全方位（星狀/交錯）All-Channel</b>：人人可互通，速度快、士氣最高、<u>正確性中等</u>、無領袖，適合團隊自主工作。</p></div>
+<div class="card"><h5>非正式溝通：葡萄藤 Grapevine<span class="yr">115問1-4</span></h5>
+<p class="small" style="margin:2px 0">指組織結構<u>之外</u>、來自人員自發行動形成的溝通網路，如同葡萄藤蔓般四處蔓延。<br><b>特性</b>：傳播速度快、不受層級限制、能反映員工真實關切；但易失真、難控制。<br><b>管理意涵</b>：無法禁絕，應善用它偵測員工情緒並以正式溝通即時澄清謠言。</p></div>
+</div>
+<div class="box key"><div class="bt">◆ Davis 非正式溝通四型態<span class="yr hot">111-19</span></div>
+<div class="tblwrap"><table>
+<thead><tr><th>型態</th><th>樣貌</th></tr></thead>
+<tbody>
+<tr><td><b>單線連鎖</b> Single Strand</td><td>A→B→C→D 一個傳一個，如傳話遊戲，失真率最高</td></tr>
+<tr><td><b>密語（機密）連鎖</b> Gossip</td><td>一個人告訴所有其他人（一對多的中心擴散，通常為非工作相關的八卦）</td></tr>
+<tr><td><b>機率連鎖</b> Probability</td><td>隨機告訴遇到的人，傳遞對象隨機，訊息較不重要</td></tr>
+<tr><td><b>群集（集群）連鎖</b> Cluster</td><td><mark>資訊由「數個中心人物」傳達給其他人，是組織中最常見的非正式溝通</mark></td></tr>
+</tbody></table></div></div>
+
+<h4>11-4　團隊與群體現象</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>概念</th><th>意涵</th></tr></thead>
+<tbody>
+<tr><td><b>Tuckman 團隊發展五階段</b></td><td><b>形成期 Forming</b>（試探、不確定）→ <b>動盪期 Storming</b>（衝突、爭權）→ <b>規範期 Norming</b>（凝聚、建立規範）→ <b>執行期 Performing</b>（全力產出）→ <b>解散期 Adjourning</b></td></tr>
+<tr><td><b>社會賦閒</b> Social Loafing<span class="yr hot">111-20</span></td><td>個人在團體中工作時所付出的努力<u>比單獨工作時更少</u>的現象（又稱社會惰化、搭便車效應）。成因：責任分散、個人貢獻無法辨識、覺得他人會混所以自己也混。<br><b>對策</b>：明確個人責任、縮小團隊規模、設定個人可衡量目標、同儕評量。</td></tr>
+<tr><td><b>群體極化</b> Group Polarization</td><td>群體討論後的決策比個人原本的立場<u>更極端</u>（冒險偏移或保守偏移）。</td></tr>
+<tr><td><b>群體迷思</b> Groupthink</td><td>見 Ch5。與社會賦閒並列最常考的兩個群體病症。</td></tr>
+<tr><td><b>木桶定律</b> Cannikin Law<span class="yr">112問1-5</span></td><td>木桶能裝多少水取決於<u>最短的那塊木板</u>。比喻組織整體績效受限於最弱的環節／成員，故管理應補強弱點而非只強化長處（又稱短板效應）。</td></tr>
+<tr><td><b>馬基維利主義</b> Machiavellianism<span class="yr">112問1-1</span></td><td>一種人格特質：高馬基維利主義者<u>務實、重視結果、情感疏離、相信為達目的可以不擇手段</u>，善於操縱他人、說服力強。在需要協商與有限規範的情境中表現較佳。</td></tr>
+</tbody></table></div>
+
+<h4>11-5　衝突管理（109 申論題）</h4>
+<div class="box tmpl"><div class="bt">📐 申論模板：Thomas 五種衝突處理（抑減）策略（109問2，15 分）</div>
+<p style="margin:4px 0">湯瑪斯(Kenneth W. Thomas)以「<b>合作性</b>（滿足對方關切的程度）」與「<b>堅持性</b>（滿足自身關切的程度）」兩構面，歸納出 5 種衝突處理策略：</p>
+<div class="mtx">
+  <div class="lbl">堅持性<br>高</div>
+  <div class="cell"><b>競爭 Competing</b><small>高堅持‧低合作<br>犧牲他人滿足自己（我贏你輸）。適用：緊急、必須採取不受歡迎的行動時</small></div>
+  <div class="cell"><b>統合／合作 Collaborating</b><small>高堅持‧高合作<br>尋求雙方皆滿意的方案（雙贏）。適用：議題重要、時間充裕，是最理想的方式</small></div>
+  <div class="lbl">堅持性<br>低</div>
+  <div class="cell"><b>迴避 Avoiding</b><small>低堅持‧低合作<br>退縮或壓抑衝突（雙輸）。適用：議題瑣碎、衝突代價大於效益</small></div>
+  <div class="cell"><b>順應／遷就 Accommodating</b><small>低堅持‧高合作<br>犧牲自己滿足對方。適用：維持和諧更重要、自知理虧時</small></div>
+  <div class="lbl">　</div><div class="lbl">合作性 低</div><div class="lbl">合作性 高</div>
+</div>
+<p class="small" style="margin:2px 0">第五種：<b>妥協 Compromising</b>——位於中央，堅持性與合作性皆中等，雙方各退一步、各有得失。適用：勢均力敵、需暫時解決方案時。</p>
+<p class="small" style="margin:4px 0"><b>加分觀念：</b>現代觀點（互動觀點）認為衝突並非全然有害，<u>適度的功能性衝突（工作／程序衝突）能激發創意與警覺</u>，管理者的責任是維持衝突於最適水準，而非完全消除；<u>關係（情感）衝突</u>則多為功能失調，應予抑減。</p></div>
+<div class="box key"><div class="bt">◆ Ch11 填充題必背關鍵字</div>
+<p style="margin:2px 0">編碼/解碼/噪音/回饋・下行-上行-平行-斜向・鏈狀/輪狀/全方位網絡・葡萄藤・Davis四連鎖（單線/密語/機率/群集）・Tuckman五階段・社會賦閒/群體極化/群體迷思・木桶定律・馬基維利主義・Thomas五策略（競爭/統合/妥協/迴避/順應）・功能性vs失能性衝突</p></div>
+<a class="backtop" href="#p2">↑ 回目錄</a>
+
+<!-- ================= Ch12 ================= -->
+<h3 id="c12">Ch12　控制　<span class="stars">★★★☆☆</span></h3>
+<div class="srcline">歷屆出處：<span class="yr">112-14 PDCA檢查</span><span class="yr hot">113-4 活動重要性</span><span class="yr hot">113-8 衡量實際績效</span><span class="yr hot">111問3 有效控制五特徵</span><span class="yr">114問1-4 事前控制</span><span class="yr">114-20 內部控制</span></div>
+
+<h4>12-1　控制程序三步驟<span class="yr hot">113-8</span></h4>
+<div class="flow">
+<div class="st"><b>① 衡量實際績效</b><small>透過觀察、統計報告、口頭與書面報告蒐集資訊</small></div><div class="ar">→</div>
+<div class="st"><b>② 將實際績效與標準比較</b><small>判斷差異是否落在可接受變異範圍(AV)內</small></div><div class="ar">→</div>
+<div class="st"><b>③ 採取管理行動</b><small>維持現狀／矯正實際績效／修正標準</small></div>
+</div>
+<p class="small">※ 113 年題幹已明示「假設在規劃過程中已建立績效的標準」，因此第一步不是「設定標準」而是<b>「衡量（實際）績效」</b>——這是本題的關鍵陷阱。</p>
+
+<h4>12-2　控制的類型（依時間點）</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>類型</th><th>時點</th><th>意涵與例子</th></tr></thead>
+<tbody>
+<tr><td><b>事前控制</b><br>Feedforward / Precontrol<span class="yr">114問1-4</span></td><td>活動<b>開始前</b></td><td><mark>在問題發生前即採取預防措施</mark>，是<u>最理想</u>的控制型態，因為可避免問題而非事後補救。需及時且正確的資訊。例：原物料進廠檢驗、員工職前訓練、預算編列、預防保養。</td></tr>
+<tr><td><b>事中控制</b><br>Concurrent</td><td>活動<b>進行中</b></td><td>即時修正偏差。例：走動式管理、生產線即時監控、主管當場指導。</td></tr>
+<tr><td><b>事後控制</b><br>Feedback</td><td>活動<b>結束後</b></td><td>最常見。優點：提供績效回饋、強化員工激勵；缺點：<u>損害已造成</u>。例：財務報表分析、年度績效考核、顧客滿意度調查。</td></tr>
+</tbody></table></div>
+
+<h4>12-3　影響控制的權變因素<span class="yr hot">113-4</span></h4>
+<p>Robbins 列出 5 項：① <b>組織規模</b>（大→正式化控制；小→非正式直接監督）② <b>職位在組織層級中的高低</b>（愈高階愈重視整體性、綜合性控制）③ <b>分權化的程度</b>（愈分權愈需要控制回饋）④ <b>組織文化</b>（信任開放的文化→較少正式控制）⑤ <mark><b>活動（任務）的重要性</b></mark>（愈重要→控制愈嚴密）。</p>
+
+<div class="box tmpl"><div class="bt">📐 申論模板：Richman &amp; Farmer 有效控制系統的 5 項特徵（111問3，15 分）</div>
+<ol class="tight">
+<li><b>正確性 Accuracy</b>：控制系統所產生的資訊必須真實可靠。不正確的資訊會導致管理者誤判情勢、採取錯誤行動，其危害甚於沒有控制。</li>
+<li><b>時效性（及時性）Timeliness</b>：資訊必須及時提供，使管理者能在損害擴大前矯正偏差。過時的資訊即使正確也無管理價值。</li>
+<li><b>客觀性（可理解性）Objectivity / Comprehensibility</b>：控制標準與衡量方式應客觀、明確且容易被使用者理解，避免因主觀認定或過於複雜而失去效用。</li>
+<li><b>集中重點於策略要點 Focus on Strategic Points</b>：控制應聚焦在對組織績效最關鍵、最容易出錯或成本最高的少數要項（重點管理、例外管理），而非鉅細靡遺全面監控。</li>
+<li><b>經濟性（符合成本效益）Economic Feasibility</b>：控制所投入的成本不應超過其所能帶來的效益，過度控制不僅浪費資源，也會斲傷員工士氣與自主性。</li>
+</ol>
+<p class="small" style="margin:4px 0">※ 若題目問「有效控制系統的特徵」而未指定學者，可再補：彈性、合理的標準、多重標準、強調例外、採取矯正行動、可被接受。</p></div>
+
+<h4>12-4　控制工具</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>工具</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td><b>PDCA 循環</b>（戴明 Deming）<span class="yr">112-14</span></td><td><b>P</b>lan 計劃 → <b>D</b>o 執行 → <mark><b>C</b>heck 檢查（查核）</mark> → <b>A</b>ction 行動（矯正與標準化）；強調<u>周而復始</u>的螺旋式持續改善，不是做一次就結束。</td></tr>
+<tr><td><b>甘特圖</b> Gantt Chart</td><td>橫軸＝時間，縱軸＝<u>活動／工作項目</u>；顯示各項工作的排程與實際進度對比。</td></tr>
+<tr><td><b>負荷圖</b> Load Chart<span class="yr">112-5</span></td><td>甘特圖的變形。橫軸＝時間，縱軸＝<mark><b>資源</b>（機器、設備或部門）</mark>；用於了解組織中各機器設備的使用情形，以利安排生產排程。</td></tr>
+<tr><td><b>內部控制制度</b><span class="yr">114-20</span></td><td>公開發行公司為促進企業健全經營，確保達成<u>營運效率、資訊報導及時透明、遵循相關法令規章</u>等目標，由經理人設計、董事會通過，並由董事會、經理人及其他員工執行之管理過程。<br><b>五大組成要素（COSO）</b>：① 控制環境 ② 風險評估 ③ 控制作業 ④ 資訊與溝通 ⑤ 監督作業。</td></tr>
+<tr><td><b>平衡計分卡 BSC</b></td><td>見 Ch6；同時是策略工具與控制工具。</td></tr>
+<tr><td><b>財務控制</b></td><td>預算、財務比率分析（見 Ch16）。</td></tr>
+</tbody></table></div>
+<div class="box key"><div class="bt">◆ Ch12 填充題必背關鍵字</div>
+<p style="margin:2px 0">控制三步驟（衡量績效→比較→採取行動）・可接受變異範圍・事前/事中/事後控制・權變五因素（含活動重要性）・Richman&amp;Farmer五特徵・PDCA・甘特圖(縱軸活動) vs 負荷圖(縱軸資源)・內部控制與COSO五要素</p></div>
+<a class="backtop" href="#p2">↑ 回目錄</a>
+<h2 class="part" id="p3">PART 3　企業機能：產 · 銷 · 人 · 發 · 財</h2>
+
+<!-- ================= Ch13 ================= -->
+<h3 id="c13">Ch13　生產與作業管理　<span class="stars">★★★☆☆</span></h3>
+<div class="srcline">歷屆出處：<span class="yr hot">108-5 PERT</span><span class="yr hot">109-20 要徑</span><span class="yr">112-5 負荷圖</span><span class="yr hot">112問4 EOQ計算</span><span class="yr">112問1-3 長鞭效應</span><span class="yr hot">113-5 PERT期望時間</span><span class="yr hot">113-15 JIT</span><span class="yr">114問1-5 精實生產</span><span class="yr hot">115-17 EOQ/PERT</span><span class="yr">115問1-5 TPS</span></div>
+
+<h4>13-1　專案管理：PERT 與要徑（8 年考 4 次，且有計算）</h4>
+<div class="box key"><div class="bt">◆ PERT 計畫評核術 Program Evaluation and Review Technique</div>
+<p class="small" style="margin:2px 0"><b>起源</b>：源於 1958 年美國海軍的<u>北極星飛彈（火箭）系統計畫</u>，是網絡分析技術，以網絡圖規劃整個專案，將各項作業與主要事件排程聯結。<span class="yr">108-5</span></p>
+<p class="small" style="margin:2px 0"><b>要徑（關鍵路徑）Critical Path</b><span class="yr">109-20</span>：從整體完成工作之各路線中，<mark>找出一條所需時間「最長」的路線</mark>。要徑決定了專案最短完成時間；<u>要徑上的作業沒有寬裕時間(slack)，一旦延誤，整個專案就延誤</u>。</p>
+<h5>PERT 三時估計與期望時間公式（必考計算）</h5>
+<div class="formula">期望時間 t<sub>e</sub> ＝ ( 最樂觀時間 a ＋ 4 × 最可能時間 m ＋ 最悲觀時間 b ) ÷ 6
+
+變異數 σ² ＝ [ ( b − a ) ÷ 6 ]²</div>
+<p class="small" style="margin:2px 0"><b>113-5 原題演算</b>：最樂觀 5 天、最悲觀 13 天、最可能 6 天。</p>
+<div class="formula">t<sub>e</sub> = (5 + 4×6 + 13) ÷ 6 = (5 + 24 + 13) ÷ 6 = 42 ÷ 6 = <b>7 天</b></div>
+<p class="small" style="margin:2px 0"><b>易錯提醒</b>：題目給的順序常是「最樂觀 → 最悲觀 → 最可能」，<mark>乘 4 的一定是「最可能(m)」，不是中間那個數字</mark>。看到三個數字先分類再代入。<br><b>CPM 對比</b>：CPM（要徑法）為<u>單一時間估計</u>且考慮成本趕工，適用於時間確定的重複性專案；PERT 為<u>三時估計</u>（機率性），適用於時間不確定的新專案。</p></div>
+
+<h4>13-2　存貨管理：EOQ 經濟訂購量（必考計算）</h4>
+<div class="box key"><div class="bt">◆ EOQ Economic Order Quantity<span class="yr hot">115-17</span></div>
+<p class="small" style="margin:2px 0"><b>定義</b>：在滿足需求的前提下，使<mark>「訂購（整備）成本」與「持有（儲存）成本」兩者總和最低</mark>的最適單次訂購數量。當訂購成本＝持有成本時，總成本最小。</p>
+<div class="formula">EOQ ＝ √( 2 × D × S ÷ H )
+　D = 年需求量　S = 每次訂購成本　H = 每單位每年持有成本</div>
+<p class="small" style="margin:2px 0"><b>112問4 原題演算</b>：年需求 D=1,000 個；訂購費用 500 元；物料單價 20 元；<u>每「季」持有成本為單價的 5%</u>。</p>
+<div class="formula">① 換算年持有成本 H：
+   每季持有成本率 5% → 年持有成本率 = 5% × 4季 = 20%
+   H = 20 元 × 20% = 4 元／個／年
+
+② 代入公式：
+   EOQ = √(2 × 1,000 × 500 ÷ 4)
+       = √(1,000,000 ÷ 4)
+       = √250,000
+       = <b>500 個</b></div>
+<p class="small" style="margin:2px 0"><b>本題唯一陷阱</b>：<mark>持有成本是「每季」，必須先 ×4 換算成「每年」</mark>，否則會算成 1,000 個。<br><b>延伸公式</b>：年訂購次數＝D÷EOQ＝2 次；<b>再訂購點 ROP ＝ 每日需求量 × 前置時間 ＋ 安全存量</b>。</p></div>
+
+<h4>13-3　豐田式生產系統：JIT／精實生產／TPS（8 年考 3 次）</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>名詞</th><th>內容（可直接當名詞解釋擬答）</th></tr></thead>
+<tbody>
+<tr><td><b>JIT 即時生產</b><br>Just In Time<span class="yr hot">113-15</span></td><td><mark>強調生產過程中所需的零件，可在適當時間出現在需要的工作站</mark>，達到平衡與順暢的生產流程，並使系統有效控制庫存。以「<u>後拉式(Pull)</u>」生產取代預測推式生產，由後工程向前工程領料，將庫存降至最低。</td></tr>
+<tr><td><b>精實生產</b><br>Lean Production<span class="yr">114問1-5</span></td><td>源自豐田生產方式的管理思維，以<u>顧客價值</u>為起點，透過辨識價值流、消除一切<b>不創造價值的浪費(Muda)</b>（過量生產、等待、搬運、加工過度、庫存、動作、不良品等七大浪費），並以拉式生產與持續改善(Kaizen)追求完善，用更少資源創造更多價值。核心之一即 JIT 系統。</td></tr>
+<tr><td><b>豐田式生產系統 TPS</b><br>Toyota Production System<span class="yr">115問1-5</span></td><td>豐田汽車發展的整合性生產管理體系，以<b>「杜絕浪費」</b>為根本目標，建立在兩大支柱上：<br>① <b>及時化 (JIT)</b>——需要的東西、在需要的時候、只生產需要的量，以<u>看板(Kanban)</u> 作為拉式生產的資訊工具；<br>② <b>自働化 (Jidoka)</b>——「帶人字旁的自動化」，機器或人員發現異常時立即停線、不讓不良品流入下一站（安燈 Andon）。<br>並輔以平準化生產、標準作業與持續改善(Kaizen)。</td></tr>
+</tbody></table></div>
+<p class="small"><b>阿米巴經營 Amoeba Operating</b><span class="yr">114問1-3</span>：日本京瓷創辦人<u>稻盛和夫</u>提出。將組織切割為許多能獨立核算損益的小型單位（阿米巴），各單位自行訂定目標、獨立經營並以「單位時間附加價值」衡量績效，藉此<u>培養具經營意識的人才、落實全員參與經營</u>，同時保持組織的高度彈性與應變力。</p>
+
+<h4>13-4　品質管理與供應鏈</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>概念</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td><b>全面品質管理 TQM</b></td><td>以<u>顧客為focus、全員參與、持續改善(Kaizen)、以事實與數據管理、重視過程</u>為核心的整體品質哲學。品質大師：戴明(PDCA、14 要點)、裘蘭(Juran，品質三部曲：品質規劃-管制-改善、80/20)、克勞斯比(Crosby，零缺點、第一次就做對)、石川馨(魚骨圖、QCC 品管圈)。</td></tr>
+<tr><td><b>六標準差 6σ</b></td><td>追求每百萬次機會的缺陷數 ≤ 3.4 (DPMO)。改善流程 <b>DMAIC</b>：Define 定義 → Measure 衡量 → Analyze 分析 → Improve 改善 → Control 控制。</td></tr>
+<tr><td><b>QC 七大手法</b></td><td>查檢表、層別法、柏拉圖、魚骨（特性要因）圖、直方圖、散佈圖、管制圖。</td></tr>
+<tr><td><b>長鞭效應</b> Bullwhip Effect<span class="yr">112問1-3</span></td><td><mark>供應鏈中，終端消費者需求的微小變動，沿著供應鏈往上游（零售商→批發商→製造商→供應商）逐級放大，造成訂單與庫存劇烈波動</mark>的現象，形似甩動的長鞭。<br><b>成因</b>：需求預測層層加碼、批量訂購、價格波動與促銷、缺貨時的浮報訂單、前置時間長、資訊不透明。<br><b>對策</b>：資訊共享(POS 資料分享)、供應商管理庫存(VMI)、協同規劃預測與補貨(CPFR)、縮短前置時間、天天平價。</td></tr>
+<tr><td><b>ERP / MRP / SCM</b></td><td>MRP 物料需求規劃 → MRPⅡ 製造資源規劃 → ERP 企業資源規劃（整合全企業資源）；SCM 供應鏈管理。</td></tr>
+<tr><td><b>產能與生產型態</b></td><td>專案生產 → 零工（訂單）式生產 → 批次生產 → 大量（連續）生產；另有<b>大量客製化</b>（Mass Customization）與<b>模組化</b>。</td></tr>
+</tbody></table></div>
+<div class="box key"><div class="bt">◆ Ch13 填充題必背關鍵字</div>
+<p style="margin:2px 0">PERT/北極星計畫/三時估計公式・要徑(最長路線)/寬裕時間・CPM・EOQ公式/訂購成本=持有成本・再訂購點・JIT/看板/拉式・精實生產/七大浪費・TPS/及時化+自働化・阿米巴/稻盛和夫・TQM/Kaizen・六標準差DMAIC・QC七手法/魚骨圖・長鞭效應・甘特圖vs負荷圖</p></div>
+<a class="backtop" href="#p3">↑ 回目錄</a>
+
+<!-- ================= Ch14 ================= -->
+<h3 id="c14">Ch14　行銷管理　<span class="stars">★★★★★</span></h3>
+<div class="srcline">歷屆出處：<span class="yr hot">108-3 4C溝通</span><span class="yr hot">108-4 PLC成熟期</span><span class="yr">108-12 產品組合長度</span><span class="yr hot">108問3 服務四特性</span><span class="yr">109-6 滲透訂價</span><span class="yr">109-8 密集配銷</span><span class="yr">110-8 參考群體</span><span class="yr">110-9 利基行銷</span><span class="yr hot">110-14 PLC成長期</span><span class="yr hot">110問4 PZB五缺口</span><span class="yr">111問1-4 零階通路</span><span class="yr hot">112-7 目標市場選擇</span><span class="yr">112-16 邊際成本訂價</span><span class="yr">113-20 意見領袖</span><span class="yr hot">113問4 市場區隔五條件</span><span class="yr">114-4 互動行銷</span><span class="yr">114-6 創新者</span><span class="yr hot">114-10 行為變數</span><span class="yr hot">114問2 4P與4C</span><span class="yr hot">115-4 PLC成熟期</span><span class="yr hot">115-5 無形性</span><span class="yr hot">115-6 人口統計變數</span><span class="yr hot">115-18 行銷哲學演進</span></div>
+<p><b>與組織章並列全科最大熱區；且 115 年一口氣考了 4 題填充，比重持續上升。</b></p>
+
+<h4>14-1　行銷哲學（觀念）的演進<span class="yr hot">115-18</span></h4>
+<div class="flow" style="font-size:12.6px">
+<div class="st"><b>① 生產觀念</b><small>專注製造、大量生產與降低成本（東西做出來就賣得掉）</small></div><div class="ar">→</div>
+<div class="st"><b>② 產品觀念</b><small>著重產品設計與品質（酒香不怕巷子深→行銷近視症）</small></div><div class="ar">→</div>
+<div class="st"><b>③ 銷售觀念</b><small>專注銷售管理與推銷技巧（賣我所做的）</small></div><div class="ar">→</div>
+<div class="st"><b>④ 行銷觀念</b><small>重視顧客需求、競爭優勢 4P（做我所能賣的）</small></div><div class="ar">→</div>
+<div class="st"><b>⑤ 社會行銷觀念</b><small>將社會大眾權益納入行銷活動（顧客+公司+社會三贏）</small></div>
+</div>
+<p class="small"><b>行銷近視症 Marketing Myopia</b>（Levitt）：企業只從「<u>產品</u>」而非「<u>顧客需求</u>」定義事業，如鐵路公司自認在「鐵路業」而非「運輸業」，終被取代。</p>
+
+<h4>14-2　STP 目標行銷三部曲</h4>
+<div class="flow">
+<div class="st"><b>S 市場區隔</b><small>Segmentation<br>把市場切成有意義的群</small></div><div class="ar">→</div>
+<div class="st"><b>T 目標市場選擇</b><small>Targeting<span class="yr hot">112-7</span><br>選一或多個區隔進攻</small></div><div class="ar">→</div>
+<div class="st"><b>P 市場定位</b><small>Positioning<br>在目標顧客心中佔據獨特位置</small></div>
+</div>
+
+<div class="box key"><div class="bt">◆ 市場區隔的四大變數<span class="yr hot">115-6</span><span class="yr hot">114-10</span></div>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">變數</th><th>內容</th><th>台電式舉例</th></tr></thead>
+<tbody>
+<tr><td class="ctr"><b>地理變數</b></td><td>國家、地區、城鄉、氣候、人口密度</td><td>北中南區供電區域</td></tr>
+<tr><td class="ctr"><b>人口統計變數</b><span class="yr hot">115-6</span></td><td>年齡、性別、所得、職業、教育、家庭生命週期、宗教、種族——<u>最常用，因為易衡量</u></td><td>家庭用戶 vs 工業用戶</td></tr>
+<tr><td class="ctr"><b>心理變數</b></td><td>社會階層、生活型態(AIO)、人格特質</td><td>重視環保的綠電支持者</td></tr>
+<tr><td class="ctr"><b>行為變數</b><span class="yr hot">114-10</span></td><td>使用時機、追求利益、<mark>使用率／用量</mark>、忠誠度、購買準備階段、對產品的態度</td><td><mark>針對不同用電量的用戶推出不同電價方案</mark></td></tr>
+</tbody></table></div></div>
+
+<div class="box tmpl"><div class="bt">📐 申論模板：有效市場區隔應滿足的 5 個條件（113問4，15 分）</div>
+<ol class="tight">
+<li><b>可衡量性 Measurable</b>：區隔後的市場規模、購買力與特徵必須能被具體衡量，否則無從評估是否值得進入。</li>
+<li><b>足量性（可獲利性）Substantial</b>：區隔市場須夠大且具足夠獲利潛力，值得企業以客製化的行銷方案來服務。</li>
+<li><b>可接近性 Accessible</b>：企業必須能有效地接觸到該區隔並為其提供服務（通路與傳播管道可達）。</li>
+<li><b>可區別性（差異性）Differentiable</b>：各區隔之間在概念上可明確區分，且對不同的行銷組合會有不同反應；若兩區隔反應相同，就不應視為兩個區隔。</li>
+<li><b>可行動性 Actionable</b>：企業有能力擬定並執行有效的行銷方案來吸引並服務該區隔（受限於資源與能力）。</li>
+</ol>
+<p class="small" style="margin:4px 0">※ 口訣：<b>「衡、量、近、別、行」</b>。另可補充目標市場涵蓋策略：<u>無差異行銷（大量行銷）／差異化行銷／集中化行銷（利基行銷）</u>。</p></div>
+<p class="small"><b>利基（集中化）行銷</b><span class="yr">110-9</span>：當廠商資源有限、無法在主要市場與競爭者抗衡時，<mark>傾全力爭取一個其他廠商看不上眼、不想進入的次要市場</mark>。</p>
+
+<h4>14-3　4P 與 4C（114 申論題，必須會對應）</h4>
+<div class="box tmpl"><div class="bt">📐 申論模板：行銷 4P 與 4C 之對應與差異（114問2，15 分）</div>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">4P（<b>生產者／賣方</b>觀點）</th><th class="ctr">對應</th><th class="ctr">4C（<b>消費者／買方</b>觀點）</th></tr></thead>
+<tbody>
+<tr><td><b>產品 Product</b><br><span class="small">我們能生產什麼</span></td><td class="ctr">⟷</td><td><b>顧客需求與慾望 Customer needs and wants</b><br><span class="small">顧客真正想解決什麼問題</span></td></tr>
+<tr><td><b>價格 Price</b><br><span class="small">我們要定多少錢</span></td><td class="ctr">⟷</td><td><b>顧客成本 Cost to the customer</b><br><span class="small">顧客為滿足需求所付出的總代價（含時間、心理成本）</span></td></tr>
+<tr><td><b>通路 Place</b><br><span class="small">我們怎麼鋪貨</span></td><td class="ctr">⟷</td><td><b>便利性 Convenience</b><br><span class="small">顧客購買與取得的方便程度</span></td></tr>
+<tr><td><b>推廣 Promotion</b><br><span class="small">我們怎麼推銷</span></td><td class="ctr">⟷</td><td><mark><b>溝通 Communication</b></mark><span class="yr hot">108-3</span><br><span class="small">與顧客雙向互動、建立關係</span></td></tr>
+</tbody></table></div>
+<p style="margin:4px 0"><b>兩者差異（3 分）</b>：4P 是<u>由內而外</u>的<b>生產者導向</b>，思考「我有什麼、如何賣出去」，強調企業對行銷組合的操控；4C 則是<u>由外而內</u>的<b>消費者導向</b>，思考「顧客要什麼、如何讓他容易買到並願意對話」，強調顧客價值與雙向關係的建立。4C 是行銷觀念從交易導向邁向關係導向的體現。</p>
+<p class="small" style="margin:4px 0">※ 延伸：服務業 <b>7P</b> ＝ 4P ＋ 人員 People、實體設施 Physical evidence、服務流程 Process。<br>※ 更新版 <b>4V</b>（差異化 Variation、功能化 Versatility、附加價值 Value、共鳴 Vibration）、<b>4R</b>（關聯、反應、關係、報酬）。</p></div>
+
+<h4>14-4　產品策略</h4>
+<div class="box key"><div class="bt">◆ 產品生命週期 PLC（8 年考 3 次）</div>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">階段</th><th class="ctr">銷售</th><th class="ctr">利潤</th><th class="ctr">競爭者</th><th>行銷重點</th></tr></thead>
+<tbody>
+<tr><td class="ctr"><b>導入期</b></td><td class="ctr">低且緩慢</td><td class="ctr">負／極低</td><td class="ctr">極少</td><td>建立知名度、<b>告知性廣告</b>；吸脂或滲透訂價</td></tr>
+<tr><td class="ctr"><b>成長期</b><span class="yr">110-14</span></td><td class="ctr"><mark>急遽攀升</mark></td><td class="ctr">快速上升</td><td class="ctr"><mark>數量開始增加</mark></td><td>擴大通路、產品改良、<b>說服性廣告</b>、建立品牌偏好</td></tr>
+<tr><td class="ctr"><b>成熟期</b><span class="yr hot">108-4</span><span class="yr hot">115-4</span></td><td class="ctr"><mark>達到最高</mark>後趨緩</td><td class="ctr"><mark>達到最高</mark>後下滑</td><td class="ctr">最多、殺價激烈</td><td><mark>提醒性廣告</mark>、市場/產品/行銷組合改良；<u>通常是 PLC 中最長的階段</u></td></tr>
+<tr><td class="ctr"><b>衰退期</b></td><td class="ctr">下降</td><td class="ctr">下降</td><td class="ctr">退出</td><td>收割、維持或撤退；削減促銷費用</td></tr>
+</tbody></table></div>
+<p class="small" style="margin:2px 0"><b>陷阱：</b>115-4「銷售量及利潤已達最高、提醒性廣告、階段最久」→ <b>成熟期</b>；110-14「銷售量急遽攀升、競爭者數量開始增加」→ <b>成長期</b>。判斷關鍵字：<u>「攀升中」＝成長；「已達最高」＝成熟</u>。</p></div>
+
+<div class="grid2">
+<div class="card"><h5>產品組合四指標<span class="yr">108-12</span></h5>
+<p class="small" style="margin:2px 0"><b>寬度</b>：產品線的數目。<br><b>長度</b>：<mark>產品組合內企業所擁有產品項目的總數量</mark>。<br><b>深度</b>：每一產品線中每個產品的變化款式數（口味、規格）。<br><b>一致性</b>：各產品線在用途、生產、通路上的關聯程度。</p></div>
+<div class="card"><h5>服務的四大特性<span class="yr hot">108問3</span><span class="yr hot">115-5</span></h5>
+<p class="small" style="margin:2px 0"><b>① 無形性 Intangibility</b>：無法在購買前被看到、嚐到、摸到 → 對策：具體化、實體線索、品牌。<br><b>② 不可分離性 Inseparability</b>：生產與消費同時發生，顧客參與其中 → 對策：人員訓練、管理顧客互動。<br><b>③ 易變性（異質性）Variability</b>：品質隨提供者、時間、地點而異 → 對策：標準化流程、服務藍圖、SOP。<br><b>④ 易逝性 Perishability</b>：不能儲存、無法留到下次賣 → 對策：尖離峰差別訂價、預約制、彈性人力。</p></div>
+</div>
+<div class="box tmpl"><div class="bt">📐 申論補充：何謂「服務」（108問3 前 3 分）</div>
+<p class="small" style="margin:2px 0">服務係指一方能提供給另一方、<u>本質上為無形且不涉及所有權移轉</u>的任何活動或利益；其生產可能與實體產品有關，也可能無關。換言之，服務是以「過程」與「體驗」而非「物件」交付價值的產品型態。</p></div>
+
+<h4>14-5　訂價、通路與推廣</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>主題</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td><b>新產品訂價</b></td><td><b>吸脂（撇脂）訂價 Skimming</b>：初期訂高價，向願付高價者撈取利潤後再逐步降價（適用創新性高、需求價格彈性低）。<br><b>滲透訂價 Penetration</b><span class="yr">109-6</span>：<mark>假設消費者對價格比較敏感，以較低價鼓勵嘗試購買與試用，搶佔市場佔有率</mark>。</td></tr>
+<tr><td><b>其他訂價法</b></td><td><b>成本加成訂價</b>／<b>邊際成本訂價</b><span class="yr">112-16</span>（依「每增加一單位產量所須增加之成本」訂價）／<b>目標報酬訂價</b>／<b>認知價值訂價</b>／<b>畸零訂價 odd pricing</b><span class="yr">110問1-5</span>（訂為 99、199 等非整數，利用消費者左位數效應，感覺便宜且像經過精算）／<b>犧牲品（帶路貨）訂價</b>／<b>差別訂價</b>／<b>心理訂價</b>／<b>組合（搭售）訂價</b></td></tr>
+<tr><td><b>通路階層</b></td><td><b>零階通路 Zero-level Channel</b><span class="yr">111問1-4</span>：<mark>製造商不透過任何中間商，直接將產品銷售給最終消費者</mark>的通路型態，即直接行銷（直營門市、電話行銷、郵購、電子商務、直銷）。優點：掌握顧客與價格、利潤高；缺點：需自建通路、成本高、涵蓋面有限。<br>一階＝製造商→零售商→消費者；二階＝製造商→批發商→零售商→消費者。</td></tr>
+<tr><td><b>通路廣度</b></td><td><b>密集性配銷</b><span class="yr">109-8</span>：<mark>採用最大可能數目的零售商來配銷，優點是能提供最大的產品涵蓋面</mark>（便利品，如飲料、衛生紙）。<br><b>選擇性配銷</b>：挑選部分中間商（選購品，如家電、服飾）。<br><b>獨家性配銷</b>：特定區域只授權一家（特殊品，如名車、精品）。</td></tr>
+<tr><td><b>推廣組合</b></td><td>廣告、人員銷售、促銷（銷售推廣）、公共關係與宣傳、直效行銷。<br><b>推式策略 Push</b>（推給通路商）vs <b>拉式策略 Pull</b>（打廣告讓消費者指名）。</td></tr>
+</tbody></table></div>
+
+<h4>14-6　消費者行為與服務行銷</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>概念</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td><b>消費者購買決策五階段</b></td><td>問題（需求）認知 → 資訊蒐集 → 方案評估 → 購買決策 → 購後行為（認知失調）</td></tr>
+<tr><td><b>參考群體</b><span class="yr">110-8</span></td><td><mark>對一個人的價值觀念、態度與行為有間接或直接影響的群體</mark>，常影響消費者對產品的購買動機、評估與選擇。類型：成員群體、<u>渴望群體</u>、<u>迴避群體</u>。</td></tr>
+<tr><td><b>意見領袖</b> Opinion Leader<span class="yr">113-20</span></td><td>科特勒(Kotler)：在產品的<u>非正式溝通過程</u>中，<mark>會對某項產品或產品類別提供忠告或有用資訊者</mark>。是口碑行銷與 KOL 行銷的理論基礎。</td></tr>
+<tr><td><b>創新採用者五類型</b><span class="yr">114-6</span></td><td>依技術採用生命週期(Rogers)：<mark><b>創新者 Innovators</b>（2.5%，最容易接受新科技產品且最願意嘗試，又稱技術狂熱者、冒險家）</mark> → 早期採用者 Early Adopters（13.5%，意見領袖） → 早期大眾（34%） → 晚期大眾（34%） → 落後者 Laggards（16%）。<br>※ Moore《跨越鴻溝》：早期採用者與早期大眾之間存在「<b>鴻溝 Chasm</b>」。</td></tr>
+<tr><td><b>服務金三角</b><span class="yr">114-4</span></td><td>三個角：公司、員工、顧客；三條邊為三種行銷：<br><b>外部行銷</b>（公司→顧客：定價、推廣、承諾）<br><b>內部行銷</b>（公司→員工：訓練、授權、激勵，讓員工有能力兌現承諾）<br><mark><b>互動行銷</b></mark>（員工↔顧客：接觸點的服務品質，決定顧客實際體驗）</td></tr>
+</tbody></table></div>
+
+<div class="box tmpl"><div class="bt">📐 申論模板：PZB 服務品質缺口模式（110問4，15 分）</div>
+<p style="margin:4px 0">Parasuraman、Zeithaml 與 Berry 提出，認為顧客對服務品質的不滿源自 5 個缺口：</p>
+<ol class="tight">
+<li><b>缺口一　認知缺口</b>（顧客期望 ↔ 管理者認知）：管理者<u>不了解顧客真正期望什麼</u>。成因：缺乏市場調查、層級過多使顧客聲音上不來。</li>
+<li><b>缺口二　標準缺口</b>（管理者認知 ↔ 服務品質規格）：管理者知道顧客要什麼，卻<u>未能轉化為明確可執行的服務標準</u>。成因：資源限制、缺乏目標設定與標準化。</li>
+<li><b>缺口三　傳遞缺口</b>（服務品質規格 ↔ 實際服務傳遞）：<u>第一線人員未按標準執行</u>。成因：訓練不足、角色衝突與模糊、技術與人力不足、考核與獎酬不當。</li>
+<li><b>缺口四　溝通缺口</b>（實際服務傳遞 ↔ 對外溝通）：<u>廣告與承諾誇大，高於實際能提供的服務</u>，墊高顧客期望。成因：橫向溝通不足、過度承諾。</li>
+<li><b>缺口五　服務品質缺口</b>（顧客期望 ↔ 顧客知覺的服務）：<u>顧客實際感受與期望之間的落差</u>，是前四個缺口累積造成的結果，也是顧客評價服務品質的依據。</li>
+</ol>
+<p class="small" style="margin:4px 0">※ 加分：PZB 另提出 <b>SERVQUAL</b> 五大衡量構面——<b>可靠性、反應性、保證性、同理心、有形性</b>（口訣：靠反保同有）。</p></div>
+<div class="box key"><div class="bt">◆ Ch14 填充題必背關鍵字</div>
+<p style="margin:2px 0">五種行銷哲學・行銷近視症・STP・區隔四變數・有效區隔五條件・無差異/差異化/集中化(利基)・4P對4C（推廣↔溝通）・7P・PLC四期特徵・產品組合寬長深一致・服務四特性・吸脂/滲透/邊際成本/畸零訂價・零階通路・密集/選擇/獨家配銷・推式vs拉式・購買決策五階段・參考群體/意見領袖/創新者・服務金三角(外部/內部/互動)・PZB五缺口/SERVQUAL・品牌權益Aaker五構面</p></div>
+<a class="backtop" href="#p3">↑ 回目錄</a>
+<!-- ================= Ch15 ================= -->
+<h3 id="c15">Ch15　人力資源管理　<span class="stars">★★★☆☆</span></h3>
+<div class="srcline">歷屆出處：<span class="yr">108-9 人資管理</span><span class="yr hot">109-14 工作規範書</span><span class="yr hot">111-1 月暈效應</span><span class="yr">111-2 外向性</span><span class="yr">111問1-2 彼得原理</span><span class="yr">111問1-3 黃金降落傘</span><span class="yr">113問1-2 玻璃天花板</span><span class="yr hot">114-3 觀察法</span><span class="yr">114問1-2 尖角效應</span><span class="yr">115問1-1 360度評估</span></div>
+
+<div class="tree"><div class="root">人力資源管理：選、育、用、留</div>
+<ul>
+<li><span class="n1">選才</span> <small>— 人力資源規劃 → 工作分析 → 招募 → 甄選</small></li>
+<li><span class="n1">育才</span> <small>— 職前引導、在職訓練(OJT)、職外訓練、生涯發展</small></li>
+<li><span class="n1">用才</span> <small>— 績效評估、工作設計、晉升與調任</small></li>
+<li><span class="n1">留才</span> <small>— 薪酬福利、勞資關係、員工協助方案、離職管理</small></li>
+</ul></div>
+
+<h4>15-1　工作分析：產出兩份文件</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>產出文件</th><th>回答什麼問題</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td><b>工作說明書</b><br>Job Description</td><td>這份工作<b>要做什麼事</b>？</td><td>工作名稱、職責、任務、權限、工作條件、使用設備、隸屬關係</td></tr>
+<tr><td><b>工作規範（書）</b><br>Job Specification<span class="yr hot">109-14</span></td><td>做這份工作的<b>人要具備什麼</b>？</td><td><mark>工作分析之後，用以決定工作人員所應具備「最低資格條件」之書面說明</mark>——學歷、經驗、證照、技能、體能、人格特質</td></tr>
+</tbody></table></div>
+<p class="small"><b>工作分析方法</b>：<b>觀察法</b><span class="yr hot">114-3</span>（<mark>透過錄影記錄員工在工作過程中的各項作業，再加以分析、歸納與分類</mark>，適用於可見、重複性高的工作）、面談法、問卷法、工作日誌法、關鍵事件法、實作法。</p>
+<div class="box mnem"><div class="bt">✦ 一句話分辨</div><p style="margin:2px 0"><b>說明書寫「事」，規範書寫「人」。</b>題幹出現「<u>最低資格條件</u>」＝工作規範書。</p></div>
+
+<h4>15-2　績效評估的誤差（名詞解釋高頻區）</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>誤差</th><th>意涵</th></tr></thead>
+<tbody>
+<tr><td><b>月暈（暈輪）效應</b><br>Halo Effect<span class="yr hot">111-1</span></td><td><mark>主管只藉由某位部屬的單一特徵（如外表）形成對該部屬的整體印象</mark>，以偏概全的<u>正面</u>推論（一好百好）。</td></tr>
+<tr><td><b>尖角（犄角）效應</b><br>Horn Effect<span class="yr">114問1-2</span></td><td>月暈效應的<u>反面</u>：因部屬某一項<u>缺點或負面特徵</u>，而對其整體表現作出全面性的負面評價（一壞百壞），導致績效評估失真。</td></tr>
+<tr><td><b>比馬龍效應</b><br>Pygmalion Effect<span class="yr">109問3-2</span></td><td>又稱自我應驗預言。<u>主管對部屬抱持高度期望並表現出信任，部屬便會朝此期望發展而真的表現更好</u>；反之（低期望）則表現更差（負向稱為<b>格蘭效應</b>）。</td></tr>
+<tr><td><b>其他常見誤差</b></td><td><b>近因誤差</b>（只記得最近表現）、<b>初始效應／第一印象</b>、<b>寬大／嚴苛誤差</b>、<b>趨中傾向</b>（都給中間分）、<b>對比效應</b>（與前一位受評者比較）、<b>刻板印象</b>、<b>相似誤差</b>（像我的人給高分）。</td></tr>
+</tbody></table></div>
+<p class="small"><b>360 度評估 360-degree Appraisal</b><span class="yr">115問1-1</span>：又稱全方位回饋，指績效資訊<mark>不僅來自直屬主管，而是同時蒐集來自上司、同儕、部屬、受評者本人，以及顧客或供應商等多來源的評量</mark>。優點：資訊完整、減少單一評估者偏誤、強化自我覺察與發展導向；缺點：耗時費力、可能流於人情或互相報復、匿名性處理不當易生衝突。</p>
+
+<h4>15-3　人格特質與職涯議題</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>概念</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td><b>五大人格特質 Big Five</b><span class="yr">111-2</span></td><td><b>開放性</b> Openness（想像力、創意）／<b>盡責性</b> Conscientiousness（負責、可靠、有組織，<u>是預測工作績效最有效的單一特質</u>）／<b>外向性</b> Extraversion（合群、健談、自信）／<b>親和性</b> Agreeableness（合作、信任、隨和）／<b>神經質</b> Neuroticism（情緒穩定性的反面）<br>口訣：<b>開、盡、外、親、神</b></td></tr>
+<tr><td><b>其他人格構面</b></td><td>內外控傾向(Locus of Control)、馬基維利主義、自尊、自我監控、風險傾向、A 型/B 型人格。</td></tr>
+<tr><td><b>彼得原理</b> The Peter Principle<span class="yr">111問1-2</span></td><td>勞倫斯·彼得提出：在層級組織中，<mark>每位員工都傾向於晉升到他所「不能勝任」的職位為止</mark>。因為升遷是依據「現職表現」而非「新職所需能力」，最終導致組織中每個職位都被無法勝任的人佔據。對策：升遷前評估新職能力、設立雙軌（專業／管理）職涯路徑、升遷試用期。</td></tr>
+<tr><td><b>玻璃天花板</b> Glass Ceiling<span class="yr">113問1-2</span></td><td>指組織中存在一道<mark>看不見、未明文規定卻真實存在的無形障礙</mark>，使女性或少數族群縱然具備能力與資格，仍難以晉升至高階管理職位。成因包括刻板印象、非正式人脈排除、缺乏角色典範與導師。相關概念：玻璃懸崖、黏地板、玻璃電梯。</td></tr>
+<tr><td><b>黃金降落傘</b> Golden Parachute<span class="yr">111問1-3</span></td><td>公司與高階經理人簽訂的契約條款，約定若公司<mark>被併購而導致其去職</mark>，可獲得極為優厚的離職補償金（現金、股票選擇權、退休金加碼）。目的有二：① 作為<u>反併購（毒藥丸）措施</u>，墊高敵意併購成本；② 減輕經理人對併購的個人抗拒，使其以股東利益為優先考量。</td></tr>
+<tr><td><b>敏捷管理</b> Agile Management<span class="yr">114問1-1</span></td><td>源自軟體開發的管理方法，以<u>小型跨功能團隊、短週期迭代(Sprint)、持續交付可用成果、快速回應變化與顧客回饋</u>為核心，重視「個人與互動勝於流程與工具、可用的成果勝於詳盡的文件、與顧客協作勝於合約協商、回應變化勝於遵循計畫」。適用於高度不確定的環境。</td></tr>
+</tbody></table></div>
+<div class="box key"><div class="bt">◆ Ch15 填充題必背關鍵字</div>
+<p style="margin:2px 0">選育用留・工作分析(觀察/面談/問卷/日誌/關鍵事件)・工作說明書vs工作規範書(最低資格條件)・月暈/尖角/比馬龍/近因/趨中/對比・360度評估・五大人格(開盡外親神)・彼得原理・玻璃天花板・黃金降落傘・敏捷管理・訓練OJT</p></div>
+<a class="backtop" href="#p3">↑ 回目錄</a>
+
+<!-- ================= Ch16 ================= -->
+<h3 id="c16">Ch16　財務管理　<span class="stars">★★★★★</span></h3>
+<div class="srcline">歷屆出處：<span class="yr hot">108-6 公司理財</span><span class="yr hot">108-7 現金流量表</span><span class="yr hot">108-18 存貨週轉率20次</span><span class="yr">109-11 貼現</span><span class="yr hot">109-19 ROE 50%</span><span class="yr">109問3-5 代理問題</span><span class="yr hot">109問4 效率市場</span><span class="yr hot">110-10 速動比率1.6</span><span class="yr">110-11 股東權益</span><span class="yr hot">111-3 損益兩平400</span><span class="yr hot">112-10 報酬率75%</span><span class="yr">112-13 公司債</span><span class="yr hot">112-20 淨營運資金</span><span class="yr">113問1-3 淨現值法</span><span class="yr hot">113-19 速動比率2</span><span class="yr hot">114-18 利潤45萬</span><span class="yr">114-15/115-7 損益表</span><span class="yr hot">115-19 ROA 12%</span><span class="yr">115問1-2 風險溢酬</span></div>
+<p><b>這是最容易被非本科生放棄、卻也最容易靠公式穩穩拿分的一章。八年來每年至少 1 題計算。</b></p>
+
+<h4>16-1　財務管理三大領域與四大報表</h4>
+<p class="small">廣義財務管理分為三大領域<span class="yr">108-6</span>：① <b>金融市場</b> ② <b>投資學</b> ③ <mark><b>公司理財（財務管理）</b>——主要涉及公司實際的管理運作所會遇到的財務問題</mark>（籌資、投資、股利、營運資金四大決策）。</p>
+<div class="tblwrap"><table>
+<thead><tr><th>報表</th><th>回答什麼</th><th>時間性質</th><th>組成</th></tr></thead>
+<tbody>
+<tr><td><b>資產負債表</b><br>Balance Sheet</td><td>公司「有多少家當、欠多少債」</td><td><b>某一時間「點」</b>（存量）</td><td>資產 ＝ 負債 ＋ <mark>股東（業主）權益</mark><span class="yr">110-11</span></td></tr>
+<tr><td><b>（綜合）損益表</b><br>Income Statement<span class="yr">114-15</span><span class="yr hot">115-7</span></td><td>公司「這期間賺了多少」</td><td><b>某一期間</b>（流量）</td><td><mark>呈現特定會計期間內發生之收入、費用、損失、利益，反映該連續期間的經營績效</mark>；提供銷售額、銷售成本與盈利等資料以評估獲利能力</td></tr>
+<tr><td><b>現金流量表</b><span class="yr">108-7</span></td><td>公司「現金怎麼進出」</td><td>某一期間</td><td>營業活動、投資活動、籌資（融資）活動三大現金流</td></tr>
+<tr><td><b>股東權益變動表</b></td><td>股東權益如何增減</td><td>某一期間</td><td>股本、資本公積、保留盈餘之變動</td></tr>
+</tbody></table></div>
+<div class="box trap"><div class="bt">⚠ 一秒判斷</div><p style="margin:2px 0">題幹出現「<u>特定時間點／財務狀況／有什麼</u>」＝資產負債表；出現「<u>特定期間／收入費用／經營績效／獲利能力</u>」＝損益表。這兩題 114、115 連續兩年都考。</p></div>
+
+<h4>16-2　財務比率：必背公式表</h4>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">類別</th><th>比率</th><th>公式</th><th>意義</th></tr></thead>
+<tbody>
+<tr><td class="ctr" rowspan="3"><b>流動性<br>（償債能力）</b></td><td>流動比率</td><td class="mono">流動資產 ÷ 流動負債</td><td>短期償債能力，一般 ≥2 為佳</td></tr>
+<tr><td><b>速動比率</b><br>（酸性測驗比率）</td><td class="mono">(流動資產 − <b>存貨</b> − <b>預付費用</b>) ÷ 流動負債<br>＝(現金＋有價證券＋應收帳款) ÷ 流動負債</td><td>更嚴格的短期償債能力，一般 ≥1 為佳<br><span class="yr hot">110-10</span><span class="yr hot">113-19</span></td></tr>
+<tr><td><b>淨營運資金</b></td><td class="mono">流動資產 − 流動負債</td><td>可供日常週轉的資金<span class="yr hot">112-20</span></td></tr>
+<tr><td class="ctr" rowspan="3"><b>活動性<br>（經營效率）</b></td><td><b>存貨週轉率</b></td><td class="mono">銷貨成本 ÷ 平均存貨<br>平均存貨＝(期初＋期末) ÷ 2</td><td>存貨銷售速度，越高越好<span class="yr hot">108-18</span></td></tr>
+<tr><td>應收帳款週轉率</td><td class="mono">銷貨淨額 ÷ 平均應收帳款</td><td>收款效率</td></tr>
+<tr><td>總資產週轉率</td><td class="mono">銷貨淨額 ÷ 平均總資產</td><td>資產創造營收的效率</td></tr>
+<tr><td class="ctr" rowspan="3"><b>獲利性</b></td><td>純益率（淨利率）</td><td class="mono">稅後淨利 ÷ 銷貨淨額</td><td>每 1 元營收賺多少</td></tr>
+<tr><td><b>ROA 總資產報酬率</b></td><td class="mono">稅後淨利 ÷ 平均總資產<br>＝<b>純益率 × 總資產週轉率</b></td><td>資產獲利能力<span class="yr hot">115-19</span></td></tr>
+<tr><td><b>ROE 股東權益報酬率</b></td><td class="mono">稅後淨利 ÷ 平均股東權益<br>＝<b>ROA × 權益乘數</b><br>權益乘數＝總資產 ÷ 股東權益</td><td>股東投入資金的報酬<span class="yr hot">109-19</span></td></tr>
+<tr><td class="ctr"><b>財務結構</b></td><td>負債比率／權益乘數</td><td class="mono">負債總額 ÷ 資產總額</td><td>財務槓桿與風險</td></tr>
+</tbody></table></div>
+<div class="box mnem"><div class="bt">✦ 杜邦分析（DuPont）串起三個比率</div>
+<div class="formula">ROE ＝ 純益率 × 總資產週轉率 × 權益乘數
+　　　（獲利能力）　（經營效率）　（財務槓桿）
+ROA ＝ 純益率 × 總資產週轉率</div>
+<p class="small" style="margin:2px 0">只要背這一條，109 與 115 兩題計算都能直接秒解。</p></div>
+
+<div class="box exam"><div class="bt">📝 歷屆計算題全解（一定要親手算過）</div>
+<p class="small" style="margin:6px 0 2px"><b>① 115-19：</b>稅後淨利 $2,000,000、總資產週轉率 3.0、純益率 4%，求 ROA。</p>
+<div class="formula">ROA = 純益率 × 總資產週轉率 = 4% × 3.0 = <b>12%</b>
+（稅後淨利 2,000,000 是干擾資訊，不需用到）</div>
+<p class="small" style="margin:6px 0 2px"><b>② 109-19：</b>平均資產總額 1,350 萬、平均股東權益 810 萬、ROA＝30%，求 ROE。</p>
+<div class="formula">權益乘數 = 1,350 ÷ 810 = 5/3
+ROE = ROA × 權益乘數 = 30% × 5/3 = <b>50%</b>
+（驗算：淨利 = 1,350×30% = 405 萬；405 ÷ 810 = 50% ✓）</div>
+<p class="small" style="margin:6px 0 2px"><b>③ 113-19：</b>流動資產 500 萬＝現金 200＋應收 100＋存貨 150＋預付費用 50；流動負債 150 萬，求速動比率。</p>
+<div class="formula">速動資產 = 500 − 存貨150 − 預付50 = 300 萬
+速動比率 = 300 ÷ 150 = <b>2</b>　（陷阱：預付費用也要扣除！）</div>
+<p class="small" style="margin:6px 0 2px"><b>④ 110-10：</b>流動資產 1,200 萬、存貨 400 萬、流動負債 500 萬。</p>
+<div class="formula">速動比率 = (1,200 − 400) ÷ 500 = 800 ÷ 500 = <b>1.6</b>（或 8/5、160%）</div>
+<p class="small" style="margin:6px 0 2px"><b>⑤ 108-18：</b>期初存貨 4 萬、期末存貨 2 萬、銷貨成本 60 萬。</p>
+<div class="formula">平均存貨 = (4 + 2) ÷ 2 = 3 萬
+存貨週轉率 = 60 ÷ 3 = <b>20 次</b></div>
+<p class="small" style="margin:6px 0 2px"><b>⑥ 112-20：</b>流動資產 $500,000、淨固定資產 $800,000、流動負債 $250,000、長期借款 $300,000。</p>
+<div class="formula">淨營運資金 = 流動資產 − 流動負債 = 500,000 − 250,000 = <b>$250,000</b>
+（固定資產與長期借款皆為干擾項）</div>
+<p class="small" style="margin:6px 0 2px"><b>⑦ 112-10：</b>年初 20 元買 A 股 1 張（1,000 股），年中配現金股利 2 元、股票股利 1 元，年底 30 元賣出股票及零股，求報酬率。</p>
+<div class="formula">成本 = 20 × 1,000 = 20,000 元
+現金股利 = 2 × 1,000 = 2,000 元
+股票股利 1 元 → 每股配 0.1 股 → 配得 100 股，持股變 1,100 股
+賣出收入 = 30 × 1,100 = 33,000 元
+總報酬 = (33,000 + 2,000) − 20,000 = 15,000 元
+報酬率 = 15,000 ÷ 20,000 = <b>75%</b></div>
+<p class="small" style="margin:2px 0">※ 台股慣例：<b>股票股利 1 元 ＝ 每 1,000 股配 100 股（配股率 10%）</b>，因面額 10 元。這是本題最關鍵的常識。</p>
+</div>
+
+<h4>16-3　損益兩平分析（CVP）</h4>
+<div class="formula">單位邊際貢獻 ＝ 售價 P − 單位變動成本 V
+
+損益兩平銷售「量」 BEQ ＝ 固定成本 F ÷ (P − V)
+損益兩平銷售「額」 BES ＝ 固定成本 F ÷ 邊際貢獻率
+　　　　　　　　　　　　邊際貢獻率 ＝ (P − V) ÷ P
+
+目標利潤銷量 ＝ (固定成本 F ＋ 目標利潤 π) ÷ (P − V)
+利潤 π ＝ 銷售量 × (P − V) − F</div>
+<div class="box exam"><div class="bt">📝 歷屆計算題</div>
+<p class="small" style="margin:6px 0 2px"><b>⑧ 111-3：</b>售價 75 元、單位變動成本 25 元、總固定成本 20,000 元。</p>
+<div class="formula">BEQ = 20,000 ÷ (75 − 25) = 20,000 ÷ 50 = <b>400 個</b></div>
+<p class="small" style="margin:6px 0 2px"><b>⑨ 114-18：</b>變動成本 20 元／件、售價 50 元、年固定成本 15 萬元、今年銷售預測「<u>額</u>」100 萬元，求預測利潤。</p>
+<div class="formula">銷售量 = 1,000,000 ÷ 50 = 20,000 件
+邊際貢獻 = (50 − 20) × 20,000 = 600,000 元
+利潤 = 600,000 − 150,000 = <b>450,000 元（45 萬）</b></div>
+<p class="small" style="margin:2px 0">※ 陷阱：題目給的是銷售<b>金額</b>不是<b>數量</b>，必須先除以售價換算件數。</p></div>
+
+<h4>16-4　籌資、投資評估與市場理論</h4>
+<div class="tblwrap"><table>
+<thead><tr><th>主題</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td><b>公司債</b><span class="yr">112-13</span></td><td>公司透過金融機構發行的憑證，使公司借入款項而獲得現金，並<mark>承諾於固定時間支付利息，且於到期日償還本金</mark>。屬長期<u>負債</u>（債權人不具表決權）。<br>對比<b>股票</b>：屬股東權益，無到期日、股利非義務、股東有表決權。</td></tr>
+<tr><td><b>票據貼現</b><span class="yr">109-11</span></td><td>企業將<u>未到期</u>的票據，以<mark>預扣利息</mark>的方式出售給銀行，以提前取得資金的短期融資方式。</td></tr>
+<tr><td><b>資金來源</b></td><td><b>短期</b>：商業本票、銀行短期借款、應付帳款、票據貼現。<br><b>長期</b>：公司債、長期借款、特別股、普通股、保留盈餘、融資租賃。<br><b>內部 vs 外部</b>、<b>權益 vs 負債</b>。</td></tr>
+<tr><td><b>淨現值法 NPV</b><br>Net Present Value<span class="yr">113問1-3</span></td><td>資本預算評估方法之一：將投資案<u>未來各期的現金流入，以適當的資金成本（折現率）折算為現值後加總，再減去期初投資成本</u>所得的淨額。<br><b>決策法則：NPV &gt; 0 表示該案可為股東創造價值，應接受；NPV &lt; 0 則拒絕；多案互斥時選 NPV 最大者。</b><br>優點：考慮貨幣時間價值與全部現金流、符合價值加法性；缺點：須先估計折現率。<br>相關方法：<b>IRR</b>（內部報酬率，使 NPV＝0 的折現率）、<b>回收期間法</b>（不考慮時間價值）、<b>獲利能力指數 PI</b>。</td></tr>
+<tr><td><b>風險溢酬</b><br>Risk Premium<span class="yr">115問1-2</span></td><td>指投資人因承擔<mark>額外風險</mark>而要求的、<u>高於無風險利率的超額報酬</u>。<br>公式：風險溢酬 ＝ 預期報酬率 − 無風險利率。<br>風險越高，投資人要求的風險溢酬越高（風險與報酬抵換）。在 CAPM 中：<span class="mono">E(Ri) = Rf + βi × [E(Rm) − Rf]</span>，其中 [E(Rm)−Rf] 即市場風險溢酬。</td></tr>
+<tr><td><b>代理問題</b><br>Agency Problem<span class="yr">109問3-5</span></td><td>當公司所有權（股東／委託人）與經營權（經理人／代理人）分離時，因<u>目標不一致與資訊不對稱</u>，經理人可能追求自身利益（在職消費、帝國建構、規避風險）而損及股東利益的現象。所衍生的監督、約束與剩餘損失合稱<b>代理成本</b>。<br><b>解決之道</b>：績效連結的股票選擇權、獨立董事與監察人、資訊揭露、公司治理機制、外部接管市場的威脅。</td></tr>
+</tbody></table></div>
+
+<div class="box tmpl"><div class="bt">📐 申論模板：Fama 效率市場三種型態（109問4，15 分）</div>
+<p style="margin:4px 0">效率市場假說(EMH)主張<u>證券價格已充分反映所有可得資訊</u>，投資人無法持續獲得超額報酬。依「資訊」範圍的不同，可分為三種型態：</p>
+<ol class="tight">
+<li><b>弱式效率市場 Weak Form</b>：現行股價已充分反映<u>所有「歷史」資訊</u>（過去價格、成交量、報酬率）。<br>→ 推論：<mark>技術分析無效</mark>；但基本分析與內線消息仍可能獲利。</li>
+<li><b>半強式效率市場 Semi-strong Form</b>：現行股價已充分反映所有<u>「公開」可得的資訊</u>（財務報表、股利政策、經濟數據、新聞公告）。<br>→ 推論：<mark>技術分析與基本分析皆無效</mark>；僅內線消息仍可能獲利。</li>
+<li><b>強式效率市場 Strong Form</b>：現行股價已充分反映<u>所有「公開及未公開（內線）」資訊</u>。<br>→ 推論：<mark>任何分析與內線交易皆無法獲得超額報酬</mark>，此為理論上的極端狀態。</li>
+</ol>
+<p class="small" style="margin:4px 0">※ 三者為<b>包含關係</b>：強式 ⊃ 半強式 ⊃ 弱式。多數實證研究支持成熟市場接近半強式效率。</p></div>
+<div class="box key"><div class="bt">◆ Ch16 填充題必背關鍵字</div>
+<p style="margin:2px 0">三大領域(金融市場/投資學/公司理財)・四大報表・資產=負債+股東權益・流動比率/速動比率(扣存貨與預付)/淨營運資金・存貨週轉率/總資產週轉率・純益率/ROA/ROE/杜邦分析/權益乘數・損益兩平公式・公司債/票據貼現/商業本票・NPV/IRR/回收期間・風險溢酬/CAPM・代理問題與代理成本・效率市場弱式-半強式-強式</p></div>
+<a class="backtop" href="#p3">↑ 回目錄</a>
+
+<!-- ================= Ch17 ================= -->
+<h3 id="c17">Ch17　研發、資訊與知識管理　<span class="stars">★★★☆☆</span></h3>
+<div class="srcline">歷屆出處：<span class="yr">108-13 智慧資本</span><span class="yr">108-19 發明專利</span><span class="yr">108-20 國家標準</span><span class="yr">110-15 破壞性創新</span><span class="yr hot">114-13 知識管理</span><span class="yr">114-12 平衡計分卡</span></div>
+
+<div class="tblwrap"><table>
+<thead><tr><th>主題</th><th>內容</th></tr></thead>
+<tbody>
+<tr><td><b>知識管理</b> KM<span class="yr hot">114-13</span></td><td><mark>系統性地管理與運用企業的經營智慧，包含有形的資產與無形的人才與經驗，並使組織成員有效獲得資訊，且易於與其他成員分享</mark>。<br>公式：<span class="mono">K ＝ (P ＋ I)<sup>S</sup></span>　K 知識、P 人員、I 資訊、S 分享（分享是指數，威力最大）。<br><b>知識轉換 SECI 模式</b>（野中郁次郎）：共同化 Socialization（內隱→內隱）、外化 Externalization（內隱→外顯）、結合 Combination（外顯→外顯）、內化 Internalization（外顯→內隱）。<br><b>內隱知識</b>（難以言傳的經驗訣竅）vs <b>外顯知識</b>（可文件化、可編碼）。</td></tr>
+<tr><td><b>智慧資本</b><span class="yr">108-13</span></td><td><mark>企業員工與團隊能為企業帶來競爭優勢的所有知識與能力的總和</mark>，如人員作業經驗、生產技術、團隊溝通機制、顧客關係及品牌地位。<br>三大構成：<b>人力資本</b>（員工知識技能）、<b>結構（組織）資本</b>（流程、制度、資料庫、專利）、<b>關係（顧客）資本</b>（顧客關係、品牌、通路）。</td></tr>
+<tr><td><b>創新的類型</b></td><td>依程度：<b>漸進式創新</b> vs <b>突破（基進）式創新</b>；依標的：產品創新／製程創新／服務創新／商業模式創新／管理創新；依市場效果：<b>維持性創新</b> vs <b>破壞式創新</b><span class="yr">110-15</span>。<br><b>開放式創新</b>（Chesbrough）：善用外部知識與通路加速創新。</td></tr>
+<tr><td><b>專利種類</b><span class="yr">108-19</span></td><td>我國《專利法》分為 3 種：<b>① 發明專利</b>（利用自然法則之技術思想的創作，20 年）<b>② 新型專利</b>（物品形狀、構造或組合的創作，10 年）<b>③ 設計專利</b>（物品外觀之形狀、花紋、色彩，15 年）。<br>相關：著作權、商標權、營業秘密。</td></tr>
+<tr><td><b>標準</b><span class="yr">108-20</span></td><td>依《標準法》，由標準專責機關依法定程序制定或轉訂、可供公眾使用之標準，稱為<b>國家標準（CNS）</b>。</td></tr>
+<tr><td><b>資訊系統層級</b></td><td>TPS 交易處理系統 → MIS 管理資訊系統 → DSS 決策支援系統 → EIS 高階主管資訊系統 → ES 專家系統／BI 商業智慧／大數據與 AI。<br><b>ERP</b>（企業資源規劃）、<b>CRM</b>（顧客關係管理）、<b>SCM</b>（供應鏈管理）、<b>KMS</b>（知識管理系統）四大應用系統。</td></tr>
+<tr><td><b>電子商務模式</b></td><td>B2B、B2C、C2C、C2B、O2O、OMO。<b>長尾理論</b>（Anderson）：網路降低庫存與通路成本，使眾多利基小眾商品的總銷量可與暢銷品匹敵。</td></tr>
+<tr><td><b>工業 4.0 / 數位轉型</b></td><td>CPS 虛實整合系統、IoT 物聯網、大數據、雲端、智慧製造；<b>數位轉型三階段</b>：數位化(Digitization) → 數位優化(Digitalization) → 數位轉型(Digital Transformation)。</td></tr>
+<tr><td><b>奧茲法則</b> The Oz Principle<span class="yr">110問1-4</span></td><td>強調<mark>「當責」(Accountability)</mark> 的管理概念：如同《綠野仙蹤》主角們以為要靠魔法師才能實現願望，最終發現力量一直在自己身上。主張個人與組織應跨越「受害者循環」（推諉、歸咎他人、等待觀望），透過四個步驟展現當責：<b>正視現實(See It) → 承擔責任(Own It) → 解決問題(Solve It) → 著手完成(Do It)</b>。</td></tr>
+</tbody></table></div>
+<div class="box key"><div class="bt">◆ Ch17 填充題必背關鍵字</div>
+<p style="margin:2px 0">知識管理K=(P+I)^S・SECI共同化-外化-結合-內化・內隱vs外顯知識・智慧資本(人力/結構/關係)・維持性vs破壞式創新・開放式創新・發明/新型/設計專利・CNS國家標準・TPS-MIS-DSS-EIS・ERP/CRM/SCM・長尾理論・工業4.0・奧茲法則與當責</p></div>
+<a class="backtop" href="#p3">↑ 回目錄</a>
+<h2 class="part" id="p4">PART 4　應試工具箱：考前最後七天只讀這一區</h2>
+
+<h3 id="t1">4-1　計算題公式速查（含歷屆全解）</h3>
+<div class="box trap"><div class="bt">⚠ 計算題四步驟鐵律</div><p style="margin:2px 0">台電明文規定「<u>問答與計算大題須詳列解答過程，未詳列者不予給分</u>」。每題務必寫齊：<b>① 寫出公式 → ② 代入數字 → ③ 逐步運算 → ④ 寫出答案並加單位</b>。即使算錯，公式與過程仍可拿部分分。</p></div>
+
+<div class="tblwrap"><table>
+<thead><tr><th>主題</th><th>公式</th><th>歷屆</th></tr></thead>
+<tbody>
+<tr><td><b>速動比率</b></td><td class="mono">(流動資產 − 存貨 − 預付費用) ÷ 流動負債</td><td><span class="yr">110-10</span><span class="yr">113-19</span></td></tr>
+<tr><td><b>流動比率</b></td><td class="mono">流動資產 ÷ 流動負債</td><td>—</td></tr>
+<tr><td><b>淨營運資金</b></td><td class="mono">流動資產 − 流動負債</td><td><span class="yr">112-20</span></td></tr>
+<tr><td><b>存貨週轉率</b></td><td class="mono">銷貨成本 ÷ [(期初存貨＋期末存貨) ÷ 2]</td><td><span class="yr">108-18</span></td></tr>
+<tr><td><b>ROA</b></td><td class="mono">稅後淨利 ÷ 平均總資產 ＝ 純益率 × 總資產週轉率</td><td><span class="yr">115-19</span></td></tr>
+<tr><td><b>ROE</b></td><td class="mono">稅後淨利 ÷ 平均股東權益 ＝ ROA × (總資產÷股東權益)</td><td><span class="yr">109-19</span></td></tr>
+<tr><td><b>損益兩平量</b></td><td class="mono">固定成本 ÷ (售價 − 單位變動成本)</td><td><span class="yr">111-3</span></td></tr>
+<tr><td><b>目標利潤</b></td><td class="mono">利潤 ＝ 銷量 × (售價 − 單位變動成本) − 固定成本</td><td><span class="yr">114-18</span></td></tr>
+<tr><td><b>股票報酬率</b></td><td class="mono">[(期末市價×期末股數 ＋ 現金股利) − 期初成本] ÷ 期初成本<br>※ 股票股利 1 元 ＝ 每 1,000 股配 100 股</td><td><span class="yr">112-10</span></td></tr>
+<tr><td><b>PERT 期望時間</b></td><td class="mono">(a ＋ 4m ＋ b) ÷ 6　（a樂觀、m最可能、b悲觀）</td><td><span class="yr">113-5</span></td></tr>
+<tr><td><b>EOQ</b></td><td class="mono">√(2 × 年需求D × 每次訂購成本S ÷ 年持有成本H)</td><td><span class="yr">112問4</span></td></tr>
+<tr><td><b>再訂購點</b></td><td class="mono">每日需求 × 前置時間 ＋ 安全存量</td><td>—</td></tr>
+<tr><td><b>差別計件工資</b></td><td class="mono">達標 → 全部產量 × 高費率；未達標 → 全部產量 × 低費率</td><td><span class="yr">114-2</span></td></tr>
+<tr><td><b>MPS 激勵潛能</b></td><td class="mono">[(多樣性＋完整性＋重要性)÷3] × 自主性 × 回饋性</td><td>—</td></tr>
+<tr><td><b>期望理論</b></td><td class="mono">M ＝ E（期望）× I（工具性）× V（價值）</td><td><span class="yr">113問3</span></td></tr>
+<tr><td><b>痛苦指數</b></td><td class="mono">通貨膨脹率 ＋ 失業率</td><td><span class="yr">115-1</span></td></tr>
+</tbody></table></div>
+
+<h3 id="t2">4-2　名詞解釋庫</h3>
+<p>八年來共考過 <b>38 則</b>名詞解釋（每則 3 分），是投報率最高的區塊。作答公式：<mark>「誰提出（若有）＋ 核心定義一句 ＋ 機制或舉例一句 ＋ 管理意涵一句」</mark>，三行即可拿滿 3 分。</p>
+
+<details open><summary>A. 歷屆已考 38 則（依年份，附本講義對應章節）</summary><div class="dbody">
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">年</th><th>名詞</th><th>一句話定義</th><th class="ctr">詳見</th></tr></thead>
+<tbody>
+<tr><td class="ctr">108</td><td>扁平式組織</td><td>管理層級少、控制幅度大的組織結構，溝通快、授權多，但主管負荷重、升遷管道少</td><td class="ctr">Ch7</td></tr>
+<tr><td class="ctr">108</td><td>工作豐富化</td><td>垂直擴展工作，給予部屬更多責任與權力，提升自主性與參與管理機會</td><td class="ctr">Ch10</td></tr>
+<tr><td class="ctr">108</td><td>效能</td><td>達成既定目標的程度，「做對的事」</td><td class="ctr">Ch1</td></tr>
+<tr><td class="ctr">109</td><td>有限理性決策</td><td>Simon：受資訊、時間與認知限制，決策者只能求「滿意解」而非最佳解</td><td class="ctr">Ch5</td></tr>
+<tr><td class="ctr">109</td><td>比馬龍效應</td><td>主管的高度期望會使部屬朝該期望發展而真的表現更好（自我應驗預言）</td><td class="ctr">Ch15</td></tr>
+<tr><td class="ctr">109</td><td>增強理論</td><td>Skinner：行為是其結果的函數，以正增強、負增強、懲罰、消弱塑造行為</td><td class="ctr">Ch10</td></tr>
+<tr><td class="ctr">109</td><td>停滯性通貨膨脹</td><td>經濟成長停滯、失業率高，卻同時發生物價持續上漲的現象</td><td class="ctr">Ch3</td></tr>
+<tr><td class="ctr">109</td><td>代理問題</td><td>所有權與經營權分離下，經理人因目標不一致與資訊不對稱而損及股東利益</td><td class="ctr">Ch16</td></tr>
+<tr><td class="ctr">110</td><td>群體迷思</td><td>高凝聚力群體為維持一致而壓抑異議，導致決策品質低落</td><td class="ctr">Ch5</td></tr>
+<tr><td class="ctr">110</td><td>自利偏差</td><td>成功歸因於自己、失敗歸咎於環境或他人的歸因偏誤</td><td class="ctr">Ch5</td></tr>
+<tr><td class="ctr">110</td><td>共享經濟</td><td>透過平台將閒置資源的使用權暫時移轉給他人，提高資源利用效率</td><td class="ctr">Ch3</td></tr>
+<tr><td class="ctr">110</td><td>奧茲法則</td><td>強調當責：跨越受害者循環，正視現實→承擔責任→解決問題→著手完成</td><td class="ctr">Ch17</td></tr>
+<tr><td class="ctr">110</td><td>畸零定價</td><td>訂為 99、199 等非整數價格，利用左位數效應讓消費者感覺較便宜且經過精算</td><td class="ctr">Ch14</td></tr>
+<tr><td class="ctr">111</td><td>承諾升高</td><td>明知決策已錯仍持續投入資源，以避免承認失敗（沉沒成本謬誤）</td><td class="ctr">Ch5</td></tr>
+<tr><td class="ctr">111</td><td>彼得原理</td><td>層級組織中每位員工終將晉升到其不能勝任的職位為止</td><td class="ctr">Ch15</td></tr>
+<tr><td class="ctr">111</td><td>黃金降落傘</td><td>高階經理人因公司被併購而去職時可獲優厚補償的契約條款，兼具反併購功能</td><td class="ctr">Ch15</td></tr>
+<tr><td class="ctr">111</td><td>零階通路</td><td>製造商不透過中間商，直接銷售給最終消費者的直接行銷通路</td><td class="ctr">Ch14</td></tr>
+<tr><td class="ctr">111</td><td>僕人領導</td><td>Greenleaf：領導者以服務他人為先，把部屬成長與需求置於自身利益之前</td><td class="ctr">Ch9</td></tr>
+<tr><td class="ctr">112</td><td>馬基維利主義</td><td>務實、情感疏離、重結果、相信為達目的可不擇手段的人格特質</td><td class="ctr">Ch11</td></tr>
+<tr><td class="ctr">112</td><td>熱爐法則</td><td>懲罰應如碰熱爐：具警告性、即刻性、一致性、公平性</td><td class="ctr">Ch10</td></tr>
+<tr><td class="ctr">112</td><td>長鞭效應</td><td>終端需求微小變動沿供應鏈向上游逐級放大，造成訂單與庫存劇烈波動</td><td class="ctr">Ch13</td></tr>
+<tr><td class="ctr">112</td><td>社會賦閒</td><td>個人在團體中付出的努力少於單獨工作時（搭便車）</td><td class="ctr">Ch11</td></tr>
+<tr><td class="ctr">112</td><td>木桶定律</td><td>整體績效取決於最短的那塊木板，即最弱的環節</td><td class="ctr">Ch11</td></tr>
+<tr><td class="ctr">113</td><td>霍桑效應</td><td>員工因意識到被觀察、受重視而改變行為並提高產出</td><td class="ctr">Ch2</td></tr>
+<tr><td class="ctr">113</td><td>玻璃天花板</td><td>阻礙女性或少數族群晉升高階的無形、未明文的障礙</td><td class="ctr">Ch15</td></tr>
+<tr><td class="ctr">113</td><td>淨現值評估法</td><td>未來現金流折現加總後減期初投資，NPV&gt;0 則接受該投資案</td><td class="ctr">Ch16</td></tr>
+<tr><td class="ctr">113</td><td>鯰魚效應</td><td>引進外部強者激發原有成員危機意識與活力，避免組織僵化</td><td class="ctr">Ch8</td></tr>
+<tr><td class="ctr">113</td><td>穀倉效應</td><td>各部門各自為政、資訊不流通，形成本位主義而損及整體效能</td><td class="ctr">Ch8</td></tr>
+<tr><td class="ctr">114</td><td>敏捷管理</td><td>以小型跨功能團隊、短週期迭代、快速回應變化與顧客回饋為核心的管理方法</td><td class="ctr">Ch15</td></tr>
+<tr><td class="ctr">114</td><td>尖角效應</td><td>因單一負面特徵而對他人整體作出全面性負評（月暈效應的反面）</td><td class="ctr">Ch15</td></tr>
+<tr><td class="ctr">114</td><td>阿米巴經營</td><td>稻盛和夫：將組織切為可獨立核算的小單位，落實全員參與經營</td><td class="ctr">Ch13</td></tr>
+<tr><td class="ctr">114</td><td>事前控制</td><td>在活動開始前預防問題發生的控制，是最理想的控制型態</td><td class="ctr">Ch12</td></tr>
+<tr><td class="ctr">114</td><td>精實生產</td><td>以顧客價值為起點，消除一切不創造價值的浪費，用更少資源創造更多價值</td><td class="ctr">Ch13</td></tr>
+<tr><td class="ctr">115</td><td>360 度評估</td><td>蒐集上司、同儕、部屬、自評及顧客等多來源的全方位績效回饋</td><td class="ctr">Ch15</td></tr>
+<tr><td class="ctr">115</td><td>風險溢酬</td><td>投資人因承擔額外風險而要求高於無風險利率的超額報酬</td><td class="ctr">Ch16</td></tr>
+<tr><td class="ctr">115</td><td>社會賦閒</td><td>（同 112 年，八年內第二次以名詞解釋出現）</td><td class="ctr">Ch11</td></tr>
+<tr><td class="ctr">115</td><td>葡萄藤溝通</td><td>組織結構外由成員自發形成的非正式溝通網路，傳播快但易失真</td><td class="ctr">Ch11</td></tr>
+<tr><td class="ctr">115</td><td>豐田式生產系統</td><td>以杜絕浪費為目標，建立在及時化(JIT)與自働化(Jidoka)兩大支柱上的生產體系</td><td class="ctr">Ch13</td></tr>
+</tbody></table></div></div></details>
+
+<details><summary>B. 尚未考過但高機率的 24 則（依命題偏好推估）</summary><div class="dbody">
+<p class="small">篩選邏輯：① 屬於「效應／法則／定律／現象」類（歷屆最愛）② 近年管理實務熱門 ③ 與台電業務或 ESG 相關。</p>
+<div class="tblwrap"><table>
+<thead><tr><th>名詞</th><th>定義（可直接抄寫）</th></tr></thead>
+<tbody>
+<tr><td><b>破窗效應</b><br>Broken Windows</td><td>一扇窗被打破而未及時修補，會暗示無人管理，進而引來更多破壞。比喻組織中對小違規的縱容會擴散成集體失序，管理上應及早處理微小偏差。</td></tr>
+<tr><td><b>青蛙效應</b>（溫水煮青蛙）</td><td>青蛙在緩慢加熱的水中不會察覺危險而終至死亡。比喻組織在漸進式的環境變化中因缺乏危機意識而喪失應變時機。</td></tr>
+<tr><td><b>馬太效應</b></td><td>「凡有的還要加給他」——優勢者因既有資源而累積更多優勢，弱勢者則更弱，形成強者恆強的正向回饋。</td></tr>
+<tr><td><b>帕列托法則</b>（80/20 法則）</td><td>約 80% 的結果來自 20% 的原因，如 80% 營收來自 20% 顧客。管理上應集中資源於關鍵少數（重點管理）。</td></tr>
+<tr><td><b>蝴蝶效應</b></td><td>初始條件的微小差異，經系統放大後可能導致結果的巨大改變。強調管理者須留意微小變數與長期累積效果。</td></tr>
+<tr><td><b>從眾效應</b>（羊群效應／樂隊花車）</td><td>個人在群體壓力下放棄自身判斷而追隨多數人的行為，是群體迷思與投資泡沫的心理基礎。</td></tr>
+<tr><td><b>沉沒成本</b> Sunk Cost</td><td>已經付出且無法回收的成本。理性決策應只考慮未來的增量成本與效益，忽略沉沒成本；過度在意即導致承諾升高。</td></tr>
+<tr><td><b>機會成本</b></td><td>為選擇某一方案而放棄的所有其他方案中，價值最高者的代價。</td></tr>
+<tr><td><b>藍海策略</b><br>Blue Ocean Strategy</td><td>金偉燦與莫伯尼提出：跳脫在既有市場血腥競爭的紅海，透過<b>價值創新</b>（同時追求差異化與低成本），以「刪除－減少－提升－創造」四項行動架構開創無人競爭的新市場空間。</td></tr>
+<tr><td><b>KPI 與 OKR</b></td><td>KPI（關鍵績效指標）是衡量目標達成度的量化指標，重考核；OKR（目標與關鍵結果）由目標 O 與 3–5 個可衡量的關鍵結果 KR 組成，重對焦與挑戰，通常不直接連結績效獎金。</td></tr>
+<tr><td><b>學習曲線</b></td><td>隨著累積產量倍增，單位成本或工時依固定比率下降的現象，源自熟練度、製程改善與規模效果。</td></tr>
+<tr><td><b>經濟附加價值 EVA</b></td><td>稅後營業淨利減去全部資金成本（含權益資金成本）後的餘額，衡量企業是否真正為股東創造價值。</td></tr>
+<tr><td><b>漂綠</b> Greenwashing</td><td>企業以誇大或不實的環保宣稱包裝自身形象，實際上並未落實環境保護作為，屬 ESG 揭露的重大風險。</td></tr>
+<tr><td><b>循環經濟</b></td><td>相對於「開採－製造－丟棄」的線性經濟，強調資源在設計之初即考慮回收再生，透過修復、再利用、再製造使資源循環使用。</td></tr>
+<tr><td><b>淨零碳排／碳中和</b></td><td>碳中和指以減量與抵換使特定範圍內的碳排放量與移除量相抵為零；淨零排放則涵蓋所有溫室氣體，範圍更廣、要求更嚴。</td></tr>
+<tr><td><b>安靜離職</b> Quiet Quitting</td><td>員工不辭職，但僅完成職務說明書所載的最低要求，不再額外投入。反映工作投入度下降與心理契約的斷裂。</td></tr>
+<tr><td><b>職業倦怠</b> Burnout</td><td>長期工作壓力導致的情緒耗竭、去人性化（消極疏離）與個人成就感降低三種症候。</td></tr>
+<tr><td><b>賦權／授能</b> Empowerment</td><td>將決策權、資源與資訊下放給第一線員工，並賦予相應責任，以提升應變速度與工作動機。</td></tr>
+<tr><td><b>走動式管理</b> MBWA</td><td>管理者主動走出辦公室到現場觀察與交談，以即時掌握真實狀況並縮短溝通距離（屬事中控制）。</td></tr>
+<tr><td><b>利害關係人</b> Stakeholder</td><td>任何會影響組織決策與行動，或受其影響的個人或群體，如股東、員工、顧客、供應商、社區、政府。</td></tr>
+<tr><td><b>組織公民行為 OCB</b></td><td>員工自發從事、非職務所要求、也不被正式獎酬制度直接認可，但有助於組織有效運作的行為（如主動協助同事）。</td></tr>
+<tr><td><b>心理契約</b></td><td>員工與組織之間未明文記載、對彼此義務的主觀期待；一旦被違反，將導致信任與承諾大幅下降。</td></tr>
+<tr><td><b>ESG</b></td><td>環境(Environmental)、社會(Social)、公司治理(Governance) 三面向的非財務績效評估架構，是永續投資的主要準則。</td></tr>
+<tr><td><b>ChatGPT／生成式 AI 於管理之應用</b></td><td>運用大型語言模型自動生成文字、程式與分析，應用於客服、知識管理、文件彙整與決策輔助；須留意資料安全、偏誤與幻覺問題。</td></tr>
+</tbody></table></div></div></details>
+
+<h3 id="t3">4-3　申論題答題模板總索引</h3>
+<p>八年 24 題申論中有 20 題是「列舉型」。下表是可直接套用的通用結構，以及本講義已寫好的 14 份完整模板位置。</p>
+<div class="box tmpl"><div class="bt">📐 萬用申論骨架（任何題目都能套）</div>
+<div class="formula">【第一段　定義】
+　○○（英文名）係由學者□□所提出，係指……（一句核心定義）。
+
+【第二段　架構】
+　依……可分為 N 種／N 個階段／N 個構面，分述如下：
+
+【第三段　展開】（每點兩行）
+　（一）名稱（英文）：核心意涵一句。→ 補充說明或實例一句。
+　（二）……
+　（N）……
+
+【第四段　結語／加分】（有時間才寫，1–2 行）
+　綜上，……對管理實務之啟示在於……；以台電為例，……。</div></div>
+<div class="tblwrap"><table>
+<thead><tr><th>主題</th><th class="ctr">章節</th><th>主題</th><th class="ctr">章節</th></tr></thead>
+<tbody>
+<tr><td>管理綠化四階段</td><td class="ctr">Ch4</td><td>期望理論（含關聯圖）</td><td class="ctr">Ch10</td></tr>
+<tr><td>Hofstede 文化五構面</td><td class="ctr">Ch3</td><td>Thomas 五種衝突策略</td><td class="ctr">Ch11</td></tr>
+<tr><td>全球化五大驅力</td><td class="ctr">Ch3</td><td>Richman&amp;Farmer 控制五特徵</td><td class="ctr">Ch12</td></tr>
+<tr><td>群體決策優缺點</td><td class="ctr">Ch5</td><td>市場區隔五條件</td><td class="ctr">Ch14</td></tr>
+<tr><td>安索夫矩陣（含繪圖）</td><td class="ctr">Ch6</td><td>4P 與 4C 對應</td><td class="ctr">Ch14</td></tr>
+<tr><td>Aaker 品牌權益五構面</td><td class="ctr">Ch6</td><td>PZB 五大缺口</td><td class="ctr">Ch14</td></tr>
+<tr><td>職權三種行使關係</td><td class="ctr">Ch7</td><td>服務四特性</td><td class="ctr">Ch14</td></tr>
+<tr><td>組織變革三類型</td><td class="ctr">Ch8</td><td>效率市場三型態</td><td class="ctr">Ch16</td></tr>
+<tr><td>French&amp;Raven 五種權力</td><td class="ctr">Ch9</td><td>Maslow 五層次</td><td class="ctr">Ch10</td></tr>
+<tr><td>管理方格（含繪圖）</td><td class="ctr">Ch9</td><td>路徑-目標四型態</td><td class="ctr">Ch9</td></tr>
+<tr><td>第五級領導五等級</td><td class="ctr">Ch9</td><td>EOQ 計算</td><td class="ctr">Ch13</td></tr>
+</tbody></table></div>
+<div class="box trap"><div class="bt">⚠ 需要「畫圖」的三大題型，考前務必手繪三遍</div>
+<p style="margin:2px 0"><b>① 安索夫產品／市場擴張矩陣</b>（115問3 明訂繪圖 7 分、111問2 亦要求繪出）<br><b>② 管理方格圖</b>（112問3）<br><b>③ 期望理論關聯圖</b>（113問3 明訂「並繪出期望模式之關聯圖」）<br>畫圖要點：兩軸都要標名稱與高低方向、每格寫上策略名稱、圖下加一行圖名。</p></div>
+<a class="backtop" href="#p4">↑ 回目錄</a>
+<h3 id="t35">4-3b　歷屆問答題全覽（108–115，共 24 題）</h3>
+<p>把 8 年的問答題攤開來看，命題偏好一目了然：<b>名詞解釋固定 15 分</b>（108 年為 3 題×5 分，109 年起固定 5 題×3 分），另外三題幾乎全是「<b>列舉 N 項並說明</b>」。下表也標出哪些主題<u>已重複出現</u>——這些是最該優先準備的。</p>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">年</th><th>第 1 題（名詞解釋）</th><th>第 2 題</th><th>第 3 題</th><th>第 4 題</th></tr></thead>
+<tbody>
+<tr><td class="ctr"><b>115</b></td><td>360度評估／風險溢酬／<mark>社會賦閒</mark>／葡萄藤溝通／豐田式生產系統</td><td>職權定義＋三種行使關係</td><td><mark>安索夫矩陣（繪圖7分＋說明8分）</mark></td><td>French&amp;Raven 五種權力來源</td></tr>
+<tr><td class="ctr"><b>114</b></td><td>敏捷管理／尖角效應／阿米巴經營／事前控制／精實生產</td><td>4P 與 4C 定義、對應與差異</td><td>Collins 第五級領導五等級</td><td>Lewin 三種衝突類型</td></tr>
+<tr><td class="ctr"><b>113</b></td><td>霍桑效應／玻璃天花板／淨現值評估法／鯰魚效應／穀倉效應</td><td><mark>管理綠化定義＋四階段</mark></td><td>期望理論＋<b>繪關聯圖</b></td><td>有效市場區隔五條件</td></tr>
+<tr><td class="ctr"><b>112</b></td><td>馬基維利主義／熱爐法則／長鞭效應／<mark>社會賦閒</mark>／木桶定律</td><td>群體決策定義＋優缺點各 3 項</td><td>管理方格理論＋代表型領導</td><td>EOQ 定義＋<b>計算</b></td></tr>
+<tr><td class="ctr"><b>111</b></td><td>承諾升高／彼得原理／黃金降落傘／零階通路／僕人領導</td><td><mark>安索夫矩陣（繪圖＋四策略）</mark></td><td>Richman&amp;Farmer 有效控制五特徵</td><td>Hofstede 文化構面（扣除放任約束的其他五項）</td></tr>
+<tr><td class="ctr"><b>110</b></td><td>群體迷思／自利偏差／共享經濟／奧茲法則／畸零定價</td><td>Aaker 品牌權益五層面</td><td>組織變革三類型</td><td>PZB 五大服務品質缺口</td></tr>
+<tr><td class="ctr"><b>109</b></td><td>（第 3 題）有限理性決策／比馬龍效應／增強理論／停滯性通膨／代理問題</td><td>（第 1 題）路徑-目標理論定義＋四種領導型態</td><td>（第 2 題）Thomas 五種衝突抑減策略</td><td>Fama 效率市場三型態</td></tr>
+<tr><td class="ctr"><b>108</b></td><td>扁平式組織／工作豐富化／效能（3 題×5 分）</td><td>Maslow 需求五層次</td><td>服務定義＋四項特性</td><td>全球化五大驅力</td></tr>
+</tbody></table></div>
+<div class="box key"><div class="bt">◆ 從這張表看出的三件事</div>
+<ol class="tight">
+<li><b>安索夫矩陣 8 年內考 2 次申論（111、115），且兩次都要求繪圖</b>——這是全科最該優先練熟的一張圖。</li>
+<li><b>社會賦閒 8 年內以名詞解釋出現 2 次（112、115）、以填充出現 1 次（111）</b>，共 3 次。管理綠化亦 3 次。<mark>「重複命題」是本科最明確的規律。</mark></li>
+<li><b>每年第 1 題（名詞解釋）15 分幾乎是送分題</b>：只要背過就有分、背不過也能靠字面推測寫幾句。把 4-2 名詞庫背熟＝穩拿 12–15 分，等於填充題 7 題的分量。</li>
+</ol></div>
+<a class="backtop" href="#p4">↑ 回目錄</a>
+
+<h3 id="t4">4-4　學者人名中英速查表</h3>
+<p>填充題有六成以「某某(英文名)提出……」開頭。<mark>考場上若題幹只給英文名而你只背中文，等於白讀。</mark>下表依主題排列，請務必中英對照記憶。</p>
+<div class="tblwrap"><table>
+<thead><tr><th>中文</th><th>英文</th><th>代表理論／關鍵字</th><th class="ctr">章</th></tr></thead>
+<tbody>
+<tr><td>泰勒</td><td class="en">F. W. Taylor</td><td>科學管理之父、時間動作研究、差別計件工資制、例外管理</td><td class="ctr">2</td></tr>
+<tr><td>費堯</td><td class="en">Henri Fayol</td><td>管理程序之父、五大管理功能、14 項管理原則</td><td class="ctr">2</td></tr>
+<tr><td>韋伯（馬克思·韋伯）</td><td class="en">Max Weber</td><td>科層（官僚）體制、三種職權：傳統／魅力（神格）／法理</td><td class="ctr">2</td></tr>
+<tr><td>梅堯</td><td class="en">Elton Mayo</td><td>霍桑研究、霍桑效應、非正式組織</td><td class="ctr">2</td></tr>
+<tr><td>巴納德</td><td class="en">Chester Barnard</td><td>職權接受論、貢獻－滿足平衡</td><td class="ctr">2</td></tr>
+<tr><td>麥克葛瑞格</td><td class="en">D. McGregor</td><td>X 理論與 Y 理論</td><td class="ctr">2</td></tr>
+<tr><td>莫爾斯與洛希</td><td class="en">J. Morse &amp; J. Lorsch</td><td>超 Y 理論（人性權變觀點）</td><td class="ctr">2</td></tr>
+<tr><td>大內</td><td class="en">William Ouchi</td><td>Z 理論（美日融合、長期僱用、共識決策）</td><td class="ctr">2</td></tr>
+<tr><td>凱茲（卡茲）</td><td class="en">Robert Katz</td><td>三大管理技能：技術／人際／概念化</td><td class="ctr">1</td></tr>
+<tr><td>明茲伯格</td><td class="en">Henry Mintzberg</td><td>管理者十大角色（人際／資訊／決策）</td><td class="ctr">1</td></tr>
+<tr><td>杜拉克</td><td class="en">Peter Drucker</td><td>目標管理 MBO、效率與效能、知識工作者</td><td class="ctr">1,5</td></tr>
+<tr><td>賽蒙（西蒙）</td><td class="en">Herbert Simon</td><td>有限理性、滿意解、決策三部曲（情報／設計／選擇）</td><td class="ctr">5</td></tr>
+<tr><td>傅利曼</td><td class="en">Milton Friedman</td><td>社會責任古典（股東）觀點</td><td class="ctr">4</td></tr>
+<tr><td>柯柏格</td><td class="en">L. Kohlberg</td><td>道德發展三層次六階段</td><td class="ctr">4</td></tr>
+<tr><td>波特</td><td class="en">Michael E. Porter</td><td>五力分析、三大競爭策略、價值鏈、鑽石模型</td><td class="ctr">6</td></tr>
+<tr><td>安索夫</td><td class="en">H. Igor Ansoff</td><td>產品／市場擴張矩陣、策略管理之父</td><td class="ctr">6</td></tr>
+<tr><td>波士頓顧問團</td><td class="en">Boston Consulting Group</td><td>BCG 矩陣（明星／金牛／問題／落水狗）</td><td class="ctr">6</td></tr>
+<tr><td>邁爾斯與司諾</td><td class="en">Miles &amp; Snow</td><td>適應策略：探勘（前瞻）／防禦／分析／反應型</td><td class="ctr">6</td></tr>
+<tr><td>柯普朗與諾頓</td><td class="en">Kaplan &amp; Norton</td><td>平衡計分卡 BSC 四構面</td><td class="ctr">6</td></tr>
+<tr><td>巴特利特與高夏</td><td class="en">Bartlett &amp; Ghoshal</td><td>國際／多國／全球／跨國型企業</td><td class="ctr">3</td></tr>
+<tr><td>霍夫斯泰德</td><td class="en">Geert Hofstede</td><td>國家文化價值觀六構面</td><td class="ctr">3</td></tr>
+<tr><td>施振榮</td><td class="en">Stan Shih</td><td>微笑曲線</td><td class="ctr">6</td></tr>
+<tr><td>顧林納（格雷納）</td><td class="en">Larry Greiner</td><td>組織成長五階段與五危機</td><td class="ctr">7</td></tr>
+<tr><td>李維特</td><td class="en">H. Leavitt</td><td>組織變革途徑：結構／技術／人員（任務）</td><td class="ctr">8</td></tr>
+<tr><td>勒溫</td><td class="en">Kurt Lewin</td><td>變革三步驟（解凍→變革→再凍結）、力場分析、三種衝突</td><td class="ctr">8,5</td></tr>
+<tr><td>科特</td><td class="en">John Kotter</td><td>變革八步驟、降低抗拒的方法</td><td class="ctr">8</td></tr>
+<tr><td>彼得聖吉</td><td class="en">Peter M. Senge</td><td>學習型組織第五項修練（系統思考）</td><td class="ctr">8</td></tr>
+<tr><td>克里斯汀生</td><td class="en">Clayton Christensen</td><td>破壞式創新、創新的兩難</td><td class="ctr">8</td></tr>
+<tr><td>希斯</td><td class="en">Robert Heath</td><td>危機管理 4R（縮減／預備／反應／復原）</td><td class="ctr">8</td></tr>
+<tr><td>布萊克與摩頓</td><td class="en">R. Blake &amp; J. Mouton</td><td>管理方格理論（9,9 團隊型）</td><td class="ctr">9</td></tr>
+<tr><td>懷特與利普特</td><td class="en">White &amp; Lippitt</td><td>專制式／民主式／放任式領導</td><td class="ctr">9</td></tr>
+<tr><td>費德勒</td><td class="en">Fred Fiedler</td><td>權變模型、LPC 量表、三情境變數</td><td class="ctr">9</td></tr>
+<tr><td>赫塞與布蘭查</td><td class="en">P. Hersey &amp; K. Blanchard</td><td>情境領導：告知／推銷／參與／授權</td><td class="ctr">9</td></tr>
+<tr><td>浩斯（豪斯）</td><td class="en">Robert House</td><td>路徑－目標理論四型態</td><td class="ctr">9</td></tr>
+<tr><td>傅蘭琪與雷芬</td><td class="en">J. French &amp; B. Raven</td><td>五種權力來源</td><td class="ctr">9</td></tr>
+<tr><td>葛林里夫</td><td class="en">Robert Greenleaf</td><td>僕人領導</td><td class="ctr">9</td></tr>
+<tr><td>柯林思</td><td class="en">Jim Collins</td><td>《從 A 到 A+》第五級領導</td><td class="ctr">9</td></tr>
+<tr><td>雷定</td><td class="en">W. J. Reddin</td><td>三構面領導理論（加入「效能」構面）</td><td class="ctr">9</td></tr>
+<tr><td>馬斯洛</td><td class="en">A. H. Maslow</td><td>需求層次理論五層次</td><td class="ctr">10</td></tr>
+<tr><td>阿德佛</td><td class="en">Clayton Alderfer</td><td>ERG 理論、挫折－退化</td><td class="ctr">10</td></tr>
+<tr><td>赫茲伯格</td><td class="en">F. Herzberg</td><td>雙因子理論（保健因子／激勵因子）、工作豐富化</td><td class="ctr">10</td></tr>
+<tr><td>麥克里蘭</td><td class="en">David McClelland</td><td>三需求理論（成就／權力／歸屬）</td><td class="ctr">10</td></tr>
+<tr><td>佛洛姆</td><td class="en">Victor Vroom</td><td>期望理論 M＝E×I×V</td><td class="ctr">10</td></tr>
+<tr><td>亞當斯</td><td class="en">J. Stacey Adams</td><td>公平（衡平）理論</td><td class="ctr">10</td></tr>
+<tr><td>洛克</td><td class="en">Edwin Locke</td><td>目標設定理論</td><td class="ctr">10</td></tr>
+<tr><td>史金納</td><td class="en">B. F. Skinner</td><td>增強理論、操作制約</td><td class="ctr">10</td></tr>
+<tr><td>海克曼與歐德漢</td><td class="en">Hackman &amp; Oldham</td><td>工作特性模型 JCM 五構面</td><td class="ctr">10</td></tr>
+<tr><td>羅賓斯</td><td class="en">Stephen P. Robbins</td><td>管理學集大成（決策風格、創新三變數、控制權變因素）</td><td class="ctr">全</td></tr>
+<tr><td>考特（考爾特）</td><td class="en">Mary Coulter</td><td>與 Robbins 合著《管理學》</td><td class="ctr">全</td></tr>
+<tr><td>戴維斯</td><td class="en">Keith Davis</td><td>非正式溝通四型態（單線／密語／機率／群集連鎖）</td><td class="ctr">11</td></tr>
+<tr><td>湯瑪斯</td><td class="en">Kenneth W. Thomas</td><td>五種衝突處理策略</td><td class="ctr">11</td></tr>
+<tr><td>塔克曼</td><td class="en">Bruce Tuckman</td><td>團隊發展五階段</td><td class="ctr">11</td></tr>
+<tr><td>戴明</td><td class="en">W. Edwards Deming</td><td>PDCA 循環、品質管理 14 要點</td><td class="ctr">12,13</td></tr>
+<tr><td>裘蘭</td><td class="en">Joseph Juran</td><td>品質三部曲、適用性品質</td><td class="ctr">13</td></tr>
+<tr><td>克勞斯比</td><td class="en">Philip Crosby</td><td>零缺點、第一次就做對</td><td class="ctr">13</td></tr>
+<tr><td>石川馨</td><td class="en">Kaoru Ishikawa</td><td>魚骨圖（特性要因圖）、品管圈 QCC</td><td class="ctr">13</td></tr>
+<tr><td>大野耐一／稻盛和夫</td><td class="en">Taiichi Ohno / Kazuo Inamori</td><td>豐田式生產系統 TPS／阿米巴經營</td><td class="ctr">13</td></tr>
+<tr><td>力其曼與法墨</td><td class="en">Richman &amp; Farmer</td><td>有效控制系統五項特徵</td><td class="ctr">12</td></tr>
+<tr><td>科特勒</td><td class="en">Philip Kotler</td><td>行銷管理、STP、意見領袖、行銷哲學演進</td><td class="ctr">14</td></tr>
+<tr><td>李維特</td><td class="en">Theodore Levitt</td><td>行銷近視症</td><td class="ctr">14</td></tr>
+<tr><td>艾克</td><td class="en">David Aaker</td><td>品牌權益五構面</td><td class="ctr">6,14</td></tr>
+<tr><td>PZB 三學者</td><td class="en">Parasuraman, Zeithaml &amp; Berry</td><td>服務品質缺口模式、SERVQUAL</td><td class="ctr">14</td></tr>
+<tr><td>羅吉斯</td><td class="en">Everett Rogers</td><td>創新擴散、採用者五類型（創新者…落後者）</td><td class="ctr">14</td></tr>
+<tr><td>彼得（勞倫斯·彼得）</td><td class="en">Laurence J. Peter</td><td>彼得原理</td><td class="ctr">15</td></tr>
+<tr><td>法瑪</td><td class="en">Eugene Fama</td><td>效率市場假說三型態</td><td class="ctr">16</td></tr>
+<tr><td>野中郁次郎</td><td class="en">Ikujiro Nonaka</td><td>知識轉換 SECI 模式、內隱／外顯知識</td><td class="ctr">17</td></tr>
+<tr><td>黎特文與史春格</td><td class="en">Litwin &amp; Stringer</td><td>組織氣候</td><td class="ctr">8</td></tr>
+<tr><td>金偉燦與莫伯尼</td><td class="en">W. Chan Kim &amp; R. Mauborgne</td><td>藍海策略、價值創新</td><td class="ctr">6</td></tr>
+</tbody></table></div>
+<a class="backtop" href="#p4">↑ 回目錄</a>
+
+<h3 id="t45">4-4b　易混淆概念總整理（考前必掃 24 組）</h3>
+<p>填充題的失分，八成不是「不知道」，而是「兩個很像的答案選錯邊」。下表把八年考題中最容易被互換的概念並排，<mark>每組只記「判斷關鍵字」那一欄</mark>即可。</p>
+<div class="tblwrap"><table>
+<thead><tr><th>易混淆組</th><th>判斷關鍵字（題幹出現就選它）</th><th class="ctr">章</th></tr></thead>
+<tbody>
+<tr><td><b>效率</b> vs <b>效能</b></td><td>手段／過程／投入產出比＝效率；<b>目標達成度／做對的事</b>＝效能</td><td class="ctr">1</td></tr>
+<tr><td><b>技術能力</b> vs <b>概念化能力</b></td><td>與基層直接接觸、專業工具＝技術；<b>抽絲剝繭、整體、職位越高越重要</b>＝概念化</td><td class="ctr">1</td></tr>
+<tr><td><b>傳播者</b> vs <b>發言人</b></td><td>對<u>內</u>轉達＝傳播者；<b>對<u>外</u>發表政策成果</b>＝發言人</td><td class="ctr">1</td></tr>
+<tr><td><b>創業家</b> vs <b>危機處理者</b></td><td>主動求變＝創業家；被動救突發干擾＝危機處理者</td><td class="ctr">1</td></tr>
+<tr><td><b>X／Y 理論</b> vs <b>超 Y 理論</b></td><td>出現「<b>都不是絕對／隨時改變／完美搭配</b>」＝超 Y（莫爾斯與洛希）</td><td class="ctr">2</td></tr>
+<tr><td><b>名目群體法</b> vs <b>德菲法</b></td><td>在場先書面再討論＝名目群體；<b>不碰面、匿名、問卷、多回合</b>＝德菲</td><td class="ctr">5</td></tr>
+<tr><td><b>定錨效應</b> vs <b>承諾升高</b></td><td>依賴<b>初期</b>資訊不調整＝定錨；明知錯仍<b>持續加碼</b>＝承諾升高</td><td class="ctr">5</td></tr>
+<tr><td><b>雙趨</b> vs <b>雙避</b> vs <b>趨避</b></td><td>兩個都要＝雙趨；兩個都不要＝雙避；<b>同一目標又愛又恨</b>＝趨避</td><td class="ctr">5</td></tr>
+<tr><td><b>群體迷思</b> vs <b>社會賦閒</b></td><td>壓抑異議、追求一致＝群體迷思；<b>出力比單獨少</b>＝社會賦閒</td><td class="ctr">5,11</td></tr>
+<tr><td><b>垂直整合</b> vs <b>水平整合</b></td><td>整合上／下游＝垂直；<b>與同一位置的競爭者結合</b>＝水平</td><td class="ctr">6</td></tr>
+<tr><td><b>明星</b> vs <b>問題</b> vs <b>金牛</b></td><td>高成長高佔有＝明星；<b>高成長低佔有、需大量投注</b>＝問題；低成長高佔有＝金牛</td><td class="ctr">6</td></tr>
+<tr><td><b>市場開發</b> vs <b>產品開發</b></td><td>舊產品進<b>新市場</b>＝市場開發；<b>新產品</b>給舊顧客＝產品開發</td><td class="ctr">6</td></tr>
+<tr><td><b>新進入者威脅</b> vs <b>現有競爭強度</b></td><td>出現「<b>規模經濟、專利、品牌忠誠度</b>（＝進入障礙）」＝新進入者威脅</td><td class="ctr">6</td></tr>
+<tr><td><b>內部標竿</b> vs <b>競爭標竿</b></td><td><b>同一企業內</b>最佳部門＝內部標竿；向對手學＝競爭標竿</td><td class="ctr">6</td></tr>
+<tr><td><b>直線職權</b> vs <b>幕僚職權</b> vs <b>功能職權</b></td><td>直接指揮＝直線；<b>只輔助、無指揮權</b>＝幕僚；<b>跨單位的專業有限指揮</b>＝功能</td><td class="ctr">7</td></tr>
+<tr><td><b>控制幅度</b> vs <b>指揮鏈</b></td><td><b>管幾個人</b>＝控制幅度；<b>向誰報告／連續職權線</b>＝指揮鏈</td><td class="ctr">7</td></tr>
+<tr><td><b>組織文化</b> vs <b>組織氣候</b></td><td>深層共享價值、穩定＝文化；<b>整體而主觀的知覺</b>（黎特文與史春格）＝氣候</td><td class="ctr">8</td></tr>
+<tr><td><b>負增強</b> vs <b>懲罰</b></td><td><b>移除不愉快以鼓勵好行為</b>（不取消全勤獎金）＝負增強；<b>給予不愉快以減少壞行為</b>＝懲罰</td><td class="ctr">10</td></tr>
+<tr><td><b>保健因子</b> vs <b>激勵因子</b></td><td><b>防止不滿足</b>＝保健（薪資、制度、督導）；<b>帶來滿足</b>＝激勵（成就、賞識、責任）</td><td class="ctr">10</td></tr>
+<tr><td><b>工作輪調</b> vs <b>擴大化</b> vs <b>豐富化</b></td><td>換位子＝輪調；同層級做更多種＝擴大化；<b>給責任與權力（垂直）</b>＝豐富化</td><td class="ctr">10</td></tr>
+<tr><td><b>編碼</b> vs <b>解碼</b></td><td>發訊者<b>轉為符號</b>＝編碼；收訊者<b>翻譯成可理解的意思</b>＝解碼</td><td class="ctr">11</td></tr>
+<tr><td><b>平行溝通</b> vs <b>斜向溝通</b></td><td>同層級不同部門＝平行；<b>不同部門且不同層級</b>＝斜向</td><td class="ctr">11</td></tr>
+<tr><td><b>甘特圖</b> vs <b>負荷圖</b></td><td>縱軸＝<b>活動／工作</b>＝甘特圖；縱軸＝<b>資源／機器設備</b>＝負荷圖</td><td class="ctr">12</td></tr>
+<tr><td><b>資產負債表</b> vs <b>損益表</b></td><td>某一時間<b>點</b>／財務狀況＝資產負債表；某一<b>期間</b>／收入費用／經營績效＝損益表</td><td class="ctr">16</td></tr>
+<tr><td><b>成長期</b> vs <b>成熟期</b>（PLC）</td><td>「<b>急遽攀升中</b>、競爭者開始增加」＝成長；「<b>已達最高</b>、提醒性廣告、階段最久」＝成熟</td><td class="ctr">14</td></tr>
+<tr><td><b>月暈效應</b> vs <b>尖角效應</b></td><td>單一<b>特徵→整體正面</b>＝月暈；單一<b>缺點→整體負面</b>＝尖角</td><td class="ctr">15</td></tr>
+<tr><td><b>工作說明書</b> vs <b>工作規範書</b></td><td>寫「事」（職責任務）＝說明書；寫「人」（<b>最低資格條件</b>）＝規範書</td><td class="ctr">15</td></tr>
+<tr><td><b>流動比率</b> vs <b>速動比率</b></td><td>速動要<b>扣掉存貨「和預付費用」</b>——這是 113 年的失分點</td><td class="ctr">16</td></tr>
+</tbody></table></div>
+<a class="backtop" href="#p4">↑ 回目錄</a>
+
+<h3 id="t5">4-5　數字口訣總表（考前一天只看這一頁）</h3>
+<p>企管填充題有個極強的規律：<b>幾乎所有考點都是「N 個什麼」。</b>把數字當索引背，考場上看到「3 種」「4 個階段」「5 項特徵」就能立刻鎖定範圍。</p>
+
+<details open><summary>【3 的家族】</summary><div class="dbody">
+<div class="tblwrap"><table><tbody>
+<tr><th style="width:190px">Katz 三大管理技能</th><td>技術／人際／概念化</td></tr>
+<tr><th>Mintzberg 三大類角色</th><td>人際／資訊／決策</td></tr>
+<tr><th>Weber 三種職權</th><td>傳統型／魅力（神格）型／法理型</td></tr>
+<tr><th>管理者三層級</th><td>高階／中階／基層</td></tr>
+<tr><th>策略三層級</th><td>總體（公司）／事業（競爭）／功能</td></tr>
+<tr><th>Porter 三大競爭策略</th><td>成本領導／差異化／集中化</td></tr>
+<tr><th>ERG 三需求</th><td>生存 E／關係 R／成長 G</td></tr>
+<tr><th>McClelland 三需求</th><td>成就／權力／歸屬（親和）</td></tr>
+<tr><th>Simon 決策三部曲</th><td>情報（智慧）／設計／選擇</td></tr>
+<tr><th>控制三步驟</th><td>衡量實際績效／與標準比較／採取管理行動</td></tr>
+<tr><th>控制三時點</th><td>事前（前饋）／事中（即時）／事後（回饋）</td></tr>
+<tr><th>Lewin 變革三步驟</th><td>解凍／變革／再凍結</td></tr>
+<tr><th>Lewin 三種衝突</th><td>雙趨／雙避／趨避</td></tr>
+<tr><th>組織變革三類型</th><td>結構／技術／人員</td></tr>
+<tr><th>White&amp;Lippitt 三領導風格</th><td>專制式／民主式／放任式</td></tr>
+<tr><th>職權三種關係</th><td>直線／幕僚／功能</td></tr>
+<tr><th>效率市場三型態</th><td>弱式／半強式／強式</td></tr>
+<tr><th>智慧資本三構成</th><td>人力資本／結構資本／關係（顧客）資本</td></tr>
+<tr><th>專利三種</th><td>發明／新型／設計</td></tr>
+<tr><th>ESG 三面向</th><td>環境／社會／公司治理</td></tr>
+<tr><th>財務管理三領域</th><td>金融市場／投資學／公司理財</td></tr>
+<tr><th>Robbins 創新三變數</th><td>結構／文化／人力資源</td></tr>
+<tr><th>服務金三角三行銷</th><td>外部／內部／互動</td></tr>
+</tbody></table></div></div></details>
+
+<details><summary>【4 的家族】</summary><div class="dbody">
+<div class="tblwrap"><table><tbody>
+<tr><th style="width:190px">管理四功能</th><td>規劃／組織／領導／控制</td></tr>
+<tr><th>PDCA 四步驟</th><td>Plan／Do／Check／Action</td></tr>
+<tr><th>組織圖四項資訊</th><td>任務／分工／管理層級／指揮鏈</td></tr>
+<tr><th>組織生命週期四期</th><td>設立／成長／成熟／衰退</td></tr>
+<tr><th>產品生命週期四期</th><td>導入／成長／成熟／衰退</td></tr>
+<tr><th>管理綠化四途徑</th><td>守法／市場／利害關係人／行動主義</td></tr>
+<tr><th>道德決策四觀點</th><td>功利／權利／正義／整合社會契約</td></tr>
+<tr><th>服務四特性</th><td>無形性／不可分離性／易變性／易逝性</td></tr>
+<tr><th>行銷 4P ／ 4C</th><td>產品-顧客需求／價格-成本／通路-便利／推廣-溝通</td></tr>
+<tr><th>市場區隔四變數</th><td>地理／人口統計／心理／行為</td></tr>
+<tr><th>安索夫四策略</th><td>市場滲透／市場開發／產品開發／多角化</td></tr>
+<tr><th>BCG 四象限</th><td>明星／金牛／問題／落水狗</td></tr>
+<tr><th>Bartlett&amp;Ghoshal 四類企業</th><td>國際／多國／全球／跨國</td></tr>
+<tr><th>Miles&amp;Snow 四策略</th><td>探勘（前瞻）／防禦／分析／反應</td></tr>
+<tr><th>BSC 四構面</th><td>財務／顧客／內部流程／學習與成長</td></tr>
+<tr><th>Robbins 決策四風格</th><td>指示／分析／觀念／行為</td></tr>
+<tr><th>增強理論四方法</th><td>正增強／負增強／懲罰／消弱</td></tr>
+<tr><th>熱爐法則四原則</th><td>警告性／即刻性／一致性／公平性</td></tr>
+<tr><th>情境領導四風格</th><td>告知／推銷／參與／授權</td></tr>
+<tr><th>路徑－目標四型態</th><td>指導／支持／參與／成就導向</td></tr>
+<tr><th>Davis 非正式溝通四型態</th><td>單線／密語／機率／群集連鎖</td></tr>
+<tr><th>四大財務報表</th><td>資產負債／綜合損益／現金流量／股東權益變動</td></tr>
+<tr><th>市場結構四類型</th><td>獨占／寡占／獨占性競爭／完全競爭</td></tr>
+<tr><th>危機管理 4R</th><td>縮減力／預備力／反應力／復原力</td></tr>
+<tr><th>組織文化傳承四方式</th><td>故事／儀式典禮／物質表徵與符號／語言</td></tr>
+<tr><th>產品組合四指標</th><td>寬度／長度／深度／一致性</td></tr>
+<tr><th>OGSM 四項目</th><td>最終目的／具體目標／策略／檢核</td></tr>
+<tr><th>SECI 四轉換</th><td>共同化／外化／結合／內化</td></tr>
+<tr><th>艾森豪矩陣四象限</th><td>重要緊急（做）／重要不緊急（排程）／不重要緊急（授權）／皆不（刪除）</td></tr>
+</tbody></table></div></div></details>
+
+<details><summary>【5 的家族】</summary><div class="dbody">
+<div class="tblwrap"><table><tbody>
+<tr><th style="width:190px">費堯五管理功能</th><td>規劃／組織／指揮／協調／控制</td></tr>
+<tr><th>企業機能五管</th><td>生產／行銷／人資／研發／財務（＋資訊＝六管）</td></tr>
+<tr><th>Porter 五力</th><td>新進入者／供應商／購買者／替代品／現有競爭者</td></tr>
+<tr><th>Maslow 五層次</th><td>生理／安全／社會／尊重／自我實現</td></tr>
+<tr><th>JCM 五核心構面</th><td>技能多樣性／任務完整性／任務重要性／自主性／回饋性</td></tr>
+<tr><th>French&amp;Raven 五權力</th><td>法定／獎賞／強制／專家／參考</td></tr>
+<tr><th>Thomas 五衝突策略</th><td>競爭／統合／妥協／迴避／順應</td></tr>
+<tr><th>管理方格五代表型</th><td>(1,1)放任／(1,9)鄉村俱樂部／(9,1)任務／(5,5)中庸／(9,9)團隊</td></tr>
+<tr><th>第五級領導五等級</th><td>高才幹個人／團隊成員／經理人／領導者／第五級領導人</td></tr>
+<tr><th>Greiner 五階段</th><td>創造力／指揮／授權／協調／合作（→ 領導／自主／控制／僵化／飽和危機）</td></tr>
+<tr><th>Tuckman 五階段</th><td>形成／動盪／規範／執行／解散</td></tr>
+<tr><th>SMART 五原則</th><td>明確／可衡量／可達成／符合現實／具時效</td></tr>
+<tr><th>有效市場區隔五條件</th><td>可衡量／足量／可接近／可區別／可行動</td></tr>
+<tr><th>PZB 五缺口</th><td>認知／標準／傳遞／溝通／服務品質缺口</td></tr>
+<tr><th>SERVQUAL 五構面</th><td>可靠性／反應性／保證性／同理心／有形性</td></tr>
+<tr><th>Aaker 品牌權益五構面</th><td>知名度／知覺品質／品牌聯想／忠誠度／其他專屬資產</td></tr>
+<tr><th>五大人格特質</th><td>開放／盡責／外向／親和／神經質</td></tr>
+<tr><th>Richman&amp;Farmer 控制五特徵</th><td>正確性／時效性／客觀性／集中重點／經濟性</td></tr>
+<tr><th>控制五權變因素</th><td>組織規模／職位層級／分權程度／組織文化／活動重要性</td></tr>
+<tr><th>管理道德五因素</th><td>道德發展階段／個人特質／結構設計／組織文化／事件強度</td></tr>
+<tr><th>行銷哲學五階段</th><td>生產／產品／銷售／行銷／社會行銷</td></tr>
+<tr><th>採用者五類型</th><td>創新者／早期採用者／早期大眾／晚期大眾／落後者</td></tr>
+<tr><th>第五項修練</th><td>自我超越／改善心智模式／共同願景／團隊學習／系統思考</td></tr>
+<tr><th>全球化五驅力</th><td>市場／成本／政府／科技／競爭</td></tr>
+<tr><th>消費者決策五階段</th><td>需求認知／資訊蒐集／方案評估／購買決策／購後行為</td></tr>
+<tr><th>內部控制五要素</th><td>控制環境／風險評估／控制作業／資訊與溝通／監督作業</td></tr>
+<tr><th>DMAIC 五步驟</th><td>定義／衡量／分析／改善／控制</td></tr>
+</tbody></table></div></div></details>
+
+<details><summary>【6 以上與其他】</summary><div class="dbody">
+<div class="tblwrap"><table><tbody>
+<tr><th style="width:190px">組織設計六元素</th><td>專業分工／部門化／指揮鏈／控制幅度／集權分權／正式化</td></tr>
+<tr><th>Hofstede 六構面</th><td>權力距離／個人集體／陽剛陰柔／不確定性規避／長短期導向／放任約束</td></tr>
+<tr><th>PESTEL 六面向</th><td>政治／經濟／社會文化／科技／自然環境／法律</td></tr>
+<tr><th>企業機能六管</th><td>生產／行銷／人資／研發／財務／資訊</td></tr>
+<tr><th>服務業 7P</th><td>4P ＋ 人員／實體設施／服務流程</td></tr>
+<tr><th>麥肯錫 7S</th><td>策略／結構／制度／風格／人員／技能／<b>共享價值（中樞）</b></td></tr>
+<tr><th>QC 七手法</th><td>查檢表／層別法／柏拉圖／魚骨圖／直方圖／散佈圖／管制圖</td></tr>
+<tr><th>精實七大浪費</th><td>過量生產／等待／搬運／過度加工／庫存／動作／不良品</td></tr>
+<tr><th>理性決策八步驟</th><td>界定問題→確認準則→決定權重→發展方案→分析方案→選擇方案→執行方案→評估效能</td></tr>
+<tr><th>Kotter 變革八步驟</th><td>危機意識→領導聯盟→提出願景→溝通願景→授權行動→短期戰果→鞏固戰果→深植文化</td></tr>
+<tr><th>Mintzberg 十大角色</th><td>頭臉人物／領導者／聯絡者／監督者／傳播者／發言人／創業家／危機處理者／資源分配者／談判者</td></tr>
+<tr><th>費堯 14 管理原則</th><td>分工、職權職責、紀律、指揮統一、目標一致、個人利益服從整體、報酬公平、集權、階梯鏈、秩序、公正、人事安定、主動創新、團隊精神</td></tr>
+</tbody></table></div></div></details>
+<a class="backtop" href="#p4">↑ 回目錄</a>
+<h3 id="t6">4-6　108–115 年填充題答案總表（自我測驗用）</h3>
+<p>把下表當作 <b>160 題的隨身題庫</b>：先遮住答案欄、看考點回想答案，再對照。凡是想不出來的，回該章節重讀。</p>
+
+<details open><summary>115 年（最新一屆）</summary><div class="dbody"><div class="tblwrap"><table>
+<thead><tr><th class="ctr">題</th><th>考點</th><th>答案</th><th class="ctr">章</th></tr></thead><tbody>
+<tr><td class="ctr">1</td><td>通膨率＋失業率的總和</td><td><b>痛苦</b>指數</td><td class="ctr">3</td></tr>
+<tr><td class="ctr">2</td><td>額外獎金鼓勵好行為</td><td><b>正增強</b></td><td class="ctr">10</td></tr>
+<tr><td class="ctr">3</td><td>收訊者翻譯訊息</td><td><b>解碼</b></td><td class="ctr">11</td></tr>
+<tr><td class="ctr">4</td><td>銷售與利潤最高、提醒性廣告</td><td><b>成熟</b>期</td><td class="ctr">14</td></tr>
+<tr><td class="ctr">5</td><td>服務四特性之一</td><td><b>無形</b>性</td><td class="ctr">14</td></tr>
+<tr><td class="ctr">6</td><td>市場區隔變數</td><td><b>人口（統計）</b>變數</td><td class="ctr">14</td></tr>
+<tr><td class="ctr">7</td><td>特定期間收入費用損益</td><td><b>（綜合）損益</b>表</td><td class="ctr">16</td></tr>
+<tr><td class="ctr">8</td><td>定期轉換工作培養多元技能</td><td><b>工作輪調</b></td><td class="ctr">10</td></tr>
+<tr><td class="ctr">9</td><td>整合上下游／與競爭者結合</td><td><b>垂直</b>；<b>水平</b></td><td class="ctr">6</td></tr>
+<tr><td class="ctr">10</td><td>組織圖四資訊之一</td><td><b>指揮鏈</b></td><td class="ctr">7</td></tr>
+<tr><td class="ctr">11</td><td>員工普遍具良好決策能力</td><td><b>Y</b> 理論</td><td class="ctr">2</td></tr>
+<tr><td class="ctr">12</td><td>Porter 產業結構分析工具</td><td><b>五力</b>分析</td><td class="ctr">6</td></tr>
+<tr><td class="ctr">13</td><td>法律經濟義務外追求長期社會有益目標</td><td><b>（企業）社會責任</b></td><td class="ctr">4</td></tr>
+<tr><td class="ctr">14</td><td>專家意見、銷售員意見</td><td><b>質化（定性）</b>預測</td><td class="ctr">5</td></tr>
+<tr><td class="ctr">15</td><td>魚與熊掌不可兼得</td><td><b>雙趨</b>衝突</td><td class="ctr">5</td></tr>
+<tr><td class="ctr">16</td><td>PESTEL 缺兩項</td><td><b>政治</b>；<b>科技</b></td><td class="ctr">3</td></tr>
+<tr><td class="ctr">17</td><td>EOQ／PERT 中文名</td><td><b>經濟訂購量</b>；<b>計畫評核術</b></td><td class="ctr">13</td></tr>
+<tr><td class="ctr">18</td><td>行銷哲學演進缺兩階段</td><td><b>產品觀念</b>；<b>行銷觀念</b></td><td class="ctr">14</td></tr>
+<tr><td class="ctr">19</td><td>純益率 4%×總資產週轉率 3</td><td><b>12</b>%</td><td class="ctr">16</td></tr>
+<tr><td class="ctr">20</td><td>7S 之中樞</td><td><b>共享價值</b></td><td class="ctr">6</td></tr>
+</tbody></table></div></div></details>
+
+<details><summary>114 年</summary><div class="dbody"><div class="tblwrap"><table>
+<thead><tr><th class="ctr">題</th><th>考點</th><th>答案</th><th class="ctr">章</th></tr></thead><tbody>
+<tr><td class="ctr">1</td><td>公司法第 1 條之法人性質</td><td><b>社團</b>法人</td><td class="ctr">1</td></tr>
+<tr><td class="ctr">2</td><td>泰勒差別計件（80 支×10 元）</td><td><b>800</b> 元</td><td class="ctr">2</td></tr>
+<tr><td class="ctr">3</td><td>錄影記錄作業再分析歸納</td><td><b>觀察</b>法</td><td class="ctr">15</td></tr>
+<tr><td class="ctr">4</td><td>服務金三角第三種行銷</td><td><b>互動</b>行銷</td><td class="ctr">14</td></tr>
+<tr><td class="ctr">5</td><td>不同部門且不同層級</td><td><b>斜向（對角）</b>溝通</td><td class="ctr">11</td></tr>
+<tr><td class="ctr">6</td><td>最願意嘗試新科技者</td><td><b>創新者</b></td><td class="ctr">14</td></tr>
+<tr><td class="ctr">7</td><td>能力意願均佳、成熟度高</td><td><b>授權</b>式</td><td class="ctr">9</td></tr>
+<tr><td class="ctr">8</td><td>Leavitt 變革途徑之一</td><td><b>結構</b>改變</td><td class="ctr">8</td></tr>
+<tr><td class="ctr">9</td><td>給予不想要的結果以減少行為</td><td><b>懲罰</b></td><td class="ctr">10</td></tr>
+<tr><td class="ctr">10</td><td>依用電量區隔</td><td><b>行為</b>變數</td><td class="ctr">14</td></tr>
+<tr><td class="ctr">11</td><td>五管／六管</td><td><b>研發</b>；<b>資訊</b></td><td class="ctr">1</td></tr>
+<tr><td class="ctr">12</td><td>Kaplan&amp;Norton 四構面工具</td><td><b>平衡計分卡</b></td><td class="ctr">6</td></tr>
+<tr><td class="ctr">13</td><td>系統管理經營智慧並分享</td><td><b>知識管理</b></td><td class="ctr">17</td></tr>
+<tr><td class="ctr">14</td><td>Lewin 三步驟排序</td><td><b>①⑤③</b>（解凍→變革→再凍結）</td><td class="ctr">8</td></tr>
+<tr><td class="ctr">15</td><td>反映銷售額、成本與盈利</td><td><b>綜合損益</b>表</td><td class="ctr">16</td></tr>
+<tr><td class="ctr">16</td><td>有機式組織特點</td><td><b>高</b>；<b>低</b></td><td class="ctr">7</td></tr>
+<tr><td class="ctr">17</td><td>開發綠電滿足客戶需求</td><td><b>市場</b>途徑</td><td class="ctr">4</td></tr>
+<tr><td class="ctr">18</td><td>(50−20)×20,000−150,000</td><td><b>450,000</b> 元</td><td class="ctr">16</td></tr>
+<tr><td class="ctr">19</td><td>艾森豪矩陣另一軸</td><td><b>緊急度（急迫性）</b></td><td class="ctr">5</td></tr>
+<tr><td class="ctr">20</td><td>控制環境、風險評估、控制作業…</td><td><b>內部控制</b>制度</td><td class="ctr">12</td></tr>
+</tbody></table></div></div></details>
+
+<details><summary>113 年</summary><div class="dbody"><div class="tblwrap"><table>
+<thead><tr><th class="ctr">題</th><th>考點</th><th>答案</th><th class="ctr">章</th></tr></thead><tbody>
+<tr><td class="ctr">1</td><td>組織文化傳承四方式</td><td><b>儀式／典禮</b></td><td class="ctr">8</td></tr>
+<tr><td class="ctr">2</td><td>決策前與成員磋商並採納建議</td><td><b>參與</b>型</td><td class="ctr">9</td></tr>
+<tr><td class="ctr">3</td><td>不碰面、匿名、問卷蒐集</td><td><b>德菲</b>技術法</td><td class="ctr">5</td></tr>
+<tr><td class="ctr">4</td><td>控制權變因素之一</td><td><b>活動（任務）的重要性</b></td><td class="ctr">12</td></tr>
+<tr><td class="ctr">5</td><td>(5＋4×6＋13)÷6</td><td><b>7</b> 天</td><td class="ctr">13</td></tr>
+<tr><td class="ctr">6</td><td>對模稜兩可的接受度…</td><td><b>文化</b>變數</td><td class="ctr">8</td></tr>
+<tr><td class="ctr">7</td><td>沿正式指揮鏈上下流動</td><td><b>鏈</b>狀網絡</td><td class="ctr">11</td></tr>
+<tr><td class="ctr">8</td><td>控制程序第一步</td><td><b>衡量（實際）績效</b></td><td class="ctr">12</td></tr>
+<tr><td class="ctr">9</td><td>影響管理道德因素之一</td><td><b>個人特質</b></td><td class="ctr">4</td></tr>
+<tr><td class="ctr">10</td><td>特殊神蹟、英雄主義、獨特人格</td><td><b>魅力（神格／超人）</b>型職權</td><td class="ctr">2</td></tr>
+<tr><td class="ctr">11</td><td>職位越高越形重要</td><td><b>概念化</b>能力</td><td class="ctr">1</td></tr>
+<tr><td class="ctr">12</td><td>普通重要＋高不確定性</td><td><b>邊界擴張</b>策略</td><td class="ctr">6</td></tr>
+<tr><td class="ctr">13</td><td>SMART 的 A</td><td><b>可達成的</b></td><td class="ctr">5</td></tr>
+<tr><td class="ctr">14</td><td>給予更多責任與權力（垂直擴展）</td><td><b>工作豐富化</b></td><td class="ctr">10</td></tr>
+<tr><td class="ctr">15</td><td>零件在適當時間出現在需要工作站</td><td><b>JIT（即時生產）</b></td><td class="ctr">13</td></tr>
+<tr><td class="ctr">16</td><td>規模經濟、專利、品牌忠誠度</td><td><b>新進入者（的）威脅</b></td><td class="ctr">6</td></tr>
+<tr><td class="ctr">17</td><td>高成長低佔有、需大量資源</td><td><b>問號（問題）</b>事業</td><td class="ctr">6</td></tr>
+<tr><td class="ctr">18</td><td>Greiner 第 4 階段危機</td><td><b>僵化（官僚）</b>危機</td><td class="ctr">7</td></tr>
+<tr><td class="ctr">19</td><td>(200＋100)÷150</td><td><b>2</b></td><td class="ctr">16</td></tr>
+<tr><td class="ctr">20</td><td>非正式溝通中提供忠告者</td><td><b>意見領袖</b></td><td class="ctr">14</td></tr>
+</tbody></table></div></div></details>
+
+<details><summary>112 年</summary><div class="dbody"><div class="tblwrap"><table>
+<thead><tr><th class="ctr">題</th><th>考點</th><th>答案</th><th class="ctr">章</th></tr></thead><tbody>
+<tr><td class="ctr">1</td><td>組織生命週期第 3 期</td><td><b>成熟</b>期</td><td class="ctr">7</td></tr>
+<tr><td class="ctr">2</td><td>從屬於職位、離職即消失的權力</td><td><b>職權</b></td><td class="ctr">7</td></tr>
+<tr><td class="ctr">3</td><td>ERG 之一</td><td><b>生存</b></td><td class="ctr">10</td></tr>
+<tr><td class="ctr">4</td><td>將訊息轉為符號形式</td><td><b>編碼</b></td><td class="ctr">11</td></tr>
+<tr><td class="ctr">5</td><td>負荷圖縱軸</td><td><b>資源</b></td><td class="ctr">12</td></tr>
+<tr><td class="ctr">6</td><td>對外發表企業政策計畫成果</td><td><b>發言人</b></td><td class="ctr">1</td></tr>
+<tr><td class="ctr">7</td><td>STP 第二步</td><td><b>目標市場選擇</b></td><td class="ctr">14</td></tr>
+<tr><td class="ctr">8</td><td>施振榮提出、研發與行銷創造高附加價值</td><td><b>微笑曲線</b></td><td class="ctr">6</td></tr>
+<tr><td class="ctr">9</td><td>White&amp;Lippitt 三風格之一</td><td><b>民主</b>式</td><td class="ctr">9</td></tr>
+<tr><td class="ctr">10</td><td>股票交易報酬率</td><td><b>75</b>%</td><td class="ctr">16</td></tr>
+<tr><td class="ctr">11</td><td>能直接有效控管的部屬人數</td><td><b>控制（管理）幅度</b></td><td class="ctr">7</td></tr>
+<tr><td class="ctr">12</td><td>理性決策第 7 步</td><td><b>執行方案</b></td><td class="ctr">5</td></tr>
+<tr><td class="ctr">13</td><td>固定時間付息、到期還本的憑證</td><td><b>公司債</b></td><td class="ctr">16</td></tr>
+<tr><td class="ctr">14</td><td>PDCA 第 3 項</td><td><b>檢查（查核）</b></td><td class="ctr">12</td></tr>
+<tr><td class="ctr">15</td><td>存在時能防止不滿足</td><td><b>保健</b>因子</td><td class="ctr">10</td></tr>
+<tr><td class="ctr">16</td><td>每增一單位產量所增成本</td><td><b>邊際成本</b>訂價</td><td class="ctr">14</td></tr>
+<tr><td class="ctr">17</td><td>極端有利或極端不利情境</td><td><b>任務</b>導向</td><td class="ctr">9</td></tr>
+<tr><td class="ctr">18</td><td>ESG 第三項</td><td><b>公司治理</b></td><td class="ctr">4</td></tr>
+<tr><td class="ctr">19</td><td>BCG 縱軸</td><td><b>（市場）成長</b>率</td><td class="ctr">6</td></tr>
+<tr><td class="ctr">20</td><td>500,000−250,000</td><td><b>250,000</b></td><td class="ctr">16</td></tr>
+</tbody></table></div></div></details>
+
+<details><summary>111 年</summary><div class="dbody"><div class="tblwrap"><table>
+<thead><tr><th class="ctr">題</th><th>考點</th><th>答案</th><th class="ctr">章</th></tr></thead><tbody>
+<tr><td class="ctr">1</td><td>由單一特徵形成整體印象</td><td><b>月暈（暈輪）</b>效應</td><td class="ctr">15</td></tr>
+<tr><td class="ctr">2</td><td>五大人格缺一項</td><td><b>外向</b>性</td><td class="ctr">15</td></tr>
+<tr><td class="ctr">3</td><td>20,000÷(75−25)</td><td><b>400</b> 個</td><td class="ctr">16</td></tr>
+<tr><td class="ctr">4</td><td>合理重視生產與員工需求</td><td><b>團隊</b>型 (9,9)</td><td class="ctr">9</td></tr>
+<tr><td class="ctr">5</td><td>基層管理者最重要</td><td><b>技術</b>能力</td><td class="ctr">1</td></tr>
+<tr><td class="ctr">6</td><td>日常事務充分授權部屬</td><td><b>例外</b>管理</td><td class="ctr">2</td></tr>
+<tr><td class="ctr">7</td><td>人與環境皆會隨時改變</td><td><b>超 Y</b> 理論</td><td class="ctr">2</td></tr>
+<tr><td class="ctr">8</td><td>讓員工對工作結果負責</td><td><b>自主</b>性</td><td class="ctr">10</td></tr>
+<tr><td class="ctr">9</td><td>綜合判斷分數 17–22</td><td><b>黃藍</b>燈</td><td class="ctr">3</td></tr>
+<tr><td class="ctr">10</td><td>轉職過渡期的暫時失業</td><td><b>摩擦</b>性失業</td><td class="ctr">3</td></tr>
+<tr><td class="ctr">11</td><td>Greiner 第一階段</td><td><b>創造力</b></td><td class="ctr">7</td></tr>
+<tr><td class="ctr">12</td><td>五力缺一項</td><td><b>購買者（消費者）的議價能力</b></td><td class="ctr">6</td></tr>
+<tr><td class="ctr">13</td><td>又愛又恨、好惡相間</td><td><b>趨避</b>衝突</td><td class="ctr">5</td></tr>
+<tr><td class="ctr">14</td><td>全球整合高、地區回應高</td><td><b>跨國</b>企業</td><td class="ctr">3</td></tr>
+<tr><td class="ctr">15</td><td>同一企業內績效最佳部門</td><td><b>內部</b>標竿</td><td class="ctr">6</td></tr>
+<tr><td class="ctr">16</td><td>Simon 決策三部曲之二</td><td><b>設計</b>活動</td><td class="ctr">5</td></tr>
+<tr><td class="ctr">17</td><td>排除不愉快事件作為獎勵</td><td><b>負增強</b></td><td class="ctr">10</td></tr>
+<tr><td class="ctr">18</td><td>主動開發新市場新產品</td><td><b>探勘（前瞻）</b>型</td><td class="ctr">6</td></tr>
+<tr><td class="ctr">19</td><td>數個中心人物傳達給其他人</td><td><b>群集（集群）</b>連鎖</td><td class="ctr">11</td></tr>
+<tr><td class="ctr">20</td><td>團體中出力比單獨工作少</td><td><b>社會賦閒</b></td><td class="ctr">11</td></tr>
+</tbody></table></div></div></details>
+
+<details><summary>110 年</summary><div class="dbody"><div class="tblwrap"><table>
+<thead><tr><th class="ctr">題</th><th>考點</th><th>答案</th><th class="ctr">章</th></tr></thead><tbody>
+<tr><td class="ctr">1</td><td>回應顧客的環境偏好</td><td><b>市場</b>途徑</td><td class="ctr">4</td></tr>
+<tr><td class="ctr">2</td><td>依賴初期資訊無法調整</td><td><b>定錨（錨定）</b>效應</td><td class="ctr">5</td></tr>
+<tr><td class="ctr">3</td><td>組織設計六元素之一</td><td><b>控制（管理）幅度</b></td><td class="ctr">7</td></tr>
+<tr><td class="ctr">4</td><td>OGSM 第三項</td><td><b>策略</b></td><td class="ctr">5</td></tr>
+<tr><td class="ctr">5</td><td>劃分內外團體</td><td><b>領導者－成員交換（LMX）</b></td><td class="ctr">9</td></tr>
+<tr><td class="ctr">6</td><td>三需求理論之一</td><td><b>成就</b>需求</td><td class="ctr">10</td></tr>
+<tr><td class="ctr">7</td><td>基於專業、特殊技術或知識</td><td><b>專家</b>權</td><td class="ctr">9</td></tr>
+<tr><td class="ctr">8</td><td>對價值觀態度行為有影響的群體</td><td><b>參考團（群）體</b></td><td class="ctr">14</td></tr>
+<tr><td class="ctr">9</td><td>爭取他人看不上眼的次要市場</td><td><b>集中化（利基）</b>行銷</td><td class="ctr">14</td></tr>
+<tr><td class="ctr">10</td><td>(1,200−400)÷500</td><td><b>1.6</b></td><td class="ctr">16</td></tr>
+<tr><td class="ctr">11</td><td>資產負債表三大部分之一</td><td><b>股東（業主）權益</b></td><td class="ctr">16</td></tr>
+<tr><td class="ctr">12</td><td>高佔有率、低成長率</td><td><b>金牛</b>事業</td><td class="ctr">6</td></tr>
+<tr><td class="ctr">13</td><td>SWOT 的 T</td><td><b>威脅</b></td><td class="ctr">6</td></tr>
+<tr><td class="ctr">14</td><td>銷售量急遽攀升、競爭者增加</td><td><b>成長</b>期</td><td class="ctr">14</td></tr>
+<tr><td class="ctr">15</td><td>顛覆現有競爭模式與遊戲規則</td><td><b>破壞</b>性創新</td><td class="ctr">8</td></tr>
+<tr><td class="ctr">16</td><td>以整體性觀點駕馭複雜事物</td><td><b>系統思考</b></td><td class="ctr">8</td></tr>
+<tr><td class="ctr">17</td><td>降低不可控事件的威脅或損失</td><td><b>風險</b>管理</td><td class="ctr">8</td></tr>
+<tr><td class="ctr">18</td><td>貨幣超過實際產出、物價上漲</td><td><b>通貨</b>膨脹</td><td class="ctr">3</td></tr>
+<tr><td class="ctr">19</td><td>1+1&gt;2 的效果</td><td><b>綜效</b></td><td class="ctr">3</td></tr>
+<tr><td class="ctr">20</td><td>低價、規模經濟、嚴控費用</td><td><b>成本領導</b>策略</td><td class="ctr">6</td></tr>
+</tbody></table></div></div></details>
+
+<details><summary>109 年</summary><div class="dbody"><div class="tblwrap"><table>
+<thead><tr><th class="ctr">題</th><th>考點</th><th>答案</th><th class="ctr">章</th></tr></thead><tbody>
+<tr><td class="ctr">1</td><td>抽絲剝繭、理出頭緒</td><td><b>概念（觀念）化</b>能力</td><td class="ctr">1</td></tr>
+<tr><td class="ctr">2</td><td>重結果、最多數人最大利益</td><td><b>功利</b>主義</td><td class="ctr">4</td></tr>
+<tr><td class="ctr">3</td><td>產業鏈中相同位置的併購</td><td><b>水平</b>併購</td><td class="ctr">6</td></tr>
+<tr><td class="ctr">4</td><td>組織圖四資訊之一</td><td><b>指揮鏈</b></td><td class="ctr">7</td></tr>
+<tr><td class="ctr">5</td><td>JCM 五構面之一</td><td><b>回饋</b>性</td><td class="ctr">10</td></tr>
+<tr><td class="ctr">6</td><td>低價鼓勵嘗試、搶佔市佔</td><td><b>滲透</b>式訂價</td><td class="ctr">14</td></tr>
+<tr><td class="ctr">7</td><td>2 種以上部門化方式編組</td><td><b>矩陣</b>式組織</td><td class="ctr">7</td></tr>
+<tr><td class="ctr">8</td><td>最大可能數目的零售商</td><td><b>密集</b>性配銷</td><td class="ctr">14</td></tr>
+<tr><td class="ctr">9</td><td>輔助直線、無直接指揮權</td><td><b>幕僚</b>職權</td><td class="ctr">7</td></tr>
+<tr><td class="ctr">10</td><td>責任超過創造利潤、增進社會福祉</td><td><b>社會經濟</b>觀點</td><td class="ctr">4</td></tr>
+<tr><td class="ctr">11</td><td>未到期票據預扣利息售予銀行</td><td><b>（票據）貼現</b></td><td class="ctr">16</td></tr>
+<tr><td class="ctr">12</td><td>違反柏拉圖效率</td><td><b>市場失靈</b></td><td class="ctr">3</td></tr>
+<tr><td class="ctr">13</td><td>科學管理學派的人性假定</td><td><b>經濟人</b></td><td class="ctr">2</td></tr>
+<tr><td class="ctr">14</td><td>最低資格條件之書面說明</td><td><b>工作規範（書）</b></td><td class="ctr">15</td></tr>
+<tr><td class="ctr">15</td><td>整體與主觀的環境觀念</td><td><b>組織氣候</b></td><td class="ctr">8</td></tr>
+<tr><td class="ctr">16</td><td>從原物料到消費者每階段皆有貢獻</td><td><b>價值鏈</b></td><td class="ctr">6</td></tr>
+<tr><td class="ctr">17</td><td>規模擴大反使成本升高</td><td><b>規模不經濟</b></td><td class="ctr">3</td></tr>
+<tr><td class="ctr">18</td><td>投入與報酬平衡並與他人比較</td><td><b>公平（衡平）</b>理論</td><td class="ctr">10</td></tr>
+<tr><td class="ctr">19</td><td>ROA 30%×(1,350÷810)</td><td><b>50</b>%</td><td class="ctr">16</td></tr>
+<tr><td class="ctr">20</td><td>各路線中所需時間最長者</td><td><b>要徑（關鍵路徑）</b></td><td class="ctr">13</td></tr>
+</tbody></table></div></div></details>
+
+<details><summary>108 年</summary><div class="dbody"><div class="tblwrap"><table>
+<thead><tr><th class="ctr">題</th><th>考點</th><th>答案</th><th class="ctr">章</th></tr></thead><tbody>
+<tr><td class="ctr">1</td><td>管理四功能之一</td><td><b>組織</b></td><td class="ctr">1</td></tr>
+<tr><td class="ctr">2</td><td>SWOT 的 O</td><td><b>機會</b></td><td class="ctr">6</td></tr>
+<tr><td class="ctr">3</td><td>4P 促銷對應 4C</td><td><b>溝通</b></td><td class="ctr">14</td></tr>
+<tr><td class="ctr">4</td><td>PLC 第 3 期</td><td><b>成熟</b>期</td><td class="ctr">14</td></tr>
+<tr><td class="ctr">5</td><td>源於北極星火箭系統計畫</td><td><b>計畫評核術（PERT）</b></td><td class="ctr">13</td></tr>
+<tr><td class="ctr">6</td><td>財管三領域之一</td><td><b>公司理財</b></td><td class="ctr">16</td></tr>
+<tr><td class="ctr">7</td><td>四大報表之一</td><td><b>現金流量</b>表</td><td class="ctr">16</td></tr>
+<tr><td class="ctr">8</td><td>危機管理 4R 第一步</td><td><b>縮減</b>力</td><td class="ctr">8</td></tr>
+<tr><td class="ctr">9</td><td>招募、培訓、薪酬、考核</td><td><b>人力資源</b>管理</td><td class="ctr">15</td></tr>
+<tr><td class="ctr">10</td><td>競爭者家數為「無」</td><td><b>獨占</b>市場</td><td class="ctr">3</td></tr>
+<tr><td class="ctr">11</td><td>Robbins 決策風格之一</td><td><b>分析</b>型</td><td class="ctr">5</td></tr>
+<tr><td class="ctr">12</td><td>產品組合內產品項目數量</td><td><b>長度</b></td><td class="ctr">14</td></tr>
+<tr><td class="ctr">13</td><td>員工與團隊帶來競爭優勢的知識總和</td><td><b>智慧</b>資本</td><td class="ctr">17</td></tr>
+<tr><td class="ctr">14</td><td>展現未來經營雄心的遠景</td><td><b>願景</b></td><td class="ctr">1</td></tr>
+<tr><td class="ctr">15</td><td>任務分工與工作相互關係</td><td><b>（組織）結構</b></td><td class="ctr">7</td></tr>
+<tr><td class="ctr">16</td><td>7S 缺一項</td><td><b>策略</b></td><td class="ctr">6</td></tr>
+<tr><td class="ctr">17</td><td>保障股東權益的指導管理機制</td><td><b>公司治理</b></td><td class="ctr">4</td></tr>
+<tr><td class="ctr">18</td><td>60÷[(4+2)÷2]</td><td><b>20</b> 次</td><td class="ctr">16</td></tr>
+<tr><td class="ctr">19</td><td>專利三種之一</td><td><b>發明</b>專利</td><td class="ctr">17</td></tr>
+<tr><td class="ctr">20</td><td>標準法之公眾使用標準</td><td><b>國家</b>標準（CNS）</td><td class="ctr">17</td></tr>
+</tbody></table></div></div></details>
+<a class="backtop" href="#p4">↑ 回目錄</a>
+
+<h3 id="t7">4-7　考前七天 Checklist</h3>
+<div class="tblwrap"><table>
+<thead><tr><th class="ctr">Day</th><th>任務</th><th>檢核標準</th></tr></thead>
+<tbody>
+<tr><td class="ctr"><b>D-7</b></td><td>讀 <b>4-5 數字口訣總表</b>（3/4/5 的家族），遮住右欄默寫</td><td>3 與 4 的家族能默寫 80% 以上</td></tr>
+<tr><td class="ctr"><b>D-6</b></td><td>讀 <b>4-4 學者速查表</b>，重點是中英對照</td><td>看到 House／Fiedler／Vroom 能立刻說出理論</td></tr>
+<tr><td class="ctr"><b>D-5</b></td><td>手算 <b>4-1 所有計算題</b>各一遍；再手繪安索夫、管理方格、期望理論三張圖</td><td>每題 3 分鐘內完成且不看公式</td></tr>
+<tr><td class="ctr"><b>D-4</b></td><td>讀 <b>4-2 名詞解釋庫 A 區 38 則</b>，每則練習口述三行</td><td>任抽 10 則能立刻說出定義</td></tr>
+<tr><td class="ctr"><b>D-3</b></td><td>讀 <b>4-2 B 區 24 則</b>＋ 複習 Ch6、Ch14（兩大熱區）</td><td>五力、BCG、安索夫、STP、PLC、4P4C 全通</td></tr>
+<tr><td class="ctr"><b>D-2</b></td><td>用 <b>4-6 答案總表</b>遮答案自測 115→108 共 160 題</td><td>正確率 ≥ 80%；錯題回章節補</td></tr>
+<tr><td class="ctr"><b>D-1</b></td><td>只看 <b>Part 0 的作答戰術</b>＋ 自己標記的錯題；早睡</td><td>不讀新東西</td></tr>
+<tr><td class="ctr"><b>D-0</b></td><td>進場前 10 分鐘掃一眼 4-5 數字口訣</td><td>—</td></tr>
+</tbody></table></div>
+
+<div class="box mnem"><div class="bt">✦ 最後三句話</div>
+<ol class="tight" style="margin:4px 0">
+<li><b>填充題不空白。</b>台電標準答案通常接受 3–8 種寫法，意思對就給分。寫一個相關名詞的期望值，永遠高於空白。</li>
+<li><b>申論題先寫完架構再補肉。</b>題目說幾點就寫幾點，兩行一點，四題平均分配版面。</li>
+<li><b>計算題把公式抄上去。</b>「未詳列解答過程不予給分」的反面是——寫了過程，就算最後算錯也有分。</li>
+</ol></div>
+
+<hr>
+<p class="small center" style="color:var(--ink3)">本講義依據台灣電力公司 108–115 年度新進僱用人員甄試「專業科目 B（企業管理概論）」公告試題與答案逆向編寫。<br>各項考試制度、題型與配分仍應以台電當年度正式簡章為準。<br>祝順利上榜。</p>
+</main>
+</div>
+<script>
+function openAll(){document.querySelectorAll('details').forEach(d=>d.open=true)}
+function closeAll(){document.querySelectorAll('details').forEach(d=>d.open=false)}
+function tgTheme(){
+  var r=document.documentElement;
+  var cur=r.getAttribute('data-theme');
+  var dark=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var now=cur?cur:(dark?'dark':'light');
+  r.setAttribute('data-theme', now==='dark'?'light':'dark');
+  try{localStorage.setItem('tp_theme', r.getAttribute('data-theme'))}catch(e){}
+}
+try{var t=localStorage.getItem('tp_theme'); if(t){document.documentElement.setAttribute('data-theme',t)}}catch(e){}
+</script>
+</body>
+</html>
